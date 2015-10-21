@@ -431,17 +431,50 @@ html {
                         height: 34px;
                     }
                     p {
-                        color:$lightFontcolor;
+                        color: $lightFontcolor;
                         width: 816px;
                         font-size: 0.9em;
                     }
                 }
             }
+            // первый слайдер (инициализируется по классу firsttype_slider_wrapper в main.js)
+            .firsttype_slider_wrapper {
+                outline: 1px dotted red;
+                width: $mainWidt;
+                margin: 0 auto;
+                position: relative;
+                zoom: 1;
+                .slides {
+                    li {}
+                }
+                // вперед/назад
+                .flex-control-nav.flex-control-paging {
+                    background-color: #ccc;
+                    outline: 1px dotted red;
+                }
+                // пагинация слайдера
+                .flex-direction-nav {
+                    .flex-nav-prev {
+                        background-color: #ccc;
+                        outline: 1px dotted red;
+                        a {
+                            background-color: #ccc;
+                            outline: 1px dotted red;
+                            &:before {}
+                        }
+                    }
+                    .flex-nav-next {
+                        background-color: #ccc;
+                        outline: 1px dotted red;
+                        a {
+                            background-color: #ccc;
+                            outline: 1px dotted red;
+                            &:before {}
+                        }
+                    }
+                }
+            }
         }
-
-
-
-
         // ПОДВАЛ//////ПОДВАЛ//////ПОДВАЛ//////ПОДВАЛ//////ПОДВАЛ//////ПОДВАЛ//////ПОДВАЛ//////ПОДВАЛ//////
         .footer_wrapper {
             outline: 1px dotted red;

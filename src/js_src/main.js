@@ -7,9 +7,9 @@ $(document).ready(function() {
     $('.firsttype_slider_wrapper').flexslider({
         animation: "slide",
         animationLoop: false,
-        itemWidth: 210,
-        itemMargin: 5,
-        minItems: 2,
+        itemWidth: 316,
+        itemMargin: 0,
+        minItems: 3,
         maxItems: 3
     });
 
