@@ -3,15 +3,16 @@ html {
     body {
         background-color: $lightenbrown;
         background-repeat: no-repeat;
-        background-position: 0 50%;
         width: 100%;
-        background-image: url("../img/svg/background_image.svg");
+        // background-image: url("../img/svg/background_image.svg");
+        // background-position: 0 50%;
         .main_wrapper {
             width: 100%;
             // outline: 1px dotted red;
             margin: 0 auto;
             display: block;
             background-color: $lightenbrown;
+            // ШАПКА// ШАПКА// ШАПКА// ШАПКА// ШАПКА// ШАПКА// ШАПКА// ШАПКА// ШАПКА// ШАПКА// ШАПКА// ШАПКА// ШАПКА// ШАПКА
             header {
                 display: flex;
                 flex-flow: column nowrap;
@@ -43,7 +44,7 @@ html {
                             padding: 0;
                             list-style-image: url("../img/svg/septopmenu.svg");
                             height: 100%;
-                            transition: all 0.1s linear;
+                            // transition: all 0.1s linear;
                             // outline: 1px dotted red;
                             z-index: 2;
                             &:first-child {
@@ -150,6 +151,7 @@ html {
                         }
                     }
                 }
+                // обертка галвного меню и кнопок ЗАПИСАТЬСЯ и ВЫЗОВ НА ДОМ
                 .main_menu_wrapper {
                     width: $mainWidt;
                     margin: 0 auto 300px auto;
@@ -159,11 +161,13 @@ html {
                     align-items: center;
                     // outline: 1px dotted red;
                     height: 120px;
+                    // обертка главного меню
                     .main_menu {
                         background-color: #fff;
                         // outline: 1px dotted red;
                         height: 100%;
                         width: 79.7%;
+                        // главное меню
                         ul {
                             // outline: 1px dotted blue;
                             display: flex;
@@ -186,27 +190,24 @@ html {
                                 border-top: 2px solid $fontcolor;
                                 border-bottom: 2px solid $fontcolor;
                                 position: relative;
+                                // рисуем ромбик между итемами гглавного меню
                                 &:before {
                                     background-image: url("../img/svg/mian_menu_sep.svg");
                                     content: "";
-                                    position: relative;
+                                    position: absolute;
                                     height: 12px;
                                     width: 12px;
-                                    right: 30px;
-                                    // outline: 1px dotted red;
-                                    content: "";
+                                    left: 0;
+                                    top: 50%;
+                                    margin: -5px 0 0 -25px;
                                 }
+                                // убираем ромбик у мервого итема главного меню
                                 &:first-child {
                                     &:before {
                                         background-image: none;
+                                        content: none;
                                     }
                                     list-style: none;
-                                    // width: auto;
-                                    &:hover {
-                                        .main_menu_list_items {
-                                            display: block;
-                                        }
-                                    }
                                 }
                                 a {
                                     display: flex;
@@ -225,26 +226,58 @@ html {
                                     border-top: 1px solid $fontcolor;
                                     border-bottom: 1px solid $fontcolor;
                                 }
+                                // показываем сабменю главного меню
+                                &:hover {
+                                    .main_menu_list_items {
+                                        display: flex;
+                                        flex-flow: row nowrap;
+                                        justify-content: space-between;
+                                    }
+                                    // перекрашиваем пункт главного меню при наведении
+                                    background-color: $lightenmiddlebrown;
+                                    a {
+                                        background-color: $lightenmiddlebrown;
+                                    }
+                                }
                                 .main_menu_list_items {
                                     display: none;
+                                    // outline: 1px dotted red;
+                                    position: absolute;
+                                    top: 102px;
+                                    left: 0;
+                                    height: initial;
+                                    z-index: 1;
+                                    // width: auto;
+                                    padding: 50px 50px 50px 50px;
+                                    background-color: $lightenmiddlebrown;
                                     .mainsubmenu {
-                                        background-color: $lightenbrown2;
-                                        margin: 0;
+                                        margin: 0 4em 0 0;
                                         padding: 0;
-                                        position: absolute;
-                                        top: 110px;
-                                        left: 0;
-                                        height: initial;
-                                        z-index: 1;
+                                        display: block;
+                                        width: 10em;
+                                        &:last-child {
+                                            margin: 0;
+                                        }
+                                        span {
+                                            display: block;
+                                            padding: 0 0 1.5em 0;
+                                            margin: 0 0 0.5em 0;
+                                            font-size: 1.2em;
+                                            border-bottom: 1px solid $fontcolor;
+                                            font-family: $ptSerif;
+                                            // color:red;
+                                        }
                                         li {
+                                            list-style-position: inside;
                                             border: none;
-                                            list-style-image: none;
-                                            list-style-type: disk;
-                                            height: initial;
-                                            width: initial;
+                                            // list-style-image: none;
+                                            display: list-item;
+                                            list-style-type: disc;
+                                            height: auto;
+                                            width: auto;
+                                            line-height: 1.9em;
                                             &:before {
                                                 background-image: none;
-                                                content: "";
                                                 position: relative;
                                                 height: none;
                                                 width: none;
@@ -252,12 +285,33 @@ html {
                                                 content: none;
                                             }
                                             a {
+                                                font-family: $openSans;
                                                 border: none;
                                                 height: initial;
                                                 width: initial;
+                                                background-color: inherit;
+                                                font-size: 0.9em;
+                                                text-transform: none;
+                                                display: inline-block;
+                                                &:hover {
+                                                    color: $redColor;
+                                                }
                                             }
                                         }
                                     }
+                                    // div{
+                                    //     width:10em;
+                                    //     margin: 0 7em 0 0;
+                                    //     span{
+                                    //         display:block;
+                                    //         padding:0 0 1.5em 0;
+                                    //         margin:0 0 0.5em 0;
+                                    //         font-size: 1.2em;
+                                    //         border-bottom: 1px solid $fontcolor;
+                                    //         font-family: $ptSerif;
+                                    //         // color:red;
+                                    //     }
+                                    // }
                                 }
                             }
                         }
@@ -282,7 +336,7 @@ html {
                             justify-content: space-around;
                             align-items: center;
                             font-size: 1.1em;
-                            transition: all linear 0.1s;
+                            // transition: all linear 0.1s;
                             &:hover {
                                 background-color: lighten($redColor, 10%);
                             }
@@ -319,6 +373,80 @@ html {
                     }
                 }
             }
+        }
+        // КОНТЕНТ// КОНТЕНТ// КОНТЕНТ// КОНТЕНТ// КОНТЕНТ// КОНТЕНТ// КОНТЕНТ// КОНТЕНТ// КОНТЕНТ// КОНТЕНТ// КОНТЕНТ
+        .content_wrapper {
+            display: flex;
+            flex-flow: column nowrap;
+            background-size: cover;
+            background-color: transparent;
+            background-image: url("../img/svg/background_image.svg");
+            background-position: 0 50%;
+            // background-size: normal;
+            // блок о клинике на главной
+            .about_on_main {
+                width: 1135px;
+                // outline: 1px dotted red;
+                margin: -150px auto 0 auto;
+                background-color: $lightenbrown;
+                padding: 8px;
+                border: 1px solid #ccc;
+                .bordered {
+                    width: 100%;
+                    height: 270px;
+                    border: 1px solid $lightFontcolor;
+                    display: flex;
+                    flex-flow: column;
+                    justify-content: space-around;
+                    align-items: center;
+                    .big_heading {
+                        font-family: $ptSerif;
+                        text-transform: capitalize;
+                        padding: 10px;
+                        display: flex;
+                        line-height: 0.3em;
+                        font-size: 2em;
+                        &:before {
+                            content: "";
+                            background-image: url("../img/svg/big_heading_before.svg");
+                            width: 25px;
+                            height: 14px;
+                            display: block;
+                            margin: 0 10px 0 0;
+                        }
+                        &:after {
+                            content: "";
+                            background-image: url("../img/svg/big_heading_before.svg");
+                            width: 25px;
+                            height: 14px;
+                            display: block;
+                            transform: rotate(180deg);
+                            margin: 0 0 0 10px;
+                        }
+                    }
+                    .sep_afterheading {
+                        background-image: url("../img/svg/sep_afterheading.svg");
+                        display: block;
+                        width: 128px;
+                        height: 34px;
+                    }
+                    p {
+                        color:$lightFontcolor;
+                        width: 816px;
+                        font-size: 0.9em;
+                    }
+                }
+            }
+        }
+
+
+
+
+        // ПОДВАЛ//////ПОДВАЛ//////ПОДВАЛ//////ПОДВАЛ//////ПОДВАЛ//////ПОДВАЛ//////ПОДВАЛ//////ПОДВАЛ//////
+        .footer_wrapper {
+            outline: 1px dotted red;
+            background-color: $mainbrown;
+            height: 400px;
         }
     }
 }
