@@ -1,0 +1,147 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+$attach-name: 'attach';
+$attach-x: 170px;
+$attach-y: 51px;
+$attach-offset-x: -170px;
+$attach-offset-y: -51px;
+$attach-width: 30px;
+$attach-height: 30px;
+$attach-total-width: 221px;
+$attach-total-height: 121px;
+$attach-image: '/dist/img/sprite.png';
+$attach: (170px, 51px, -170px, -51px, 30px, 30px, 221px, 121px, '/dist/img/sprite.png', 'attach', );
+$cart-img-name: 'cart_img';
+$cart-img-x: 170px;
+$cart-img-y: 81px;
+$cart-img-offset-x: -170px;
+$cart-img-offset-y: -81px;
+$cart-img-width: 35px;
+$cart-img-height: 22px;
+$cart-img-total-width: 221px;
+$cart-img-total-height: 121px;
+$cart-img-image: '/dist/img/sprite.png';
+$cart-img: (170px, 81px, -170px, -81px, 35px, 22px, 221px, 121px, '/dist/img/sprite.png', 'cart_img', );
+$collapsed-name: 'collapsed';
+$collapsed-x: 200px;
+$collapsed-y: 51px;
+$collapsed-offset-x: -200px;
+$collapsed-offset-y: -51px;
+$collapsed-width: 11px;
+$collapsed-height: 7px;
+$collapsed-total-width: 221px;
+$collapsed-total-height: 121px;
+$collapsed-image: '/dist/img/sprite.png';
+$collapsed: (200px, 51px, -200px, -51px, 11px, 7px, 221px, 121px, '/dist/img/sprite.png', 'collapsed', );
+$down-name: 'down';
+$down-x: 170px;
+$down-y: 103px;
+$down-offset-x: -170px;
+$down-offset-y: -103px;
+$down-width: 31px;
+$down-height: 18px;
+$down-total-width: 221px;
+$down-total-height: 121px;
+$down-image: '/dist/img/sprite.png';
+$down: (170px, 103px, -170px, -103px, 31px, 18px, 221px, 121px, '/dist/img/sprite.png', 'down', );
+$griphon1-name: 'griphon1';
+$griphon1-x: 0px;
+$griphon1-y: 0px;
+$griphon1-offset-x: 0px;
+$griphon1-offset-y: 0px;
+$griphon1-width: 85px;
+$griphon1-height: 121px;
+$griphon1-total-width: 221px;
+$griphon1-total-height: 121px;
+$griphon1-image: '/dist/img/sprite.png';
+$griphon1: (0px, 0px, 0px, 0px, 85px, 121px, 221px, 121px, '/dist/img/sprite.png', 'griphon1', );
+$griphon2-name: 'griphon2';
+$griphon2-x: 85px;
+$griphon2-y: 0px;
+$griphon2-offset-x: -85px;
+$griphon2-offset-y: 0px;
+$griphon2-width: 85px;
+$griphon2-height: 121px;
+$griphon2-total-width: 221px;
+$griphon2-total-height: 121px;
+$griphon2-image: '/dist/img/sprite.png';
+$griphon2: (85px, 0px, -85px, 0px, 85px, 121px, 221px, 121px, '/dist/img/sprite.png', 'griphon2', );
+$safari-name: 'safari';
+$safari-x: 170px;
+$safari-y: 0px;
+$safari-offset-x: -170px;
+$safari-offset-y: 0px;
+$safari-width: 51px;
+$safari-height: 51px;
+$safari-total-width: 221px;
+$safari-total-height: 121px;
+$safari-image: '/dist/img/sprite.png';
+$safari: (170px, 0px, -170px, 0px, 51px, 51px, 221px, 121px, '/dist/img/sprite.png', 'safari', );
+$spritesheet-width: 221px;
+$spritesheet-height: 121px;
+$spritesheet-image: '/dist/img/sprite.png';
+$spritesheet-sprites: ($attach, $cart-img, $collapsed, $down, $griphon1, $griphon2, $safari, );
+$spritesheet: (221px, 121px, '/dist/img/sprite.png', $spritesheet-sprites, );
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+*/
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}
