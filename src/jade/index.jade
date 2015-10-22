@@ -186,24 +186,201 @@ html(lang="en").no-js
         .content_wrapper
             .about_on_main
                 .bordered
-                    span.big_heading о клинике доктора пеля
+                    span.big_heading О клинике доктора пеля
                     span.sep_afterheading
                     p К специалистам в центр медицинских услуг можно попасть, предварительно записавшись. Это помогает полностью ликвидировать очереди под кабинетами. У многих людей поход к врачу часто связан с определенным дискомфортом, потому что в таких ситуациях приходится рассказывать о своих нередко 
 
-            //- слайдер акций на главной. Первый слайдер (инициализируется по классу firsttype_slider_wrapper в main.js)
-            .firsttype_slider_wrapper
-                ul.slides
-                    li
-                        img(src="../../dist/img/testimage.jpg")
-                    li
-                        img(src="../../dist/img/testimage.jpg")
-                    li
-                        img(src="../../dist/img/testimage.jpg")
-                    li
-                        img(src="../../dist/img/testimage.jpg")
-                    li
-                        img(src="../../dist/img/testimage.jpg")
+            
 
+            //- главная обертка сладера/////////////////////////
+            .firsttype_slider_wrapper
+
+                //- // обертка для заголовка слайдера
+                .big_heading_for_slider
+
+                    //- костылек
+                    span.koStil &nbsp;
+                    span.big_heading Акции
+                    .wrapper_button_in_slider
+                        a(href="#").button_in_slider все акции
+
+                //- слайдер акций на главной. Первый слайдер (инициализируется по классу firsttype_slider в main.js)
+
+                .firsttype_slider
+                    ul.slides
+                        li
+                            .border_akc_slider_wrap
+                                .akc_slider_wrap
+                                    a(href="#")
+                                        img(src="../../dist/img/testimage.jpg")
+                            span.akc_heading_slide 
+                                a(href="#") стресс головные боли бессоница?
+                            span.akc_slider_sep
+                            p Остеопат. Без боли и лекарств, бесопасно и тол боли и лекарств
+                        li
+                            .border_akc_slider_wrap
+                                .akc_slider_wrap
+                                    a(href="#")
+                                        img(src="../../dist/img/testimage.jpg")
+                            span.akc_heading_slide 
+                                a(href="#") стресс головные боли бессоница?
+                            span.akc_slider_sep
+                            p Остеопат. Без боли и лекарств, бесопасно и только у нас!
+                        li
+                            .border_akc_slider_wrap
+                                .akc_slider_wrap
+                                    a(href="#")
+                                        img(src="../../dist/img/testimage.jpg")
+                            span.akc_heading_slide 
+                                a(href="#") стресс головные боли бессоница?
+                            span.akc_slider_sep
+                            p Остеопат. Без боли и лекарств, бесопасно и только у нас!
+                        li
+                            .border_akc_slider_wrap
+                                .akc_slider_wrap
+                                    a(href="#")
+                                        img(src="../../dist/img/testimage.jpg")
+                            span.akc_heading_slide 
+                                a(href="#") стресс головные боли бессоница?
+                            span.akc_slider_sep
+                            p Остеопат. Без боли и лекарств, бесопасно и только у нас!
+                        li
+                            .border_akc_slider_wrap
+                                .akc_slider_wrap
+                                    a(href="#")
+                                        img(src="../../dist/img/testimage.jpg")
+                            span.akc_heading_slide 
+                                a(href="#") стресс головные боли бессоницас головные боли бессо
+                            span.akc_slider_sep
+                            p Остеопат. Без боли и лекарств, бесопасно и только у нас!
+                        li
+                            .border_akc_slider_wrap
+                                .akc_slider_wrap
+                                    a(href="#")
+                                        img(src="../../dist/img/testimage.jpg")
+                            span.akc_heading_slide 
+                                a(href="#") стресс головные боли бессоница?
+                            span.akc_slider_sep
+                            p Остеопат. Без боли и лекарств, бесопасно и только у нас!
+                                //- вперед назад слайдреа
+                .custom-navigation
+                    a(href="javascript://").flex-prev
+                    //- пагинация слайдера
+                    a(href="javascript://").flex-next
+                .custom-controls-container
+
+            
+
+            //- главная обертка фотогалереи/////////////////////////
+            .gallery_slider_wrapper
+
+                //- // обертка для заголовка слайдера
+                .big_heading_for_slider
+
+                    span.big_heading Фотогалерея
+
+                //- слайдер акций на главной. Первый слайдер (инициализируется по классу gallerytype_slider в main.js)
+
+                .gallerytype_slider
+                    ul.slides
+                        li
+                            img(src="../../dist/img/slide1.jpg")
+                        li
+                            img(src="../../dist/img/slide1.jpg")
+                        li
+                            img(src="../../dist/img/slide1.jpg")
+                        li
+                            img(src="../../dist/img/slide1.jpg")
+                        li
+                            img(src="../../dist/img/slide1.jpg")
+                        li
+                            img(src="../../dist/img/slide1.jpg")
+
+                //- вперед назад слайдреа
+                .custom-navigation2
+                    a(href="javascript://").flex-prev
+                    //- пагинация слайдера
+                    a(href="javascript://").flex-next
+                .custom-controls-container2
+
+
+            //- главная обертка сладера/////////////////////////
+            .doctortype_slider_wrapper
+
+                //- // обертка для заголовка слайдера
+                .big_heading_for_slider
+
+                    //- костылек
+                    span.koStil &nbsp;
+                    span.big_heading Врачи клиники
+                    .wrapper_button_in_slider
+                        a(href="#").button_in_slider все врачи
+
+                //- слайдер акций на главной. Первый слайдер (инициализируется по классу firsttype_slider в main.js)
+                .wrap_doctor
+                    .border_doctor
+                        .doctortype_slider
+                            ul.slides
+                                li
+                                    .border_doctor_slider_wrap
+                                        .doctor_slider_wrap
+                                            a(href="#")
+                                                img(src="../../dist/img/testimage.jpg")
+                                    span.doctor_heading_slide 
+                                        a(href="#") стресс головные боли бессоница?
+                                    span.doctor_slider_sep
+                                    p Остеопат. Без боли и лекарств, бесопасно и тол боли и лекарств
+                                li
+                                    .border_doctor_slider_wrap
+                                        .doctor_slider_wrap
+                                            a(href="#")
+                                                img(src="../../dist/img/testimage.jpg")
+                                    span.doctor_heading_slide 
+                                        a(href="#") стресс головные боли бессоница?
+                                    span.doctor_slider_sep
+                                    p Остеопат. Без боли и лекарств, бесопасно и тол боли и лекарств
+                                li
+                                    .border_doctor_slider_wrap
+                                        .doctor_slider_wrap
+                                            a(href="#")
+                                                img(src="../../dist/img/testimage.jpg")
+                                    span.doctor_heading_slide 
+                                        a(href="#") стресс головные боли бессоница?
+                                    span.doctor_slider_sep
+                                    p Остеопат. Без боли и лекарств, бесопасно и тол боли и лекарств
+                                li
+                                    .border_doctor_slider_wrap
+                                        .doctor_slider_wrap
+                                            a(href="#")
+                                                img(src="../../dist/img/testimage.jpg")
+                                    span.doctor_heading_slide 
+                                        a(href="#") стресс головные боли бессоница?
+                                    span.doctor_slider_sep
+                                    p Остеопат. Без боли и лекарств, бесопасно и тол боли и лекарств
+                                li
+                                    .border_doctor_slider_wrap
+                                        .doctor_slider_wrap
+                                            a(href="#")
+                                                img(src="../../dist/img/testimage.jpg")
+                                    span.doctor_heading_slide 
+                                        a(href="#") стресс головные боли бессоница?
+                                    span.doctor_slider_sep
+                                    p Остеопат. Без боли и лекарств, бесопасно и тол боли и лекарств
+                                li
+                                    .border_doctor_slider_wrap
+                                        .doctor_slider_wrap
+                                            a(href="#")
+                                                img(src="../../dist/img/testimage.jpg")
+                                    span.doctor_heading_slide 
+                                        a(href="#") стресс головные боли бессоница?
+                                    span.doctor_slider_sep
+                                    p Остеопат. Без боли и лекарств, бесопасно и тол боли и лекарств
+                                        //- вперед назад слайдреа
+                        .custom-navigation3
+                            a(href="javascript://").flex-prev
+                            //- пагинация слайдера
+                            a(href="javascript://").flex-next
+                        .custom-controls-container3
 
 
 

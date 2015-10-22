@@ -12,13 +12,13 @@
 /* ====================================================================================================================
  * FONT-FACE
  * ====================================================================================================================*/
-@font-face {
+/*@font-face {
   font-family: 'flexslider-icon';
   src: url('fonts/flexslider-icon.eot');
   src: url('fonts/flexslider-icon.eot?#iefix') format('embedded-opentype'), url('fonts/flexslider-icon.woff') format('woff'), url('fonts/flexslider-icon.ttf') format('truetype'), url('fonts/flexslider-icon.svg#flexslider-icon') format('svg');
   font-weight: normal;
   font-style: normal;
-}
+}*/
 /* ====================================================================================================================
  * RESETS
  * ====================================================================================================================*/
@@ -195,7 +195,7 @@ html[xmlns] .flexslider .slides {
 }
 .flex-control-nav {
   width: 100%;
-  position: absolute;
+  /*position: absolute;*/
   bottom: -40px;
   text-align: center;
 }
@@ -206,11 +206,11 @@ html[xmlns] .flexslider .slides {
   *display: inline;
 }
 .flex-control-paging li a {
-  width: 11px;
-  height: 11px;
+  width: 13px;
+  height: 13px;
   display: block;
-  background: #666;
-  background: rgba(0, 0, 0, 0.5);
+  /* background: #666; */
+  /* background: rgba(0, 0, 0, 0.5); */
   cursor: pointer;
   text-indent: -9999px;
   -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
@@ -219,15 +219,14 @@ html[xmlns] .flexslider .slides {
   box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
-  border-radius: 20px;
+  border-radius: 40px;
 }
 .flex-control-paging li a:hover {
   background: #333;
   background: rgba(0, 0, 0, 0.7);
 }
 .flex-control-paging li a.flex-active {
-  background: #000;
-  background: rgba(0, 0, 0, 0.9);
+  background: #242121;
   cursor: default;
 }
 .flex-control-thumbs {
