@@ -548,7 +548,7 @@
                                 flex-flow: column nowrap;
                                 align-items: center;
                                 justify-content: space-around;
-                                width: 316px;
+                                // width: 316px;
                                 padding: 0;
                                 height: 100%;
                                 // при наведении на элемент слайдера
@@ -855,7 +855,7 @@
                                     flex-flow: column nowrap;
                                     align-items: center;
                                     justify-content: flex-start;
-                                    width: 298px;
+                                    // width: 298px;
                                     padding: 20px 0 20px 0;
                                     margin: 20px 0 20px 0;
                                     height: 100%;
@@ -1001,5 +1001,75 @@
             outline: 1px dotted red;
             background-color: $mainbrown;
             height: 400px;
+            .conts {
+                display: flex;
+                justify-content: space-around;
+                color: #fff;
+                .footercont {
+                    margin: 0 4em 0 0;
+                    padding: 0;
+                    display: block;
+                    width: 10em;
+                    // &:last-child {
+                    //     margin: 0;
+                    // }
+                    span {
+                        display: block;
+                        padding: 0 0 1.5em 0;
+                        margin: 0 0 0.5em 0;
+                        font-size: 1.2em;
+                        border-bottom: 1px solid #fff;
+                        font-family: $ptSerif;
+                        color: inherit;
+                    }
+                    li {
+                        list-style-position: inside;
+                        border: none;
+                        // list-style-image: none;
+                        display: list-item;
+                        list-style-type: disc;
+                        height: auto;
+                        width: auto;
+                        line-height: 1.9em;
+                        &:before {
+                            background-image: none;
+                            position: relative;
+                            height: none;
+                            width: none;
+                            right: none;
+                            content: none;
+                        }
+                        a {
+                            font-family: $openSans;
+                            border: none;
+                            height: initial;
+                            width: initial;
+                            background-color: inherit;
+                            font-size: 0.9em;
+                            text-transform: none;
+                            display: inline-block;
+                            color: inherit;
+                            &:hover {
+                                // color:inherit;
+                            }
+                        }
+                    }
+                }
+                .footermenu {
+                    span {
+                        color: inherit;
+                    }
+                    li {
+                        a {
+                            color: inherit;
+                        }
+                    }
+                }
+            }
+            .copyrght {
+                display: flex;
+                justify-content: space-between;
+                span {}
+            }
         }
     }
