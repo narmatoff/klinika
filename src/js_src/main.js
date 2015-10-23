@@ -10,7 +10,7 @@ $(document).ready(function() {
         itemWidth: 316,
         itemMargin: 0,
         // minItems: 3,
-        // maxItems: 3,
+        maxItems: 3,
         controlsContainer: $(".custom-controls-container"),
         customDirectionNav: $(".custom-navigation a")
     });
@@ -30,7 +30,7 @@ $(document).ready(function() {
         itemWidth: 298,
         itemMargin: 0,
         // minItems: 3,
-        // maxItems: 3,
+        maxItems: 3,
         controlsContainer: $(".custom-controls-container3"),
         customDirectionNav: $(".custom-navigation3 a")
     });

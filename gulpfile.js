@@ -223,7 +223,9 @@ gulp.task('bower', function() {
         .pipe(plumber())
 
     .pipe(wiredep({
-            directory: "dist/bower_components"
+            directory: "dist/bower_components",
+            // игнорируем путь для относительности путей
+            ignorePath: '../../dist/'
         }).on('error', gutil.log))
         .pipe(gulp.dest('src/jade/'))
         .pipe(connect.reload())

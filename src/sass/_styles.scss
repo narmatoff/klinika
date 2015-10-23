@@ -6,6 +6,21 @@
             width: 100%;
             // background-image: url("../img/svg/background_image.svg");
             // background-position: 0 50%;
+            // умолчания:
+            a,
+            {
+                outline: none;
+                border: none;
+            }
+            a,
+            div,
+            span,
+            li,
+            path {
+                transition: all 0.3s ease;
+            }
+            // white-space: nowrap;
+            // конец_умолчания
             .main_wrapper {
                 width: 100%;
                 // outline: 1px dotted red;
@@ -609,6 +624,10 @@
                             background-image: url("../img/svg/navigation_button.svg");
                             width: 50px;
                             height: 50px;
+                            border-radius: 50%;
+                            &:hover {
+                                background-color: $lightenbrown2;
+                            }
                             &:first-child {
                                 transform: rotate(180deg);
                             }
@@ -712,8 +731,9 @@
                         display: block;
                         width: 50px;
                         height: 50px;
-                        outline: none;
-                        border: none;
+                        &:hover {
+                            opacity: 0.8;
+                        }
                         &.flex-prev {
                             @include sprite($photo_leftarrow);
                         }
@@ -732,7 +752,6 @@
                         // background-color: #ccc;
                         li {
                             a {
-                                outline: none;
                                 border: none;
                             }
                         }
@@ -812,11 +831,10 @@
                 .wrap_doctor {
                     width: 100%;
                     background-color: $lightenbrown;
-
                     .border_doctor {
                         border: 1px solid #c4beb5;
-                        margin:5px;
-
+                        margin: 8px;
+                        padding: 0 0 0 0;
                         .doctortype_slider {
                             position: relative;
                             zoom: 1;
@@ -827,7 +845,7 @@
                             align-items: center;
                             width: 894px;
                             z-index: 2;
-                            height: 515px;
+                            height: 480px;
                             margin: 0 auto;
                             .slides {
                                 height: 100%;
@@ -836,62 +854,98 @@
                                     display: flex !important;
                                     flex-flow: column nowrap;
                                     align-items: center;
-                                    justify-content: space-around;
+                                    justify-content: flex-start;
                                     width: 298px;
-                                    padding: 0;
+                                    padding: 20px 0 20px 0;
+                                    margin: 20px 0 20px 0;
                                     height: 100%;
                                     // при наведении на элемент слайдера
                                     &:hover {
                                         background-color: #fff;
                                         .border_doctor_slider_wrap {
-                                            border: 4px solid $redColor;
+                                            // border: 4px solid $redColor;
                                             .doctor_slider_wrap {
-                                                border: 3px solid $redColor;
+                                                // border: 3px solid $redColor;
                                                 img {}
+                                                svg {
+                                                    path {
+                                                        &:nth-child(2) {
+                                                            fill: #fff;
+                                                        }
+                                                        &:last-child {
+                                                            fill: red;
+                                                        }
+                                                    }
+                                                }
                                             }
                                         }
                                     }
                                     .border_doctor_slider_wrap {
                                         padding: 5px;
-                                        border-radius: 50%;
-                                        border: 4px solid $lightenbrown0;
-                                        background-color: $lightenmiddlebrown;
+                                        // border-radius: 50%;
+                                        // border: 4px solid $lightenbrown0;
+                                        // background-color: $lightenmiddlebrown;
+                                        // mask: url(#doctors);
+                                        // mask: url(#a);
+                                        margin: 0 0 1.4em 0;
                                         .doctor_slider_wrap {
-                                            border: 3px solid $lightenbrown0;
+                                            // border: 3px solid $lightenbrown0;
                                             width: 198px;
                                             height: 198px;
                                             overflow: hidden;
-                                            border-radius: 50%;
+                                            // border-radius: 50%;
                                             display: flex;
                                             flex-flow: row nowrap;
                                             align-items: center;
                                             justify-content: center;
                                             margin: 0;
-                                            img {}
+                                            position: relative;
+                                            img {
+                                                // clip-path: url(#doctors);
+                                                // mask-border: url("./img/svg/doctor_border.svg") 35 repeat;
+                                            }
+                                            svg {
+                                                position: absolute;
+                                                z-index: 1;
+                                                left: 0;
+                                                bottom: 0;
+                                                path {
+                                                    &:first-child {
+                                                        // fill:red;
+                                                    }
+                                                }
+                                            }
                                         }
                                     }
                                     .doctor_heading_slide {
                                         text-align: center;
-                                        margin: 20px 0 0 0;
-                                        a {
-                                            font-family: $ptSerif;
-                                            text-transform: uppercase;
-                                            font-size: 1.1em;
-                                            text-decoration: none;
-                                            color: $fontcolor;
+                                        margin: 0 0 1.2em 0;
+                                        border-top: 2px solid darken($lightenmiddlebrown2, 10%);
+                                        border-bottom: 2px solid $lightenmiddlebrown2;
+                                        display: block;
+                                        width: 90%;
+                                        .doctor_heading_slide_insbord {
+                                            border-top: 1px solid $lightenmiddlebrown2;
+                                            border-bottom: 1px solid $lightenmiddlebrown2;
+                                            display: block;
+                                            width: 95%;
+                                            margin: 2px auto 2px auto;
+                                            padding: 10px 0 10px 0;
+                                            a {
+                                                font-family: $ptSerif;
+                                                text-transform: capitalize;
+                                                font-size: 1.1em;
+                                                text-decoration: none;
+                                                color: $fontcolor;
+                                            }
                                         }
-                                    }
-                                    .doctor_slider_sep {
-                                        background-image: url("../img/svg/akc_slider_sep.svg");
-                                        background-repeat: no-repeat;
-                                        width: 94px;
-                                        height: 26px;
-                                        margin: 30px 0 15px 0;
                                     }
                                     p {
                                         width: 230px;
                                         color: $lightFontcolor;
                                         font-size: 0.9em;
+                                        margin: 0;
+                                        text-align: center;
                                     }
                                 }
                             }
@@ -901,20 +955,25 @@
                 // вперед/назад
                 // // пагинация слайдера
                 .custom-navigation3 {
-                    position: absolute;
-                    bottom: 17em;
-                    left: 0;
-                    width: 100%;
+                    position: relative;
+                    bottom: 12.5em;
+                    // left: 0;
+                    width: 94%;
                     display: flex;
                     flex-flow: row nowrap;
                     justify-content: space-between;
                     align-items: center;
+                    margin: 0 auto;
                     a {
                         color: red;
                         display: block;
                         background-image: url("../img/svg/navigation_button.svg");
                         width: 50px;
                         height: 50px;
+                        border-radius: 50%;
+                        &:hover {
+                            background-color: $lightenbrown2;
+                        }
                         &:first-child {
                             transform: rotate(180deg);
                         }
@@ -922,7 +981,7 @@
                 }
                 .custom-controls-container3 {
                     width: 100%;
-                    margin: 3em 0 0 0;
+                    margin: 0 0 2em 0;
                     .flex-control-nav.flex-control-paging {
                         // background-color: #ccc;
                         li {

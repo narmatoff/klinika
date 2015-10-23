@@ -6,183 +6,18 @@ html(lang="en").no-js
     meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
     meta(charset="utf-8")
     // bower:css
-    link(rel='stylesheet', href='../../dist/bower_components/normalize-css/normalize.css')
-    link(rel='stylesheet', href='../../dist/bower_components/flexslider/flexslider.css')
-    link(rel='stylesheet', href='../../dist/bower_components/fancybox3/jquery.fancybox.css')
+    link(rel='stylesheet', href='bower_components/normalize-css/normalize.css')
+    link(rel='stylesheet', href='bower_components/flexslider/flexslider.css')
+    link(rel='stylesheet', href='bower_components/fancybox3/jquery.fancybox.css')
     // endbower
     link(rel='stylesheet', href='css/main.css')
     
   body
-
     //- обертка
     .main_wrapper
-        header
-
-            //- главнове меню
-            .topmenu
-                ul
-                    li
-                        a(href="#") О нас
-                        ul.topsubmenu
-                            li
-                                a(href="#") Первый пункт
-                            li
-                                a(href="#") Второй пункт
-                            li
-                                a(href="#") Третий пункт
-                            li
-                                a(href="#") Четвертый пункт
-                            li
-                                a(href="#") Первый пункт
-                            li
-                                a(href="#") Второй пункт
-                            li
-                                a(href="#") Третий пункт
-                            li
-                                a(href="#") Четвертый пункт
-                    li
-                        a(href="#") Врачи
-                    li
-                        a(href="#") Прайс
-                    li
-                        a(href="#") Вопрос-ответ
-
-                        //- подменю нлавного меню
-                        ul.topsubmenu
-                            li
-                                a(href="#") Первый пункт
-                            li
-                                a(href="#") Второй пункт
-                            li
-                                a(href="#") Третий пункт
-                            li
-                                a(href="#") Четвертый пункт
-                     li 
-                        a(href="#") Контакты
-            //- верхний блок с адресом и логотипом
-            .topinfoblock
-                .left_griphon
-                .address_block
-                    p 
-                        |Санкт-Петербург, 7-ая линия В.О.,д. 16-18
-                a(href="#")
-                    img.main_logo(src="./img/svg/main_logo.svg")
-                .phone_block
-                    p 
-                        a(href="tel:873287283")
-                            | (812) 323-04-45
-                        br
-                        a(href="tel:873287283")
-                            | (812) 958-02-27
-                .right_griphon
-
-                    //- главное меню и 2 кнопки
-            .main_menu_wrapper
-                .main_menu
-                    ul
-                        li
-                            a(href="#") Взрослое направление
-
-                            //- обертка подменю
-                            .main_menu_list_items
-                                
-                                //- подменю
-                                ul.mainsubmenu
-                                    li
-                                        a(href="#") Гастроэкология
-                                    li
-                                        a(href="#") Гинекология
-                                    li
-                                        a(href="#") Стомотология
-                                    li
-                                        a(href="#") Терапия
-                                    li
-                                        a(href="#") Кардиология
-                                    li
-                                        a(href="#") Педиятрия
-                                    li
-                                        a(href="#") Урология
-                                    li
-                                        a(href="#") Хирургия
-                                    li
-                                        a(href="#") Психотерапия
-                                    li
-                                        a(href="#") Унализы
-                           li
-                            a(href="#") Детсткое направление
-
-                            .main_menu_list_items
-
-                                ul.mainsubmenu
-                                    li
-                                        a(href="#") Гастроэкология
-                                    li
-                                        a(href="#") Гинекология
-                                    li
-                                        a(href="#") Стомотология
-                                    li
-                                        a(href="#") Терапия
-                                    li
-                                        a(href="#") Кардиология
-                                    li
-                                        a(href="#") Педиятрия
-                                    li
-                                        a(href="#") Урология
-                                    li
-                                        a(href="#") Хирургия
-                                    li
-                                        a(href="#") Психотерапия
-                                    li
-                                        a(href="#") Унализы
-                                ul.mainsubmenu
-                                    li
-                                        a(href="#") Первый пункт
-                                    li
-                                        a(href="#") Второй пункт
-                                    li
-                                        a(href="#") Третий пункт
-                                    li
-                                        a(href="#") Четвертый пункт
-                                    li
-                                        a(href="#") Первый пункт
-                                    li
-                                        a(href="#") Второй пункт
-                                    li
-                                        a(href="#") Третий пункт
-                                    li
-                                        a(href="#") Четвертый пункт
-                                ul.mainsubmenu
-                                    span Диагностика
-                                    li
-                                        a(href="#") Первый пункт
-                                    li
-                                        a(href="#") Второй пункт
-                                    li
-                                        a(href="#") Третий пункт
-                                    li 
-                                        a(href="#") Четвертый пункт
-                                    li
-                                        a(href="#") Первый пункт
-                                    li
-                                        a(href="#") Второй пункт
-                                    li
-                                        a(href="#") Третий пункт
-                                    li
-                                        a(href="#") Четвертый пункт
-
-
-                        li
-                            a(href="#") Комплексное лечение
-                        li
-                            a(href="#") Корпоративным клиентам
-
-                    
-                .top_buttons
-                    a(href="#").zapis записаться
-                        span.arrow_top_buttons
-                    a(href="#").nadom вызов на дом
-                        span.arrow_top_buttons
-        //- обертка для контента
+        //- шапка
+        include includes/head.jade
+        //- обертка для контента (главной)
         .content_wrapper
             .about_on_main
                 .bordered
@@ -212,7 +47,7 @@ html(lang="en").no-js
                             .border_akc_slider_wrap
                                 .akc_slider_wrap
                                     a(href="#")
-                                        img(src="../../dist/img/testimage.jpg")
+                                        img(src="img/testimage.jpg")
                             span.akc_heading_slide 
                                 a(href="#") стресс головные боли бессоница?
                             span.akc_slider_sep
@@ -221,7 +56,7 @@ html(lang="en").no-js
                             .border_akc_slider_wrap
                                 .akc_slider_wrap
                                     a(href="#")
-                                        img(src="../../dist/img/testimage.jpg")
+                                        img(src="img/testimage.jpg")
                             span.akc_heading_slide 
                                 a(href="#") стресс головные боли бессоница?
                             span.akc_slider_sep
@@ -230,7 +65,7 @@ html(lang="en").no-js
                             .border_akc_slider_wrap
                                 .akc_slider_wrap
                                     a(href="#")
-                                        img(src="../../dist/img/testimage.jpg")
+                                        img(src="img/testimage.jpg")
                             span.akc_heading_slide 
                                 a(href="#") стресс головные боли бессоница?
                             span.akc_slider_sep
@@ -239,7 +74,7 @@ html(lang="en").no-js
                             .border_akc_slider_wrap
                                 .akc_slider_wrap
                                     a(href="#")
-                                        img(src="../../dist/img/testimage.jpg")
+                                        img(src="img/testimage.jpg")
                             span.akc_heading_slide 
                                 a(href="#") стресс головные боли бессоница?
                             span.akc_slider_sep
@@ -248,7 +83,7 @@ html(lang="en").no-js
                             .border_akc_slider_wrap
                                 .akc_slider_wrap
                                     a(href="#")
-                                        img(src="../../dist/img/testimage.jpg")
+                                        img(src="img/testimage.jpg")
                             span.akc_heading_slide 
                                 a(href="#") стресс головные боли бессоницас головные боли бессо
                             span.akc_slider_sep
@@ -257,7 +92,7 @@ html(lang="en").no-js
                             .border_akc_slider_wrap
                                 .akc_slider_wrap
                                     a(href="#")
-                                        img(src="../../dist/img/testimage.jpg")
+                                        img(src="img/testimage.jpg")
                             span.akc_heading_slide 
                                 a(href="#") стресс головные боли бессоница?
                             span.akc_slider_sep
@@ -284,17 +119,17 @@ html(lang="en").no-js
                 .gallerytype_slider
                     ul.slides
                         li
-                            img(src="../../dist/img/slide1.jpg")
+                            img(src="img/slide1.jpg")
                         li
-                            img(src="../../dist/img/slide1.jpg")
+                            img(src="img/slide1.jpg")
                         li
-                            img(src="../../dist/img/slide1.jpg")
+                            img(src="img/slide1.jpg")
                         li
-                            img(src="../../dist/img/slide1.jpg")
+                            img(src="img/slide1.jpg")
                         li
-                            img(src="../../dist/img/slide1.jpg")
+                            img(src="img/slide1.jpg")
                         li
-                            img(src="../../dist/img/slide1.jpg")
+                            img(src="img/slide1.jpg")
 
                 //- вперед назад слайдреа
                 .custom-navigation2
@@ -325,55 +160,66 @@ html(lang="en").no-js
                                     .border_doctor_slider_wrap
                                         .doctor_slider_wrap
                                             a(href="#")
-                                                img(src="../../dist/img/testimage.jpg")
-                                    span.doctor_heading_slide 
-                                        a(href="#") стресс головные боли бессоница?
-                                    span.doctor_slider_sep
+                                                img(src="img/testimage.jpg")
+                                                include includes/doctor_border.jade
+
+                                    span.doctor_heading_slide
+                                        span.doctor_heading_slide_insbord
+                                            a(href="#") стресс головные боли бессоница?
                                     p Остеопат. Без боли и лекарств, бесопасно и тол боли и лекарств
                                 li
                                     .border_doctor_slider_wrap
                                         .doctor_slider_wrap
                                             a(href="#")
-                                                img(src="../../dist/img/testimage.jpg")
-                                    span.doctor_heading_slide 
-                                        a(href="#") стресс головные боли бессоница?
-                                    span.doctor_slider_sep
+                                                img(src="img/testimage.jpg")
+                                                include includes/doctor_border.jade
+
+                                    span.doctor_heading_slide
+                                        span.doctor_heading_slide_insbord
+                                            a(href="#") стресс головные боли бессоница?
                                     p Остеопат. Без боли и лекарств, бесопасно и тол боли и лекарств
                                 li
                                     .border_doctor_slider_wrap
                                         .doctor_slider_wrap
                                             a(href="#")
-                                                img(src="../../dist/img/testimage.jpg")
-                                    span.doctor_heading_slide 
-                                        a(href="#") стресс головные боли бессоница?
-                                    span.doctor_slider_sep
+                                                img(src="img/testimage.jpg")
+                                                include includes/doctor_border.jade
+
+                                    span.doctor_heading_slide
+                                        span.doctor_heading_slide_insbord
+                                            a(href="#") стресс головные боли бессоница?
                                     p Остеопат. Без боли и лекарств, бесопасно и тол боли и лекарств
                                 li
                                     .border_doctor_slider_wrap
                                         .doctor_slider_wrap
                                             a(href="#")
-                                                img(src="../../dist/img/testimage.jpg")
-                                    span.doctor_heading_slide 
-                                        a(href="#") стресс головные боли бессоница?
-                                    span.doctor_slider_sep
+                                                img(src="img/testimage.jpg")
+                                                include includes/doctor_border.jade
+
+                                    span.doctor_heading_slide
+                                        span.doctor_heading_slide_insbord
+                                            a(href="#") стресс головные боли бессоница?
                                     p Остеопат. Без боли и лекарств, бесопасно и тол боли и лекарств
                                 li
                                     .border_doctor_slider_wrap
                                         .doctor_slider_wrap
                                             a(href="#")
-                                                img(src="../../dist/img/testimage.jpg")
-                                    span.doctor_heading_slide 
-                                        a(href="#") стресс головные боли бессоница?
-                                    span.doctor_slider_sep
+                                                img(src="img/testimage.jpg")
+                                                include includes/doctor_border.jade
+
+                                    span.doctor_heading_slide
+                                        span.doctor_heading_slide_insbord
+                                            a(href="#") стресс головные боли бессоница?
                                     p Остеопат. Без боли и лекарств, бесопасно и тол боли и лекарств
                                 li
                                     .border_doctor_slider_wrap
                                         .doctor_slider_wrap
                                             a(href="#")
-                                                img(src="../../dist/img/testimage.jpg")
-                                    span.doctor_heading_slide 
-                                        a(href="#") стресс головные боли бессоница?
-                                    span.doctor_slider_sep
+                                                img(src="img/testimage.jpg")
+                                                include includes/doctor_border.jade
+                                    span.doctor_heading_slide
+                                        span.doctor_heading_slide_insbord
+                                            a(href="#") стресс головные боли бессоница?
                                     p Остеопат. Без боли и лекарств, бесопасно и тол боли и лекарств
                                         //- вперед назад слайдреа
                         .custom-navigation3
@@ -381,10 +227,11 @@ html(lang="en").no-js
                             //- пагинация слайдера
                             a(href="javascript://").flex-next
                         .custom-controls-container3
+                        
 
 
 
-        .footer_wrapper 312
+        include includes/footer_wrapper.jade
 
 
 
@@ -392,9 +239,9 @@ html(lang="en").no-js
 
     //- before body///////////////////////////////////////////////////////////////////////////////////////
     // bower:js
-    script(src='../../dist/bower_components/jquery/dist/jquery.js')
-    script(src='../../dist/bower_components/flexslider/jquery.flexslider.js')
-    script(src='../../dist/bower_components/fancybox3/jquery.fancybox.js')
+    script(src='bower_components/jquery/dist/jquery.js')
+    script(src='bower_components/flexslider/jquery.flexslider.js')
+    script(src='bower_components/fancybox3/jquery.fancybox.js')
     // endbower
     //- end before body
 

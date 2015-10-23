@@ -1,8 +1,8 @@
 // vars for media-queries
 // exampl:
-// 		@include screen($littleboy-min, $littleboy-max){
-// 			background-color: #000;
-// 		}
+//      @include screen($littleboy-min, $littleboy-max){
+//          background-color: #000;
+//      }
 $littleboy-min: 0px;
 $littleboy-max: 480px;
 ////////////////////////////////
@@ -12,28 +12,25 @@ $middleboy-max: 568px;
 $olderboy-min: 414px;
 $olderboy-max: 736px;
 //////////////////////////////
-
 $mainWidt:1150px;
-
 // main colors
 $fontcolor:#373838;
 $lightenbrown0:#f1ecdd;
 $lightenbrown:#EFEADB;
 $lightenmiddlebrown:#E4D8C1;
+$lightenmiddlebrown2:rgba(116, 109, 109, 0.6);
 $lightenbrown2:#FBDD96;
 $lightFontcolor:#746d6d;
 $navitemcolor:#736C6C;
 $mainbrown:#5D3737;
 $redColor:#f24949;
-
-
-
 // Google Fonts
 // opensans
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700&subset=latin,cyrillic);
-$openSans:'Open Sans', sans-serif;
-
+$openSans:'Open Sans',
+sans-serif;
 // ptserif
 @import url(https://fonts.googleapis.com/css?family=PT+Serif&subset=latin,cyrillic);
 // @import url(https://fonts.googleapis.com/css?family=PT+Serif+Caption&subset=latin,cyrillic);
-$ptSerif:'PT Serif Caption', serif;
+$ptSerif:'PT Serif Caption',
+serif;
