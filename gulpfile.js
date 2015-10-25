@@ -7,7 +7,7 @@ var gulp = require('gulp'),
     rename = require("gulp-rename"),
     autoprefixer = require('gulp-autoprefixer'),
     livereload = require('gulp-livereload'),
-    // notify = require("gulp-notify"),
+    notify = require("gulp-notify"),
     path = require('path'),
     // uncss = require('gulp-uncss'),
     // LessPluginCleanCSS = require('less-plugin-clean-css'),
@@ -56,8 +56,8 @@ gulp.task('jade', function() {
         }).on('error', gutil.log))
         .pipe(connect.reload())
         .pipe(livereload())
-        .pipe(gulp.dest('dist/'));
-    // .pipe(notify("jade готов!"));
+        .pipe(gulp.dest('dist/'))
+    .pipe(notify("jade готов!"));
 
 });
 
@@ -100,8 +100,8 @@ gulp.task('lint', function() {
         .pipe(rename({
             suffix: '.min'
         }))
-        .pipe(gulp.dest('dist/js'));
-    // .pipe(notify("js готов!"));
+        .pipe(gulp.dest('dist/js'))
+    .pipe(notify("js готов!"));
 });
 
 // sass
@@ -125,8 +125,8 @@ gulp.task('sass', function() {
         //}))
         .pipe(gulp.dest('dist/css'))
         .pipe(connect.reload())
-        .pipe(livereload());
-    // .pipe(notify("sass готов!"));
+        .pipe(livereload())
+    .pipe(notify("sass готов!"));
 });
 
 
@@ -159,8 +159,8 @@ gulp.task('sprite', function() {
     // Return a merged stream to handle both `end` events 
     return merge(imgStream, cssStream)
         .pipe(connect.reload())
-        .pipe(livereload());
-    // .pipe(notify("sprite готов!"));
+        .pipe(livereload())
+    .pipe(notify("sprite готов!"));
 });
 
 // svgsprites
@@ -191,8 +191,8 @@ gulp.task('imagemin', function() {
         }))
         .pipe(gulp.dest('dist/img'))
         .pipe(connect.reload())
-        .pipe(livereload());
-    // .pipe(notify("imagemin готов!"));
+        .pipe(livereload())
+    .pipe(notify("imagemin готов!"));
 });
 
 // svgmin
@@ -210,8 +210,8 @@ gulp.task('svgmin', function() {
                 removeComments: true
             }]
         }).on('error', gutil.log))
-        .pipe(gulp.dest('dist/img/svg'));
-    // .pipe(notify("svgmin готов!"));
+        .pipe(gulp.dest('dist/img/svg'))
+    .pipe(notify("svgmin готов!"));
 
 });
 
@@ -229,8 +229,8 @@ gulp.task('bower', function() {
         }).on('error', gutil.log))
         .pipe(gulp.dest('src/jade/'))
         .pipe(connect.reload())
-        .pipe(livereload());
-    // .pipe(notify("bower готов!"));
+        .pipe(livereload())
+    .pipe(notify("bower готов!"));
 });
 
 // connect

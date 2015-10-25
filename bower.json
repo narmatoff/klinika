@@ -21,7 +21,7 @@
   "dependencies": {
     "normalize-css": "~3.0.3",
     "jquery": "2.1.4",
-    "flexslider": "~2.5.0",
-    "fancybox3": "*"
+    "fancybox3": "*",
+    "slick-carousel": "~1.5.8"
   }
 }

@@ -1,18 +1,19 @@
 doctype html/
 html(lang="en").no-js
-  head
-    title Клиника Пеля
-    
-    meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
-    meta(charset="utf-8")
-    // bower:css
-    link(rel='stylesheet', href='bower_components/normalize-css/normalize.css')
-    link(rel='stylesheet', href='bower_components/flexslider/flexslider.css')
-    link(rel='stylesheet', href='bower_components/fancybox3/jquery.fancybox.css')
-    // endbower
-    link(rel='stylesheet', href='css/main.css')
-    
-  body
+    head
+        title Клиника Пеля
+
+        meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
+        meta(charset="utf-8")
+        // bower:css
+        link(rel='stylesheet', href='bower_components/normalize-css/normalize.css')
+        link(rel='stylesheet', href='bower_components/fancybox3/jquery.fancybox.css')
+        link(rel='stylesheet', href='bower_components/slick-carousel/slick/slick.css')
+        link(rel='stylesheet', href='bower_components/slick-carousel/slick/slick-theme.css')
+        // endbower
+        link(rel='stylesheet', href='css/main.css')
+
+    body
     //- обертка
     .main_wrapper
         //- шапка
@@ -44,8 +45,8 @@ html(lang="en").no-js
                 .firsttype_slider
                     ul.slides
                         li
-                            .border_akc_slider_wrap
-                                .akc_slider_wrap
+                            span.border_akc_slider_wrap
+                                span.akc_slider_wrap
                                     a(href="#")
                                         img(src="img/testimage.jpg")
                             span.akc_heading_slide 
@@ -53,8 +54,8 @@ html(lang="en").no-js
                             span.akc_slider_sep
                             p Остеопат. Без боли и лекарств, бесопасно и тол боли и лекарств
                         li
-                            .border_akc_slider_wrap
-                                .akc_slider_wrap
+                            span.border_akc_slider_wrap
+                                span.akc_slider_wrap
                                     a(href="#")
                                         img(src="img/testimage.jpg")
                             span.akc_heading_slide 
@@ -62,8 +63,8 @@ html(lang="en").no-js
                             span.akc_slider_sep
                             p Остеопат. Без боли и лекарств, бесопасно и только у нас!
                         li
-                            .border_akc_slider_wrap
-                                .akc_slider_wrap
+                            span.border_akc_slider_wrap
+                                span.akc_slider_wrap
                                     a(href="#")
                                         img(src="img/testimage.jpg")
                             span.akc_heading_slide 
@@ -71,8 +72,8 @@ html(lang="en").no-js
                             span.akc_slider_sep
                             p Остеопат. Без боли и лекарств, бесопасно и только у нас!
                         li
-                            .border_akc_slider_wrap
-                                .akc_slider_wrap
+                            span.border_akc_slider_wrap
+                                span.akc_slider_wrap
                                     a(href="#")
                                         img(src="img/testimage.jpg")
                             span.akc_heading_slide 
@@ -80,8 +81,8 @@ html(lang="en").no-js
                             span.akc_slider_sep
                             p Остеопат. Без боли и лекарств, бесопасно и только у нас!
                         li
-                            .border_akc_slider_wrap
-                                .akc_slider_wrap
+                            span.border_akc_slider_wrap
+                                span.akc_slider_wrap
                                     a(href="#")
                                         img(src="img/testimage.jpg")
                             span.akc_heading_slide 
@@ -89,22 +90,15 @@ html(lang="en").no-js
                             span.akc_slider_sep
                             p Остеопат. Без боли и лекарств, бесопасно и только у нас!
                         li
-                            .border_akc_slider_wrap
-                                .akc_slider_wrap
+                            span.border_akc_slider_wrap
+                                span.akc_slider_wrap
                                     a(href="#")
                                         img(src="img/testimage.jpg")
                             span.akc_heading_slide 
                                 a(href="#") стресс головные боли бессоница?
                             span.akc_slider_sep
                             p Остеопат. Без боли и лекарств, бесопасно и только у нас!
-                                //- вперед назад слайдреа
-                .custom-navigation
-                    a(href="javascript://").flex-prev
-                    //- пагинация слайдера
-                    a(href="javascript://").flex-next
-                .custom-controls-container
 
-            
 
             //- главная обертка фотогалереи/////////////////////////
             .gallery_slider_wrapper
@@ -124,20 +118,6 @@ html(lang="en").no-js
                             img(src="img/slide1.jpg")
                         li
                             img(src="img/slide1.jpg")
-                        li
-                            img(src="img/slide1.jpg")
-                        li
-                            img(src="img/slide1.jpg")
-                        li
-                            img(src="img/slide1.jpg")
-
-                //- вперед назад слайдреа
-                .custom-navigation2
-                    a(href="javascript://").flex-prev
-                    //- пагинация слайдера
-                    a(href="javascript://").flex-next
-                .custom-controls-container2
-
 
             //- главная обертка сладера/////////////////////////
             .doctortype_slider_wrapper
@@ -221,14 +201,6 @@ html(lang="en").no-js
                                         span.doctor_heading_slide_insbord
                                             a(href="#") стресс головные боли бессоница?
                                     p Остеопат. Без боли и лекарств, бесопасно и тол боли и лекарств
-                                        //- вперед назад слайдреа
-                        .custom-navigation3
-                            a(href="javascript://").flex-prev
-                            //- пагинация слайдера
-                            a(href="javascript://").flex-next
-                        .custom-controls-container3
-                        
-
 
 
         include includes/footer_wrapper.jade
@@ -241,8 +213,8 @@ html(lang="en").no-js
     //- before body///////////////////////////////////////////////////////////////////////////////////////
     // bower:js
     script(src='bower_components/jquery/dist/jquery.js')
-    script(src='bower_components/flexslider/jquery.flexslider.js')
     script(src='bower_components/fancybox3/jquery.fancybox.js')
+    script(src='bower_components/slick-carousel/slick/slick.min.js')
     // endbower
     //- end before body
 
