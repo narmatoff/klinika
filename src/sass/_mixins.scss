@@ -1,0 +1,35 @@
+//MQ_variables
+$small: 480px;
+$large: $mainWidt;
+@mixin respond-to($media) {
+    @if $media==handhelds {
+        @media only screen and (max-width: $small) {
+            @content;
+        }
+    }
+    @else if $media==medium-screens {
+        @media only screen and (min-width: $small + 220) and (max-width: $large - 1) {
+            @content;
+        }
+    }
+    @else if $media==wide-screens {
+        @media only screen and (min-width: $large) {
+            @content;
+        }
+    }
+}
+
+// // test media
+// @include respond-to(handhelds) {
+//     color: red;
+// }
+
+// @include respond-to(medium-screens) {
+//     color: green;
+// }
+
+// @include respond-to(wide-screens) {
+//     color: yellow;
+// }
+
+// // test media

@@ -2,7 +2,7 @@ $(document).ready(function() {
 
     // fancybox
     $(".fancybox").fancybox();
-// слайдер услуг
+    // слайдер услуг
     $('.firsttype_slider>.slides').slick({
         dots: true,
         infinite: false,
@@ -11,10 +11,45 @@ $(document).ready(function() {
         slidesToScroll: 3,
         // centerMode: true,
         variableWidth: true,
-        autoplay: false
+        autoplay: false,
+        responsive: [{
+                breakpoint: 1150,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    infinite: true,
+                    dots: true
+                }
+            }, {
+                breakpoint: 775,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                }
+            }, {
+                breakpoint: 700,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: false
+                }
+            }, {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+        ]
     });
 
-// слайдер галереи
+    // слайдер галереи
     $('.gallerytype_slider>.slides').slick({
         dots: true,
         infinite: true,
@@ -24,7 +59,7 @@ $(document).ready(function() {
     });
 
 
-// слайдер врачей
+    // слайдер врачей
     $('.doctortype_slider>.slides').slick({
         dots: true,
         infinite: false,
@@ -33,7 +68,42 @@ $(document).ready(function() {
         slidesToScroll: 3,
         // centerMode: true,
         variableWidth: true,
-        autoplay: false
+        autoplay: false,
+        responsive: [{
+                breakpoint: 1150,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    infinite: true,
+                    dots: true
+                }
+            }, {
+                breakpoint: 775,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                }
+            }, {
+                breakpoint: 700,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: false
+                }
+            }, {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+            // You can unslick at a given breakpoint now by adding:
+            // settings: "unslick"
+            // instead of a settings object
+        ]
     });
 
 });

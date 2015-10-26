@@ -60,15 +60,21 @@
                             // margin: 0;
                             padding: 0;
                             height: 100%;
+                            @include respond-to(medium-screens) {
+                                width: 92.73%;
+                            }
                             li {
                                 position: relative;
                                 margin: 0 0 0 0;
-                                padding: 0;
+                                padding: 0em 3.3% 0 2%;
                                 list-style-image: url("../img/svg/septopmenu.svg");
                                 height: 100%;
                                 // transition: all 0.1s linear;
                                 // outline: 1px dotted red;
                                 z-index: 2;
+                                @include respond-to(medium-screens) {
+                                    padding: 0em 4% 0 2%;
+                                }
                                 &:first-child {
                                     list-style-image: none;
                                     // margin: 0;
@@ -83,12 +89,15 @@
                                 a {
                                     color: $fontcolor;
                                     text-decoration: none;
-                                    padding: 0.4em 2.8em 0 1.8em;
+                                    padding: 0.4em 0;
                                     // color: #fff;
                                     // padding: 15px 0 0 0;
                                     display: block;
                                     width: 100%;
                                     height: 85%;
+                                    @include respond-to(medium-screens) {
+                                        padding: 0.4em 0;
+                                    }
                                 }
                                 .topsubmenu {
                                     display: none;
@@ -139,17 +148,23 @@
                         padding: 1em 0 1em 0;
                         display: flex;
                         flex-flow: row wrap;
-                        justify-content: space-around;
+                        justify-content: space-between;
                         align-items: center;
                         font-family: $ptSerif;
                         font-weight: normal;
                         font-size: 1em;
+                        @include respond-to(medium-screens) {
+                            width: 92.73%;
+                        }
                         .left_griphon {
                             // @include sprite($griphon1);
                             background-image: url('../img/svg/Gryphon-l.svg');
                             background-repeat: no-repeat;
                             height: 121px;
                             width: 85px;
+                            @include respond-to(medium-screens) {
+                                display: none;
+                            }
                         }
                         .right_griphon {
                             // @include sprite($griphon2);
@@ -158,6 +173,9 @@
                             background-repeat: no-repeat;
                             height: 121px;
                             width: 85px;
+                            @include respond-to(medium-screens) {
+                                display: none;
+                            }
                         }
                         .address_block {
                             width: 200px;
@@ -165,16 +183,22 @@
                                 color: #fff;
                                 display: list-item;
                                 list-style-image: url("../img/svg/addr_baloon.svg");
+                                display: list-item;
+                                list-style-position: inside;
+                                text-align: right;
                                 a {
                                     text-decoration: none;
                                 }
                             }
                         }
                         .phone_block {
-                            width: 200px;
+                            // width: 200px;
+                            width: auto;
                             p {
                                 display: list-item;
+                                list-style-position: inside;
                                 list-style-image: url("../img/svg/phone_baloon.svg");
+                                text-align: right;
                                 a {
                                     text-decoration: none;
                                     color: #fff;
@@ -193,12 +217,22 @@
                         // outline: 1px dotted red;
                         height: 120px;
                         // обертка главного меню
+                        @include respond-to(medium-screens) {
+                            width: 92.73%;
+                            height: 5em;
+                        }
                         .main_menu {
                             background-color: #fff;
                             // outline: 1px dotted red;
                             height: 100%;
                             width: 79.7%;
                             // главное меню
+                            @include respond-to(medium-screens) {
+                                padding: 0;
+                                margin: 0;
+                                width: 80%;
+                                // 92.73%
+                            }
                             ul {
                                 // outline: 1px dotted blue;
                                 display: flex;
@@ -207,10 +241,15 @@
                                 align-items: center;
                                 // text-align: space-between;
                                 height: 100%;
-                                width: 96.5%;
+                                width: 100%;
                                 flex-basis: 100%;
                                 margin: 0;
-                                padding: 0 1em 0 1em;
+                                padding: 0;
+                                @include respond-to(medium-screens) {
+                                    padding: 0;
+                                    margin: 0;
+                                    // width:100%;
+                                }
                                 li {
                                     display: flex;
                                     justify-content: center;
@@ -221,6 +260,15 @@
                                     border-top: 2px solid $fontcolor;
                                     border-bottom: 2px solid $fontcolor;
                                     position: relative;
+                                    @include respond-to(medium-screens) {
+                                        // border-bottom: 1px solid $fontcolor;
+                                        width: 20%;
+                                        border: none;
+                                        // border-top: 1px solid $fontcolor;
+                                        height: auto;
+                                        font-size: 0.8em;
+                                        padding: 0 1em 0 1em;
+                                    }
                                     // рисуем ромбик между итемами гглавного меню
                                     &:before {
                                         background-image: url("../img/svg/mian_menu_sep.svg");
@@ -232,6 +280,9 @@
                                         left: 0;
                                         top: 50%;
                                         margin: -5px 0 0 -25px;
+                                        @include respond-to(medium-screens) {
+                                            display: none;
+                                        }
                                     }
                                     // убираем ромбик у мервого итема главного меню
                                     &:first-child {
@@ -257,6 +308,11 @@
                                         text-transform: uppercase;
                                         border-top: 1px solid $fontcolor;
                                         border-bottom: 1px solid $fontcolor;
+                                        @include respond-to(medium-screens) {
+                                            border: none;
+                                            width: auto;
+                                            height: 100%;
+                                        }
                                     }
                                     // показываем сабменю главного меню
                                     &:hover {
@@ -282,11 +338,19 @@
                                         // width: auto;
                                         padding: 50px 50px 50px 50px;
                                         background-color: $lightenmiddlebrown;
+                                        @include respond-to(medium-screens) {
+                                            padding: 1em;
+                                            font-size: 1.5em;
+                                            top: 3.9em;
+                                        }
                                         .mainsubmenu {
                                             margin: 0 4em 0 0;
                                             padding: 0;
                                             display: block;
                                             width: 10em;
+                                            @include respond-to(medium-screens) {
+                                                margin: 0;
+                                            }
                                             &:last-child {
                                                 margin: 0;
                                             }
@@ -297,7 +361,10 @@
                                                 font-size: 1.2em;
                                                 border-bottom: 1px solid $fontcolor;
                                                 font-family: $ptSerif;
-                                                // color:red;
+                                                @include respond-to(medium-screens) {
+                                                    padding: 0 0 0.8em 0;
+                                                    font-size: 1em;
+                                                }
                                             }
                                             li {
                                                 list-style-position: inside;
@@ -370,6 +437,10 @@
                                 align-items: center;
                                 font-size: 1.1em;
                                 // transition: all linear 0.1s;
+                                @include respond-to(medium-screens) {
+                                    font-size: 0.9em;
+                                    height: 2.5em;
+                                }
                                 &:hover {
                                     background-color: lighten($redColor, 10%);
                                 }
@@ -393,6 +464,10 @@
                                 justify-content: space-around;
                                 align-items: center;
                                 font-size: 1.1em;
+                                @include respond-to(medium-screens) {
+                                    font-size: 0.9em;
+                                    height: 2.5em;
+                                }
                                 &:hover {
                                     background-color: lighten($lightenbrown2, 10%);
                                 }
@@ -423,12 +498,16 @@
                 // background-size: normal;
                 // блок о клинике на главной
                 .about_on_main {
-                    width: 1135px;
+                    // width: 1135px;
+                    width: $mainWidt;
                     // outline: 1px dotted red;
                     margin: -150px auto 0 auto;
                     background-color: $lightenbrown;
                     padding: 8px;
                     border: 1px solid #ccc;
+                    @include respond-to(medium-screens) {
+                        width: 92.73%;
+                    }
                     .bordered {
                         width: 100%;
                         height: 270px;
@@ -473,7 +552,7 @@
                         }
                         p {
                             color: $lightFontcolor;
-                            width: 816px;
+                            width: 76.6%;
                             font-size: 0.9em;
                         }
                     }
@@ -490,6 +569,9 @@
                     position: relative;
                     // padding: 0 40px 0 40px;
                     // обертка для заголовка слайдера
+                    @include respond-to(medium-screens) {
+                        width: 39.5em;
+                    }
                     .big_heading_for_slider {
                         // outline: 1px dotted red;
                         width: 100%;
@@ -497,6 +579,9 @@
                         justify-content: space-between;
                         align-items: center;
                         margin: 0 auto 2em auto;
+                        @include respond-to(medium-screens) {
+                            width:92.73%;
+                        }
                         .koStil {
                             display: block;
                             width: 134px;
@@ -554,9 +639,15 @@
                         flex-flow: column nowrap;
                         justify-content: center;
                         align-items: center;
-                        width: 948px;
+                        width: 82.435%;
                         z-index: 2;
                         height: 540px;
+                        @include respond-to(medium-screens) {
+
+                        width: 100%;
+
+                        }
+
                         .slides {
                             height: 100%;
                             width: 100%;
@@ -764,6 +855,9 @@
                 position: relative;
                 // padding: 0 40px 0 40px;
                 // обертка для заголовка слайдера
+                @include respond-to(medium-screens) {
+                    width: 100%;
+                }
                 .big_heading_for_slider {
                     width: 100%;
                     display: flex;
@@ -988,6 +1082,9 @@
                 position: relative;
                 // padding: 0 40px 0 40px;
                 // обертка для заголовка слайдера
+                @include respond-to(medium-screens) {
+                    width: 92.73%;
+                }
                 .big_heading_for_slider {
                     // outline: 1px dotted red;
                     width: 100%;
@@ -1065,6 +1162,9 @@
                             height: 480px;
                             margin: 0 auto;
                             // overflow:hidden;
+                                @include respond-to(medium-screens) {
+                                            width: 82.73%;
+                                }
                             .slides {
                                 height: 100%;
                                 width: 100%;
@@ -1305,10 +1405,15 @@
             .conts {
                 display: flex;
                 justify-content: space-around;
+                flex-flow: row wrap;
                 color: #fff;
                 width: $mainWidt;
                 margin: 2em auto;
                 // outline: 1px dotted white;
+                @include respond-to(medium-screens) {
+                    width: 92.73%;
+                    height:100%;
+                }
                 .footercont {
                     margin: 0 4em 0 0;
                     padding: 0;
@@ -1316,6 +1421,10 @@
                     width: 10em;
                     font-family: $ptSerif;
                     font-size: 1.1em;
+                    @include respond-to(medium-screens) {
+    margin: 0;
+    padding:0;
+}
                     // span {
                     //     display: block;
                     //     padding: 0 0 1.5em 0;
@@ -1365,9 +1474,9 @@
                                     text-decoration: underline;
                                     // color:inherit;
                                 }
-                                &[type="email"]{
-                                    color:#fff;
-                                    margin:1.5em 0 0 0;
+                                &[type="email"] {
+                                    color: #fff;
+                                    margin: 1.5em 0 0 0;
                                 }
                             }
                         }
@@ -1380,6 +1489,10 @@
                     width: 10em;
                     font-family: $ptSerif;
                     font-size: 1.1em;
+                        @include respond-to(medium-screens) {
+                            display:none;
+                    }
+
                     // span {
                     //     display: block;
                     //     padding: 0 0 1.5em 0;
@@ -1451,6 +1564,10 @@
                 // outline: 1px dotted white;
                 border-top: 1px solid #242121;
                 padding: 2em 0 2em 0;
+                @include respond-to(medium-screens) {
+                    width: 92.73%;
+                    // height:100%;
+                }
                 span {
                     a {
                         color: $lightenmiddlebrown;
