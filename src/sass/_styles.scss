@@ -139,10 +139,20 @@
                         font-weight: normal;
                         font-size: 1em;
                         .left_griphon {
-                            @include sprite($griphon1);
+                            // @include sprite($griphon1);
+                            background-image: url('../img/svg/Gryphon-l.svg');
+                            background-repeat: no-repeat;
+                            height:121px;
+                            width:85px;
+
                         }
                         .right_griphon {
-                            @include sprite($griphon2);
+                            // @include sprite($griphon2);
+                                                        // @include sprite($griphon1);
+                            background-image: url('../img/svg/Gryphon-r.svg');
+                            background-repeat: no-repeat;
+                            height:121px;
+                            width:85px;
                         }
                         .address_block {
                             width: 200px;
@@ -1274,70 +1284,142 @@
         }
         // ПОДВАЛ//////ПОДВАЛ//////ПОДВАЛ//////ПОДВАЛ//////ПОДВАЛ//////ПОДВАЛ//////ПОДВАЛ//////ПОДВАЛ//////
         .footer_wrapper {
-            outline: 1px dotted red;
+            // outline: 1px dotted red;
             background-color: $mainbrown;
-            height: 400px;
+            height: 385px;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: space-between;
             .conts {
                 display: flex;
                 justify-content: space-around;
                 color: #fff;
+                width: $mainWidt;
+                margin: 2em auto;
+                // outline: 1px dotted white;
                 .footercont {
                     margin: 0 4em 0 0;
                     padding: 0;
                     display: block;
                     width: 10em;
-                    // &:last-child {
-                    //     margin: 0;
+                    font-family: $ptSerif;
+                    font-size: 1.1em;
+                    // span {
+                    //     display: block;
+                    //     padding: 0 0 1.5em 0;
+                    //     margin: 0 0 0.5em 0;
+                    //     font-size: 1.2em;
+                    //     border-bottom: 1px solid #fff;
+                    //     color: inherit;
                     // }
-                    span {
-                        display: block;
-                        padding: 0 0 1.5em 0;
-                        margin: 0 0 0.5em 0;
-                        font-size: 1.2em;
-                        border-bottom: 1px solid #fff;
-                        font-family: $ptSerif;
-                        color: inherit;
-                    }
-                    li {
-                        list-style-position: inside;
-                        border: none;
-                        // list-style-image: none;
-                        display: list-item;
-                        list-style-type: disc;
-                        height: auto;
-                        width: auto;
-                        line-height: 1.9em;
-                        &:before {
-                            background-image: none;
-                            position: relative;
-                            height: none;
-                            width: none;
-                            right: none;
-                            content: none;
-                        }
-                        a {
-                            font-family: $openSans;
+                    ul {
+                        border-top: 1px solid $lightenmiddlebrown;
+                        margin: 1em 0 0 0;
+                        padding: 0.8em 0 0 0;
+                        li {
+                            list-style-position: inside;
                             border: none;
-                            height: initial;
-                            width: initial;
-                            background-color: inherit;
-                            font-size: 0.9em;
-                            text-transform: none;
-                            display: inline-block;
-                            color: inherit;
-                            &:hover {
-                                // color:inherit;
+                            // list-style-image: none;
+                            display: list-item;
+                            list-style-type: disc;
+                            height: auto;
+                            width: auto;
+                            line-height: 1.5em;
+                            list-style: none;
+                            &:before {
+                                background-image: none;
+                                position: relative;
+                                height: none;
+                                width: none;
+                                right: none;
+                                content: none;
+                            }
+                            a {
+                                font-family: $openSans;
+                                border: none;
+                                height: initial;
+                                width: initial;
+                                background-color: inherit;
+                                font-size: 0.8em;
+                                text-transform: none;
+                                display: inline-block;
+                                color: inherit;
+                                color: $lightenmiddlebrown;
+                                text-decoration: none;
+                                img {
+                                    margin: 0 1em 0 0;
+                                }
+                                &:hover {
+                                    text-decoration: underline;
+                                    // color:inherit;
+                                }
                             }
                         }
                     }
                 }
                 .footermenu {
-                    span {
-                        color: inherit;
-                    }
-                    li {
-                        a {
-                            color: inherit;
+                    margin: 0 4em 0 0;
+                    padding: 0;
+                    display: block;
+                    width: 10em;
+                    font-family: $ptSerif;
+                    font-size: 1.1em;
+                    // span {
+                    //     display: block;
+                    //     padding: 0 0 1.5em 0;
+                    //     margin: 0 0 0.5em 0;
+                    //     font-size: 1.2em;
+                    //     border-bottom: 1px solid #fff;
+                    //     color: inherit;
+                    // }
+                    ul {
+                        border-top: 1px solid $lightenmiddlebrown;
+                        margin: 1em 0 0 0;
+                        padding: 0.8em 0 0 0;
+                        display: flex;
+                        flex-flow: column wrap;
+                        justify-content: flex-start;
+                        align-items: space-between;
+                        height: 10em;
+                        li {
+                            list-style-position: inside;
+                            border: none;
+                            // list-style-image: none;
+                            display: list-item;
+                            list-style-type: disc;
+                            height: auto;
+                            width: auto;
+                            line-height: 1.5em;
+                            list-style: none;
+                            margin: 0 3em 0 0;
+                            &:before {
+                                background-image: none;
+                                position: relative;
+                                height: none;
+                                width: none;
+                                right: none;
+                                content: none;
+                            }
+                            a {
+                                font-family: $openSans;
+                                border: none;
+                                height: initial;
+                                width: initial;
+                                background-color: inherit;
+                                font-size: 0.8em;
+                                text-transform: none;
+                                display: inline-block;
+                                color: inherit;
+                                color: $lightenmiddlebrown;
+                                text-decoration: none;
+                                img {
+                                    margin: 0 1em 0 0;
+                                }
+                                &:hover {
+                                    text-decoration: underline;
+                                    // color:inherit;
+                                }
+                            }
                         }
                     }
                 }
@@ -1345,7 +1427,19 @@
             .copyrght {
                 display: flex;
                 justify-content: space-between;
-                span {}
+                color: #fff;
+                width: $mainWidt;
+                margin: 0 auto;
+                color: $lightenmiddlebrown;
+                font-size:0.8em;
+                // outline: 1px dotted white;
+                border-top:1px solid #242121;
+                padding:2em 0 2em 0;
+                span {
+                    a {
+                        color: $lightenmiddlebrown;
+                    }
+                }
             }
         }
     }
