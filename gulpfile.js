@@ -36,8 +36,8 @@ var gulp = require('gulp'),
     jshint = require('gulp-jshint'),
     jsmin = require('gulp-jsmin'),
     // svgSprite = require("gulp-svg-sprites"),
-    wiredep = require('wiredep').stream;
-// cmq = require('gulp-combine-media-queries'); //проверить работоспособность!
+    wiredep = require('wiredep').stream,
+    combineMq = require('gulp-combine-mq');
 
 
 
@@ -57,7 +57,7 @@ gulp.task('jade', function() {
         .pipe(connect.reload())
         .pipe(livereload())
         .pipe(gulp.dest('dist/'))
-    .pipe(notify("jade готов!"));
+        .pipe(notify("jade готов!"));
 
 });
 
@@ -101,7 +101,7 @@ gulp.task('lint', function() {
             suffix: '.min'
         }))
         .pipe(gulp.dest('dist/js'))
-    .pipe(notify("js готов!"));
+        .pipe(notify("js готов!"));
 });
 
 // sass
@@ -120,13 +120,15 @@ gulp.task('sass', function() {
             browsers: ['last 14 versions'],
             cascade: false
         }))
-        //.pipe(cmq({
-        //  log: true
-        //}))
-        .pipe(gulp.dest('dist/css'))
+        // компановка медиа запросов
+        .pipe(combineMq({
+            beautify: false
+        }))
+
+    .pipe(gulp.dest('dist/css'))
         .pipe(connect.reload())
         .pipe(livereload())
-    .pipe(notify("sass готов!"));
+        .pipe(notify("sass готов!"));
 });
 
 
@@ -160,7 +162,7 @@ gulp.task('sprite', function() {
     return merge(imgStream, cssStream)
         .pipe(connect.reload())
         .pipe(livereload())
-    .pipe(notify("sprite готов!"));
+        .pipe(notify("sprite готов!"));
 });
 
 // svgsprites
@@ -192,7 +194,7 @@ gulp.task('imagemin', function() {
         .pipe(gulp.dest('dist/img'))
         .pipe(connect.reload())
         .pipe(livereload())
-    .pipe(notify("imagemin готов!"));
+        .pipe(notify("imagemin готов!"));
 });
 
 // svgmin
@@ -211,7 +213,7 @@ gulp.task('svgmin', function() {
             }]
         }).on('error', gutil.log))
         .pipe(gulp.dest('dist/img/svg'))
-    .pipe(notify("svgmin готов!"));
+        .pipe(notify("svgmin готов!"));
 
 });
 
@@ -230,7 +232,7 @@ gulp.task('bower', function() {
         .pipe(gulp.dest('src/jade/'))
         .pipe(connect.reload())
         .pipe(livereload())
-    .pipe(notify("bower готов!"));
+        .pipe(notify("bower готов!"));
 });
 
 // connect
@@ -282,10 +284,10 @@ gulp.task('connect', function() {
 // });
 
 // strip
-gulp.task('strip', function(){
-  gulp.src('dist/js/*.js')
-    .pipe(strip())
-    .pipe(gulp.dest('dist/js'));
+gulp.task('strip', function() {
+    gulp.src('dist/js/*.js')
+        .pipe(strip())
+        .pipe(gulp.dest('dist/js'));
 });
 
 
