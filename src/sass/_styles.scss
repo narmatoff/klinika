@@ -35,8 +35,7 @@
                     background-size: cover;
                     background-repeat: no-repeat;
                     .topmenu {
-                        width: $mainWidt;
-                        margin: 0 auto;
+                        width:100%;
                         background-color: #fff;
                         padding: 0;
                         // height: 40px;
@@ -45,6 +44,8 @@
                         flex-flow: column nowrap;
                         justify-content: center;
                         ul {
+                            width: $mainWidt;
+                            margin: 0 auto;
                             list-style: none;
                             display: flex;
                             flex-direction: row;
@@ -52,7 +53,7 @@
                             justify-content: flex-start;
                             align-content: flex-start;
                             align-items: center;
-                            margin: 0;
+                            // margin: 0;
                             padding: 0;
                             height: 100%;
                             li {
