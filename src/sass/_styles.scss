@@ -410,9 +410,10 @@
                 flex-flow: column nowrap;
                 background-size: cover;
                 background-color: transparent;
-                // background-image: url("../img/svg/background_image.svg");
+                background-image: url("../img/svg/background_image.svg");
                 background-repeat: no-repeat;
-                background-position: 0 50%;
+                background-position: 0 0;
+                background-size: 427px 572px;
                 // position:relative;
                 // background-size: normal;
                 // блок о клинике на главной
@@ -1292,6 +1293,10 @@
             display: flex;
             flex-flow: column nowrap;
             justify-content: space-between;
+            background-image: url("../img/svg/footer_back.svg");
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            background-size: 372px 385px;
             .conts {
                 display: flex;
                 justify-content: space-around;
