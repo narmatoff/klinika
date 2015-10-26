@@ -1,8 +1,7 @@
 $(document).ready(function() {
 
     // fancybox
-    // $(".fancybox").fancybox();
-
+    $(".fancybox").fancybox();
 // слайдер услуг
     $('.firsttype_slider>.slides').slick({
         dots: true,

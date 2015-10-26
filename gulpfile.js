@@ -281,8 +281,12 @@ gulp.task('connect', function() {
 //         .pipe(notify("html готов!"));
 // });
 
-
-
+// strip
+gulp.task('strip', function(){
+  gulp.src('dist/js/*.js')
+    .pipe(strip())
+    .pipe(gulp.dest('dist/js'));
+});
 
 
 // Watch

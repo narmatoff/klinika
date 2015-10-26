@@ -4,9 +4,14 @@
             background-color: $lightenmiddlebrown;
             background-repeat: no-repeat;
             width: 100%;
-            // background-image: url("../img/svg/background_image.svg");
-            // background-position: 0 50%;
-            // умолчания:
+            // умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:
+            a {
+                color: $mainbrown;
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
             a,
             {
                 outline: none;
@@ -19,8 +24,7 @@
             path {
                 transition: all 0.3s ease;
             }
-            // white-space: nowrap;
-            // конец_умолчания
+            // конец_умолчания// конец_умолчания// конец_умолчания// конец_умолчания// конец_умолчания// конец_умолчания// конец_умолчания// конец_умолчания// конец_умолчания// конец_умолчания// конец_умолчания// конец_умолчания// конец_умолчания// конец_умолчания// конец_умолчания// конец_умолчания// конец_умолчания// конец_умолчания// конец_умолчания// конец_умолчания
             .main_wrapper {
                 width: 100%;
                 // outline: 1px dotted red;
@@ -35,7 +39,7 @@
                     background-size: cover;
                     background-repeat: no-repeat;
                     .topmenu {
-                        width:100%;
+                        width: 100%;
                         background-color: #fff;
                         padding: 0;
                         // height: 40px;
@@ -1360,6 +1364,10 @@
                                 &:hover {
                                     text-decoration: underline;
                                     // color:inherit;
+                                }
+                                &[type="email"]{
+                                    color:#fff;
+                                    margin:1.5em 0 0 0;
                                 }
                             }
                         }
