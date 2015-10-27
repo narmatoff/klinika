@@ -37,10 +37,12 @@ $(document).ready(function() {
                     dots: false
                 }
             }, {
-                breakpoint: 480,
+                breakpoint: 620,
                 settings: {
                     slidesToShow: 1,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    dots: false
+                    
                 }
             }
             // You can unslick at a given breakpoint now by adding:
@@ -55,7 +57,42 @@ $(document).ready(function() {
         infinite: true,
         speed: 500,
         fade: true,
-        cssEase: 'linear'
+        cssEase: 'linear',
+                responsive: [{
+                breakpoint: 1150,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                }
+            }, {
+                breakpoint: 775,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                }
+            }, {
+                breakpoint: 700,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                }
+            }, {
+                breakpoint: 620,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    dots: true
+
+                }
+            }
+        ]
+
     });
 
 
@@ -94,10 +131,12 @@ $(document).ready(function() {
                     dots: false
                 }
             }, {
-                breakpoint: 480,
+                breakpoint: 620,
                 settings: {
                     slidesToShow: 1,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    dots: false
+
                 }
             }
             // You can unslick at a given breakpoint now by adding:

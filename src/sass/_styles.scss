@@ -38,6 +38,10 @@
                     background-image: url("../img/header_back.png");
                     background-size: cover;
                     background-repeat: no-repeat;
+                    @include respond-to(handhelds) {
+                        background-image: none;
+                        background-color: $lightenbrown;
+                    }
                     .topmenu {
                         width: 100%;
                         background-color: #fff;
@@ -156,6 +160,10 @@
                         @include respond-to(medium-screens) {
                             width: 92.73%;
                         }
+                        @include respond-to(handhelds) {
+                            width: 100%;
+                            justify-content: space-around;
+                        }
                         .left_griphon {
                             // @include sprite($griphon1);
                             background-image: url('../img/svg/Gryphon-l.svg');
@@ -179,6 +187,9 @@
                         }
                         .address_block {
                             width: 200px;
+                            @include respond-to(handhelds) {
+                                display: none;
+                            }
                             p {
                                 color: #fff;
                                 display: list-item;
@@ -191,6 +202,18 @@
                                 }
                             }
                         }
+                        @include respond-to(handhelds) {
+                            &>a {
+                                background-image: url("../img/svg/mobile_logo.svg");
+                                background-repeat: no-repeat;
+                                display: block;
+                                width: 120px;
+                                height: 32px;
+                                img {
+                                    display: none;
+                                }
+                            }
+                        }
                         .phone_block {
                             // width: 200px;
                             width: auto;
@@ -199,9 +222,16 @@
                                 list-style-position: inside;
                                 list-style-image: url("../img/svg/phone_baloon.svg");
                                 text-align: right;
+                                @include respond-to(handhelds) {
+                                    list-style: none;
+                                    font-size: 0.9em;
+                                }
                                 a {
                                     text-decoration: none;
                                     color: #fff;
+                                    @include respond-to(handhelds) {
+                                        color: $lightFontcolor;
+                                    }
                                 }
                             }
                         }
@@ -221,6 +251,10 @@
                             width: 92.73%;
                             height: 5em;
                         }
+                        @include respond-to(handhelds) {
+                            width: 100%;
+                            margin: 0;
+                        }
                         .main_menu {
                             background-color: #fff;
                             // outline: 1px dotted red;
@@ -232,6 +266,9 @@
                                 margin: 0;
                                 width: 80%;
                                 // 92.73%
+                            }
+                            @include respond-to(handhelds) {
+                                display: none;
                             }
                             ul {
                                 // outline: 1px dotted blue;
@@ -265,7 +302,16 @@
                                         width: 20%;
                                         border: none;
                                         // border-top: 1px solid $fontcolor;
-                                        height: auto;
+                                        height: 100%;
+                                        font-size: 0.7em;
+                                        padding: 0 1em 0 1em;
+                                    }
+                                    @include respond-to(postmedium-screens) {
+                                        // border-bottom: 1px solid $fontcolor;
+                                        width: 20%;
+                                        border: none;
+                                        // border-top: 1px solid $fontcolor;
+                                        height: 100%;
                                         font-size: 0.8em;
                                         padding: 0 1em 0 1em;
                                     }
@@ -336,18 +382,22 @@
                                         height: initial;
                                         z-index: 1;
                                         // width: auto;
-                                        padding: 50px 50px 50px 50px;
+                                        padding: 40px;
                                         background-color: $lightenmiddlebrown;
                                         @include respond-to(medium-screens) {
                                             padding: 1em;
                                             font-size: 1.5em;
                                             top: 3.9em;
+                                            left: 0;
+                                            width: auto;
                                         }
                                         .mainsubmenu {
                                             margin: 0 4em 0 0;
                                             padding: 0;
                                             display: block;
                                             width: 10em;
+                                            list-style-image: none;
+                                            list-style-type: none;
                                             @include respond-to(medium-screens) {
                                                 margin: 0;
                                             }
@@ -369,19 +419,15 @@
                                             li {
                                                 list-style-position: inside;
                                                 border: none;
-                                                // list-style-image: none;
                                                 display: list-item;
                                                 list-style-type: disc;
                                                 height: auto;
                                                 width: auto;
                                                 line-height: 1.9em;
+                                                @include respond-to(medium-screens) {}
+                                                font-size: 0.9em;
                                                 &:before {
                                                     background-image: none;
-                                                    position: relative;
-                                                    height: none;
-                                                    width: none;
-                                                    right: none;
-                                                    content: none;
                                                 }
                                                 a {
                                                     font-family: $openSans;
@@ -424,6 +470,11 @@
                             // width: 222px;
                             width: 19.3%;
                             font-family: $ptSerif;
+                            @include respond-to(handhelds) {
+                                flex-flow: row nowrap;
+                                width: 100%;
+                                height: 50px;
+                            }
                             .zapis {
                                 background-color: $redColor;
                                 color: #fff;
@@ -440,6 +491,10 @@
                                 @include respond-to(medium-screens) {
                                     font-size: 0.9em;
                                     height: 2.5em;
+                                }
+                                @include respond-to(handhelds) {
+                                    height: 100%;
+                                    font-size: 1em;
                                 }
                                 &:hover {
                                     background-color: lighten($redColor, 10%);
@@ -467,6 +522,10 @@
                                 @include respond-to(medium-screens) {
                                     font-size: 0.9em;
                                     height: 2.5em;
+                                }
+                                @include respond-to(handhelds) {
+                                    height: 100%;
+                                    font-size: 1em;
                                 }
                                 &:hover {
                                     background-color: lighten($lightenbrown2, 10%);
@@ -497,9 +556,12 @@
                 // position:relative;
                 // background-size: normal;
                 // блок о клинике на главной
+                @include respond-to(handhelds) {
+                    background-image: none;
+                }
                 .about_on_main {
                     // width: 1135px;
-                    width: $mainWidt;
+                    width: $mainWidt - 16;
                     // outline: 1px dotted red;
                     margin: -150px auto 0 auto;
                     background-color: $lightenbrown;
@@ -507,6 +569,12 @@
                     border: 1px solid #ccc;
                     @include respond-to(medium-screens) {
                         width: 92.73%;
+                    }
+                    @include respond-to(handhelds) {
+                        width: 100%;
+                        padding: 0;
+                        border: none;
+                        margin: 0;
                     }
                     .bordered {
                         width: 100%;
@@ -516,6 +584,10 @@
                         flex-flow: column;
                         justify-content: space-around;
                         align-items: center;
+                        @include respond-to(handhelds) {
+                            border: none;
+                            height: auto;
+                        }
                         .big_heading {
                             font-family: $ptSerif;
                             text-transform: capitalize;
@@ -523,6 +595,11 @@
                             display: flex;
                             line-height: 0.3em;
                             font-size: 2em;
+                            @include respond-to(handhelds) {
+                                font-size: 1.8em;
+                                line-height: 1.2em;
+                                text-align: center;
+                            }
                             &:before {
                                 content: "";
                                 background-image: url("../img/svg/big_heading_before.svg");
@@ -531,6 +608,9 @@
                                 height: 14px;
                                 display: block;
                                 margin: 0 10px 0 0;
+                                @include respond-to(handhelds) {
+                                    display: none;
+                                }
                             }
                             &:after {
                                 content: "";
@@ -541,6 +621,9 @@
                                 display: block;
                                 transform: rotate(180deg);
                                 margin: 0 0 0 10px;
+                                @include respond-to(handhelds) {
+                                    display: none;
+                                }
                             }
                         }
                         .sep_afterheading {
@@ -570,7 +653,14 @@
                     // padding: 0 40px 0 40px;
                     // обертка для заголовка слайдера
                     @include respond-to(medium-screens) {
+                        width: 19.8em;
+                    }
+                    @include respond-to(postmedium-screens) {
                         width: 39.5em;
+                        // color: orange;
+                    }
+                    @include respond-to(handhelds) {
+                        width: 16.7em;
                     }
                     .big_heading_for_slider {
                         // outline: 1px dotted red;
@@ -579,12 +669,29 @@
                         justify-content: space-between;
                         align-items: center;
                         margin: 0 auto 2em auto;
+                        // @include respond-to(medium-screens) {
+                        //     width: 92.73%;
+                        // }
                         @include respond-to(medium-screens) {
-                            width:92.73%;
+                            height: 6em;
+                            display: flex;
+                            flex-flow: column nowrap;
+                            justify-content: space-between;
+                            align-items: center;
+                        }
+                        @include respond-to(postmedium-screens) {
+                            height: 6em;
+                            display: flex;
+                            flex-flow: row nowrap;
+                            justify-content: space-between;
+                            align-items: center;
                         }
                         .koStil {
                             display: block;
                             width: 134px;
+                            @include respond-to(medium-screens) {
+                                display: none;
+                            }
                         }
                         .big_heading {
                             font-family: $ptSerif;
@@ -601,6 +708,9 @@
                                 height: 14px;
                                 display: block;
                                 margin: 0 10px 0 0;
+                                @include respond-to(handhelds) {
+                                    display: none;
+                                }
                             }
                             &:after {
                                 content: "";
@@ -611,6 +721,9 @@
                                 display: block;
                                 transform: rotate(180deg);
                                 margin: 0 0 0 10px;
+                                @include respond-to(handhelds) {
+                                    display: none;
+                                }
                             }
                         }
                         .wrapper_button_in_slider {
@@ -643,11 +756,8 @@
                         z-index: 2;
                         height: 540px;
                         @include respond-to(medium-screens) {
-
-                        width: 100%;
-
+                            width: 100%;
                         }
-
                         .slides {
                             height: 100%;
                             width: 100%;
@@ -679,6 +789,10 @@
                                 height: 90%;
                                 outline: none;
                                 border: none;
+                                @include respond-to(handhelds) {
+                                    background-color: $lightenbrown;
+                                    width: 270px;
+                                }
                                 // при наведении на элемент слайдера
                                 &:hover {
                                     background-color: $lightenbrown0;
@@ -760,8 +874,9 @@
                                     background-color: initial;
                                 }
                                 &.slick-prev {
-                                    left: -70px;
+                                    // left: -70px;
                                     transform: rotate(180deg);
+                                    z-index: 2;
                                     &:before {
                                         font-family: initial;
                                         font-size: initial;
@@ -776,7 +891,7 @@
                                     }
                                 }
                                 &.slick-next {
-                                    right: -70px;
+                                    // right: -70px;
                                     // transform: rotate(180deg);
                                     &:before {
                                         font-family: initial;
@@ -847,16 +962,25 @@
             .gallery_slider_wrapper {
                 // outline: 1px dotted red;
                 width: $mainWidt;
+                height: auto;
                 margin: 2em auto 3em auto;
                 display: flex;
                 flex-flow: column nowrap;
-                justify-content: center;
+                justify-content: space-around;
                 align-items: center;
                 position: relative;
                 // padding: 0 40px 0 40px;
                 // обертка для заголовка слайдера
                 @include respond-to(medium-screens) {
-                    width: 100%;
+                    width: 92.73%;
+                    // width: 100%;
+                }
+                @include respond-to(postmedium-screens) {
+                    // width: 92.73%;
+                    width: 47.5em;
+                }
+                @include respond-to(handhelds) {
+                    display: none;
                 }
                 .big_heading_for_slider {
                     width: 100%;
@@ -879,6 +1003,9 @@
                             height: 14px;
                             display: block;
                             margin: 0 10px 0 0;
+                            @include respond-to(handhelds) {
+                                display: none;
+                            }
                         }
                         &:after {
                             content: "";
@@ -889,6 +1016,9 @@
                             display: block;
                             transform: rotate(180deg);
                             margin: 0 0 0 10px;
+                            @include respond-to(handhelds) {
+                                display: none;
+                            }
                         }
                     }
                 }
@@ -898,13 +1028,17 @@
                     zoom: 1;
                     display: flex;
                     flex-flow: column nowrap;
-                    justify-content: center;
+                    justify-content: space-around;
                     align-items: center;
                     // width: 861px;
                     width: 100%;
-                    height: 610px;
+                    height: 574px;
                     z-index: 2;
                     // overflow: hidden;
+                    @include respond-to(medium-screens) {
+                        // height: 100%;
+                        height: 29.5em;
+                    }
                     .slides {
                         // outline: 1px dotted red;
                         height: 100%;
@@ -914,13 +1048,31 @@
                         display: flex;
                         flex-flow: row wrap;
                         justify-content: center;
-                        align-items: flex-start;
+                        align-items: center;
+                        position: relative;
+                        @include respond-to(medium-screens) {
+                            justify-content: space-around;
+                            align-items: center;
+                        }
                         li {
                             img {}
                         }
                         .slick-list {
-                            width: 760px;
+                            width: 861px;
                             height: 574px;
+                            @include respond-to(medium-screens) {
+                                // height: 560px;
+                                // width: 374px;
+                                width: 100%;
+                                height: auto;
+                            }
+                            .slick-slide {
+                                width: auto;
+                                img {
+                                    height: auto;
+                                    width: 100%;
+                                }
+                            }
                         }
                         .slick-arrow {
                             // outline: 1px dotted red;
@@ -930,7 +1082,7 @@
                             overflow: hidden;
                             // top:0;
                             // left:0;
-                            position: relative;
+                            // position: relative;
                             height: 574px;
                             top: 10px;
                             &.slick-disabled {
@@ -941,8 +1093,18 @@
                             &.slick-prev {
                                 // left: -70px;
                                 // transform: rotate(180deg);
-                                // top:0;
                                 left: 0;
+                                z-index: 1;
+                                @include respond-to(medium-screens) {
+                                    // margin: -30px 0 0 0;
+                                    top: 50%;
+                                    // left: 10px;
+                                    height: 50px;
+                                    width: 50px;
+                                    border-radius: 50%;
+                                    overflow: hidden;
+                                    // border:1px solid #736D6D;
+                                }
                                 &:before {
                                     font-family: initial;
                                     font-size: initial;
@@ -950,9 +1112,28 @@
                                     opacity: initial;
                                     color: initial;
                                     content: '';
-                                    // background-image: url("../img/svg/navigation_button.svg");
                                     @include sprite($photo_leftarrow);
                                     display: block;
+                                    @include respond-to(medium-screens) {
+                                        background-image: url("../img/svg/navigation_button.svg");
+                                        background-color: #fff;
+                                        border-radius: 50%;
+                                        width: 50px;
+                                        height: 50px;
+                                        background-repeat: no-repeat;
+                                        background-position: 0px 0px;
+                                        font-family: initial;
+                                        font-size: initial;
+                                        line-height: initial;
+                                        opacity: initial;
+                                        color: initial;
+                                        content: '';
+                                        transform: rotate(180deg);
+                                        // background-image: url(/dist/img/sprite.png);
+                                        // width: 145px;
+                                        // height: 574px;
+                                        display: block;
+                                    }
                                 }
                             }
                             &.slick-next {
@@ -960,6 +1141,13 @@
                                 // top:0;
                                 // bottom:0;
                                 // transform: rotate(180deg);
+                                @include respond-to(medium-screens) {
+                                    // margin: -30px 0 0 0;
+                                    top: 50%;
+                                    // right: 10px;
+                                    height: 50px;
+                                    width: 50px;
+                                }
                                 &:before {
                                     font-family: initial;
                                     font-size: initial;
@@ -970,6 +1158,25 @@
                                     // background-image: url("../img/svg/navigation_button.svg");
                                     @include sprite($photo_rightarrow);
                                     display: block;
+                                    @include respond-to(medium-screens) {
+                                        background-image: url("../img/svg/navigation_button.svg");
+                                        width: 50px;
+                                        height: 100%;
+                                        background-color: #fff;
+                                        border-radius: 50%;
+                                        background-repeat: no-repeat;
+                                        background-position: 0px 0px;
+                                        font-family: initial;
+                                        font-size: initial;
+                                        line-height: initial;
+                                        opacity: initial;
+                                        color: initial;
+                                        content: '';
+                                        // background-image: url(/dist/img/sprite.png);
+                                        // width: 145px;
+                                        // height: 574px;
+                                        display: block;
+                                    }
                                 }
                             }
                         }
@@ -983,11 +1190,14 @@
                             flex-basis: 100%;
                             width: 100%;
                             flex-flow: row nowrap;
-                            bottom: 0;
+                            bottom: -30px;
                             left: 0;
                             justify-content: center;
                             align-items: center;
                             height: auto;
+                            @include respond-to(medium-screens) {
+                                bottom: -5%;
+                            }
                             li {
                                 width: initial;
                                 padding: initial;
@@ -1083,7 +1293,13 @@
                 // padding: 0 40px 0 40px;
                 // обертка для заголовка слайдера
                 @include respond-to(medium-screens) {
-                    width: 92.73%;
+                    width: 23.5em;
+                }
+                @include respond-to(postmedium-screens) {
+                    width: 45.5em;
+                }
+                @include respond-to(handhelds) {
+                    width: 16.7em;
                 }
                 .big_heading_for_slider {
                     // outline: 1px dotted red;
@@ -1092,9 +1308,26 @@
                     justify-content: space-between;
                     align-items: center;
                     margin: 0 auto 2em auto;
+                    @include respond-to(medium-screens) {
+                        height: 6em;
+                        display: flex;
+                        flex-flow: column nowrap;
+                        justify-content: space-between;
+                        align-items: center;
+                    }
+                    @include respond-to(postmedium-screens) {
+                        height: 6em;
+                        display: flex;
+                        flex-flow: row nowrap;
+                        justify-content: space-between;
+                        align-items: center;
+                    }
                     .koStil {
                         display: block;
                         width: 134px;
+                        @include respond-to(medium-screens) {
+                            display: none;
+                        }
                     }
                     .big_heading {
                         font-family: $ptSerif;
@@ -1103,6 +1336,10 @@
                         display: flex;
                         line-height: 0.3em;
                         font-size: 2em;
+                        @include respond-to(medium-screens) {
+                            font-size: 1.2em;
+                            text-transform: uppercase;
+                        }
                         &:before {
                             content: "";
                             background-image: url("../img/svg/big_heading_before.svg");
@@ -1111,6 +1348,12 @@
                             height: 14px;
                             display: block;
                             margin: 0 10px 0 0;
+                            // @include respond-to(medium-screens) {
+                            //     display: none;
+                            // }
+                            @include respond-to(handhelds) {
+                                display: none;
+                            }
                         }
                         &:after {
                             content: "";
@@ -1121,6 +1364,12 @@
                             display: block;
                             transform: rotate(180deg);
                             margin: 0 0 0 10px;
+                            // @include respond-to(medium-screens) {
+                            //     display: none;
+                            // }
+                            @include respond-to(handhelds) {
+                                display: none;
+                            }
                         }
                     }
                     .wrapper_button_in_slider {
@@ -1149,6 +1398,11 @@
                         border: 1px solid #c4beb5;
                         margin: 8px;
                         padding: 0 0 0 0;
+                        @include respond-to(handhelds) {
+                            margin: 0;
+                            border: none;
+                            // width:70%;
+                        }
                         .doctortype_slider {
                             position: relative;
                             zoom: 1;
@@ -1162,9 +1416,12 @@
                             height: 480px;
                             margin: 0 auto;
                             // overflow:hidden;
-                                @include respond-to(medium-screens) {
-                                            width: 82.73%;
-                                }
+                            @include respond-to(medium-screens) {
+                                width: 82.73%;
+                            }
+                            @include respond-to(handhelds) {
+                                width: 100%;
+                            }
                             .slides {
                                 height: 100%;
                                 width: 100%;
@@ -1190,6 +1447,9 @@
                                     height: 90%;
                                     outline: none;
                                     border: none;
+                                    @include respond-to(handhelds) {
+                                        width: 18.45em;
+                                    }
                                     // при наведении на элемент слайдера
                                     &:hover {
                                         background-color: #fff;
@@ -1207,9 +1467,18 @@
                                                         &:last-child {
                                                             fill: red;
                                                         }
+                                                        @include respond-to(handhelds) {
+                                                            &:nth-child(2) {
+                                                                fill: #F1EBDD;
+
+                                                            }
+                                                        }
                                                     }
                                                 }
                                             }
+                                        }
+                                        @include respond-to(handhelds) {
+                                            background-color: inherit;
                                         }
                                     }
                                     .border_doctor_slider_wrap {
@@ -1256,6 +1525,9 @@
                                         border-bottom: 2px solid $lightenmiddlebrown2;
                                         display: block;
                                         width: 90%;
+                                        @include respond-to(handhelds) {
+                                            width: 70%;
+                                        }
                                         .doctor_heading_slide_insbord {
                                             border-top: 1px solid $lightenmiddlebrown2;
                                             border-bottom: 1px solid $lightenmiddlebrown2;
@@ -1308,6 +1580,10 @@
                                     &.slick-prev {
                                         left: -70px;
                                         transform: rotate(180deg);
+                                        z-index: 2;
+                                        @include respond-to(handhelds) {
+                                            left: -25px;
+                                        }
                                         &:before {
                                             font-family: initial;
                                             font-size: initial;
@@ -1324,6 +1600,9 @@
                                     &.slick-next {
                                         right: -70px;
                                         // transform: rotate(180deg);
+                                        @include respond-to(handhelds) {
+                                            right: -25px;
+                                        }
                                         &:before {
                                             font-family: initial;
                                             font-size: initial;
@@ -1402,6 +1681,10 @@
             background-repeat: no-repeat;
             background-position: 0 0;
             background-size: 372px 385px;
+            @include respond-to(handhelds) {
+                background-image: none;
+                height: auto;
+            }
             .conts {
                 display: flex;
                 justify-content: space-around;
@@ -1412,7 +1695,12 @@
                 // outline: 1px dotted white;
                 @include respond-to(medium-screens) {
                     width: 92.73%;
-                    height:100%;
+                    height: 100%;
+                }
+                @include respond-to(handhelds) {
+                    height: 60%;
+                    justify-content: flex-start;
+                    margin: 2em 0 0 2em;
                 }
                 .footercont {
                     margin: 0 4em 0 0;
@@ -1422,9 +1710,12 @@
                     font-family: $ptSerif;
                     font-size: 1.1em;
                     @include respond-to(medium-screens) {
-    margin: 0;
-    padding:0;
-}
+                        margin: 0;
+                        padding: 0;
+                    }
+                    @include respond-to(handhelds) {
+                        height: auto;
+                    }
                     // span {
                     //     display: block;
                     //     padding: 0 0 1.5em 0;
@@ -1489,10 +1780,9 @@
                     width: 10em;
                     font-family: $ptSerif;
                     font-size: 1.1em;
-                        @include respond-to(medium-screens) {
-                            display:none;
+                    @include respond-to(medium-screens) {
+                        display: none;
                     }
-
                     // span {
                     //     display: block;
                     //     padding: 0 0 1.5em 0;
