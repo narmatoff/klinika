@@ -1,5 +1,15 @@
 $(document).ready(function() {
 
+// menu on henhelds
+$(".hamburger").click(function() {
+    $(".topmenu").show('fast');
+});
+
+$(".menu_sloser").click(function() {
+    $(".topmenu").hide('fast');
+});
+
+
     // fancybox
     $(".fancybox").fancybox();
     // слайдер услуг
