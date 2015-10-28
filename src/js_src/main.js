@@ -1,13 +1,25 @@
 $(document).ready(function() {
 
-// menu on henhelds
-$(".hamburger").click(function() {
-    $(".topmenu").show('fast');
-});
+    // menu on henhelds
+    $(".hamburger").click(function() {
+        $(".topmenu").show('fast');
+    });
 
-$(".menu_sloser").click(function() {
-    $(".topmenu").hide('fast');
-});
+    $(".menu_sloser").click(function() {
+        $(".topmenu").hide('fast');
+    });
+
+    // избегаем скрытие topmenu в desktop версии после его скрытия в hendhelds
+    function windowSize() {
+        if ($(window).width() <= '620') {
+            $('.topmenu').hide();
+        } else {
+            $('.topmenu').show();
+        }
+    }
+    $(window).on('load resize', windowSize);
+
+
 
 
     // fancybox
@@ -52,7 +64,7 @@ $(".menu_sloser").click(function() {
                     slidesToShow: 1,
                     slidesToScroll: 1,
                     dots: false
-                    
+
                 }
             }
             // You can unslick at a given breakpoint now by adding:
@@ -68,40 +80,39 @@ $(".menu_sloser").click(function() {
         speed: 500,
         fade: true,
         cssEase: 'linear',
-                responsive: [{
-                breakpoint: 1150,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    infinite: true,
-                    dots: true
-                }
-            }, {
-                breakpoint: 775,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    infinite: true,
-                    dots: true
-                }
-            }, {
-                breakpoint: 700,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    infinite: true,
-                    dots: true
-                }
-            }, {
-                breakpoint: 620,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    dots: true
-
-                }
+        responsive: [{
+            breakpoint: 1150,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: true
             }
-        ]
+        }, {
+            breakpoint: 775,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: true
+            }
+        }, {
+            breakpoint: 700,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: true
+            }
+        }, {
+            breakpoint: 620,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                dots: true
+
+            }
+        }]
 
     });
 
