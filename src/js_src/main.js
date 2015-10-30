@@ -166,4 +166,12 @@ $(document).ready(function() {
         ]
     });
 
+
+
+$("article ol li").map(function(i, o) {
+    var num = i+1;
+    $(o).prepend("<span class='numlist'>"+num+"</span>");
+});
+
+
 });
