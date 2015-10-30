@@ -21,10 +21,6 @@
     "gulp-plumber": "^1.0.1",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.0.4",
-<<<<<<< HEAD
-=======
-    "gulp-svg-sprites": "^3.0.0",
->>>>>>> be69b66f368e1fea4ea702263f5b8d974f9ec418
     "gulp-svgmin": "^1.2.0",
     "gulp-uncss": "^1.0.4",
     "gulp-util": "^3.0.6",
