@@ -27,7 +27,7 @@ var gulp = require('gulp'),
     // }),
     imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
-    csso = require('gulp-csso'),
+    // csso = require('gulp-csso'),
     merge = require('gulp-merge'),
     svgmin = require('gulp-svgmin'),
     spritesmith = require('gulp.spritesmith'),
@@ -57,7 +57,7 @@ gulp.task('jade', function() {
         .pipe(connect.reload())
         .pipe(livereload())
         .pipe(gulp.dest('dist/'));
-        // .pipe(notify("jade готов!"));
+    // .pipe(notify("jade готов!"));
 
 });
 
@@ -101,7 +101,7 @@ gulp.task('lint', function() {
             suffix: '.min'
         }))
         .pipe(gulp.dest('dist/js'));
-        // .pipe(notify("js готов!"));
+    // .pipe(notify("js готов!"));
 });
 
 // sass
@@ -124,11 +124,12 @@ gulp.task('sass', function() {
         .pipe(combineMq({
             beautify: false
         }))
+        // .pipe(csso())
 
     .pipe(gulp.dest('dist/css'))
         .pipe(connect.reload())
         .pipe(livereload());
-        // .pipe(notify("sass готов!"));
+    // .pipe(notify("sass готов!"));
 });
 
 
@@ -162,7 +163,7 @@ gulp.task('sprite', function() {
     return merge(imgStream, cssStream)
         .pipe(connect.reload())
         .pipe(livereload());
-        // .pipe(notify("sprite готов!"));
+    // .pipe(notify("sprite готов!"));
 });
 
 // svgsprites
@@ -194,7 +195,7 @@ gulp.task('imagemin', function() {
         .pipe(gulp.dest('dist/img'))
         .pipe(connect.reload())
         .pipe(livereload());
-        // .pipe(notify("imagemin готов!"));
+    // .pipe(notify("imagemin готов!"));
 });
 
 // svgmin
@@ -213,7 +214,7 @@ gulp.task('svgmin', function() {
             }]
         }).on('error', gutil.log))
         .pipe(gulp.dest('dist/img/svg'));
-        // .pipe(notify("svgmin готов!"));
+    // .pipe(notify("svgmin готов!"));
 
 });
 
@@ -232,7 +233,7 @@ gulp.task('bower', function() {
         .pipe(gulp.dest('src/jade/'))
         .pipe(connect.reload())
         .pipe(livereload());
-        // .pipe(notify("bower готов!"));
+    // .pipe(notify("bower готов!"));
 });
 
 // connect
