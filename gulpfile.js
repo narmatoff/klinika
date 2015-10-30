@@ -35,6 +35,7 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     jshint = require('gulp-jshint'),
     jsmin = require('gulp-jsmin'),
+    // svgSprite = require("gulp-svg-sprites"),
     wiredep = require('wiredep').stream,
     combineMq = require('gulp-combine-mq');
 
