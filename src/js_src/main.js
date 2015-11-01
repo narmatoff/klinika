@@ -1,5 +1,9 @@
 $(document).ready(function() {
 
+
+
+$(".fancyimg").fancybox();
+
     // menu on henhelds
     $(".hamburger").click(function() {
         $(".topmenu").show('fast');
@@ -21,9 +25,6 @@ $(document).ready(function() {
 
 
 
-
-    // fancybox
-    $(".fancybox").fancybox();
     // слайдер услуг
     $('.firsttype_slider>.slides').slick({
         dots: true,
@@ -167,11 +168,12 @@ $(document).ready(function() {
     });
 
 
-
+// кастомная нумерация нумерованных списков
 $("article ol li").map(function(i, o) {
     var num = i+1;
     $(o).prepend("<span class='numlist'>"+num+"</span>");
 });
+
 
 
 });
