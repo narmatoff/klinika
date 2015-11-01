@@ -2,7 +2,7 @@ $(document).ready(function() {
 
 
 
-$(".fancyimg").fancybox();
+    $(".fancyimg").fancybox();
 
     // menu on henhelds
     $(".hamburger").click(function() {
@@ -168,11 +168,11 @@ $(".fancyimg").fancybox();
     });
 
 
-// кастомная нумерация нумерованных списков
-$("article ol li").map(function(i, o) {
-    var num = i+1;
-    $(o).prepend("<span class='numlist'>"+num+"</span>");
-});
+    // кастомная нумерация нумерованных списков
+    $("article ol li").map(function(i, o) {
+        var num = i + 1;
+        $(o).prepend("<span class='numlist'>" + num + "</span>");
+    });
 
 
 

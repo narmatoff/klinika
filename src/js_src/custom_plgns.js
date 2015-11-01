@@ -161,13 +161,13 @@
         elem: f("modernizr")
     };
     Modernizr._q.push(function() {
-        delete E.elem
+        delete E.elem;
     });
     var P = {
         style: E.elem.style
     };
     Modernizr._q.unshift(function() {
-        delete P.style
+        delete P.style;
     }), C.testAllProps = v, C.testAllProps = y, Modernizr.addTest("flexbox", y("flexBasis", "1px", !0)), Modernizr.addTest("flexboxlegacy", y("boxDirection", "reverse", !0)), Modernizr.addTest("flexboxtweener", y("flexAlign", "end", !0)), Modernizr.addTest("flexwrap", y("flexWrap", "wrap", !0)), s(), r(g), delete C.addTest, delete C.addAsyncTest;
     for (var z = 0; z < Modernizr._q.length; z++) Modernizr._q[z]();
     e.Modernizr = Modernizr

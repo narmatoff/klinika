@@ -902,7 +902,7 @@ html {
                     }
                 }
             }
-            .contentner {
+            .contentner ,.someother_conteiner{
                 // width: 1135px;
                 width: $mainWidt - 16;
                 // outline: 1px dotted red;
@@ -971,6 +971,8 @@ html {
                     flex-flow: column;
                     justify-content: space-around;
                     align-items: center;
+                    // margin:1em 0 1em 0;
+                    margin:0;
                     @include respond-to(handhelds) {
                         border: none;
                         height: auto;
@@ -1156,6 +1158,9 @@ html {
                         }
                     }
                 }
+            }
+            .someother_conteiner{
+                margin:3em auto 3em auto;
             }
             // обертка главного слайдера
             .firsttype_slider_wrapper {
