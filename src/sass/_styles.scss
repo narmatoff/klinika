@@ -1501,7 +1501,6 @@ html {
                                     @include respond-to(handhelds) {
                                         width: 17.85em;
                                     }
-
                                     // при наведении на элемент слайдера
                                     &:hover {
                                         background-color: #fff;
