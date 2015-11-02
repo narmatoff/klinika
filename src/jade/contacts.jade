@@ -8,84 +8,84 @@ html(lang="en").no-js
         meta(name="viewport" content="width=device-width, initial-scale=1")
         // bower:css
         link(rel='stylesheet', href='bower_components/normalize-css/normalize.css')
-        link(rel='stylesheet', href='bower_components/fancybox3/jquery.fancybox.css')
         link(rel='stylesheet', href='bower_components/slick-carousel/slick/slick.css')
         link(rel='stylesheet', href='bower_components/slick-carousel/slick/slick-theme.css')
+        link(rel='stylesheet', href='bower_components/fancybox3/jquery.fancybox.css')
         // endbower
         link(rel='stylesheet', href='css/main.css')
 
     body
-    //- обертка
-    .main_wrapper
-        //- шапка
-        include includes/head.jade
-        //- обертка для контента (главной)
-        .content_wrapper
-            //- .about_on_main
-            .contentner
-                .breadcrmbs_bordered
-                    ul
-                        li
-                            a(href="#") Главная
-                        li
-                            a(href="#") Конткты
+        //- обертка
+        .main_wrapper
+            //- шапка
+            include includes/head.jade
+            //- обертка для контента (главной)
+            .content_wrapper
+                //- .about_on_main
+                .contentner
+                    .breadcrmbs_bordered
+                        ul
+                            li
+                                a(href="#") Главная
+                            li
+                                a(href="#") Конткты
 
-                //- .bordered
-                section
-                    h1.big_heading Контакты
-                    span.sep_afterheading
-                    article
-                        p Мы находимся на Васильевском острове, в пешей доступности от нескольких станций метро. 
-                            | Если у вас появятся пожелания, предложения или вопросы, напишите нам!
-            .someother_conteiner
-                section
-                    //- article
-                    <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=A626MTPNlBrVdgAJAo2aiB7CQamNz2D6&width=100%&height=100%&lang=ru_RU&sourceType=constructor"></script>
+                    //- .bordered
+                    section
+                        h1.big_heading Контакты
+                        span.sep_afterheading
+                        article
+                            p Мы находимся на Васильевском острове, в пешей доступности от нескольких станций метро. 
+                                | Если у вас появятся пожелания, предложения или вопросы, напишите нам!
+                .someother_conteiner
+                    section
+                        //- article
+                        <script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=A626MTPNlBrVdgAJAo2aiB7CQamNz2D6&width=100%&height=100%&lang=ru_RU&sourceType=constructor"></script>
 
-            .someother_conteiner
-                section
-                    //- article
-                    //-     p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, repellat fugiat facere maxime quis distinctio id, quibusdam autem ut libero cupiditate delectus doloremque deserunt soluta odit dolorem. Distinctio, autem, qu
-                    .contacts_info
-                        div.main_continfo
-                            h3.addr_ico Адрес
-                            ul
-                                li г. Cанкт-Петербург, В.О., 7-я линия, 16/18, литера А
-                            h3.phone_ico Телефоны
-                            ul
-                                li (812) 323-04-45
-                                li (812) 323-27-68
-                                li (921) 958 02 27
-                            h3.mail_ico Почта
-                            ul
-                                li 
-                                    a(href="mailto:klinikapelya@mail.ru") klinikapelya@mail.ru
-                            h3.time_ico Время работы
-                            ul
-                                li 
-                                    b пн–пт:
-                                    |09:00 – 22:00
-                                li 
-                                    b сб:
-                                    |10:00 – 18:00
-                                li 
-                                    b вс: 
-                                    |Выходной
-                            h3.pay_ico Способы оплаты
-                            ul
-                                li Наличные
-                                li Банковские карты
-                                li Безналичный расчет по договору с юр. лицами
+                .someother_conteiner
+                    section
+                        //- article
+                        //-     p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, repellat fugiat facere maxime quis distinctio id, quibusdam autem ut libero cupiditate delectus doloremque deserunt soluta odit dolorem. Distinctio, autem, qu
+                        .contacts_info
+                            div.main_continfo
+                                h3.addr_ico Адрес
+                                ul
+                                    li г. Cанкт-Петербург, В.О., 7-я линия, 16/18, литера А
+                                h3.phone_ico Телефоны
+                                ul
+                                    li (812) 323-04-45
+                                    li (812) 323-27-68
+                                    li (921) 958 02 27
+                                h3.mail_ico Почта
+                                ul
+                                    li 
+                                        a(href="mailto:klinikapelya@mail.ru") klinikapelya@mail.ru
+                                h3.time_ico Время работы
+                                ul
+                                    li 
+                                        b пн–пт:
+                                        |09:00 – 22:00
+                                    li 
+                                        b сб:
+                                        |10:00 – 18:00
+                                    li 
+                                        b вс: 
+                                        |Выходной
+                                h3.pay_ico Способы оплаты
+                                ul
+                                    li Наличные
+                                    li Банковские карты
+                                    li Безналичный расчет по договору с юр. лицами
+                                
+
+                            div.cont_form
+                                h3 Обратная связь
+                                form
+                                    input(placeholder="Ваше имя")
+                                    input(placeholder="Email")
+                                    textarea(placeholder="Ваше сообщение")
+                                    button.thirdbutton Отправить
                             
-
-                        div.cont_form
-                            h3 Обратная связь
-                            form
-                                input(placeholder="Ваше имя")
-                                input(placeholder="Email")
-                                textarea(placeholder="Ваше сообщение")
-                                button.thirdbutton Отправить
-                        
 
 
 
@@ -101,13 +101,15 @@ html(lang="en").no-js
 
 
 
-    //- before body///////////////////////////////////////////////////////////////////////////////////////
-    // bower:js
-    script(src='bower_components/jquery/dist/jquery.js')
-    script(src='bower_components/fancybox3/jquery.fancybox.js')
-    script(src='bower_components/slick-carousel/slick/slick.min.js')
-    // endbower
-    //- end before body
+        //- before body///////////////////////////////////////////////////////////////////////////////////////
+        // bower:js
+        script(src='bower_components/jquery/dist/jquery.js')
+        script(src='bower_components/slick-carousel/slick/slick.min.js')
+        script(src='bower_components/fancybox3/jquery.fancybox.js')
+        // endbower
+        script(src='bower_components/easytabs/lib/jquery.easytabs.min.js')
+        
+        //- end before body
 
-    script(src='js/custom_plgns.min.js', type='text/javascript')
-    script(src='js/main.min.js', type='text/javascript')
+        script(src='js/custom_plgns.min.js', type='text/javascript')
+        script(src='js/main.min.js', type='text/javascript')

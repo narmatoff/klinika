@@ -121,6 +121,9 @@ html {
             margin: 0;
             padding: 0.4em 1em;
             box-shadow: 0 0 0 3px $lightenbrown, 0 0 0 4px $fontcolor;
+            &:hover {
+                text-decoration: none;
+            }
         }
         .secondbutton {
             display: inline-flex;
@@ -132,6 +135,10 @@ html {
             padding: 0.8em 1.3em;
             background-color: $lightenbrown2;
             border: none;
+            &:hover {
+                background-color: lighten($lightenbrown2,3%);
+                text-decoration: none;
+            }
         }
         .thirdbutton {
             display: inline-flex;
@@ -144,6 +151,10 @@ html {
             background-color: $mainbrown;
             color: #fff;
             border: none;
+            &:hover {
+                background-color: lighten($mainbrown,3%);
+                text-decoration: none;
+            }
             &:after {
                 display: block;
                 background-image: url("../img/svg/arrow_top_btn.svg");
@@ -165,6 +176,10 @@ html {
             background-color: $redColor;
             color: #fff;
             border: none;
+            &:hover {
+                background-color: lighten($redColor,3%);
+                text-decoration: none;
+            }
             &:after {
                 display: block;
                 background-image: url("../img/svg/arrow_top_btn.svg");
@@ -174,6 +189,33 @@ html {
                 content: "";
                 margin: 0 0 0 1em;
             }
+        }
+        .fourthbutton_nonarrow {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-family: $ptSerif;
+            padding: 0.8em 1.3em;
+            background-color: $redColor;
+            color: #fff;
+            border: none;
+            margin: 2em 0;
+            &:hover {
+                background-color: lighten($redColor,3%);
+                text-decoration: none;
+            }
+
+            //&:after {
+            //    display: block;
+            //    background-image: url("../img/svg/arrow_top_btn.svg");
+            //    background-repeat: no-repeat;
+            //    width: 15px;
+            //    height: 14px;
+            //    content: "";
+            //    margin: 0 0 0 1em;
+            //}
         }
         .fancyimg {
             display: inline-block;
@@ -212,7 +254,40 @@ html {
                 opacity: 1;
             }
         }
+        table {
 
+            //outline:1px dotted red;
+            width: 98%;
+            border: 1px solid #ccc;
+            margin: 0 auto;
+            color: lighten($fontcolor,20%);
+
+            //для двуколоночных таблиц с последней колонкой цены
+            &.two_columns {
+                tr {
+                    td {
+                        &:last-child {
+                            text-align: center;
+                            background-color: #fff;
+                            padding: 0;
+                            color: $fontcolor;
+                        }
+                    }
+                }
+            }
+            tr {
+                height: 2.5em;
+                td {
+                    border: 1px solid #ccc;
+                    padding: 0 0 0 1.3em;
+                }
+            }
+        }
+
+        //.centering_elem{
+        //    display:inline-flex;
+        //    margin:0 auto;
+        //}
         // конец_умолчания// конец_умолчания// конец_умолчания// конец_умолчания// конец_умолчания// конец_умолчания// конец_умолчания// конец_умолчания// конец_умолчания// конец_умолчания// конец_умолчания// конец_умолчания// конец_умолчания// конец_умолчания// конец_умолчания// конец_умолчания// конец_умолчания// конец_умолчания// конец_умолчания// конец_умолчания
         .main_wrapper {
             width: 100%;
@@ -934,7 +1009,7 @@ html {
                     flex-flow: column;
                     justify-content: space-around;
                     align-items: center;
-                    margin: 0 0 0.5em 0;
+                    margin: 0 0 0.5em;
                     ul {
                         margin: 0 0 0 5em;
                         padding: 0;
@@ -1028,6 +1103,7 @@ html {
                         display: block;
                         width: 128px;
                         height: 34px;
+                        margin: 0 0 2em;
                     }
                     p {
                         color: $lightFontcolor;
@@ -1043,7 +1119,7 @@ html {
                 width: $mainWidt - 16;
 
                 // outline: 1px dotted red;
-                margin: -150px auto 3em auto;
+                margin: -150px auto 3em;
                 background-color: $lightenbrown;
                 padding: 8px;
                 border: 1px solid #ccc;
@@ -1064,7 +1140,7 @@ html {
                     flex-flow: column;
                     justify-content: space-around;
                     align-items: center;
-                    margin: 0 0 0.5em 0;
+                    margin: 0 0 0.5em;
                     ul {
                         margin: 0 0 0 5em;
                         padding: 0;
@@ -1112,6 +1188,8 @@ html {
 
                     // margin:1em 0 1em 0;
                     margin: 0;
+
+                    //padding:2em 0 2em 0;
                     @include respond-to(handhelds) {
                         border: none;
                         height: auto;
@@ -1161,11 +1239,13 @@ html {
                         display: block;
                         width: 128px;
                         height: 34px;
+                        margin: 0 0 2em;
                     }
                     article {
                         color: $lightFontcolor;
                         width: 76.6%;
                         font-size: 0.9em;
+                        margin: 0 0 2em;
                         ol {
                             margin: 1em 0;
                             padding: 0;
@@ -1216,6 +1296,7 @@ html {
                             padding: 0.4em;
                             border: 1px solid lighten($fontcolor, 60%);
                             display: inline-block;
+                            width:100%;
                         }
                         .fancyimg {
                             img {
@@ -1329,9 +1410,11 @@ html {
                                 display: flex;
                                 flex-flow: column nowrap;
                                 font-size: 0.9em;
+
                                 //height: 100%;
-                                justify-content:flex-start;
-                                align-items:flex-end;
+                                justify-content: flex-start;
+                                align-items: flex-end;
+
                                 //width:100%;
                                 input {
                                     height: 2.188em;
@@ -1350,12 +1433,366 @@ html {
                                     outline: none;
                                     width: 100%;
                                     max-width: 100%;
-                                    min-height:20em;
+                                    min-height: 20em;
                                     max-height: 100%;
                                 }
                                 button {
                                     width: 12em;
                                 }
+                            }
+                        }
+                    }
+                    .other_info {
+
+                        //outline:1px dotted red;
+                        height: auto;
+                        width: 97%;
+                        margin: 0 0 2em;
+                        padding:2em 0 2em 0;
+
+                        //past here doctors styles
+                        .doctortype_wrapper {
+                            position: relative;
+                            zoom: 1;
+                            display: flex;
+                            display: flex;
+                            flex-flow: column nowrap;
+                            justify-content: center;
+                            align-items: center;
+                            width: 894px;
+                            z-index: 2;
+                            height: auto;
+                            margin: 0 auto;
+
+                            // overflow:hidden;
+                            @include respond-to(medium-screens) {
+                                width: 82.73%;
+                            }
+                            @include respond-to(handhelds) {
+                                width: 100%;
+                            }
+                            .slides {
+                                height: auto;
+                                width: 100%;
+                                margin: 0;
+                                padding: 0;
+                                display: flex;
+                                flex-flow: row wrap;
+                                justify-content: space-around;
+                                align-items: center;
+
+                                // width
+                                // outline: 1px dotted red;
+                                li {
+                                    display: flex !important;
+                                    flex-flow: column nowrap;
+                                    align-items: center;
+
+                                    // justify-content: flex-start;
+                                    justify-content: center;
+                                    width: 298px;
+
+                                    // padding: 20px 0 20px 0;
+                                    // margin: 20px 0 20px 0;
+                                    padding: 0;
+                                    margin: 1em 0 1em 0;
+                                    outline:1px doted red;
+                                    height:auto;
+                                    outline: none;
+                                    border: none;
+                                    @include respond-to(handhelds) {
+                                        width: 17.85em;
+                                    }
+
+                                    // при наведении на элемент слайдера
+                                    &:hover {
+                                        background-color: #fff;
+                                        .border_doctor_slider_wrap {
+
+                                            // border: 4px solid $redColor;
+                                            .doctor_slider_wrap {
+                                                overflow: hidden;
+
+                                                // border: 3px solid $redColor;
+                                                img {
+
+                                                }
+                                                svg {
+                                                    path {
+                                                        &:nth-child(2) {
+                                                            fill: #fff;
+                                                        }
+                                                        &:last-child {
+                                                            fill: red;
+                                                        }
+                                                        @include respond-to(handhelds) {
+                                                            &:nth-child(2) {
+                                                                fill: #f1ebdd;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        @include respond-to(handhelds) {
+                                            background-color: inherit;
+                                        }
+                                    }
+                                    .border_doctor_slider_wrap {
+                                        padding: 5px;
+
+                                        // border-radius: 50%;
+                                        // border: 4px solid $lightenbrown0;
+                                        // background-color: $lightenmiddlebrown;
+                                        // mask: url(#doctors);
+                                        // mask: url(#a);
+                                        margin: 0 0 1.4em;
+                                        .doctor_slider_wrap {
+
+                                            // border: 3px solid $lightenbrown0;
+                                            width: 198px;
+                                            height: 198px;
+                                            overflow: hidden;
+
+                                            // border-radius: 50%;
+                                            display: flex;
+                                            flex-flow: row nowrap;
+                                            align-items: center;
+                                            justify-content: center;
+                                            margin: 0;
+                                            position: relative;
+                                            img {
+
+                                                // clip-path: url(#doctors);
+                                                // mask-border: url("./img/svg/doctor_border.svg") 35 repeat;
+                                            }
+                                            svg {
+                                                position: absolute;
+                                                z-index: 1;
+                                                left: 0;
+                                                bottom: -1px;
+                                                path {
+                                                    &:first-child {
+
+                                                        // fill:red;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .doctor_heading_slide {
+                                        text-align: center;
+                                        margin: 0 0 1.2em;
+                                        border-top: 2px solid darken($lightenmiddlebrown2, 10%);
+                                        border-bottom: 2px solid $lightenmiddlebrown2;
+                                        display: block;
+                                        width: 90%;
+                                        @include respond-to(handhelds) {
+                                            width: 70%;
+                                        }
+                                        .doctor_heading_slide_insbord {
+                                            border-top: 1px solid $lightenmiddlebrown2;
+                                            border-bottom: 1px solid $lightenmiddlebrown2;
+                                            display: block;
+                                            width: 95%;
+                                            margin: 2px auto;
+                                            padding: 10px 0;
+                                            a {
+                                                font-family: $ptSerif;
+                                                text-transform: capitalize;
+                                                font-size: 1.1em;
+                                                text-decoration: none;
+                                                color: $fontcolor;
+                                            }
+                                        }
+                                    }
+                                    p {
+                                        width: 230px;
+                                        color: $lightFontcolor;
+                                        font-size: 0.9em;
+                                        margin: 0;
+                                        text-align: center;
+                                    }
+                                }
+
+                                // вперед/назад
+                                // // пагинация слайдера
+                                .slick-list {
+                                    height: 100%;
+                                    .slick-track {
+                                        height: 100%;
+                                        display: flex;
+                                        flex-flow: row nowrap;
+                                        align-items: center;
+                                    }
+                                }
+                                .slick-arrow {
+
+                                    // outline: 1px dotted red;
+                                    height: 50px;
+                                    width: 50px;
+                                    border-radius: 50%;
+                                    overflow: hidden;
+                                    &:hover {
+                                        background-color: $lightenbrown2;
+                                    }
+                                    &.slick-disabled {
+                                        &:before {
+
+                                        }
+                                        opacity: 0.25;
+                                        background-color: initial;
+                                    }
+                                    &.slick-prev {
+                                        left: -70px;
+                                        transform: rotate(180deg);
+                                        z-index: 2;
+                                        @include respond-to(handhelds) {
+                                            left: -25px;
+                                        }
+                                        &:before {
+                                            font-family: initial;
+                                            font-size: initial;
+                                            line-height: initial;
+                                            opacity: initial;
+                                            color: initial;
+                                            content: "";
+                                            background-image: url("../img/svg/navigation_button.svg");
+                                            display: block;
+                                            height: 50px;
+                                            width: 50px;
+                                        }
+                                    }
+                                    &.slick-next {
+                                        right: -70px;
+
+                                        // transform: rotate(180deg);
+                                        @include respond-to(handhelds) {
+                                            right: -25px;
+                                        }
+                                        &:before {
+                                            font-family: initial;
+                                            font-size: initial;
+                                            line-height: initial;
+                                            opacity: initial;
+                                            color: initial;
+                                            content: "";
+                                            background-image: url("../img/svg/navigation_button.svg");
+                                            display: block;
+                                            height: 50px;
+                                            width: 50px;
+                                        }
+                                    }
+                                }
+
+                                // slick slider dots
+                                .slick-dots {
+                                    height: initial;
+                                    width: initial;
+                                    margin: initial;
+                                    padding: initial;
+                                    display: flex;
+                                    flex-basis: 100%;
+                                    width: 100%;
+                                    flex-flow: row nowrap;
+                                    bottom: 0;
+                                    left: 0;
+                                    justify-content: center;
+                                    align-items: center;
+                                    height: 1.5em;
+                                    li {
+                                        display: initial;
+                                        width: initial;
+                                        padding: initial;
+                                        margin: 0 0.5em;
+                                        height: auto;
+                                        &:hover {
+                                            background-color: initial;
+                                        }
+                                        &.slick-active {
+                                            button {
+                                                background-color: $fontcolor;
+                                            }
+                                        }
+                                        button {
+                                            width: 10px;
+                                            height: 10px;
+                                            display: block;
+                                            border-radius: 50%;
+                                            border: 1px solid $fontcolor;
+                                            overflow: hidden;
+                                            &:hover {
+                                                background-color: $fontcolor;
+                                            }
+                                            &:before {
+                                                display: none;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .tabser {
+
+                //outline:1px dotted red;
+                margin: 0 auto 3em;
+                ul {
+                    display: flex;
+                    flex-flow: row wrap;
+                    list-style: none;
+
+                    //outline:1px dotted red;
+                    justify-content: flex-start;
+                    align-items: center;
+                    margin: 0 0 1em;
+                    padding: 0;
+                    .tab {
+                        margin: 0 1em;
+                        padding: 0;
+
+                        //outline:1px dotted red;
+                        height: 3.438em;
+                        width: 12.5em;
+                        &:hover {
+                            background-color: rgba(255, 255, 255, 0.35);
+                        }
+                        &.active {
+                            background-color: #fff;
+                            color: $fontcolor;
+                        }
+                        &:first-child {
+                            margin: 0 1em 0 0;
+                        }
+                        &:last-child {
+                            margin: 0 0 0 1em;
+                        }
+                        a {
+                            text-decoration: none;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: 100%;
+                            height: 100%;
+                            font-family: $ptSerif;
+                            font-size: 1.2em;
+                            color: lighten($fontcolor,10%);
+                            .tab_informer {
+
+                                //display:inline-block;
+                                width: 33px;
+                                height: 33px;
+
+                                //outline:1px dotted red;
+                                background-color: $lightenbrown2;
+                                border-radius: 50%;
+                                display: inline-flex;
+                                justify-content: center;
+                                align-items: center;
+                                margin: 0 0 0 0.7em;
+                                font-size: 0.9em;
                             }
                         }
                     }

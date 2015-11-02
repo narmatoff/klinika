@@ -136,7 +136,7 @@ gulp.task('sass', function() {
 
 // спрайты
 gulp.task('sprite', function() {
-    // Generate our spritesheet 
+    // Generate our spritesheet
     var spriteData = gulp.src('src/images/forsprts/*.png')
         .pipe(plumber())
 
@@ -149,17 +149,17 @@ gulp.task('sprite', function() {
             // algorithm: "binary-tree"
     }));
 
-    // Pipe image stream through image optimizer and onto disk 
+    // Pipe image stream through image optimizer and onto disk
     var imgStream = spriteData.img
         // .pipe(imagemin())
         .pipe(gulp.dest('dist/img'));
 
-    // Pipe CSS stream through CSS optimizer and onto disk 
+    // Pipe CSS stream through CSS optimizer and onto disk
     var cssStream = spriteData.css
         // .pipe(csso())
         .pipe(gulp.dest('src/sass'));
 
-    // Return a merged stream to handle both `end` events 
+    // Return a merged stream to handle both `end` events
     return merge(imgStream, cssStream)
         .pipe(connect.reload())
         .pipe(livereload());
@@ -222,11 +222,11 @@ gulp.task('svgmin', function() {
 // bower
 gulp.task('bower', function() {
     return gulp
-        .src('src/jade/*.jade')
+        .src('src/jade/**/*.jade')
         .pipe(plumber())
 
     .pipe(wiredep({
-            directory: "dist/bower_components",
+            directory: "dist/bower_components/",
             // игнорируем путь для относительности путей
             ignorePath: '../../dist/'
         }).on('error', gutil.log))

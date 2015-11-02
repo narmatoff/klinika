@@ -3,6 +3,7 @@ $(document).ready(function() {
 
 
     $(".fancyimg").fancybox();
+    $(".tabser").easytabs();
 
     // menu on henhelds
     $(".hamburger").click(function() {
