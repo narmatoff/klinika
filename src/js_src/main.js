@@ -3,7 +3,11 @@ $(document).ready(function() {
 
 
     $(".fancyimg").fancybox();
-    $(".tabser").easytabs();
+    $(".tabser").easytabs({
+        animationSpeed: 'fast',
+        // убираем сохранение хэша в адр строке(прыгает в хроме)
+        updateHash: false
+    });
 
     // menu on henhelds
     $(".hamburger").click(function() {
