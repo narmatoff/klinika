@@ -120,7 +120,7 @@ html {
             position: relative;
             margin: 0;
             padding: 0.4em 1em;
-            box-shadow: 0 0 0 3px $lightenbrown, 0 0 0 4px $fontcolor;
+            box-shadow: 0 0 0 3px rgb(228, 216, 193), 0 0 0 4px $fontcolor;
             &:hover {
                 text-decoration: none;
             }
@@ -1833,6 +1833,10 @@ html {
                     }
                 }
                 #otzivi {
+                    display:flex;
+                    flex-flow:column nowrap;
+                    justify-content:center;
+                    align-items:center;
                     //outline: 1px dotted red;
                     .comments_block {
 
@@ -1884,6 +1888,11 @@ html {
 
                             }
                         }
+                    }
+                    .firstbutton{
+                        //display:inline-block;
+                        margin:0 auto 3em;
+                        color:$fontcolor;
                     }
                     .add_comment{
                         .cont_form{
