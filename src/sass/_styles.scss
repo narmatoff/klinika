@@ -4,6 +4,7 @@ html {
         background-color: $lightenmiddlebrown;
         background-repeat: no-repeat;
         width: 100%;
+        color: $fontcolor;
 
         // умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:
         a {
@@ -28,22 +29,39 @@ html {
         img,
         .fancyimg:after {
             transition: all 0.2s ease;
+            color: $fontcolor;
         }
         p {
             line-height: 1.55em;
+            font-size: 0.9em;
+            color: lighten($fontcolor,20%);
             a {
                 color: $redColor;
                 cursor: pointer;
             }
         }
+        article {
+            ul,
+            ol {
+
+                //display:block;
+                li {
+                    font-size: 0.9em;
+                    color: lighten($fontcolor,10%);
+
+                    //display:block;
+                }
+            }
+        }
         h1 {
             font-family: $ptSerif;
             text-transform: capitalize;
-            padding: 10px;
+            padding: 10px 0;
             display: flex;
             line-height: 0.3em;
             font-size: 2.5em;
             font-weight: normal;
+            color: $fontcolor;
             @include respond-to(handhelds) {
                 font-size: 1.8em;
                 line-height: 1.2em;
@@ -79,7 +97,8 @@ html {
             font-family: $ptSerif;
 
             // text-transform: capitalize;
-            padding: 10px;
+            padding: 10px 0;
+            color: $fontcolor;
 
             // display: flex;
             line-height: 0.3em;
@@ -96,7 +115,8 @@ html {
             font-family: $ptSerif;
 
             // text-transform: capitalize;
-            padding: 10px;
+            padding: 10px 0;
+            color: $fontcolor;
 
             // display: flex;
             line-height: 0.3em;
@@ -190,7 +210,7 @@ html {
                 margin: 0 0 0 1em;
             }
         }
-        .fourthbutton_nonarrow {
+        .fourthbutton.nonarrow {
             display: inline-flex;
             justify-content: center;
             align-items: center;
@@ -206,16 +226,6 @@ html {
                 background-color: lighten($redColor,3%);
                 text-decoration: none;
             }
-
-            //&:after {
-            //    display: block;
-            //    background-image: url("../img/svg/arrow_top_btn.svg");
-            //    background-repeat: no-repeat;
-            //    width: 15px;
-            //    height: 14px;
-            //    content: "";
-            //    margin: 0 0 0 1em;
-            //}
         }
         .fancyimg {
             display: inline-block;
@@ -266,11 +276,13 @@ html {
             &.two_columns {
                 tr {
                     td {
+
                         &:last-child {
                             text-align: center;
                             background-color: #fff;
                             padding: 0;
-                            color: $fontcolor;
+
+                            //color: $fontcolor;
                         }
                     }
                 }
@@ -280,10 +292,11 @@ html {
                 td {
                     border: 1px solid #ccc;
                     padding: 0 0 0 1.3em;
+                    text-align: left;
+
                 }
             }
         }
-
         form {
             display: flex;
             flex-flow: column nowrap;
@@ -294,7 +307,9 @@ html {
             align-items: flex-end;
 
             //width:100%;
-            input[type="text"],input[type="number"],input[type="email"] {
+            input[type="text"],
+            input[type="number"],
+            input[type="email"] {
                 height: 2.188em;
                 width: 100%;
                 background: transparent;
@@ -318,6 +333,12 @@ html {
                 width: 12em;
             }
         }
+        .nonarrow {
+            &:after {
+                content: none;
+            }
+        }
+
         //.centering_elem{
         //    display:inline-flex;
         //    margin:0 auto;
@@ -438,7 +459,8 @@ html {
                                 }
                             }
                             a {
-                                color: $fontcolor;
+
+                                //color: $fontcolor;
                                 text-decoration: none;
                                 padding: 0.4em 0;
 
@@ -632,7 +654,8 @@ html {
                             text-align: right;
                             @include respond-to(handhelds) {
                                 list-style: none;
-                                font-size: 0.9em;
+
+                                //font-size: 0.9em;
                             }
                             a {
                                 text-decoration: none;
@@ -794,7 +817,8 @@ html {
                                     font-family: $ptSerif;
                                     font-size: 1em;
                                     text-decoration: none;
-                                    color: $fontcolor;
+
+                                    //color: $fontcolor;
                                     text-transform: uppercase;
                                     border-top: 1px solid $fontcolor;
                                     border-bottom: 1px solid $fontcolor;
@@ -827,7 +851,7 @@ html {
                                     top: 102px;
                                     left: 0;
                                     height: initial;
-                                    z-index: 1;
+                                    z-index: 2;
 
                                     // width: auto;
                                     padding: 40px;
@@ -963,7 +987,8 @@ html {
                         }
                         .nadom {
                             background-color: $lightenbrown2;
-                            color: $fontcolor;
+
+                            //color: $fontcolor;
                             text-decoration: none;
                             text-align: center;
                             height: 55px;
@@ -1142,7 +1167,8 @@ html {
                     p {
                         color: $lightFontcolor;
                         width: 76.6%;
-                        font-size: 0.9em;
+
+                        //font-size: 0.9em;
                     }
                 }
             }
@@ -1278,15 +1304,18 @@ html {
                     article {
                         color: $lightFontcolor;
                         width: 76.6%;
-                        font-size: 0.9em;
+
+                        //font-size: 0.9em;
                         margin: 0 0 2em;
                         ol {
                             margin: 1em 0;
                             padding: 0;
+                            display: block;
                             li {
                                 list-style-type: none;
                                 margin: 0 0 0.2em;
-                                color: $fontcolor;
+
+                                //color: $fontcolor;
                                 .numlist {
                                     font-size: 1.1em;
                                     background-color: #fff;
@@ -1304,12 +1333,14 @@ html {
                         }
                         ul {
                             margin: 1em 0;
-                            padding: 0 0 0 1.5em;
+                            padding: 0 0 0 1em;
+                            display: block;
                             li {
                                 list-style-type: none;
                                 margin: 0 0 0.5em;
                                 padding: 0 0 0 1.4em;
-                                color: $fontcolor;
+
+                                //color: $fontcolor;
                                 list-style-image: url("../img/svg/septopmenu.svg");
                                 .numlist {
                                     font-size: 1.1em;
@@ -1330,7 +1361,8 @@ html {
                             padding: 0.4em;
                             border: 1px solid lighten($fontcolor, 60%);
                             display: inline-block;
-                            width: 100%;
+
+                            //width: 100%;
                         }
                         .fancyimg {
                             img {
@@ -1440,6 +1472,7 @@ html {
                         }
                         .cont_form {
                             flex-basis: 44.092%;
+
                             //form {
                             //    display: flex;
                             //    flex-flow: column nowrap;
@@ -1636,14 +1669,16 @@ html {
                                                 text-transform: capitalize;
                                                 font-size: 1.1em;
                                                 text-decoration: none;
-                                                color: $fontcolor;
+
+                                                //color: $fontcolor;
                                             }
                                         }
                                     }
                                     p {
                                         width: 230px;
                                         color: $lightFontcolor;
-                                        font-size: 0.9em;
+
+                                        //font-size: 0.9em;
                                         margin: 0;
                                         text-align: center;
                                     }
@@ -1765,10 +1800,192 @@ html {
                                     }
                                 }
                             }
+
+                        }
+                        .doctortype_wrapper {
+                            width:100%;
+
+                        .stati {
+                            height: auto;
+                            width: 100%;
+                            margin: 0;
+                            padding: 0;
+                            display: flex;
+                            flex-flow: row wrap;
+                            justify-content: space-around;
+                            align-items: space-around;
+
+                            // width
+                            // outline: 1px dotted red;
+                            li {
+                                display: flex !important;
+                                flex-flow: column nowrap;
+                                align-items: center;
+                                justify-content: center;
+                                width: 18.5em;
+                                padding: 1em 0 1em 0;
+                                margin: 1em 0;
+                                outline: 1px doted red;
+                                height: auto;
+                                outline: none;
+                                border: 1px solid lighten($fontcolor,50%);
+                                @include respond-to(handhelds) {
+                                    width: 17.85em;
+                                }
+
+                                // при наведении на элемент врача
+                                &:hover {
+                                    background-color: #fff;
+                                    @include respond-to(handhelds) {
+                                        background-color: inherit;
+                                    }
+                                }
+
+
+
+
+                                h3{
+                                    line-height:1.2em;
+                                    text-align:center;
+                                    font-size:1.2em;
+                                    a{
+
+                                    }
+                                }
+                                .doctor_heading_vrach_insbord{
+                                    background-image:url("../img/svg/akc_slider_sep.svg");
+                                    background-repeat:no-repeat;
+                                    width:94px;
+                                    height:26px;
+                                    margin:0 0 1em 0;
+                                }
+                                p {
+                                    width: 230px;
+                                    color: $lightFontcolor;
+
+                                    //font-size: 0.9em;
+                                    margin: 0;
+                                    text-align: left;
+                                }
+                                .st_date {
+                                    display: inline-block;
+                                    width: 73%;
+                                    background-image: url("../img/svg/calendar.svg");
+                                    background-repeat: no-repeat;
+                                    padding: 0 0 0 1.5em;
+                                    margin:1.5em 0 0 0;
+                                    line-height:1em;
+                                    color: lighten($fontcolor,15%);
+                                    font-size: 0.85em;
+                                }
+                            }
+                        }
+                    }
+
+                        article {
+                            width: 85%;
+                            margin: 0 0 0 1.5em;
+                        }
+                    }
+                    .vrach_wr {
+                        display: flex;
+                        flex-flow: row wrap;
+                        justify-content: space-around;
+                        .vr_avatar {
+                            width: 19.577%;
+                            display: flex;
+                            flex-flow: column nowrap;
+                            justify-content: center;
+                            align-items: center;
+                            .border_doctor_ava_wrap {
+                                padding: 5px;
+
+                                // border-radius: 50%;
+                                // border: 4px solid $lightenbrown0;
+                                // background-color: $lightenmiddlebrown;
+                                // mask: url(#doctors);
+                                // mask: url(#a);
+                                margin: 0 0 1.4em;
+                                display: flex;
+                                justify-content: center;
+                                .doctor_ava_wrap {
+
+                                    // border: 3px solid $lightenbrown0;
+                                    width: 198px;
+                                    height: 198px;
+                                    overflow: hidden;
+
+                                    // border-radius: 50%;
+                                    display: flex;
+                                    flex-flow: row nowrap;
+                                    align-items: center;
+                                    justify-content: center;
+                                    margin: 0;
+                                    padding: 0;
+                                    position: relative;
+                                    img {
+
+                                        // clip-path: url(#doctors);
+                                        // mask-border: url("./img/svg/doctor_border.svg") 35 repeat;
+                                    }
+                                    svg {
+                                        position: absolute;
+                                        z-index: 1;
+                                        left: 0;
+                                        bottom: -1px;
+                                        path {
+                                            &:first-child {
+
+                                                // fill:red;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .fourthbutton {
+                                font-size: 0.9em;
+                            }
+                        }
+                        .mainabout_doctor {
+                            width: 74.075%;
+                            h1 {
+
+                                //margin:0;
+                                padding: 0;
+                                &:before {
+                                    content: none;
+                                }
+                                &:after {
+                                    content: none;
+                                }
+                            }
+                            .whois_he {
+                                font-size: 1.1em;
+                                border-bottom: 2px solid lighten($fontcolor,35%);
+                                height: 2.6em;
+                                display: inline-block;
+                                span {
+
+                                    //font-size:1.1em;
+                                    border-bottom: 1px solid lighten($fontcolor,35%);
+                                    height: 2.86em;
+                                    display: inline-block;
+                                }
+                            }
+                            p {
+
+                            }
+                            h3 {
+
+                            }
+                            ul {
+                                li {
+
+                                }
+                            }
                         }
                     }
                 }
-
             }
             .tabser {
 
@@ -1796,7 +2013,8 @@ html {
                         }
                         &.active {
                             background-color: #fff;
-                            color: $fontcolor;
+
+                            //color: $fontcolor;
                         }
                         &:first-child {
                             margin: 0 1em 0 0;
@@ -1833,10 +2051,11 @@ html {
                     }
                 }
                 #otzivi {
-                    display:flex;
-                    flex-flow:column nowrap;
-                    justify-content:center;
-                    align-items:center;
+                    display: flex;
+                    flex-flow: column nowrap;
+                    justify-content: center;
+                    align-items: center;
+
                     //outline: 1px dotted red;
                     .comments_block {
 
@@ -1851,10 +2070,10 @@ html {
                         justify-content: space-between;
                         ._one_comment {
                             border: 1px solid #ccc;
-                            margin:0 0 0.7em 0;
-                            padding:1.8em;
-                            &:last-child{
-                                margin:0;
+                            margin: 0 0 0.7em;
+                            padding: 1.8em;
+                            &:last-child {
+                                margin: 0;
                             }
                             .comm_headr {
                                 display: flex;
@@ -1869,8 +2088,7 @@ html {
                                     width: auto;
                                     height: auto;
                                     font-size: 1.2em;
-                                    color:lighten($fontcolor,10%);
-
+                                    color: lighten($fontcolor,10%);
                                 }
                                 span {
                                     display: inline-block;
@@ -1883,31 +2101,32 @@ html {
                                 }
                             }
                             p {
-                                color:lighten($fontcolor,20%);
-                                font-size:0.9em;
+                                color: lighten($fontcolor,20%);
 
+                                //font-size: 0.9em;
                             }
                         }
                     }
-                    .firstbutton{
+                    .firstbutton {
+
                         //display:inline-block;
-                        margin:0 auto 3em;
-                        color:$fontcolor;
+                        margin: 0 auto 3em;
+
+                        //color: $fontcolor;
                     }
-                    .add_comment{
-                        .cont_form{
-                            border:1px solid #ccc;
-                            padding:0 0 0 1em;
-                            form{
-                                width:50%;
+                    .add_comment {
+                        .cont_form {
+                            border: 1px solid #ccc;
+                            padding: 0 0 0 1em;
+                            form {
+                                width: 50%;
+
                                 //margin:0 0 0 1em;
-                                align-items:flex-start;
+                                align-items: flex-start;
                             }
                         }
-
                     }
                 }
-
             }
             .someother_conteiner {
                 margin: 0 auto 3em;
@@ -2019,7 +2238,8 @@ html {
                             font-family: $ptSerif;
                             font-size: 0.9em;
                             text-decoration: none;
-                            color: $fontcolor;
+
+                            //color: $fontcolor;
                         }
                     }
                 }
@@ -2120,7 +2340,8 @@ html {
                                     text-transform: uppercase;
                                     font-size: 1.1em;
                                     text-decoration: none;
-                                    color: $fontcolor;
+
+                                    //color: $fontcolor;
                                 }
                             }
                             .akc_slider_sep {
@@ -2135,7 +2356,8 @@ html {
                             p {
                                 width: 230px;
                                 color: $lightFontcolor;
-                                font-size: 0.9em;
+
+                                //font-size: 0.9em;
                             }
                         }
 
@@ -2732,7 +2954,8 @@ html {
                         font-family: $ptSerif;
                         font-size: 0.9em;
                         text-decoration: none;
-                        color: $fontcolor;
+
+                        //color: $fontcolor;
                     }
                 }
             }
@@ -2901,14 +3124,16 @@ html {
                                             text-transform: capitalize;
                                             font-size: 1.1em;
                                             text-decoration: none;
-                                            color: $fontcolor;
+
+                                            //color: $fontcolor;
                                         }
                                     }
                                 }
                                 p {
                                     width: 230px;
                                     color: $lightFontcolor;
-                                    font-size: 0.9em;
+
+                                    //font-size: 0.9em;
                                     margin: 0;
                                     text-align: center;
                                 }
@@ -3229,8 +3454,6 @@ html {
             margin: 0 auto;
             color: $lightenmiddlebrown;
             font-size: 0.8em;
-
-            // outline: 1px dotted white;
             border-top: 1px solid #242121;
             padding: 2em 0;
             @include respond-to(medium-screens) {
