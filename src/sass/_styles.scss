@@ -1,5 +1,6 @@
 html {
     font-family: $openSans;
+    font-size: 16px;
     body {
         background-color: $lightenmiddlebrown;
         background-repeat: no-repeat;
@@ -58,14 +59,16 @@ html {
             text-transform: capitalize;
             padding: 10px 0;
             display: flex;
-            line-height: 0.3em;
+
+            //line-height: 0.3em;
             font-size: 2.5em;
             font-weight: normal;
             color: $fontcolor;
             @include respond-to(handhelds) {
                 font-size: 1.8em;
                 line-height: 1.2em;
-                text-align: center;
+
+                //text-align: center;
             }
             &:before {
                 content: "";
@@ -124,9 +127,11 @@ html {
             font-weight: bold;
             width: 76.6%;
             @include respond-to(handhelds) {
-                font-size: 1.8em;
+
+                //font-size: 1.8em;
                 line-height: 1.2em;
-                text-align: center;
+
+                //text-align: center;
             }
         }
         .firstbutton {
@@ -164,6 +169,7 @@ html {
             display: inline-flex;
             justify-content: center;
             align-items: center;
+            flex-flow: row nowrap;
             text-transform: uppercase;
             text-decoration: none;
             font-family: $ptSerif;
@@ -171,19 +177,24 @@ html {
             background-color: $mainbrown;
             color: #fff;
             border: none;
+            background-image: url("../img/svg/arrow_top_btn.svg");
+            background-repeat: no-repeat;
+            background-position: 90% center;
+            padding-right: 3em;
             &:hover {
                 background-color: lighten($mainbrown,3%);
                 text-decoration: none;
             }
-            &:after {
-                display: block;
-                background-image: url("../img/svg/arrow_top_btn.svg");
-                background-repeat: no-repeat;
-                width: 15px;
-                height: 14px;
-                content: "";
-                margin: 0 0 0 1em;
-            }
+
+            //&:after {
+            //    display: block;
+            //    background-image: url("../img/svg/arrow_top_btn.svg");
+            //    background-repeat: no-repeat;
+            //    width: 15px;
+            //    height: 14px;
+            //    content: "";
+            //    margin: 0 0 0 1em;
+            //}
         }
         .fourthbutton {
             display: inline-flex;
@@ -196,19 +207,24 @@ html {
             background-color: $redColor;
             color: #fff;
             border: none;
+            background-image: url("../img/svg/arrow_top_btn.svg");
+            background-repeat: no-repeat;
+            background-position: 90% center;
+            padding-right: 3em;
             &:hover {
                 background-color: lighten($redColor,3%);
                 text-decoration: none;
             }
-            &:after {
-                display: block;
-                background-image: url("../img/svg/arrow_top_btn.svg");
-                background-repeat: no-repeat;
-                width: 15px;
-                height: 14px;
-                content: "";
-                margin: 0 0 0 1em;
-            }
+
+            //&:after {
+            //    display: block;
+            //    background-image: url("../img/svg/arrow_top_btn.svg");
+            //    background-repeat: no-repeat;
+            //    width: 15px;
+            //    height: 14px;
+            //    content: "";
+            //    margin: 0 0 0 1em;
+            //}
         }
         .fourthbutton.nonarrow {
             display: inline-flex;
@@ -277,11 +293,14 @@ html {
                 tr {
                     td {
 
+                        //min-width:20%;
+                        width: 20%;
                         &:last-child {
                             text-align: center;
                             background-color: #fff;
                             padding: 0;
 
+                            //min-width:20%;
                             //color: $fontcolor;
                         }
                     }
@@ -293,7 +312,6 @@ html {
                     border: 1px solid #ccc;
                     padding: 0 0 0 1.3em;
                     text-align: left;
-
                 }
             }
         }
@@ -305,6 +323,10 @@ html {
             //height: 100%;
             justify-content: flex-start;
             align-items: flex-end;
+            @include respond-to(handhelds) {
+                justify-content: center;
+                align-items: center;
+            }
 
             //width:100%;
             input[type="text"],
@@ -334,9 +356,11 @@ html {
             }
         }
         .nonarrow {
-            &:after {
-                content: none;
-            }
+            background-image: none;
+
+            //&:after {
+            //    content: none;
+            //}
         }
 
         //.centering_elem{
@@ -623,6 +647,7 @@ html {
                             display: list-item;
                             list-style-position: inside;
                             text-align: right;
+                            font-size: 1.1em;
                             a {
                                 text-decoration: none;
                             }
@@ -652,6 +677,7 @@ html {
                             list-style-position: inside;
                             list-style-image: url("../img/svg/phone_baloon.svg");
                             text-align: right;
+                            font-size: 1.1em;
                             @include respond-to(handhelds) {
                                 list-style: none;
 
@@ -1072,7 +1098,7 @@ html {
                     ul {
                         margin: 0 0 0 5em;
                         padding: 0;
-                        width: 100%;
+                        //width:auto;
                         display: flex;
                         li {
                             list-style-image: url("../img/svg/septopmenu.svg");
@@ -1201,10 +1227,26 @@ html {
                     justify-content: space-around;
                     align-items: center;
                     margin: 0 0 0.5em;
+                    @include respond-to(handhelds) {
+
+                        // background-color: red;
+                        display: none;
+                    }
+                    @include respond-to(medium-screens) {
+
+                        // background-color: green;
+                        display: none;
+                    }
+                    @include respond-to(postmedium-screens) {
+
+                        // background-color: orange;
+                        display: flex;
+                    }
                     ul {
-                        margin: 0 0 0 5em;
+                        //margin: 0 0 0 5em;
                         padding: 0;
-                        width: 100%;
+                        //padding: 0;
+                        width: 98%;
                         display: flex;
                         li {
                             list-style-image: url("../img/svg/septopmenu.svg");
@@ -1361,6 +1403,15 @@ html {
                             padding: 0.4em;
                             border: 1px solid lighten($fontcolor, 60%);
                             display: inline-block;
+                            @include respond-to(handhelds) {
+                                max-width: 100%;
+                            }
+                            @include respond-to(medium-screens) {
+                                max-width: 100%;
+                            }
+                            @include respond-to(postmedium-screens) {
+                                max-width: 100%;
+                            }
 
                             //width: 100%;
                         }
@@ -1386,15 +1437,32 @@ html {
                         //background-color:red;
                         display: flex;
                         flex-flow: row wrap;
-                        justify-content: space-around;
+                        justify-content: space-between;
 
+                        //padding:0 0em 0 2em;
                         //flex-basis:100%;
                         width: 100%;
+                        @include respond-to(handhelds) {
+                            justify-content: center;
+                        }
                         .main_continfo {
-                            flex-basis: 44.092%;
+                            flex-basis: 45%;
+                            padding: 0 0 0 2em;
+                            @include respond-to(handhelds) {
+
+                                // color: red;
+                                flex-basis: 100%;
+                                padding: 0;
+                            }
                             .addr_ico {
                                 display: inline-block;
                                 padding: 0;
+                                @include respond-to(handhelds) {
+
+                                    // color: orange;
+                                    font-size: 1em;
+                                    margin: 1em 0 1em 1em;
+                                }
                                 &:before {
                                     background: transparent url("../img/svg/cont_addr_baloon.svg") left top no-repeat;
                                     width: 12px;
@@ -1407,6 +1475,12 @@ html {
                             .phone_ico {
                                 display: inline-block;
                                 padding: 0;
+                                @include respond-to(handhelds) {
+
+                                    // color: orange;
+                                    font-size: 1em;
+                                    margin: 1em 0 1em 1em;
+                                }
                                 &:before {
                                     background: transparent url("../img/svg/cont_phone_baloon.svg") left top no-repeat;
                                     width: 11px;
@@ -1414,11 +1488,22 @@ html {
                                     display: inline-block;
                                     content: "";
                                     margin: 0 1.8em 0 0;
+
+                                    //@include respond-to(handhelds) {
+                                    //   // color: orange;
+                                    //   content: none;
+                                    //}
                                 }
                             }
                             .mail_ico {
                                 display: inline-block;
                                 padding: 0;
+                                @include respond-to(handhelds) {
+
+                                    // color: orange;
+                                    font-size: 1em;
+                                    margin: 1em 0 1em 1em;
+                                }
                                 &:before {
                                     background: transparent url("../img/svg/cont_mail_baloon.svg") left top no-repeat;
                                     width: 16px;
@@ -1431,6 +1516,12 @@ html {
                             .time_ico {
                                 display: inline-block;
                                 padding: 0;
+                                @include respond-to(handhelds) {
+
+                                    // color: orange;
+                                    font-size: 1em;
+                                    margin: 1em 0 1em 1em;
+                                }
                                 &:before {
                                     background: transparent url("../img/svg/cont_time_baloon.svg") left top no-repeat;
                                     width: 16px;
@@ -1443,6 +1534,12 @@ html {
                             .pay_ico {
                                 display: inline-block;
                                 padding: 0;
+                                @include respond-to(handhelds) {
+
+                                    // color: orange;
+                                    font-size: 1em;
+                                    margin: 1em 0 1em 1em;
+                                }
                                 &:before {
                                     background: transparent url("../img/svg/cont_pay_baloon.svg") left top no-repeat;
                                     width: 16px;
@@ -1460,6 +1557,12 @@ html {
                                     margin: 0 0 0.5em 3.3em;
                                     color: $lightFontcolor;
                                     font-size: 0.9em;
+                                    @include respond-to(handhelds) {
+
+                                        // color: orange;
+                                        //   font-size:1em;
+                                        margin: 0 4em;
+                                    }
                                     a {
 
                                     }
@@ -1471,7 +1574,18 @@ html {
                             }
                         }
                         .cont_form {
-                            flex-basis: 44.092%;
+
+                            //flex-basis: 44.092%;
+                            flex-basis: 40%;
+                            padding: 0 2em 0 0;
+                            @include respond-to(handhelds) {
+                                flex-basis: 90%;
+
+                                //padding:0 0 0 2em;
+                                display: inline-block;
+                                margin: 0 auto;
+                                padding: 0;
+                            }
 
                             //form {
                             //    display: flex;
@@ -1800,88 +1914,81 @@ html {
                                     }
                                 }
                             }
-
                         }
                         .doctortype_wrapper {
-                            width:100%;
-
-                        .stati {
-                            height: auto;
                             width: 100%;
-                            margin: 0;
-                            padding: 0;
-                            display: flex;
-                            flex-flow: row wrap;
-                            justify-content: space-around;
-                            align-items: space-around;
-
-                            // width
-                            // outline: 1px dotted red;
-                            li {
-                                display: flex !important;
-                                flex-flow: column nowrap;
-                                align-items: center;
-                                justify-content: center;
-                                width: 18.5em;
-                                padding: 1em 0 1em 0;
-                                margin: 1em 0;
-                                outline: 1px doted red;
+                            .stati {
                                 height: auto;
-                                outline: none;
-                                border: 1px solid lighten($fontcolor,50%);
-                                @include respond-to(handhelds) {
-                                    width: 17.85em;
-                                }
+                                width: 100%;
+                                margin: 0;
+                                padding: 0;
+                                display: flex;
+                                flex-flow: row wrap;
+                                justify-content: space-around;
+                                align-items: space-around;
 
-                                // при наведении на элемент врача
-                                &:hover {
-                                    background-color: #fff;
+                                // width
+                                // outline: 1px dotted red;
+                                li {
+                                    display: flex !important;
+                                    flex-flow: column nowrap;
+                                    align-items: center;
+                                    justify-content: center;
+                                    width: 18.5em;
+                                    padding: 1em 0;
+                                    margin: 1em 0;
+                                    outline: 1px doted red;
+                                    height: auto;
+                                    outline: none;
+                                    border: 1px solid lighten($fontcolor,50%);
                                     @include respond-to(handhelds) {
-                                        background-color: inherit;
+                                        width: 17.85em;
                                     }
-                                }
 
-
-
-
-                                h3{
-                                    line-height:1.2em;
-                                    text-align:center;
-                                    font-size:1.2em;
-                                    a{
-
+                                    // при наведении на элемент врача
+                                    &:hover {
+                                        background-color: #fff;
+                                        @include respond-to(handhelds) {
+                                            background-color: inherit;
+                                        }
                                     }
-                                }
-                                .doctor_heading_vrach_insbord{
-                                    background-image:url("../img/svg/akc_slider_sep.svg");
-                                    background-repeat:no-repeat;
-                                    width:94px;
-                                    height:26px;
-                                    margin:0 0 1em 0;
-                                }
-                                p {
-                                    width: 230px;
-                                    color: $lightFontcolor;
+                                    h3 {
+                                        line-height: 1.2em;
+                                        text-align: center;
+                                        font-size: 1.2em;
+                                        a {
 
-                                    //font-size: 0.9em;
-                                    margin: 0;
-                                    text-align: left;
-                                }
-                                .st_date {
-                                    display: inline-block;
-                                    width: 73%;
-                                    background-image: url("../img/svg/calendar.svg");
-                                    background-repeat: no-repeat;
-                                    padding: 0 0 0 1.5em;
-                                    margin:1.5em 0 0 0;
-                                    line-height:1em;
-                                    color: lighten($fontcolor,15%);
-                                    font-size: 0.85em;
+                                        }
+                                    }
+                                    .doctor_heading_vrach_insbord {
+                                        background-image: url("../img/svg/akc_slider_sep.svg");
+                                        background-repeat: no-repeat;
+                                        width: 94px;
+                                        height: 26px;
+                                        margin: 0 0 1em;
+                                    }
+                                    p {
+                                        width: 230px;
+                                        color: $lightFontcolor;
+
+                                        //font-size: 0.9em;
+                                        margin: 0;
+                                        text-align: left;
+                                    }
+                                    .st_date {
+                                        display: inline-block;
+                                        width: 73%;
+                                        background-image: url("../img/svg/calendar.svg");
+                                        background-repeat: no-repeat;
+                                        padding: 0 0 0 1.5em;
+                                        margin: 1.5em 0 0;
+                                        line-height: 1em;
+                                        color: lighten($fontcolor,15%);
+                                        font-size: 0.85em;
+                                    }
                                 }
                             }
                         }
-                    }
-
                         article {
                             width: 85%;
                             margin: 0 0 0 1.5em;
@@ -1891,12 +1998,16 @@ html {
                         display: flex;
                         flex-flow: row wrap;
                         justify-content: space-around;
+                        @include respond-to(medium-screens) {
+                            margin: 1em 0 0;
+                        }
                         .vr_avatar {
-                            width: 19.577%;
+                            width: 22%;
                             display: flex;
                             flex-flow: column nowrap;
                             justify-content: center;
                             align-items: center;
+                            flex-basis: 215px;
                             .border_doctor_ava_wrap {
                                 padding: 5px;
 
@@ -1944,12 +2055,38 @@ html {
                             }
                             .fourthbutton {
                                 font-size: 0.9em;
+                                text-align: center;
                             }
                         }
                         .mainabout_doctor {
-                            width: 74.075%;
-                            h1 {
+                            width: 70%;
 
+                            //flex-basis:656px;
+                            @include respond-to(handhelds) {
+
+                                // color: red;
+                                width: 90%;
+                            }
+
+                            // @include respond-to(medium-screens) {
+                            //     color: green;
+                            // }
+                            // @include respond-to(postmedium-screens) {
+                            //     color: orange;
+                            // }
+                            h1 {
+                                @include respond-to(handhelds) {
+                                    text-align: center;
+                                    display: block;
+                                }
+
+                                // @include respond-to(medium-screens) {
+                                //    // color: green;
+                                // }
+                                //
+                                // @include respond-to(postmedium-screens) {
+                                //    // color: orange;
+                                // }
                                 //margin:0;
                                 padding: 0;
                                 &:before {
@@ -1964,12 +2101,20 @@ html {
                                 border-bottom: 2px solid lighten($fontcolor,35%);
                                 height: 2.6em;
                                 display: inline-block;
+                                @include respond-to(handhelds) {
+                                    text-align: center;
+                                    width: 100%;
+                                }
                                 span {
 
                                     //font-size:1.1em;
                                     border-bottom: 1px solid lighten($fontcolor,35%);
                                     height: 2.86em;
                                     display: inline-block;
+                                    @include respond-to(handhelds) {
+                                        text-align: center;
+                                        width: 100%;
+                                    }
                                 }
                             }
                             p {
@@ -1998,9 +2143,22 @@ html {
 
                     //outline:1px dotted red;
                     justify-content: flex-start;
-                    align-items: center;
+                    align-items: flex-start;
                     margin: 0 0 1em;
                     padding: 0;
+                    width: 94.924%;
+                    @include respond-to(medium-screens) {
+
+                        // justify-content: center;
+                        // align-items: center;
+                        margin: 1em auto 0;
+                    }
+                    @include respond-to(handhelds) {
+
+                        // justify-content: center;
+                        // align-items: center;
+                        width: 100%;
+                    }
                     .tab {
                         margin: 0 1em;
                         padding: 0;
@@ -2008,6 +2166,38 @@ html {
                         //outline:1px dotted red;
                         height: 3.438em;
                         width: 12.5em;
+                        @include respond-to(medium-screens) {
+                            width: auto;
+                            padding: 0 1em;
+                            background-color: transparent;
+                            font-size: 0.8em;
+                            &.active {
+                                background-color: $lightenbrown;
+
+                                //color: $fontcolor;
+                            }
+
+                            // &:first-child{
+                            //     margin:0;
+                            //
+                            // }
+                            //
+                            // &:last-child{
+                            //     margin:0;
+                            //
+                            // }
+                        }
+                        @include respond-to(handhelds) {
+                            width: auto;
+                            padding: 0 1em;
+                            background-color: transparent;
+                            font-size: 0.8em;
+                            &.active {
+                                background-color: $lightenbrown;
+
+                                //color: $fontcolor;
+                            }
+                        }
                         &:hover {
                             background-color: rgba(255, 255, 255, 0.35);
                         }
@@ -2089,6 +2279,12 @@ html {
                                     height: auto;
                                     font-size: 1.2em;
                                     color: lighten($fontcolor,10%);
+                                    @include respond-to(handhelds) {
+
+                                        //margin:1em 0 0 0;
+                                        width: 100%;
+                                        text-align: left;
+                                    }
                                 }
                                 span {
                                     display: inline-block;
@@ -2098,6 +2294,9 @@ html {
                                     padding: 0 0 0 1.5em;
                                     color: lighten($fontcolor,15%);
                                     font-size: 0.85em;
+                                    @include respond-to(handhelds) {
+                                        margin: 1em 0 0;
+                                    }
                                 }
                             }
                             p {
@@ -2111,6 +2310,11 @@ html {
 
                         //display:inline-block;
                         margin: 0 auto 3em;
+                        @include respond-to(handhelds) {
+
+                            // color: red;
+                            margin: 3em auto;
+                        }
 
                         //color: $fontcolor;
                     }
@@ -2123,6 +2327,17 @@ html {
 
                                 //margin:0 0 0 1em;
                                 align-items: flex-start;
+                                @include respond-to(handhelds) {
+
+                                    // color: red;
+                                    width: 90%;
+                                }
+                                @include respond-to(postmedium-screens) {
+                                    width: 50%;
+                                }
+                                @include respond-to(medium-screens) {
+                                    width: 90%;
+                                }
                             }
                         }
                     }
@@ -3462,6 +3677,7 @@ html {
                 // height:100%;
             }
             span {
+                color: #fff;
                 a {
                     color: $lightenmiddlebrown;
                 }
