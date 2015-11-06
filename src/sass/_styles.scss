@@ -1,0 +1,100 @@
+html {
+    font-family: $openSans;
+    body {
+        background-color: $lightenbrown;
+        .main_wrapper {
+            width: 1440px;
+            outline: 1px dotted red;
+            margin: 0 auto;
+            display: block;
+            background-color: $lightenbrown;
+            header {
+                .topmenu {
+                    width: 100%;
+                    background-color: #fff;
+                    padding: 0px 0 0px 0;
+                    height: 40px;
+                    display: flex;
+                    flex-flow: column nowrap;
+                    justify-content: center;
+                    ul {
+                        list-style: none;
+                        display: flex;
+                        flex-direction: row;
+                        flex-wrap: nowrap;
+                        justify-content: flex-start;
+                        align-content: flex-start;
+                        align-items: center;
+                        margin: 0;
+                        padding: 0;
+                        height: 100%;
+                        li {
+                            position: relative;
+                            margin: 0 20px 0 0;
+                            padding: 0 30px 0 30px;
+                            list-style-image: url("../img/svg/septopmenu.svg");
+                            height: 100%;
+                            transition: all 0.1s linear;
+                            // outline: 1px dotted red;
+                            &:first-child {
+                                list-style-image: none;
+                                // margin: 0;
+                            }
+                            &:hover {
+                                background-color: $lightenbrown2;
+                            }
+                            a {
+                                color: $fontcolor;
+                                text-decoration: none;
+                                // color: #fff;
+
+                                // padding: 15px 0 0 0;
+                            }
+                            &:hover {
+                                .topsubmenu {
+                                    display: inherit;
+                                    // list-style: none;
+
+                                }
+                            }
+                            ul.topsubmenu {
+                                display: none;
+                                // flex-flow: column nowrap;
+                                position: absolute;
+                                left: 0px;
+                                top: 40px;
+                                margin: 0;
+                                padding: 0;
+                                list-style-image: none;
+                                width: 180px;
+                                background-color: $lightenbrown2;
+                                height: auto;
+                                // list-style-image: none;
+                                list-style-type: disc;
+                                li {
+                                list-style-position: inside;
+                                    display:inline-block;
+                                    margin: 0;
+                                    padding: 10px 0 10px 0;
+                                    width: 100%;
+                                    text-align: left;
+                                    &:hover{
+                                        background-color: none;
+                                    }
+                                    a{
+                                        padding: 10px;
+                                        width: 100%;
+                                        display: block;
+                                        &:hover{
+                                            text-decoration: underline;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

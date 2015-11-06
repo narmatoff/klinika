@@ -1,0 +1,51 @@
+doctype html/
+html(lang="en")
+  head
+    title Клиника Пеля
+    
+    meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
+    // bower:css
+    link(rel='stylesheet', href='../../dist/bower_components/normalize-css/normalize.css')
+    link(rel='stylesheet', href='../../dist/bower_components/fancybox3/jquery.fancybox.css')
+    // endbower
+    link(rel='stylesheet', href='css/main.css')
+    
+  body
+    .main_wrapper
+        header
+            .topmenu
+                ul
+                    li
+                        a(href="#") О нас
+                        ul.topsubmenu
+                            li
+                                a(href="#") Первый пункт
+                            li
+                                a(href="#") Второй пункт
+                            li
+                                a(href="#") Третий пункт
+                            li
+                                a(href="#") Четвертый пункт
+                    li
+                        a(href="#") Врачи
+                    li
+                        a(href="#") Прайс
+                    li
+                        a(href="#") Вопрос-Ответ
+                     li 
+                        a(href="#") Контакты
+                        
+        
+
+
+
+
+
+    //- before body///////////////////////////////////////////////////////////////////////////////////////
+    // bower:js
+    script(src='../../dist/bower_components/jquery/dist/jquery.js')
+    script(src='../../dist/bower_components/fancybox3/jquery.fancybox.js')
+    // endbower
+    //- end before body
+
+    script(src='js/main.min.js', type='text/javascript')
