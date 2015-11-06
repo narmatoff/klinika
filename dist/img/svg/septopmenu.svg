@@ -1,1 +1,7 @@
+<<<<<<< HEAD
 <svg xmlns="http://www.w3.org/2000/svg" width="6" height="6"><path d="M0 3l3 3 3-3-3-3-3 3" fill="#736D6D"/></svg>
+=======
+<svg xmlns="http://www.w3.org/2000/svg" width="6" height="6" viewBox="0 0 6 6">
+    <path d="M0 3l3 3 3-3-3-3-3 3" fill="#736D6D"/>
+</svg>
+>>>>>>> efcf49e66721fe96f71e81ff7130c9efb5e48c53

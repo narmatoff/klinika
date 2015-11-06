@@ -20,5 +20,10 @@
   },
   "_source": "git://github.com/FelipeMarcos/fancybox3-bower.git",
   "_target": "*",
+<<<<<<< HEAD
   "_originalSource": "fancybox3"
+=======
+  "_originalSource": "fancybox3",
+  "_direct": true
+>>>>>>> efcf49e66721fe96f71e81ff7130c9efb5e48c53
 }
