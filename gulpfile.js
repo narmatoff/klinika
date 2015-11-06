@@ -27,11 +27,7 @@ var gulp = require('gulp'),
     // }),
     imagemin = require('gulp-imagemin'),
     pngquant = require('imagemin-pngquant'),
-<<<<<<< HEAD
-    csso = require('gulp-csso'),
-=======
     // csso = require('gulp-csso'),
->>>>>>> efcf49e66721fe96f71e81ff7130c9efb5e48c53
     merge = require('gulp-merge'),
     svgmin = require('gulp-svgmin'),
     spritesmith = require('gulp.spritesmith'),
@@ -39,14 +35,9 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     jshint = require('gulp-jshint'),
     jsmin = require('gulp-jsmin'),
-<<<<<<< HEAD
-    wiredep = require('wiredep').stream;
-// cmq = require('gulp-combine-media-queries'); //проверить работоспособность!
-=======
     // svgSprite = require("gulp-svg-sprites"),
     wiredep = require('wiredep').stream,
     combineMq = require('gulp-combine-mq');
->>>>>>> efcf49e66721fe96f71e81ff7130c9efb5e48c53
 
 
 
@@ -66,11 +57,7 @@ gulp.task('jade', function() {
         .pipe(connect.reload())
         .pipe(livereload())
         .pipe(gulp.dest('dist/'));
-<<<<<<< HEAD
-        // .pipe(notify("jade готов!"));
-=======
     // .pipe(notify("jade готов!"));
->>>>>>> efcf49e66721fe96f71e81ff7130c9efb5e48c53
 
 });
 
@@ -110,17 +97,11 @@ gulp.task('lint', function() {
         .pipe(connect.reload())
         .pipe(livereload())
         .pipe(jsmin())
-<<<<<<< HEAD
-        .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest('dist/js'));
-        // .pipe(notify("js готов!"));
-=======
         .pipe(rename({
             suffix: '.min'
         }))
         .pipe(gulp.dest('dist/js'));
     // .pipe(notify("js готов!"));
->>>>>>> efcf49e66721fe96f71e81ff7130c9efb5e48c53
 });
 
 // sass
@@ -132,26 +113,13 @@ gulp.task('sass', function() {
             // paths: [path.join(__dirname, 'src/sass/includes')],
             includePaths: ['.'],
             outputStyle: 'compressed'
-<<<<<<< HEAD
-            // outputStyle: 'expanded'
-=======
                 // outputStyle: 'expanded'
->>>>>>> efcf49e66721fe96f71e81ff7130c9efb5e48c53
         }).on('error', sass.logError))
         .pipe(rename('main.css'))
         .pipe(autoprefixer({
             browsers: ['last 14 versions'],
             cascade: false
         }))
-<<<<<<< HEAD
-        //.pipe(cmq({
-        //  log: true
-        //}))
-        .pipe(gulp.dest('dist/css'))
-        .pipe(connect.reload())
-        .pipe(livereload());
-        // .pipe(notify("sass готов!"));
-=======
         // компановка медиа запросов
         .pipe(combineMq({
             beautify: false
@@ -162,65 +130,35 @@ gulp.task('sass', function() {
         .pipe(connect.reload())
         .pipe(livereload());
     // .pipe(notify("sass готов!"));
->>>>>>> efcf49e66721fe96f71e81ff7130c9efb5e48c53
 });
 
 
 
 // спрайты
 gulp.task('sprite', function() {
-<<<<<<< HEAD
-    // Generate our spritesheet 
-=======
     // Generate our spritesheet
->>>>>>> efcf49e66721fe96f71e81ff7130c9efb5e48c53
     var spriteData = gulp.src('src/images/forsprts/*.png')
         .pipe(plumber())
 
     .pipe(spritesmith({
         imgName: 'sprite.png',
-<<<<<<< HEAD
-        imgPath:"/dist/img/sprite.png",
-=======
         imgPath: "/dist/img/sprite.png",
->>>>>>> efcf49e66721fe96f71e81ff7130c9efb5e48c53
         cssName: '_sprite.scss',
         cssFormat: "scss"
             // padding: "2",
             // algorithm: "binary-tree"
     }));
 
-<<<<<<< HEAD
-    // Pipe image stream through image optimizer and onto disk 
-=======
     // Pipe image stream through image optimizer and onto disk
->>>>>>> efcf49e66721fe96f71e81ff7130c9efb5e48c53
     var imgStream = spriteData.img
         // .pipe(imagemin())
         .pipe(gulp.dest('dist/img'));
 
-<<<<<<< HEAD
-    // Pipe CSS stream through CSS optimizer and onto disk 
-=======
     // Pipe CSS stream through CSS optimizer and onto disk
->>>>>>> efcf49e66721fe96f71e81ff7130c9efb5e48c53
     var cssStream = spriteData.css
         // .pipe(csso())
         .pipe(gulp.dest('src/sass'));
 
-<<<<<<< HEAD
-    // Return a merged stream to handle both `end` events 
-    return merge(imgStream, cssStream)
-        .pipe(connect.reload())
-        .pipe(livereload());
-        // .pipe(notify("sprite готов!"));
-});
-
-
-// imagemin
-gulp.task('imagemin', function() {
-    return gulp.src('src/images/**')
-=======
     // Return a merged stream to handle both `end` events
     return merge(imgStream, cssStream)
         .pipe(connect.reload())
@@ -246,7 +184,6 @@ gulp.task('imagemin', function() {
 // imagemin
 gulp.task('imagemin', function() {
     return gulp.src('src/images/*')
->>>>>>> efcf49e66721fe96f71e81ff7130c9efb5e48c53
         .pipe(plumber())
         .pipe(imagemin({
             progressive: true,
@@ -258,11 +195,7 @@ gulp.task('imagemin', function() {
         .pipe(gulp.dest('dist/img'))
         .pipe(connect.reload())
         .pipe(livereload());
-<<<<<<< HEAD
-        // .pipe(notify("imagemin готов!"));
-=======
     // .pipe(notify("imagemin готов!"));
->>>>>>> efcf49e66721fe96f71e81ff7130c9efb5e48c53
 });
 
 // svgmin
@@ -281,11 +214,7 @@ gulp.task('svgmin', function() {
             }]
         }).on('error', gutil.log))
         .pipe(gulp.dest('dist/img/svg'));
-<<<<<<< HEAD
-        // .pipe(notify("svgmin готов!"));
-=======
     // .pipe(notify("svgmin готов!"));
->>>>>>> efcf49e66721fe96f71e81ff7130c9efb5e48c53
 
 });
 
@@ -293,13 +222,6 @@ gulp.task('svgmin', function() {
 // bower
 gulp.task('bower', function() {
     return gulp
-<<<<<<< HEAD
-        .src('src/jade/*.jade')
-        .pipe(plumber())
-
-    .pipe(wiredep({
-            directory: "dist/bower_components"
-=======
         .src('src/jade/**/*.jade')
         .pipe(plumber())
 
@@ -307,16 +229,11 @@ gulp.task('bower', function() {
             directory: "dist/bower_components/",
             // игнорируем путь для относительности путей
             ignorePath: '../../dist/'
->>>>>>> efcf49e66721fe96f71e81ff7130c9efb5e48c53
         }).on('error', gutil.log))
         .pipe(gulp.dest('src/jade/'))
         .pipe(connect.reload())
         .pipe(livereload());
-<<<<<<< HEAD
-        // .pipe(notify("bower готов!"));
-=======
     // .pipe(notify("bower готов!"));
->>>>>>> efcf49e66721fe96f71e81ff7130c9efb5e48c53
 });
 
 // connect
@@ -367,17 +284,12 @@ gulp.task('connect', function() {
 //         .pipe(notify("html готов!"));
 // });
 
-<<<<<<< HEAD
-
-
-=======
 // strip
 gulp.task('strip', function() {
     gulp.src('dist/js/*.js')
         .pipe(strip())
         .pipe(gulp.dest('dist/js'));
 });
->>>>>>> efcf49e66721fe96f71e81ff7130c9efb5e48c53
 
 
 // Watch
@@ -387,10 +299,7 @@ gulp.task('watch', function() {
     gulp.watch('src/sass/**/*.scss', ['sass']);
     gulp.watch('src/js_src/*.js', ['lint']);
     gulp.watch('src/images/forsprts/*.png', ['sprite']);
-<<<<<<< HEAD
-=======
     // gulp.watch('src/images/forsvgsprts/*.svg', ['svgsprites']);
->>>>>>> efcf49e66721fe96f71e81ff7130c9efb5e48c53
     gulp.watch('src/images/*', ['imagemin']);
     gulp.watch('src/images/svg/**/*.svg', ['svgmin']);
     gulp.watch('bower.json', ['bower']);

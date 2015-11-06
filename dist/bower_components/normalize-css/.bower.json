@@ -19,10 +19,6 @@
   },
   "_source": "git://github.com/necolas/normalize.css.git",
   "_target": "~3.0.3",
-<<<<<<< HEAD
-  "_originalSource": "normalize.css"
-=======
   "_originalSource": "normalize-css",
   "_direct": true
->>>>>>> efcf49e66721fe96f71e81ff7130c9efb5e48c53
 }

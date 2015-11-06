@@ -1,11 +1,5 @@
 $(document).ready(function() {
 
-<<<<<<< HEAD
-	// fancybox
-	$(".fancybox").fancybox();
-	
-});
-=======
 
 
     $(".fancyimg").fancybox();
@@ -188,4 +182,3 @@ $(document).ready(function() {
 
 
 });
->>>>>>> efcf49e66721fe96f71e81ff7130c9efb5e48c53

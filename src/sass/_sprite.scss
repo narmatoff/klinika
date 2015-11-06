@@ -11,24 +11,6 @@ $icon-home: x y offset_x offset_y width height total_width total_height image_pa
 At the bottom of this section, we provide information about the spritesheet itself
 $spritesheet: width height image $spritesheet-sprites;
 */
-<<<<<<< HEAD
-$safari-name: 'safari';
-$safari-x: 0px;
-$safari-y: 0px;
-$safari-offset-x: 0px;
-$safari-offset-y: 0px;
-$safari-width: 51px;
-$safari-height: 51px;
-$safari-total-width: 51px;
-$safari-total-height: 51px;
-$safari-image: '/dist/img/sprite.png';
-$safari: (0px, 0px, 0px, 0px, 51px, 51px, 51px, 51px, '/dist/img/sprite.png', 'safari', );
-$spritesheet-width: 51px;
-$spritesheet-height: 51px;
-$spritesheet-image: '/dist/img/sprite.png';
-$spritesheet-sprites: ($safari, );
-$spritesheet: (51px, 51px, '/dist/img/sprite.png', $spritesheet-sprites, );
-=======
 $attach-name: 'attach';
 $attach-x: 341px;
 $attach-y: 242px;
@@ -144,7 +126,6 @@ $spritesheet-height: 574px;
 $spritesheet-image: '/dist/img/sprite.png';
 $spritesheet-sprites: ($attach, $cart-img, $collapsed, $down, $griphon1, $griphon2, $map-baloon, $photo-leftarrow, $photo-rightarrow, $safari, );
 $spritesheet: (375px, 574px, '/dist/img/sprite.png', $spritesheet-sprites, );
->>>>>>> efcf49e66721fe96f71e81ff7130c9efb5e48c53
 
 /*
 The provided mixins are intended to be used with the array-like variables

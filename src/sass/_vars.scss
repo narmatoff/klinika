@@ -1,39 +1,3 @@
-<<<<<<< HEAD
-// vars for media-queries
-// exampl:
-// 		@include screen($littleboy-min, $littleboy-max){
-// 			background-color: #000;
-// 		}
-$littleboy-min: 0px;
-$littleboy-max: 480px;
-////////////////////////////////
-$middleboy-min: 320px;
-$middleboy-max: 568px;
-//////////////////////////////
-$olderboy-min: 414px;
-$olderboy-max: 736px;
-//////////////////////////////
-
-
-// main colors
-$fontcolor:#373838;
-$lightenbrown:#EFEADB;
-$lightenbrown2:#FBDD96;
-$lightenmiddlebrown:#E4D8C1;
-$navitemcolor:#736C6C;
-$mainbrown:#5D3737;
-
-
-
-// Google Fonts
-// opensans
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700&subset=latin,cyrillic);
-$openSans:'Open Sans', sans-serif;
-
-// ptserif
-@import url(https://fonts.googleapis.com/css?family=PT+Serif+Caption&subset=latin,cyrillic);
-$ptSerif:'PT Serif Caption', serif;
-=======
 // vars for media-queries
 // exampl:
 //      @include screen($littleboy-min, $littleboy-max){
@@ -71,4 +35,3 @@ sans-serif;
 // @import url(https://fonts.googleapis.com/css?family=PT+Serif+Caption&subset=latin,cyrillic);
 $ptSerif:'PT Serif Caption',
 serif;
->>>>>>> efcf49e66721fe96f71e81ff7130c9efb5e48c53
