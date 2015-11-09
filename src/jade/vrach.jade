@@ -197,7 +197,7 @@ html(lang="en").no-js
         //- форма записи на прием
         div#fancyform
             h1 Запись на прием
-            div.fancyform_tabs
+            div#tab-container.fancyform_tabs
                 ul
                     li
                         a(href="#fancyform_tab1") Направление
@@ -210,22 +210,23 @@ html(lang="en").no-js
                     li
                         a(href="#fancyform_tab5") Завершение
                 form#purchase_todoctor
-                    div#fancyform_tab1
+                    div#fancyform_tab1.fieldset_wrapper
                         h3  Направление
                         fieldset
                             input(type="text" name="fio" placeholder="name" required="required")
                         
-                    div#fancyform_tab2
+                    div#fancyform_tab2.fieldset_wrapper
                         h3  Специалист
                         fieldset
                             input(type="text" name="sometext" placeholder="sometext" required="required")
 
-                    div#fancyform_tab3
+                    div#fancyform_tab3.fieldset_wrapper
                         h3  Дата и время
-                    div#fancyform_tab4
+                    div#fancyform_tab4.fieldset_wrapper
                         h3  Контакты
-                    div#fancyform_tab5
+                    div#fancyform_tab5.fieldset_wrapper
                         h3  Завершение
+            span#sdfkljhf8888 Disable B &amp; C
             
 
 

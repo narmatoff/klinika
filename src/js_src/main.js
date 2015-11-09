@@ -17,16 +17,53 @@ $(document).ready(function() {
 
     // валидация формы записи к врачу
     var v_doc = $("#purchase_todoctor").validate({
-        errorClass: "warning",
+        errorClass: "invalid",
+        validClass: "success",
         onkeyup: false,
         onfocusout: false,
+        // errorLabelContainer: ".fieldset_wrapper",
+        // wrapper: "span",
+
         submitHandler: function() {
             // alert("Submitted, thanks!");
-            form.submit();
+            // form.submit();
+            alert("Submitted!");
+
         }
     });
 
 
+
+    // фу для отключения табов
+    function disable_easytabs(tabs, indexes) {
+        var lis = tabs.children('ul').children();
+        var index = 0;
+        lis.each(function() {
+            var li = $(this);
+            var a = li.children('a');
+            var disabled = $.inArray(index, indexes) != -1;
+            if (disabled) {
+                li.addClass('disabled');
+            } else {
+                li.removeClass('disabled');
+            }
+            index++;
+        });
+    }
+    //////////////////////////////////
+
+
+    // фу отключения указанных в ней табов
+    function on_disable_b_and_c_clicked() {
+        var tabs = $("#tab-container");
+        disable_easytabs(tabs, [0, 4]);
+        return false;
+    }
+
+    // вызов фу отключения указанных табов
+    $("#sdfkljhf8888").click(function() {
+        on_disable_b_and_c_clicked();
+    })
 
 
 
@@ -44,22 +81,46 @@ $(document).ready(function() {
         .bind('easytabs:before', function(e, tab) {
             // if (!tab.hasClass('active') && !tab.hasClass('collapsed')) {
 
-            if (!tab.hasClass('active') && v_doc.form()) { //если вкладка не активная
+            // if (!tab.hasClass('active') && on_disable_b_and_c_clicked()) {
+            if (v_doc.form()) {
+                //если вкладка не активная и ошибок в валидаторе - нет то:
 
                 //  проверяем валидацию формы в первой вкладки
                 // return confirm("Открыть вкладку?");
-                console.log("ok")
+                console.log("ok");
                 return true;
 
-            }else {
+            } else {
                 console.log("NOT_ok")
+
+
+
+                $(".active").next(function() {
+                    // body...
+                    $("li").each(function(i, elem) {
+                        //  if ($(this).hasClass("stop")) {
+                        //      alert("Остановлено на " + i + "-м пункте списка.");
+                        //      return false;
+                        //  } else {
+                        //      alert(i + ': ' + $(elem).text());
+                        //  }
+                        $(this).css("border", "3px solid red");
+                    });
+                })
+
+
                 return false;
 
+
             }
+            // else if (tab.parent().hasClass('disabled')) {
+            //     console.log("NOT_ok")
+            //     return false;
+            //
+            // }
         });
 
-
-
+    // console.log(tab)
 
 
 
