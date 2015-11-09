@@ -50,7 +50,7 @@ html(lang="en").no-js
                                         a(href="#")
                                             img(src="img/demo_vrach.jpg")
                                             include includes/doctor_border.jade
-                                a(href="#").fourthbutton.nonarrow записаться на прием
+                                a(href="#fancyform").fourthbutton.nonarrow.fancyblock записаться на прием
                             .mainabout_doctor
                                 h1 Рищук Сергей Владимирович
                                 span.whois_he
@@ -191,10 +191,42 @@ html(lang="en").no-js
 
             //- главная обертка сладера/////////////////////////
            
-
         include includes/footer_wrapper.jade
         include includes/temp_nav.jade
+        
+        //- форма записи на прием
+        div#fancyform
+            h1 Запись на прием
+            div.fancyform_tabs
+                ul
+                    li
+                        a(href="#fancyform_tab1") Направление
+                    li
+                        a(href="#fancyform_tab2") Специалист
+                    li
+                        a(href="#fancyform_tab3") Дата и время
+                    li
+                        a(href="#fancyform_tab4") Контакты
+                    li
+                        a(href="#fancyform_tab5") Завершение
+                form#purchase_todoctor
+                    div#fancyform_tab1
+                        h3  Направление
+                        fieldset
+                            input(type="text" name="fio" placeholder="name" required="required")
+                        
+                    div#fancyform_tab2
+                        h3  Специалист
+                        fieldset
+                            input(type="text" name="sometext" placeholder="sometext" required="required")
 
+                    div#fancyform_tab3
+                        h3  Дата и время
+                    div#fancyform_tab4
+                        h3  Контакты
+                    div#fancyform_tab5
+                        h3  Завершение
+            
 
 
 
@@ -204,6 +236,7 @@ html(lang="en").no-js
         script(src='bower_components/jquery/dist/jquery.js')
         script(src='bower_components/slick-carousel/slick/slick.min.js')
         script(src='bower_components/fancybox3/jquery.fancybox.js')
+        script(src='bower_components/jquery-validation/dist/jquery.validate.js')
         // endbower
         //- script(src='bower_components/easytabs/vendor/jquery.hashchange.min.js')
         script(src='bower_components/easytabs/lib/jquery.easytabs.min.js')

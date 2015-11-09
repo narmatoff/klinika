@@ -3,11 +3,66 @@ $(document).ready(function() {
 
 
     $(".fancyimg").fancybox();
+    $(".fancyblock").fancybox();
     $(".tabser").easytabs({
         animationSpeed: 'fast',
         // убираем сохранение хэша в адр строке(прыгает в хроме)
         updateHash: false
     });
+
+
+
+
+
+
+    // валидация формы записи к врачу
+    var v_doc = $("#purchase_todoctor").validate({
+        errorClass: "warning",
+        onkeyup: false,
+        onfocusout: false,
+        submitHandler: function() {
+            // alert("Submitted, thanks!");
+            form.submit();
+        }
+    });
+
+
+
+
+
+
+
+    // вкладки формы записи к врачу
+    // ЗЫ: Форма сохраняет хэш урлов
+    $(".fancyform_tabs")
+        .easytabs({
+            animationSpeed: 'fast'
+                // убираем сохранение хэша в адр строке(прыгает в хроме)
+                // updateHash: false
+        })
+        // проверка валидности форм во вкладках
+        .bind('easytabs:before', function(e, tab) {
+            // if (!tab.hasClass('active') && !tab.hasClass('collapsed')) {
+
+            if (!tab.hasClass('active') && v_doc.form()) { //если вкладка не активная
+
+                //  проверяем валидацию формы в первой вкладки
+                // return confirm("Открыть вкладку?");
+                console.log("ok")
+                return true;
+
+            }else {
+                console.log("NOT_ok")
+                return false;
+
+            }
+        });
+
+
+
+
+
+
 
     // menu on henhelds
     $(".hamburger").click(function() {

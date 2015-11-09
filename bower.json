@@ -23,6 +23,7 @@
     "jquery": "2.1.4",
     "slick-carousel": "~1.5.8",
     "fancybox3": "*",
-    "easytabs": "~3.2.0"
+    "easytabs": "~3.2.0",
+    "jquery-validation": "~1.14.0"
   }
 }
