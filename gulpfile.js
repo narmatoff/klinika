@@ -106,8 +106,8 @@ gulp.task('lint_mainjs', function() {
 gulp.task('lint_customplgnsjs', function() {
     return gulp.src('src/js_src/custom_plgns.js')
         .pipe(plumber())
-        .pipe(jshint())
-        .pipe(jshint.reporter('fail'))
+        // .pipe(jshint())
+        // .pipe(jshint.reporter('fail'))
         .pipe(connect.reload())
         .pipe(livereload())
         .pipe(jsmin())

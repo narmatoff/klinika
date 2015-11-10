@@ -11,10 +11,7 @@ $(document).ready(function() {
     });
 
 
-
-
-
-
+    // validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator
     // валидация формы записи к врачу
     var v_doc = $("#purchase_todoctor").validate({
         errorClass: "invalid",
@@ -31,9 +28,11 @@ $(document).ready(function() {
 
         }
     });
+    // validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator
 
 
 
+    // tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase
     // фу для отключения табов
     function disable_easytabs(tabs, indexes) {
         var lis = tabs.children('ul').children();
@@ -51,23 +50,16 @@ $(document).ready(function() {
         });
     }
     //////////////////////////////////
-
-
     // фу отключения указанных в ней табов
     function on_disable_b_and_c_clicked() {
         var tabs = $("#tab-container");
         disable_easytabs(tabs, [0, 4]);
         return false;
     }
-
     // вызов фу отключения указанных табов
     $("#sdfkljhf8888").click(function() {
         on_disable_b_and_c_clicked();
-    })
-
-
-
-
+    });
 
     // вкладки формы записи к врачу
     // ЗЫ: Форма сохраняет хэш урлов
@@ -81,20 +73,17 @@ $(document).ready(function() {
         .bind('easytabs:before', function(e, tab) {
             // if (!tab.hasClass('active') && !tab.hasClass('collapsed')) {
 
+            //если вкладка не активная и ошибок в валидаторе - нет то:
             // if (!tab.hasClass('active') && on_disable_b_and_c_clicked()) {
-            if (v_doc.form()) {
-                //если вкладка не активная и ошибок в валидаторе - нет то:
 
-                //  проверяем валидацию формы в первой вкладки
+            //если ошибок в валидаторе - нет то:
+            if (v_doc.form()) {
+                //  открываем вкладки
                 // return confirm("Открыть вкладку?");
                 console.log("ok");
                 return true;
-
             } else {
-                console.log("NOT_ok")
-
-
-
+                console.log("NOT_ok");
                 $(".active").next(function() {
                     // body...
                     $("li").each(function(i, elem) {
@@ -106,12 +95,8 @@ $(document).ready(function() {
                         //  }
                         $(this).css("border", "3px solid red");
                     });
-                })
-
-
+                });
                 return false;
-
-
             }
             // else if (tab.parent().hasClass('disabled')) {
             //     console.log("NOT_ok")
@@ -119,8 +104,9 @@ $(document).ready(function() {
             //
             // }
         });
-
     // console.log(tab)
+    // tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase
+
 
 
 
@@ -295,6 +281,49 @@ $(document).ready(function() {
         $(o).prepend("<span class='numlist'>" + num + "</span>");
     });
 
+
+    // waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints
+
+
+    // подсветка текущего элемента
+    var nav_wayp = $(".wayp_links li");
+    $('.tracked_block').waypoint({
+        handler: function() {
+            var hash = this.element.id;
+            nav_wayp.removeClass("active");
+            $.each(nav_wayp, function() {
+                if ($(this).children("a").attr("href").slice(1) == hash) {
+                    $(this).addClass("active");
+                }
+            });
+        },
+        offset: '0'
+    });
+
+    // Плавный скролл по якорям
+    $(".wayp_links a").click(function() {
+        var selected = $(this).attr('href');
+        $.scrollTo(selected, 1000, {
+            easing: 'easeOutBack'
+        });
+        return false;
+    });
+
+
+
+    // фиксация списка годов с прокруткой
+    $('.wayp_links').containedStickyScroll({
+        duration: 0,
+        queue:true,
+        unstick:true,
+        // easing:"easeOutBack"
+
+        closeChar: ''
+    });
+
+
+
+    // waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints
 
 
 });
