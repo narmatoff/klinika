@@ -303,7 +303,7 @@ $(document).ready(function() {
     // Плавный скролл по якорям
     $(".wayp_links a").click(function() {
         var selected = $(this).attr('href');
-        $.scrollTo(selected, 1000, {
+        $.scrollTo(selected, 1500, {
             easing: 'easeOutBack'
         });
         return false;
@@ -311,7 +311,7 @@ $(document).ready(function() {
 
 
 
-    // фиксация списка годов с прокруткой
+    // фиксация списка годов при прокруткe
     $('.wayp_links').containedStickyScroll({
         duration: 0,
         queue: true,
@@ -323,6 +323,26 @@ $(document).ready(function() {
 
 
     // waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints
+
+
+    $(".year_content_container").each(function() {
+        // console.log($(this).height());
+        var Hh = $(this).height();
+        $(this).children(".years_arrow_wr").children(".years_arrow").height(Hh);
+        // body...
+    });
+
+
+    // var Hh = $(".img_history_wr").height();
+        // $(".years_arrow").height(Hh);
+
+
+
+    //
+    // var h = document.getElementsByClassName("img_history_wr").offsetHeight;
+    // document.getElementsByClassName("years_arrow").style.height = h + "px";
+
+
 
 
 });

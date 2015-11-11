@@ -1,6 +1,18 @@
 html {
     font-family: $openSans;
     font-size: 16px;
+    .clearfix {
+        *zoom: 1;
+        &:before {
+            content: " ";
+            display: table;
+        }
+        &:after {
+            content: " ";
+            display: table;
+            clear: both;
+        }
+    }
     body {
         background-color: $lightenmiddlebrown;
         background-repeat: no-repeat;
@@ -8,6 +20,13 @@ html {
         color: $fontcolor;
 
         // умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:
+        .rotating {
+            transform: rotate(180deg);
+        }
+        .clearfix {
+
+            //@include crp-Clearfix();
+        }
         a {
             color: $mainbrown;
             text-decoration: none;
@@ -89,7 +108,9 @@ html {
                 width: 25px;
                 height: 14px;
                 display: block;
-                transform: rotate(180deg);
+
+                //transform: rotate(180deg);
+                @extend .rotating;
                 margin: 0 0 0 10px;
                 @include respond-to(handhelds) {
                     display: none;
@@ -1204,7 +1225,9 @@ html {
                             width: 25px;
                             height: 14px;
                             display: block;
-                            transform: rotate(180deg);
+
+                            //transform: rotate(180deg);
+                            @extend .rotating;
                             margin: 0 0 0 10px;
                             @include respond-to(handhelds) {
                                 display: none;
@@ -1328,68 +1351,68 @@ html {
                         border: none;
                         height: auto;
                     }
+                    .wayp_links {
+                        background: transparent;
+                        padding: 0;
+                        margin: 15% 2% 0 0;
+                        width: 58px;
+                        right: 0;
 
-                        .wayp_links {
-                            background: transparent;
-                            padding:0;
-                            margin:10% 1% 0 0;
-                            width: 58px;
-                            right:0;
-                            //top:30px;
-                            //right:0;
-                            //display:inline-block;
-                            display:flex;
-                            flex-flow:column nowrap;
-                            justify-content:center;
-                            align-items:center;
-                            position:absolute;
+                        //top:30px;
+                        //right:0;
+                        //display:inline-block;
+                        display: flex;
+                        flex-flow: column nowrap;
+                        justify-content: center;
+                        align-items: center;
+                        position: absolute;
 
-                            //&.fixed {
-                                //position: fixed;
-                                //top: 10%;
-                                //left: 20.4%;
-                                //right: 50%;
+                        //&.fixed {
+                        //position: fixed;
+                        //top: 10%;
+                        //left: 20.4%;
+                        //right: 50%;
+                        //}
+                        li {
+                            padding: 0;
+                            margin: 0 0 0.5em;
+                            list-style: none;
+                            display: inline-block;
+                            width: 100%;
+                            height: 58px;
+
+                            //flex-flow:column nowrap;
+                            border-radius: 50%;
+                            font-family: $ptSerif;
+                            font-size: 1.1em;
+                            border: 2px solid transparent;
+                            //&:hover {
+                                //border: 2px solid $lightenbrown2;
                             //}
-                            li {
-                                padding:0;
-                                margin:0 0 5% 0;
-                                list-style: none;
-                                display:inline-block;
-                                width:100%;
-                                height:58px;
-                                //flex-flow:column nowrap;
-
-                                border-radius:50%;
-                                font-family:$ptSerif;
-                                font-size:1.1em;
-                                border:2px solid transparent;
+                            a {
+                                color: $lightFontcolor;
+                                display: inline-block;
+                                width: 100%;
+                                height: 100%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                text-decoration: none;
                                 &:hover{
-                                    border:2px solid $lightenbrown2;
-                                }
-                                a{
-                                color:$lightFontcolor;
-                                    display:inline-block;
-                                    width:100%;
-                                    height:100%;
-                                    display:flex;
-                                    justify-content:center;
-                                    align-items:center;
-                                    text-decoration:none;
-                                }
-
-
-                                &.active {
-                                    background: $lightenbrown2;
-                                    //font-weight:bold;
-                                    a{
-
                                     color:$fontcolor;
-                                    }
                                 }
+                            }
+                            &.active {
+                                background: $lightenbrown2;
 
+                                //font-weight:bold;
+                                a {
+                                    color: $fontcolor;
+                                }
+                            }
                         }
-                        .scrollFixIt{
-                            display:none;
+                        .scrollFixIt {
+                            display: none;
                         }
                     }
                     .big_heading {
@@ -1424,7 +1447,9 @@ html {
                             width: 25px;
                             height: 14px;
                             display: block;
-                            transform: rotate(180deg);
+
+                            //transform: rotate(180deg);
+                            @extend .rotating;
                             margin: 0 0 0 10px;
                             @include respond-to(handhelds) {
                                 display: none;
@@ -1446,6 +1471,150 @@ html {
 
                         //font-size: 0.9em;
                         margin: 0 0 2em;
+                        .history_elemnt_wr {
+
+                            //height: 50em;
+                            //outline: 1px dotted red;
+                            margin: 2em 0;
+                            display: flex;
+                            flex-flow: column nowrap;
+                            justify-content: center;
+                            align-items: center;
+                            position: relative;
+                            .img_history_wr {
+                                width: 43.402%;
+                                max-width: 43.402%;
+                                height: auto;
+                                display: flex;
+                                flex-flow: column nowrap;
+                                justify-content: flex-start;
+                                align-items: center;
+                                a {
+                                    max-width: 100%;
+                                    &:first-child {
+                                        margin: 1.2em 0 2em;
+                                    }
+                                    margin: 2em 0;
+
+                                    //outline:1px dotted red;
+                                    img {
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                            .p_history_wr {
+                                width: 43.402%;
+                                p {
+
+                                }
+                            }
+
+                            //первый элемент списка "истории" (стрела)
+                            &:first-child {
+                                height: 6em;
+                                margin: 0;
+                                .year_content_container {
+                                    margin: 0;
+                                    .years_arrow_wr {
+                                        margin: 0;
+                                        .years_arrow {
+                                            height: 6em !important;
+                                            justify-content: flex-end;
+                                            &:before {
+                                                content: none;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            &:last-child {
+
+                                //height: 6em;
+                                //margin: 0;
+                                .year_content_container {
+
+                                    //margin: 0;
+                                    .years_arrow_wr {
+
+                                        //margin: 0;
+                                        .years_arrow {
+
+                                            //height: 6em !important;
+                                            //justify-content: flex-end;
+                                            &:after {
+                                                content: none;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .year_history {
+                                font-size: 3.9em;
+                                font-family: $ptSerif;
+                                color: $fontcolor;
+                            }
+                            h3 {
+                                text-align: center;
+                                font-weight: normal;
+                                font-size: 1.3em;
+                            }
+                            .year_content_container {
+                                width: 100%;
+                                height: auto;
+                                display: flex;
+                                flex-flow: row nowrap;
+                                justify-content: space-around;
+                                align-items: flex-start;
+                                position: relative;
+                                margin: 2em 0 0;
+
+                                //position: absolute;
+                                //height: 100%;
+                                .years_arrow_wr {
+                                    width: 2px;
+                                    margin: 2.6em 0 0;
+                                    height: auto;
+                                    display: flex;
+                                    flex-flow: column nowrap;
+                                    justify-content: center;
+                                    align-items: flex-start;
+                                    .years_arrow {
+                                        width: 100%;
+
+                                        //height: 40%;
+                                        //min-height: 100%;
+                                        display: flex;
+                                        flex-flow: column nowrap;
+                                        justify-content: space-between;
+                                        align-items: center;
+                                        position: relative;
+
+                                        //outline:1px dotted green;
+                                        background-color: #ccc;
+                                        &:before {
+                                            display: inline-block;
+                                            background-image: url("../img/svg/mian_menu_sep.svg");
+                                            background-repeat: no-repeat;
+                                            content: "";
+                                            height: 12px;
+                                            width: 12px;
+                                            top: -1em;
+                                            position: relative;
+                                        }
+                                        &:after {
+                                            display: inline-block;
+                                            background-image: url("../img/svg/history_arrow.svg");
+                                            background-repeat: no-repeat;
+                                            content: "";
+                                            width: 14px;
+                                            height: 17px;
+                                            top: 1.3em;
+                                            position: relative;
+                                        }
+                                    }
+                                }
+                            }
+                        }
                         ol {
                             margin: 1em 0;
                             padding: 0;
@@ -1925,7 +2094,9 @@ html {
                                     }
                                     &.slick-prev {
                                         left: -70px;
-                                        transform: rotate(180deg);
+
+                                        //transform: rotate(180deg);
+                                        @extend .rotating;
                                         z-index: 2;
                                         @include respond-to(handhelds) {
                                             left: -25px;
@@ -2529,7 +2700,9 @@ html {
                             width: 25px;
                             height: 14px;
                             display: block;
-                            transform: rotate(180deg);
+
+                            //transform: rotate(180deg);
+                            @extend .rotating;
                             margin: 0 0 0 10px;
                             @include respond-to(handhelds) {
                                 display: none;
@@ -2704,7 +2877,8 @@ html {
                             &.slick-prev {
 
                                 // left: -70px;
-                                transform: rotate(180deg);
+                                //transform: rotate(180deg);
+                                @extend .rotating;
                                 z-index: 2;
                                 &:before {
                                     font-family: initial;
@@ -2852,7 +3026,9 @@ html {
                         width: 25px;
                         height: 14px;
                         display: block;
-                        transform: rotate(180deg);
+
+                        //transform: rotate(180deg);
+                        @extend .rotating;
                         margin: 0 0 0 10px;
                         @include respond-to(handhelds) {
                             display: none;
@@ -2983,7 +3159,9 @@ html {
                                     opacity: initial;
                                     color: initial;
                                     content: "";
-                                    transform: rotate(180deg);
+
+                                    //transform: rotate(180deg);
+                                    //@extend .rotating;
 
                                     // background-image: url(/dist/img/sprite.png);
                                     // width: 145px;
@@ -3241,7 +3419,9 @@ html {
                         width: 25px;
                         height: 14px;
                         display: block;
-                        transform: rotate(180deg);
+
+                        //transform: rotate(180deg);
+                        @extend .rotating;
                         margin: 0 0 0 10px;
 
                         // @include respond-to(medium-screens) {
@@ -3481,7 +3661,9 @@ html {
                                 }
                                 &.slick-prev {
                                     left: -70px;
-                                    transform: rotate(180deg);
+
+                                    //transform: rotate(180deg);
+                                    @extend .rotating;
                                     z-index: 2;
                                     @include respond-to(handhelds) {
                                         left: -25px;
