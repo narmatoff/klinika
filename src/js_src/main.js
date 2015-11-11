@@ -314,10 +314,9 @@ $(document).ready(function() {
     // фиксация списка годов с прокруткой
     $('.wayp_links').containedStickyScroll({
         duration: 0,
-        queue:true,
-        unstick:true,
+        queue: true,
+        unstick: true,
         // easing:"easeOutBack"
-
         closeChar: ''
     });
 

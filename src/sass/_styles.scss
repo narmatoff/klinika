@@ -1330,25 +1330,61 @@ html {
                     }
 
                         .wayp_links {
-                            background: #ccc;
+                            background: transparent;
                             padding:0;
-                            margin:5% 0 0 0;
-                            width: 60px;
+                            margin:10% 1% 0 0;
+                            width: 58px;
                             right:0;
-                            display:inline-block;
-                            &.fixed {
+                            //top:30px;
+                            //right:0;
+                            //display:inline-block;
+                            display:flex;
+                            flex-flow:column nowrap;
+                            justify-content:center;
+                            align-items:center;
+                            position:absolute;
+
+                            //&.fixed {
                                 //position: fixed;
                                 //top: 10%;
                                 //left: 20.4%;
                                 //right: 50%;
-                            }
+                            //}
                             li {
                                 padding:0;
-                                margin:0;
+                                margin:0 0 5% 0;
                                 list-style: none;
+                                display:inline-block;
+                                width:100%;
+                                height:58px;
+                                //flex-flow:column nowrap;
+
+                                border-radius:50%;
+                                font-family:$ptSerif;
+                                font-size:1.1em;
+                                border:2px solid transparent;
+                                &:hover{
+                                    border:2px solid $lightenbrown2;
+                                }
+                                a{
+                                color:$lightFontcolor;
+                                    display:inline-block;
+                                    width:100%;
+                                    height:100%;
+                                    display:flex;
+                                    justify-content:center;
+                                    align-items:center;
+                                    text-decoration:none;
+                                }
+
 
                                 &.active {
-                                    background: red;
+                                    background: $lightenbrown2;
+                                    //font-weight:bold;
+                                    a{
+
+                                    color:$fontcolor;
+                                    }
                                 }
 
                         }
