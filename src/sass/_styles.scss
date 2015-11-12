@@ -1374,6 +1374,21 @@ html {
                         //left: 20.4%;
                         //right: 50%;
                         //}
+                         @include respond-to(handhelds) {
+                            // outline:1px dotted red;
+                             display:none;
+                         }
+                          @include respond-to(medium-screens) {
+                              display:none;
+
+
+                          }
+                           @include respond-to(postmedium-screens) {
+                            //   outline:1px dotted green;
+                               display:flex;
+
+
+                           }
                         li {
                             padding: 0;
                             margin: 0 0 0.5em;
@@ -1490,6 +1505,11 @@ html {
                                 flex-flow: column nowrap;
                                 justify-content: flex-start;
                                 align-items: center;
+                                 @include respond-to(handhelds) {
+                                     max-width:100%;
+                                     width:100%;
+                                     order:2;
+                                 }
                                 a {
                                     max-width: 100%;
                                     &:first-child {
@@ -1505,6 +1525,12 @@ html {
                             }
                             .p_history_wr {
                                 width: 43.402%;
+                                 @include respond-to(handhelds) {
+                                    // color: red;
+                                     width: 100%;
+                                     order: 1;
+
+                                 }
                                 p {
 
                                 }
@@ -1514,6 +1540,9 @@ html {
                             &:first-child {
                                 height: 6em;
                                 margin: 0;
+                                 @include respond-to(handhelds) {
+                                     display:none;
+                                 }
                                 .year_content_container {
                                     margin: 0;
                                     .years_arrow_wr {
@@ -1558,6 +1587,7 @@ html {
                                 text-align: center;
                                 font-weight: normal;
                                 font-size: 1.3em;
+                                line-height:1.4em;
                             }
                             .year_content_container {
                                 width: 100%;
@@ -1569,6 +1599,12 @@ html {
                                 position: relative;
                                 margin: 2em 0 0;
 
+                                 @include respond-to(handhelds) {
+                                     flex-flow: column nowrap;
+
+
+                                 }
+
                                 //position: absolute;
                                 //height: 100%;
                                 .years_arrow_wr {
@@ -1579,6 +1615,10 @@ html {
                                     flex-flow: column nowrap;
                                     justify-content: center;
                                     align-items: flex-start;
+                                    @include respond-to(handhelds) {
+                                       // outline:1px dotted red;
+                                        display:none;
+                                    }
                                     .years_arrow {
                                         width: 100%;
 
