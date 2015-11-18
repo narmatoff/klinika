@@ -196,7 +196,7 @@
             closeRight: 0
         };
 
-        var options = $.extend(defaults, options);
+        options = $.extend(defaults, options);
 
         if (options.unstick === true) {
             this.css('position', 'absolute');
@@ -231,7 +231,6 @@
                 });
             } else if (jQuery(window).scrollTop() < (jQuery(getObject).parent().offset().top)) {
                 jQuery(getObject).animate({
-                    // top: "0px"
                     top: "0px"
                 }, {
                     queue: options.queue,

@@ -404,6 +404,19 @@ html {
                 width: 100%;
             }
             .fancyform_tabs {
+                ul{
+                    li{
+                        &.selected-tab{
+                            outline: 1px dotted red;
+                        }
+                        &.disabled{
+                            a{
+                            color: #ccc;
+
+                            }
+                        }
+                    }
+                }
                 #purchase_todoctor {
                     div {
                         width: 100%;
@@ -1945,7 +1958,7 @@ html {
                             display: flex;
                             display: flex;
                             flex-flow: column nowrap;
-                            justify-content: center;
+                            justify-content: space-between;
                             align-items: center;
                             width: 894px;
                             z-index: 2;
@@ -1977,15 +1990,17 @@ html {
                                     align-items: center;
 
                                     // justify-content: flex-start;
-                                    justify-content: center;
+                                    //justify-content: center;
+                                    justify-content: space-between;
                                     width: 298px;
 
                                     // padding: 20px 0 20px 0;
                                     // margin: 20px 0 20px 0;
-                                    padding: 0;
+                                    padding: 1em 0 1em 0;
                                     margin: 1em 0;
                                     outline: 1px doted red;
-                                    height: auto;
+                                    min-height: 23.5em;
+                                    //height: auto;
                                     outline: none;
                                     border: none;
                                     @include respond-to(handhelds) {
@@ -2070,11 +2085,13 @@ html {
                                     }
                                     .doctor_heading_slide {
                                         text-align: center;
-                                        margin: 0 0 1.2em;
+                                        margin: 0;
+                                        //margin: 0 0 1.2em;
                                         border-top: 2px solid darken($lightenmiddlebrown2, 10%);
                                         border-bottom: 2px solid $lightenmiddlebrown2;
                                         display: block;
                                         width: 90%;
+
                                         @include respond-to(handhelds) {
                                             width: 70%;
                                         }
@@ -2085,6 +2102,11 @@ html {
                                             width: 95%;
                                             margin: 2px auto;
                                             padding: 10px 0;
+                                            min-height: 2.875em;
+                                            display: flex;
+                                            flex-flow: row nowrap;
+                                            justify-content: center;
+                                            align-items: center;
                                             a {
                                                 font-family: $ptSerif;
                                                 text-transform: capitalize;
@@ -2098,10 +2120,14 @@ html {
                                     p {
                                         width: 230px;
                                         color: $lightFontcolor;
-
+                                        min-height: 4.584em;
                                         //font-size: 0.9em;
                                         margin: 0;
                                         text-align: center;
+                                        display: flex;
+                                        flex-flow: row nowrap;
+                                        justify-content: center;
+                                        align-items: flex-end;
                                     }
                                 }
 
@@ -2242,17 +2268,17 @@ html {
                                     display: flex !important;
                                     flex-flow: column nowrap;
                                     align-items: center;
-                                    justify-content: center;
+                                    justify-content: space-between;
                                     width: 18.5em;
                                     padding: 1em 0;
                                     margin: 1em 0;
                                     outline: 1px doted red;
-                                    height: auto;
+                                    height: 26.5em;
                                     outline: none;
                                     border: 1px solid lighten($fontcolor,50%);
-                                    @include respond-to(handhelds) {
-                                        width: 17.85em;
-                                    }
+                                    //@include respond-to(handhelds) {
+                                    //    width: 17.85em;
+                                    //}
 
                                     // при наведении на элемент врача
                                     &:hover {
@@ -2274,7 +2300,7 @@ html {
                                         background-repeat: no-repeat;
                                         width: 94px;
                                         height: 26px;
-                                        margin: 0 0 1em;
+                                        margin: 0 0 0;
                                     }
                                     p {
                                         width: 230px;
@@ -2307,6 +2333,7 @@ html {
                         display: flex;
                         flex-flow: row wrap;
                         justify-content: space-around;
+                        width:100%;
                         @include respond-to(medium-screens) {
                             margin: 1em 0 0;
                         }
@@ -3637,11 +3664,13 @@ html {
                                 }
                                 .doctor_heading_slide {
                                     text-align: center;
-                                    margin: 0 0 1.2em;
+                                    margin: 0;
+                                    //margin: 0 0 1.2em;
                                     border-top: 2px solid darken($lightenmiddlebrown2, 10%);
                                     border-bottom: 2px solid $lightenmiddlebrown2;
                                     display: block;
                                     width: 90%;
+
                                     @include respond-to(handhelds) {
                                         width: 70%;
                                     }
@@ -3652,6 +3681,11 @@ html {
                                         width: 95%;
                                         margin: 2px auto;
                                         padding: 10px 0;
+                                        min-height: 2.875em;
+                                        display: flex;
+                                        flex-flow: row nowrap;
+                                        justify-content: center;
+                                        align-items: center;
                                         a {
                                             font-family: $ptSerif;
                                             text-transform: capitalize;
@@ -3665,10 +3699,14 @@ html {
                                 p {
                                     width: 230px;
                                     color: $lightFontcolor;
-
+                                    min-height: 4.584em;
                                     //font-size: 0.9em;
                                     margin: 0;
                                     text-align: center;
+                                    display: flex;
+                                    flex-flow: row nowrap;
+                                    justify-content: center;
+                                    align-items: flex-end;
                                 }
                             }
 

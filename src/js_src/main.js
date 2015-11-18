@@ -12,12 +12,13 @@ $(document).ready(function() {
 
 
     // validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator
+
     // валидация формы записи к врачу
     var v_doc = $("#purchase_todoctor").validate({
         errorClass: "invalid",
         validClass: "success",
-        onkeyup: false,
-        onfocusout: false,
+        // onkeyup: true,
+        // onfocusout: true,
         // errorLabelContainer: ".fieldset_wrapper",
         // wrapper: "span",
 
@@ -28,12 +29,78 @@ $(document).ready(function() {
 
         }
     });
+    // console.log(v_doc);
     // validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator
 
 
 
     // tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase
-    // фу для отключения табов
+
+    $(function() {
+        var tabs = $('.fancyform_tabs');
+        tabs.easytabs({
+                animationSpeed: 'fast',
+                // animate: false,
+                tabActiveClass: "selected-tab",
+                panelActiveClass: "displayed"
+                // updateHash: "true"
+                    // убираем сохранение хэша в адр строке(прыгает в хроме)
+                    // updateHash: false
+            })
+            .bind('easytabs:before', function(e, tab) {
+                // if (!tab.hasClass('active') && !tab.hasClass('collapsed')) {
+
+                //если вкладка не активная и ошибок в валидаторе - нет то:
+                // if (!tab.hasClass('active') && on_disable_b_and_c_clicked()) {
+
+                //если ошибок в валидаторе - нет то:
+                if (v_doc.form()) {
+                    //  открываем вкладки
+                    // return confirm("Открыть вкладку?");
+                    console.log("ok");
+                    return true;
+                } else {
+                    console.log("NOT_ok");
+                    $(".selected-tab").next(function() {
+                        // body...
+                        $("li").each(function(i, elem) {
+                            //  if ($(this).hasClass("stop")) {
+                            //      alert("Остановлено на " + i + "-м пункте списка.");
+                            //      return false;
+                            //  } else {
+                            //      alert(i + ': ' + $(elem).text());
+                            //  }
+                            $(this).css("border", "3px solid red");
+                        });
+                    });
+                    return false;
+                }
+                // else if (tab.parent().hasClass('disabled')) {
+                //     console.log("NOT_ok")
+                //     return false;
+                //
+                // }
+            });
+        tabs.bind("easytabs:before", function(e, clicked) {
+            if (clicked.parent().hasClass('disabled')) {
+                return false;
+            }
+        });
+    });
+    //////////////////////////////////
+
+    // фу отключения указанных в ней табов
+    function disable_custom_tabs() {
+        var tabs = $("#tab-container");
+        disable_easytabs(tabs, [0, 4]);
+        return false;
+    }
+
+    function enable_some_tabs() {
+        var tabs = $('#tab-container');
+        disable_easytabs(tabs, []);
+    }
+
     function disable_easytabs(tabs, indexes) {
         var lis = tabs.children('ul').children();
         var index = 0;
@@ -43,67 +110,31 @@ $(document).ready(function() {
             var disabled = $.inArray(index, indexes) != -1;
             if (disabled) {
                 li.addClass('disabled');
+                li.on("click", returnFalse);
             } else {
                 li.removeClass('disabled');
+                li.off('click', returnFalse);
             }
             index++;
         });
     }
-    //////////////////////////////////
-    // фу отключения указанных в ней табов
-    function on_disable_b_and_c_clicked() {
-        var tabs = $("#tab-container");
-        disable_easytabs(tabs, [0, 4]);
+
+    function returnFalse(e) {
         return false;
     }
-    // вызов фу отключения указанных табов
-    $("#sdfkljhf8888").click(function() {
-        on_disable_b_and_c_clicked();
+
+
+    // вызов фу отключения/включения указанных табов
+    $("#disableCustomsTabs").click(function() {
+        disable_custom_tabs();
     });
 
-    // вкладки формы записи к врачу
-    // ЗЫ: Форма сохраняет хэш урлов
-    $(".fancyform_tabs")
-        .easytabs({
-            animationSpeed: 'fast'
-                // убираем сохранение хэша в адр строке(прыгает в хроме)
-                // updateHash: false
-        })
-        // проверка валидности форм во вкладках
-        .bind('easytabs:before', function(e, tab) {
-            // if (!tab.hasClass('active') && !tab.hasClass('collapsed')) {
+    $("#enableCustomsTabs").click(function() {
+        enable_some_tabs();
+    });
 
-            //если вкладка не активная и ошибок в валидаторе - нет то:
-            // if (!tab.hasClass('active') && on_disable_b_and_c_clicked()) {
 
-            //если ошибок в валидаторе - нет то:
-            if (v_doc.form()) {
-                //  открываем вкладки
-                // return confirm("Открыть вкладку?");
-                console.log("ok");
-                return true;
-            } else {
-                console.log("NOT_ok");
-                $(".active").next(function() {
-                    // body...
-                    $("li").each(function(i, elem) {
-                        //  if ($(this).hasClass("stop")) {
-                        //      alert("Остановлено на " + i + "-м пункте списка.");
-                        //      return false;
-                        //  } else {
-                        //      alert(i + ': ' + $(elem).text());
-                        //  }
-                        $(this).css("border", "3px solid red");
-                    });
-                });
-                return false;
-            }
-            // else if (tab.parent().hasClass('disabled')) {
-            //     console.log("NOT_ok")
-            //     return false;
-            //
-            // }
-        });
+
     // console.log(tab)
     // tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase
 

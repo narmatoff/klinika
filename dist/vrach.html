@@ -313,35 +313,55 @@
       <div id="tab-container" class="fancyform_tabs">
         <ul>
           <li><a href="#fancyform_tab1">Направление</a></li>
-          <li><a href="#fancyform_tab2">Специалист</a></li>
-          <li><a href="#fancyform_tab3">Дата и время</a></li>
-          <li><a href="#fancyform_tab4">Контакты</a></li>
-          <li><a href="#fancyform_tab5">Завершение</a></li>
+          <li class="disabled"><a href="#fancyform_tab2">Специалист</a></li>
+          <li class="disabled"><a href="#fancyform_tab3">Дата и время</a></li>
+          <li class="disabled"><a href="#fancyform_tab4">Контакты</a></li>
+          <li class="disabled"><a href="#fancyform_tab5">Завершение</a></li>
         </ul>
         <form id="purchase_todoctor">
           <div id="fancyform_tab1" class="fieldset_wrapper">
             <h3> Направление</h3>
             <fieldset>
-              <input type="text" name="fio" placeholder="name" required="required"/>
+              <input type="text" name="fio" placeholder="name" title="Пожалуйста, Введите имя" required="required"/>
             </fieldset>
+            <input type="button" value="назад" class="prev-button"/>
+            <input type="button" value="дальше" class="next-button"/>
           </div>
           <div id="fancyform_tab2" class="fieldset_wrapper">
             <h3> Специалист</h3>
             <fieldset>
-              <input type="text" name="sometext" placeholder="sometext" required="required"/>
+              <input type="text" name="sometext" title="Пожалуйста, Введите сомтекст" placeholder="sometext" required="required"/>
             </fieldset>
+            <input type="button" value="назад" class="prev-button"/>
+            <input type="button" value="дальше" class="next-button"/>
           </div>
           <div id="fancyform_tab3" class="fieldset_wrapper">
             <h3> Дата и время</h3>
+            <fieldset>
+              <input type="text" name="fam" title="Пожалуйста, Введите время" placeholder="время" required="required"/>
+            </fieldset>
+            <input type="button" value="назад" class="prev-button"/>
+            <input type="button" value="дальше" class="next-button"/>
           </div>
           <div id="fancyform_tab4" class="fieldset_wrapper">
             <h3> Контакты</h3>
+            <fieldset>
+              <input type="text" name="cont" title="Пожалуйста, Введите Контакты" placeholder="Контакты" required="required"/>
+            </fieldset>
+            <input type="button" value="назад" class="prev-button"/>
+            <input type="button" value="дальше" class="next-button"/>
           </div>
           <div id="fancyform_tab5" class="fieldset_wrapper">
             <h3> Завершение</h3>
+            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta consequatur minus ipsam voluptas facere, pariatur expedita maiores, quidem suscipit maxime.                            </p>
+            <input type="button" value="назад" class="prev-button"/>
+            <input type="button" value="дальше" class="next-button"/>
+            <button type="submit">Отправить</button>
           </div>
         </form>
-      </div><span id="sdfkljhf8888">Disable B &amp; C</span>
+      </div>
+      <button id="disableCustomsTabs">Отключить вкладки</button>
+      <button id="enableCustomsTabs">Включить вкладки</button>
     </div>
     <!-- bower:js-->
     <script src="bower_components/jquery/dist/jquery.js"></script>

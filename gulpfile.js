@@ -253,7 +253,8 @@ gulp.task('bower', function() {
 // connect
 gulp.task('connect', function() {
     connect.server({
-        livereload: true
+        livereload: true,
+        host:'0.0.0.0'
     });
 });
 

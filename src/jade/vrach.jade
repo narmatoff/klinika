@@ -201,32 +201,58 @@ html(lang="en").no-js
                 ul
                     li
                         a(href="#fancyform_tab1") Направление
-                    li
+                    li.disabled
                         a(href="#fancyform_tab2") Специалист
-                    li
+                    li.disabled
                         a(href="#fancyform_tab3") Дата и время
-                    li
+                    li.disabled
                         a(href="#fancyform_tab4") Контакты
-                    li
+                    li.disabled
                         a(href="#fancyform_tab5") Завершение
                 form#purchase_todoctor
                     div#fancyform_tab1.fieldset_wrapper
                         h3  Направление
                         fieldset
-                            input(type="text" name="fio" placeholder="name" required="required")
+                            input(type="text" name="fio" placeholder="name" title="Пожалуйста, Введите имя" required="required")
+                        input(type="button" value="назад").prev-button
+                        input(type="button" value="дальше").next-button
+
                         
                     div#fancyform_tab2.fieldset_wrapper
                         h3  Специалист
                         fieldset
-                            input(type="text" name="sometext" placeholder="sometext" required="required")
+                            input(type="text" name="sometext" title="Пожалуйста, Введите сомтекст" placeholder="sometext" required="required")
+                        input(type="button" value="назад").prev-button
+                        input(type="button" value="дальше").next-button
+
 
                     div#fancyform_tab3.fieldset_wrapper
                         h3  Дата и время
+                        fieldset
+                            input(type="text" name="fam" title="Пожалуйста, Введите время" placeholder="время" required="required")
+                        input(type="button" value="назад").prev-button
+                        input(type="button" value="дальше").next-button
+
                     div#fancyform_tab4.fieldset_wrapper
                         h3  Контакты
+                        fieldset
+                            input(type="text" name="cont" title="Пожалуйста, Введите Контакты" placeholder="Контакты" required="required")
+                        input(type="button" value="назад").prev-button
+                        input(type="button" value="дальше").next-button
+
                     div#fancyform_tab5.fieldset_wrapper
                         h3  Завершение
-            span#sdfkljhf8888 Disable B &amp; C
+
+                        p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta consequatur minus ipsam voluptas facere, pariatur expedita maiores, quidem suscipit maxime.                            
+
+                        input(type="button" value="назад").prev-button
+                        input(type="button" value="дальше").next-button
+                        
+                        button(type="submit") Отправить
+            
+            
+            button#disableCustomsTabs Отключить вкладки
+            button#enableCustomsTabs Включить вкладки
             
 
 
