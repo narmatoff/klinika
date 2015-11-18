@@ -21,7 +21,20 @@ $(document).ready(function() {
         // onfocusout: true,
         // errorLabelContainer: ".fieldset_wrapper",
         // wrapper: "span",
+        invalidHandler: function(event, validator) {
+            // 'this' refers to the form
+            var errors = validator.numberOfInvalids();
+            if (errors) {
+              var message = errors == 1 ? 'У вас 1 Ошибка.' : 'У вас ' + errors + ' ошибок.';
+              console.log(message);
+            //   $("div.error span").html(message);
+            //   $("div.error").show();
+            } else {
+            //   $("div.error").hide();
+              console.log("Все валидно!");
 
+            }
+        },
         submitHandler: function() {
             // alert("Submitted, thanks!");
             // form.submit();
