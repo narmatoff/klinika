@@ -11,41 +11,6 @@ $(document).ready(function() {
     });
 
 
-    // validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator
-
-    // валидация формы записи к врачу
-    var v_doc = $("#purchase_todoctor").validate({
-        errorClass: "invalid",
-        validClass: "success",
-        // onkeyup: true,
-        // onfocusout: true,
-        // errorLabelContainer: ".fieldset_wrapper",
-        // wrapper: "span",
-        invalidHandler: function(event, validator) {
-            // 'this' refers to the form
-            var errors = validator.numberOfInvalids();
-            if (errors) {
-              var message = errors == 1 ? 'У вас 1 Ошибка.' : 'У вас ' + errors + ' ошибок.';
-              console.log(message);
-            //   $("div.error span").html(message);
-            //   $("div.error").show();
-            } else {
-            //   $("div.error").hide();
-              console.log("Все валидно!");
-
-            }
-        },
-        submitHandler: function() {
-            // alert("Submitted, thanks!");
-            // form.submit();
-            alert("Submitted!");
-
-        }
-    });
-    // console.log(v_doc);
-    // validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator
-
-
 
     // tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase
 
@@ -55,10 +20,10 @@ $(document).ready(function() {
                 animationSpeed: 'fast',
                 // animate: false,
                 tabActiveClass: "selected-tab",
-                panelActiveClass: "displayed"
-                // updateHash: "true"
+                panelActiveClass: "displayed",
+                    // updateHash: "true"
                     // убираем сохранение хэша в адр строке(прыгает в хроме)
-                    // updateHash: false
+                    updateHash: false
             })
             .bind('easytabs:before', function(e, tab) {
                 // if (!tab.hasClass('active') && !tab.hasClass('collapsed')) {
@@ -71,21 +36,34 @@ $(document).ready(function() {
                     //  открываем вкладки
                     // return confirm("Открыть вкладку?");
                     console.log("ok");
+
+
+                    if ($("#fancyform_tab1 fieldset").children().hasClass('valid')) {
+                        console.log("keyushki");
+                        disable_custom_tabs([2,3,4,5]);
+                    }
+                    if ($("#fancyform_tab2 fieldset").children().hasClass('valid')) {
+                        console.log("keyushki");
+                        disable_custom_tabs([3,4,5]);
+                    }
+                    if ($("#fancyform_tab3 fieldset").children().hasClass('valid')) {
+                        console.log("keyushki");
+                        disable_custom_tabs([4,5]);
+                    }
+                    if ($("#fancyform_tab4 fieldset").children().hasClass('valid')) {
+                        console.log("keyushki");
+                        disable_custom_tabs([]);
+                    }
+
                     return true;
                 } else {
                     console.log("NOT_ok");
-                    $(".selected-tab").next(function() {
-                        // body...
-                        $("li").each(function(i, elem) {
-                            //  if ($(this).hasClass("stop")) {
-                            //      alert("Остановлено на " + i + "-м пункте списка.");
-                            //      return false;
-                            //  } else {
-                            //      alert(i + ': ' + $(elem).text());
-                            //  }
-                            $(this).css("border", "3px solid red");
-                        });
-                    });
+                    // $(".selected-tab").next(function() {
+                    //     $("li").each(function(i, elem) {
+                    //         $(this).css("border", "3px solid red");
+                    //     });
+                    // });
+
                     return false;
                 }
                 // else if (tab.parent().hasClass('disabled')) {
@@ -103,9 +81,10 @@ $(document).ready(function() {
     //////////////////////////////////
 
     // фу отключения указанных в ней табов
-    function disable_custom_tabs() {
+    function disable_custom_tabs(numsTabs) {
         var tabs = $("#tab-container");
-        disable_easytabs(tabs, [0, 4]);
+        disable_easytabs(tabs, numsTabs);
+
         return false;
     }
 
@@ -139,7 +118,8 @@ $(document).ready(function() {
 
     // вызов фу отключения/включения указанных табов
     $("#disableCustomsTabs").click(function() {
-        disable_custom_tabs();
+        disable_custom_tabs([1, 2]);
+        console.log(tabChecker);
     });
 
     $("#enableCustomsTabs").click(function() {
@@ -151,7 +131,78 @@ $(document).ready(function() {
     // console.log(tab)
     // tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase
 
+// вперед назад по форме записи на прием
+// вперед назад по форме записи на прием
+// вперед назад по форме записи на прием
+// вперед назад по форме записи на прием
 
+$("#fancyform_tab1 .next-button").click(function(event) {
+            $('a[href="#fancyform_tab2"]').trigger('click');
+});
+
+$("#fancyform_tab2 .next-button").click(function(event) {
+            $('a[href="#fancyform_tab3"]').trigger('click');
+});
+$("#fancyform_tab2 .prev-button").click(function(event) {
+            $('a[href="#fancyform_tab1"]').trigger('click');
+});
+$("#fancyform_tab3 .next-button").click(function(event) {
+            $('a[href="#fancyform_tab4"]').trigger('click');
+});
+$("#fancyform_tab3 .prev-button").click(function(event) {
+            $('a[href="#fancyform_tab2"]').trigger('click');
+});
+$("#fancyform_tab4 .next-button").click(function(event) {
+            $('a[href="#fancyform_tab5"]').trigger('click');
+});
+$("#fancyform_tab4 .prev-button").click(function(event) {
+            $('a[href="#fancyform_tab3"]').trigger('click');
+});
+$("#fancyform_tab5 .prev-button").click(function(event) {
+            $('a[href="#fancyform_tab4"]').trigger('click');
+});
+
+
+// вперед назад по форме записи на прием
+// вперед назад по форме записи на прием
+// вперед назад по форме записи на прием
+// вперед назад по форме записи на прием
+// вперед назад по форме записи на прием
+
+
+    // validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator
+
+    // валидация формы записи к врачу
+    var tabChecker;
+    var v_doc = $("#purchase_todoctor").validate({
+        errorClass: "warning",
+        // onkeyup: true,
+        // onfocusout: false,
+        // errorLabelContainer: "fieldset",
+        // wrapper: "span",
+        invalidHandler: function(event, validator) {
+            // 'this' refers to the form
+            var errors = validator.numberOfInvalids();
+            if (errors) {
+                var message = errors == 1 ? 'У вас 1 Ошибка.' : 'У вас ' + errors + ' ошибок.';
+                console.log(message);
+                //   $("div.error span").html(message);
+                //   $("div.error").show();
+            } else {
+                //   $("div.error").hide();
+                console.log("Все валидно!");
+
+            }
+        },
+        submitHandler: function() {
+            // alert("Submitted, thanks!");
+            // form.submit();
+            alert("Submitted!");
+
+        }
+    });
+    // console.log(v_doc);
+    // validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator
 
 
 

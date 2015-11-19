@@ -20,6 +20,12 @@ html {
         color: $fontcolor;
 
         // умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:
+        ::selection {
+            color: #fff;
+            /* Цвет текста */
+            background: $redColor;
+            /* Цвет фона */
+        }
         .rotating {
             transform: rotate(180deg);
         }
@@ -91,7 +97,7 @@ html {
             }
             &:before {
                 content: "";
-                background-image: url("../img/svg/big_heading_before.svg");
+                background-image: url(../img/svg/big_heading_before.svg);
                 background-repeat: no-repeat;
                 width: 25px;
                 height: 14px;
@@ -103,7 +109,7 @@ html {
             }
             &:after {
                 content: "";
-                background-image: url("../img/svg/big_heading_before.svg");
+                background-image: url(../img/svg/big_heading_before.svg);
                 background-repeat: no-repeat;
                 width: 25px;
                 height: 14px;
@@ -198,7 +204,7 @@ html {
             background-color: $mainbrown;
             color: #fff;
             border: none;
-            background-image: url("../img/svg/arrow_top_btn.svg");
+            background-image: url(../img/svg/arrow_top_btn.svg);
             background-repeat: no-repeat;
             background-position: 90% center;
             padding-right: 3em;
@@ -228,7 +234,7 @@ html {
             background-color: $redColor;
             color: #fff;
             border: none;
-            background-image: url("../img/svg/arrow_top_btn.svg");
+            background-image: url(../img/svg/arrow_top_btn.svg);
             background-repeat: no-repeat;
             background-position: 90% center;
             padding-right: 3em;
@@ -271,7 +277,7 @@ html {
             border: 1px solid #d0d1d1;
             background-color: transparent;
             &:after {
-                background-image: url("../img/svg/image_zoom.svg");
+                background-image: url(../img/svg/image_zoom.svg);
                 display: inline-block;
                 height: 40px;
                 width: 40px;
@@ -404,15 +410,42 @@ html {
                 width: 100%;
             }
             .fancyform_tabs {
-                ul{
-                    li{
-                        &.selected-tab{
-                            outline: 1px dotted red;
-                        }
-                        &.disabled{
-                            a{
-                            color: #ccc;
+                ul {
+                    display: flex;
+                    flex-flow: row wrap;
+                    justify-content: space-between;
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                    li {
+                        display: inline-block;
+                        a {
+                            padding: 0 1.5em;
+                            height: 2.9em;
+                            font-family: $ptSerif;
+                            font-size: 1.1em;
+                            color: lighten($fontcolor,10%);
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            flex-flow: row nowrap;
 
+                            // background-color: ;
+                            &:hover {
+                                text-decoration: none;
+                            }
+                            &:visited {
+                                background-color: green;
+                            }
+                        }
+                        &.selected-tab {
+
+                            // outline: 1px dotted red;
+                            background-color: #fff;
+                        }
+                        &.disabled {
+                            a {
+                                color: #ccc;
                             }
                         }
                     }
@@ -442,7 +475,7 @@ html {
             header {
                 display: flex;
                 flex-flow: column nowrap;
-                background-image: url("../img/header_back.png");
+                background-image: url(../img/header_back.png);
                 background-size: cover;
                 background-repeat: no-repeat;
                 @include respond-to(handhelds) {
@@ -475,7 +508,7 @@ html {
                     .menu_sloser {
                         display: none;
                         @include respond-to(handhelds) {
-                            background-image: url("../img/svg/closer_menu.svg");
+                            background-image: url(../img/svg/closer_menu.svg);
                             height: 30px;
                             width: 30px;
                             position: absolute;
@@ -519,7 +552,7 @@ html {
                             position: relative;
                             margin: 0;
                             padding: 0 3.3% 0 2%;
-                            list-style-image: url("../img/svg/septopmenu.svg");
+                            list-style-image: url(../img/svg/septopmenu.svg);
                             height: 100%;
 
                             // transition: all 0.1s linear;
@@ -532,7 +565,7 @@ html {
                                 height: auto;
 
                                 // flex-flow:
-                                list-style-image: url("../img/svg/septopmenu.svg");
+                                list-style-image: url(../img/svg/septopmenu.svg);
                                 list-style-image: none;
                                 width: 40%;
                             }
@@ -603,7 +636,7 @@ html {
                                     display: list-item;
                                     width: 100%;
                                     text-align: left;
-                                    list-style-image: url("../img/svg/septopmenu.svg");
+                                    list-style-image: url(../img/svg/septopmenu.svg);
 
                                     // list-style-type: disk;
                                     &:hover {
@@ -667,7 +700,7 @@ html {
                         margin: 0;
                         padding: 0;
                         .hamburger {
-                            background-image: url("../img/svg/hamburger.svg");
+                            background-image: url(../img/svg/hamburger.svg);
                             height: 17px;
                             width: 30px;
                             display: block;
@@ -677,7 +710,7 @@ html {
                     .left_griphon {
 
                         // @include sprite($griphon1);
-                        background-image: url("../img/svg/Gryphon-l.svg");
+                        background-image: url(../img/svg/Gryphon-l.svg);
                         background-repeat: no-repeat;
                         height: 121px;
                         width: 85px;
@@ -689,7 +722,7 @@ html {
 
                         // @include sprite($griphon2);
                         // @include sprite($griphon1);
-                        background-image: url("../img/svg/Gryphon-r.svg");
+                        background-image: url(../img/svg/Gryphon-r.svg);
                         background-repeat: no-repeat;
                         height: 121px;
                         width: 85px;
@@ -705,7 +738,7 @@ html {
                         p {
                             color: #fff;
                             display: list-item;
-                            list-style-image: url("../img/svg/addr_baloon.svg");
+                            list-style-image: url(../img/svg/addr_baloon.svg);
                             display: list-item;
                             list-style-position: inside;
                             text-align: right;
@@ -717,7 +750,7 @@ html {
                     }
                     @include respond-to(handhelds) {
                         &>a {
-                            background-image: url("../img/svg/mobile_logo.svg");
+                            background-image: url(../img/svg/mobile_logo.svg);
                             background-repeat: no-repeat;
                             display: block;
                             width: 120px;
@@ -737,7 +770,7 @@ html {
                         p {
                             display: list-item;
                             list-style-position: inside;
-                            list-style-image: url("../img/svg/phone_baloon.svg");
+                            list-style-image: url(../img/svg/phone_baloon.svg);
                             text-align: right;
                             font-size: 1.1em;
                             @include respond-to(handhelds) {
@@ -871,7 +904,7 @@ html {
 
                                 // рисуем ромбик между итемами гглавного меню
                                 &:before {
-                                    background-image: url("../img/svg/mian_menu_sep.svg");
+                                    background-image: url(../img/svg/mian_menu_sep.svg);
                                     background-repeat: no-repeat;
                                     content: "";
                                     position: absolute;
@@ -1067,7 +1100,7 @@ html {
                             }
                             .arrow_top_buttons {
                                 display: block;
-                                background-image: url("../img/svg/arrow_top_btn.svg");
+                                background-image: url(../img/svg/arrow_top_btn.svg);
                                 background-repeat: no-repeat;
                                 width: 15px;
                                 height: 14px;
@@ -1099,7 +1132,7 @@ html {
                             }
                             .arrow_top_buttons {
                                 display: block;
-                                background-image: url("../img/svg/arrow_top_btn2.svg");
+                                background-image: url(../img/svg/arrow_top_btn2.svg);
                                 background-repeat: no-repeat;
 
                                 // background-color: $fontcolor;
@@ -1118,7 +1151,7 @@ html {
             flex-flow: column nowrap;
             background-size: cover;
             background-color: transparent;
-            background-image: url("../img/svg/background_image.svg");
+            background-image: url(../img/svg/background_image.svg);
             background-repeat: no-repeat;
             background-position: 0 0;
             background-size: 427px 572px;
@@ -1164,7 +1197,7 @@ html {
                         //width:auto;
                         display: flex;
                         li {
-                            list-style-image: url("../img/svg/septopmenu.svg");
+                            list-style-image: url(../img/svg/septopmenu.svg);
                             margin: 0 0 0 2em;
                             padding: 0 0 0 1em;
                             list-style-position: outside;
@@ -1221,7 +1254,7 @@ html {
                         }
                         &:before {
                             content: "";
-                            background-image: url("../img/svg/big_heading_before.svg");
+                            background-image: url(../img/svg/big_heading_before.svg);
                             background-repeat: no-repeat;
                             width: 25px;
                             height: 14px;
@@ -1233,7 +1266,7 @@ html {
                         }
                         &:after {
                             content: "";
-                            background-image: url("../img/svg/big_heading_before.svg");
+                            background-image: url(../img/svg/big_heading_before.svg);
                             background-repeat: no-repeat;
                             width: 25px;
                             height: 14px;
@@ -1248,7 +1281,7 @@ html {
                         }
                     }
                     .sep_afterheading {
-                        background-image: url("../img/svg/sep_afterheading.svg");
+                        background-image: url(../img/svg/sep_afterheading.svg);
                         background-repeat: no-repeat;
                         display: block;
                         width: 128px;
@@ -1316,7 +1349,7 @@ html {
                         width: 98%;
                         display: flex;
                         li {
-                            list-style-image: url("../img/svg/septopmenu.svg");
+                            list-style-image: url(../img/svg/septopmenu.svg);
                             margin: 0 0 0 2em;
                             padding: 0 0 0 1em;
                             list-style-position: outside;
@@ -1368,6 +1401,7 @@ html {
                         background: transparent;
                         padding: 0;
                         margin: 10% 2% 10% 0;
+
                         //padding: 0 0 15% 0;
                         width: 58px;
                         right: 0;
@@ -1387,21 +1421,19 @@ html {
                         //left: 20.4%;
                         //right: 50%;
                         //}
-                         @include respond-to(handhelds) {
+                        @include respond-to(handhelds) {
+
                             // outline:1px dotted red;
-                             display:none;
-                         }
-                          @include respond-to(medium-screens) {
-                              display:none;
+                            display: none;
+                        }
+                        @include respond-to(medium-screens) {
+                            display: none;
+                        }
+                        @include respond-to(postmedium-screens) {
 
-
-                          }
-                           @include respond-to(postmedium-screens) {
                             //   outline:1px dotted green;
-                               display:flex;
-
-
-                           }
+                            display: flex;
+                        }
                         li {
                             padding: 0;
                             margin: 0 0 0.5em;
@@ -1415,8 +1447,9 @@ html {
                             font-family: $ptSerif;
                             font-size: 1.1em;
                             border: 2px solid transparent;
+
                             //&:hover {
-                                //border: 2px solid $lightenbrown2;
+                            //border: 2px solid $lightenbrown2;
                             //}
                             a {
                                 color: $lightFontcolor;
@@ -1427,8 +1460,8 @@ html {
                                 justify-content: center;
                                 align-items: center;
                                 text-decoration: none;
-                                &:hover{
-                                    color:$fontcolor;
+                                &:hover {
+                                    color: $fontcolor;
                                 }
                             }
                             &.active {
@@ -1459,7 +1492,7 @@ html {
                         }
                         &:before {
                             content: "";
-                            background-image: url("../img/svg/big_heading_before.svg");
+                            background-image: url(../img/svg/big_heading_before.svg);
                             background-repeat: no-repeat;
                             width: 25px;
                             height: 14px;
@@ -1471,7 +1504,7 @@ html {
                         }
                         &:after {
                             content: "";
-                            background-image: url("../img/svg/big_heading_before.svg");
+                            background-image: url(../img/svg/big_heading_before.svg);
                             background-repeat: no-repeat;
                             width: 25px;
                             height: 14px;
@@ -1486,7 +1519,7 @@ html {
                         }
                     }
                     .sep_afterheading {
-                        background-image: url("../img/svg/sep_afterheading.svg");
+                        background-image: url(../img/svg/sep_afterheading.svg);
                         background-repeat: no-repeat;
                         display: block;
                         width: 128px;
@@ -1518,11 +1551,11 @@ html {
                                 flex-flow: column nowrap;
                                 justify-content: flex-start;
                                 align-items: center;
-                                 @include respond-to(handhelds) {
-                                     max-width:100%;
-                                     width:100%;
-                                     order:2;
-                                 }
+                                @include respond-to(handhelds) {
+                                    max-width: 100%;
+                                    width: 100%;
+                                    order: 2;
+                                }
                                 a {
                                     max-width: 100%;
                                     &:first-child {
@@ -1538,12 +1571,12 @@ html {
                             }
                             .p_history_wr {
                                 width: 43.402%;
-                                 @include respond-to(handhelds) {
-                                    // color: red;
-                                     width: 100%;
-                                     order: 1;
+                                @include respond-to(handhelds) {
 
-                                 }
+                                    // color: red;
+                                    width: 100%;
+                                    order: 1;
+                                }
                                 p {
 
                                 }
@@ -1553,9 +1586,9 @@ html {
                             &:first-child {
                                 height: 6em;
                                 margin: 0;
-                                 @include respond-to(handhelds) {
-                                     display:none;
-                                 }
+                                @include respond-to(handhelds) {
+                                    display: none;
+                                }
                                 .year_content_container {
                                     margin: 0;
                                     .years_arrow_wr {
@@ -1600,7 +1633,7 @@ html {
                                 text-align: center;
                                 font-weight: normal;
                                 font-size: 1.3em;
-                                line-height:1.4em;
+                                line-height: 1.4em;
                             }
                             .year_content_container {
                                 width: 100%;
@@ -1611,12 +1644,9 @@ html {
                                 align-items: flex-start;
                                 position: relative;
                                 margin: 2em 0 0;
-
-                                 @include respond-to(handhelds) {
-                                     flex-flow: column nowrap;
-
-
-                                 }
+                                @include respond-to(handhelds) {
+                                    flex-flow: column nowrap;
+                                }
 
                                 //position: absolute;
                                 //height: 100%;
@@ -1629,8 +1659,9 @@ html {
                                     justify-content: center;
                                     align-items: flex-start;
                                     @include respond-to(handhelds) {
-                                       // outline:1px dotted red;
-                                        display:none;
+
+                                        // outline:1px dotted red;
+                                        display: none;
                                     }
                                     .years_arrow {
                                         width: 100%;
@@ -1647,7 +1678,7 @@ html {
                                         background-color: #ccc;
                                         &:before {
                                             display: inline-block;
-                                            background-image: url("../img/svg/mian_menu_sep.svg");
+                                            background-image: url(../img/svg/mian_menu_sep.svg);
                                             background-repeat: no-repeat;
                                             content: "";
                                             height: 12px;
@@ -1657,7 +1688,7 @@ html {
                                         }
                                         &:after {
                                             display: inline-block;
-                                            background-image: url("../img/svg/history_arrow.svg");
+                                            background-image: url(../img/svg/history_arrow.svg);
                                             background-repeat: no-repeat;
                                             content: "";
                                             width: 14px;
@@ -1703,7 +1734,7 @@ html {
                                 padding: 0 0 0 1.4em;
 
                                 //color: $fontcolor;
-                                list-style-image: url("../img/svg/septopmenu.svg");
+                                list-style-image: url(../img/svg/septopmenu.svg);
                                 .numlist {
                                     font-size: 1.1em;
                                     background-color: #fff;
@@ -1784,7 +1815,7 @@ html {
                                     margin: 1em 0 1em 1em;
                                 }
                                 &:before {
-                                    background: transparent url("../img/svg/cont_addr_baloon.svg") left top no-repeat;
+                                    background: transparent url(../img/svg/cont_addr_baloon.svg) left top no-repeat;
                                     width: 12px;
                                     height: 15px;
                                     display: inline-block;
@@ -1802,7 +1833,7 @@ html {
                                     margin: 1em 0 1em 1em;
                                 }
                                 &:before {
-                                    background: transparent url("../img/svg/cont_phone_baloon.svg") left top no-repeat;
+                                    background: transparent url(../img/svg/cont_phone_baloon.svg) left top no-repeat;
                                     width: 11px;
                                     height: 16px;
                                     display: inline-block;
@@ -1825,7 +1856,7 @@ html {
                                     margin: 1em 0 1em 1em;
                                 }
                                 &:before {
-                                    background: transparent url("../img/svg/cont_mail_baloon.svg") left top no-repeat;
+                                    background: transparent url(../img/svg/cont_mail_baloon.svg) left top no-repeat;
                                     width: 16px;
                                     height: 11px;
                                     display: inline-block;
@@ -1843,7 +1874,7 @@ html {
                                     margin: 1em 0 1em 1em;
                                 }
                                 &:before {
-                                    background: transparent url("../img/svg/cont_time_baloon.svg") left top no-repeat;
+                                    background: transparent url(../img/svg/cont_time_baloon.svg) left top no-repeat;
                                     width: 16px;
                                     height: 16px;
                                     display: inline-block;
@@ -1861,7 +1892,7 @@ html {
                                     margin: 1em 0 1em 1em;
                                 }
                                 &:before {
-                                    background: transparent url("../img/svg/cont_pay_baloon.svg") left top no-repeat;
+                                    background: transparent url(../img/svg/cont_pay_baloon.svg) left top no-repeat;
                                     width: 16px;
                                     height: 12px;
                                     display: inline-block;
@@ -1996,10 +2027,11 @@ html {
 
                                     // padding: 20px 0 20px 0;
                                     // margin: 20px 0 20px 0;
-                                    padding: 1em 0 1em 0;
+                                    padding: 1em 0;
                                     margin: 1em 0;
                                     outline: 1px doted red;
                                     min-height: 23.5em;
+
                                     //height: auto;
                                     outline: none;
                                     border: none;
@@ -2086,12 +2118,12 @@ html {
                                     .doctor_heading_slide {
                                         text-align: center;
                                         margin: 0;
+
                                         //margin: 0 0 1.2em;
                                         border-top: 2px solid darken($lightenmiddlebrown2, 10%);
                                         border-bottom: 2px solid $lightenmiddlebrown2;
                                         display: block;
                                         width: 90%;
-
                                         @include respond-to(handhelds) {
                                             width: 70%;
                                         }
@@ -2121,6 +2153,7 @@ html {
                                         width: 230px;
                                         color: $lightFontcolor;
                                         min-height: 4.584em;
+
                                         //font-size: 0.9em;
                                         margin: 0;
                                         text-align: center;
@@ -2175,7 +2208,7 @@ html {
                                             opacity: initial;
                                             color: initial;
                                             content: "";
-                                            background-image: url("../img/svg/navigation_button.svg");
+                                            background-image: url(../img/svg/navigation_button.svg);
                                             display: block;
                                             height: 50px;
                                             width: 50px;
@@ -2195,7 +2228,7 @@ html {
                                             opacity: initial;
                                             color: initial;
                                             content: "";
-                                            background-image: url("../img/svg/navigation_button.svg");
+                                            background-image: url(../img/svg/navigation_button.svg);
                                             display: block;
                                             height: 50px;
                                             width: 50px;
@@ -2276,10 +2309,10 @@ html {
                                     height: 26.5em;
                                     outline: none;
                                     border: 1px solid lighten($fontcolor,50%);
+
                                     //@include respond-to(handhelds) {
                                     //    width: 17.85em;
                                     //}
-
                                     // при наведении на элемент врача
                                     &:hover {
                                         background-color: #fff;
@@ -2296,11 +2329,11 @@ html {
                                         }
                                     }
                                     .doctor_heading_vrach_insbord {
-                                        background-image: url("../img/svg/akc_slider_sep.svg");
+                                        background-image: url(../img/svg/akc_slider_sep.svg);
                                         background-repeat: no-repeat;
                                         width: 94px;
                                         height: 26px;
-                                        margin: 0 0 0;
+                                        margin: 0;
                                     }
                                     p {
                                         width: 230px;
@@ -2313,7 +2346,7 @@ html {
                                     .st_date {
                                         display: inline-block;
                                         width: 73%;
-                                        background-image: url("../img/svg/calendar.svg");
+                                        background-image: url(../img/svg/calendar.svg);
                                         background-repeat: no-repeat;
                                         padding: 0 0 0 1.5em;
                                         margin: 1.5em 0 0;
@@ -2333,7 +2366,7 @@ html {
                         display: flex;
                         flex-flow: row wrap;
                         justify-content: space-around;
-                        width:100%;
+                        width: 100%;
                         @include respond-to(medium-screens) {
                             margin: 1em 0 0;
                         }
@@ -2625,7 +2658,7 @@ html {
                                 span {
                                     display: inline-block;
                                     width: auto;
-                                    background-image: url("../img/svg/calendar.svg");
+                                    background-image: url(../img/svg/calendar.svg);
                                     background-repeat: no-repeat;
                                     padding: 0 0 0 1.5em;
                                     color: lighten($fontcolor,15%);
@@ -2751,7 +2784,7 @@ html {
                         font-size: 2em;
                         &:before {
                             content: "";
-                            background-image: url("../img/svg/big_heading_before.svg");
+                            background-image: url(../img/svg/big_heading_before.svg);
                             background-repeat: no-repeat;
                             width: 25px;
                             height: 14px;
@@ -2763,7 +2796,7 @@ html {
                         }
                         &:after {
                             content: "";
-                            background-image: url("../img/svg/big_heading_before.svg");
+                            background-image: url(../img/svg/big_heading_before.svg);
                             background-repeat: no-repeat;
                             width: 25px;
                             height: 14px;
@@ -2898,7 +2931,7 @@ html {
                                 }
                             }
                             .akc_slider_sep {
-                                background-image: url("../img/svg/akc_slider_sep.svg");
+                                background-image: url(../img/svg/akc_slider_sep.svg);
                                 background-repeat: no-repeat;
                                 width: 94px;
                                 height: 26px;
@@ -2955,7 +2988,7 @@ html {
                                     opacity: initial;
                                     color: initial;
                                     content: "";
-                                    background-image: url("../img/svg/navigation_button.svg");
+                                    background-image: url(../img/svg/navigation_button.svg);
                                     display: block;
                                     height: 50px;
                                     width: 50px;
@@ -2972,7 +3005,7 @@ html {
                                     opacity: initial;
                                     color: initial;
                                     content: "";
-                                    background-image: url("../img/svg/navigation_button.svg");
+                                    background-image: url(../img/svg/navigation_button.svg);
                                     display: block;
                                     height: 50px;
                                     width: 50px;
@@ -3077,7 +3110,7 @@ html {
                     font-size: 2em;
                     &:before {
                         content: "";
-                        background-image: url("../img/svg/big_heading_before.svg");
+                        background-image: url(../img/svg/big_heading_before.svg);
                         background-repeat: no-repeat;
                         width: 25px;
                         height: 14px;
@@ -3089,7 +3122,7 @@ html {
                     }
                     &:after {
                         content: "";
-                        background-image: url("../img/svg/big_heading_before.svg");
+                        background-image: url(../img/svg/big_heading_before.svg);
                         background-repeat: no-repeat;
                         width: 25px;
                         height: 14px;
@@ -3214,7 +3247,7 @@ html {
                                 @include sprite($photo_leftarrow);
                                 display: block;
                                 @include respond-to(medium-screens) {
-                                    background-image: url("../img/svg/navigation_button.svg");
+                                    background-image: url(../img/svg/navigation_button.svg);
                                     background-color: #fff;
                                     border-radius: 50%;
                                     width: 50px;
@@ -3230,7 +3263,6 @@ html {
 
                                     //transform: rotate(180deg);
                                     //@extend .rotating;
-
                                     // background-image: url(/dist/img/sprite.png);
                                     // width: 145px;
                                     // height: 574px;
@@ -3265,7 +3297,7 @@ html {
                                 @include sprite($photo_rightarrow);
                                 display: block;
                                 @include respond-to(medium-screens) {
-                                    background-image: url("../img/svg/navigation_button.svg");
+                                    background-image: url(../img/svg/navigation_button.svg);
                                     width: 50px;
                                     height: 100%;
                                     background-color: #fff;
@@ -3466,7 +3498,7 @@ html {
                     }
                     &:before {
                         content: "";
-                        background-image: url("../img/svg/big_heading_before.svg");
+                        background-image: url(../img/svg/big_heading_before.svg);
                         background-repeat: no-repeat;
                         width: 25px;
                         height: 14px;
@@ -3482,7 +3514,7 @@ html {
                     }
                     &:after {
                         content: "";
-                        background-image: url("../img/svg/big_heading_before.svg");
+                        background-image: url(../img/svg/big_heading_before.svg);
                         background-repeat: no-repeat;
                         width: 25px;
                         height: 14px;
@@ -3665,12 +3697,12 @@ html {
                                 .doctor_heading_slide {
                                     text-align: center;
                                     margin: 0;
+
                                     //margin: 0 0 1.2em;
                                     border-top: 2px solid darken($lightenmiddlebrown2, 10%);
                                     border-bottom: 2px solid $lightenmiddlebrown2;
                                     display: block;
                                     width: 90%;
-
                                     @include respond-to(handhelds) {
                                         width: 70%;
                                     }
@@ -3700,6 +3732,7 @@ html {
                                     width: 230px;
                                     color: $lightFontcolor;
                                     min-height: 4.584em;
+
                                     //font-size: 0.9em;
                                     margin: 0;
                                     text-align: center;
@@ -3754,7 +3787,7 @@ html {
                                         opacity: initial;
                                         color: initial;
                                         content: "";
-                                        background-image: url("../img/svg/navigation_button.svg");
+                                        background-image: url(../img/svg/navigation_button.svg);
                                         display: block;
                                         height: 50px;
                                         width: 50px;
@@ -3774,7 +3807,7 @@ html {
                                         opacity: initial;
                                         color: initial;
                                         content: "";
-                                        background-image: url("../img/svg/navigation_button.svg");
+                                        background-image: url(../img/svg/navigation_button.svg);
                                         display: block;
                                         height: 50px;
                                         width: 50px;
@@ -3845,7 +3878,7 @@ html {
         display: flex;
         flex-flow: column nowrap;
         justify-content: space-between;
-        background-image: url("../img/svg/footer_back.svg");
+        background-image: url(../img/svg/footer_back.svg);
         background-repeat: no-repeat;
         background-position: 0 0;
         background-size: 372px 385px;
