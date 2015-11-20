@@ -21,9 +21,9 @@ $(document).ready(function() {
                 // animate: false,
                 tabActiveClass: "selected-tab",
                 panelActiveClass: "displayed",
-                    // updateHash: "true"
-                    // убираем сохранение хэша в адр строке(прыгает в хроме)
-                    updateHash: false
+                // updateHash: "true"
+                // убираем сохранение хэша в адр строке(прыгает в хроме)
+                updateHash: false
             })
             .bind('easytabs:before', function(e, tab) {
                 // if (!tab.hasClass('active') && !tab.hasClass('collapsed')) {
@@ -40,15 +40,15 @@ $(document).ready(function() {
 
                     if ($("#fancyform_tab1 fieldset").children().hasClass('valid')) {
                         console.log("keyushki");
-                        disable_custom_tabs([2,3,4,5]);
+                        disable_custom_tabs([2, 3, 4, 5]);
                     }
                     if ($("#fancyform_tab2 fieldset").children().hasClass('valid')) {
                         console.log("keyushki");
-                        disable_custom_tabs([3,4,5]);
+                        disable_custom_tabs([3, 4, 5]);
                     }
                     if ($("#fancyform_tab3 fieldset").children().hasClass('valid')) {
                         console.log("keyushki");
-                        disable_custom_tabs([4,5]);
+                        disable_custom_tabs([4, 5]);
                     }
                     if ($("#fancyform_tab4 fieldset").children().hasClass('valid')) {
                         console.log("keyushki");
@@ -131,43 +131,42 @@ $(document).ready(function() {
     // console.log(tab)
     // tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase
 
-// вперед назад по форме записи на прием
-// вперед назад по форме записи на прием
-// вперед назад по форме записи на прием
-// вперед назад по форме записи на прием
+    // вперед назад по форме записи на прием
+    // вперед назад по форме записи на прием
+    // вперед назад по форме записи на прием
+    // вперед назад по форме записи на прием
 
-$("#fancyform_tab1 .next-button").click(function(event) {
-            $('a[href="#fancyform_tab2"]').trigger('click');
-});
+    $("#fancyform_tab1 .next-button").click(function(event) {
+        $('a[href="#fancyform_tab2"]').trigger('click');
+    });
 
-$("#fancyform_tab2 .next-button").click(function(event) {
-            $('a[href="#fancyform_tab3"]').trigger('click');
-});
-$("#fancyform_tab2 .prev-button").click(function(event) {
-            $('a[href="#fancyform_tab1"]').trigger('click');
-});
-$("#fancyform_tab3 .next-button").click(function(event) {
-            $('a[href="#fancyform_tab4"]').trigger('click');
-});
-$("#fancyform_tab3 .prev-button").click(function(event) {
-            $('a[href="#fancyform_tab2"]').trigger('click');
-});
-$("#fancyform_tab4 .next-button").click(function(event) {
-            $('a[href="#fancyform_tab5"]').trigger('click');
-});
-$("#fancyform_tab4 .prev-button").click(function(event) {
-            $('a[href="#fancyform_tab3"]').trigger('click');
-});
-$("#fancyform_tab5 .prev-button").click(function(event) {
-            $('a[href="#fancyform_tab4"]').trigger('click');
-});
+    $("#fancyform_tab2 .next-button").click(function(event) {
+        $('a[href="#fancyform_tab3"]').trigger('click');
+    });
+    $("#fancyform_tab2 .prev-button").click(function(event) {
+        $('a[href="#fancyform_tab1"]').trigger('click');
+    });
+    $("#fancyform_tab3 .next-button").click(function(event) {
+        $('a[href="#fancyform_tab4"]').trigger('click');
+    });
+    $("#fancyform_tab3 .prev-button").click(function(event) {
+        $('a[href="#fancyform_tab2"]').trigger('click');
+    });
+    $("#fancyform_tab4 .next-button").click(function(event) {
+        $('a[href="#fancyform_tab5"]').trigger('click');
+    });
+    $("#fancyform_tab4 .prev-button").click(function(event) {
+        $('a[href="#fancyform_tab3"]').trigger('click');
+    });
+    $("#fancyform_tab5 .prev-button").click(function(event) {
+        $('a[href="#fancyform_tab4"]').trigger('click');
+    });
 
-
-// вперед назад по форме записи на прием
-// вперед назад по форме записи на прием
-// вперед назад по форме записи на прием
-// вперед назад по форме записи на прием
-// вперед назад по форме записи на прием
+    // вперед назад по форме записи на прием
+    // вперед назад по форме записи на прием
+    // вперед назад по форме записи на прием
+    // вперед назад по форме записи на прием
+    // вперед назад по форме записи на прием
 
 
     // validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator// validator
@@ -426,6 +425,9 @@ $("#fancyform_tab5 .prev-button").click(function(event) {
         var Hh = $(this).height();
         $(this).children(".years_arrow_wr").children(".years_arrow").height(Hh);
     });
+
+
+// $(".customradiobtns").mCustomScrollbar();
 
 
 

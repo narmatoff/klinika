@@ -20,7 +20,7 @@ html {
         color: $fontcolor;
 
         // умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:
-        ::selection {
+         ::selection {
             color: #fff;
             /* Цвет текста */
             background: $redColor;
@@ -446,6 +446,52 @@ html {
                         &.disabled {
                             a {
                                 color: #ccc;
+                            }
+                        }
+                    }
+                }
+                #purchase_todoctor {
+                    .fieldset_wrapper {
+                        .customradiobtns {
+                            //display:flex;
+                            //flex-flow:column nowrap;
+                            //height:10em;
+                            //justify-content:space-between;
+                            input[type=radio] {
+                                //display:block;
+                                &.css-checkbox {
+                                    /*     position: absolute; */
+                                    /*     z-index: -1000; */
+                                    /*     left: -1000px; */
+                                    overflow: hidden;
+                                    clip: rect(0 0 0 0);
+                                    height: 1px;
+                                    width: 1px;
+                                    margin: -1px;
+                                    padding: 0;
+                                    border: 0;
+                                }
+                                &.css-checkbox {
+                                    &:checked + label {
+                                        &.css-label {
+                                            /*     background-position: 0 -19px; */
+                                            background-color: #ccc;
+                                        }
+                                    }
+                                }
+                            }
+                            label {
+                                //display:block;
+                                &.css-label {
+                                    /*     background-image: url(csscheckbox_f5a0bac71f2d241ee9a9c97860a9eae4.png); */
+                                    background-color: orange;
+                                    -webkit-touch-callout: none;
+                                    -webkit-user-select: none;
+                                    -khtml-user-select: none;
+                                    -moz-user-select: none;
+                                    -ms-user-select: none;
+                                    user-select: none;
+                                }
                             }
                         }
                     }

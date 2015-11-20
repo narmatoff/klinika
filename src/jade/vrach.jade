@@ -11,6 +11,7 @@ html(lang="en").no-js
         link(rel='stylesheet', href='bower_components/slick-carousel/slick/slick.css')
         link(rel='stylesheet', href='bower_components/slick-carousel/slick/slick-theme.css')
         link(rel='stylesheet', href='bower_components/fancybox3/jquery.fancybox.css')
+        link(rel='stylesheet', href='bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css')
         // endbower
         link(rel='stylesheet', href='css/main.css')
 
@@ -200,15 +201,15 @@ html(lang="en").no-js
             div#tab-container.fancyform_tabs
                 ul
                     li
-                        a(href="#fancyform_tab1") Направление
+                        a(href="#fancyform_tab1").visited1 Направление
                     li.disabled
-                        a(href="#fancyform_tab2") Специалист
+                        a(href="#fancyform_tab2").visited2 Специалист
                     li.disabled
-                        a(href="#fancyform_tab3") Дата и время
+                        a(href="#fancyform_tab3").visited3 Дата и время
                     li.disabled
-                        a(href="#fancyform_tab4") Контакты
+                        a(href="#fancyform_tab4").visited4 Контакты
                     li.disabled
-                        a(href="#fancyform_tab5") Завершение
+                        a(href="#fancyform_tab5").visited5 Завершение
                 form#purchase_todoctor
                     div#fancyform_tab1.fieldset_wrapper
                         h3  Направление
@@ -221,7 +222,22 @@ html(lang="en").no-js
                     div#fancyform_tab2.fieldset_wrapper
                         h3  Специалист
                         fieldset
-                            input(type="text" name="sometext" title="Пожалуйста, Введите сомтекст" placeholder="sometext" required="required")
+                            div.customradiobtns
+                                input(type="radio" name="radiog_lite" required="required")#radio1.css-checkbox
+                                label(for="radio1").css-label.radGroup1 Гастроэтерология    
+                                                            
+                                input(type="radio" name="radiog_lite")#radio2.css-checkbox
+                                label(for="radio2" checked="checked" required="required").css-label.radGroup1 Хирургия     
+                                 
+                                input(type="radio" name="radiog_lite")#radio3.css-checkbox
+                                label(for="radio3" checked="checked" required="required").css-label.radGroup1 654654654684      
+                                 
+                                input(type="radio" name="radiog_lite")#radio4.css-checkbox
+                                label(for="radio4" checked="checked" required="required").css-label.radGroup1 654654654684      
+                                 
+                                input(type="radio" name="radiog_lite")#radio5.css-checkbox
+                                label(for="radio5" checked="checked" required="required").css-label.radGroup1 654654654684      
+                                                          
                         input(type="button" value="назад").prev-button
                         input(type="button" value="дальше").next-button
 
@@ -266,6 +282,8 @@ html(lang="en").no-js
         script(src='bower_components/jquery-validation/dist/jquery.validate.js')
         script(src='bower_components/jquery.scrollTo/jquery.scrollTo.js')
         script(src='bower_components/jquery.easing/js/jquery.easing.js')
+        script(src='bower_components/jquery-mousewheel/jquery.mousewheel.js')
+        script(src='bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js')
         // endbower
         //- script(src='bower_components/easytabs/vendor/jquery.hashchange.min.js')
         script(src='bower_components/easytabs/lib/jquery.easytabs.min.js')

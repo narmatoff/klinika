@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick.css"/>
     <link rel="stylesheet" href="bower_components/slick-carousel/slick/slick-theme.css"/>
     <link rel="stylesheet" href="bower_components/fancybox3/jquery.fancybox.css"/>
+    <link rel="stylesheet" href="bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css"/>
     <!-- endbower-->
     <link rel="stylesheet" href="css/main.css"/>
   </head>
@@ -312,11 +313,11 @@
       <h1>Запись на прием</h1>
       <div id="tab-container" class="fancyform_tabs">
         <ul>
-          <li><a href="#fancyform_tab1">Направление</a></li>
-          <li class="disabled"><a href="#fancyform_tab2">Специалист</a></li>
-          <li class="disabled"><a href="#fancyform_tab3">Дата и время</a></li>
-          <li class="disabled"><a href="#fancyform_tab4">Контакты</a></li>
-          <li class="disabled"><a href="#fancyform_tab5">Завершение</a></li>
+          <li><a href="#fancyform_tab1" class="visited1">Направление</a></li>
+          <li class="disabled"><a href="#fancyform_tab2" class="visited2">Специалист</a></li>
+          <li class="disabled"><a href="#fancyform_tab3" class="visited3">Дата и время</a></li>
+          <li class="disabled"><a href="#fancyform_tab4" class="visited4">Контакты</a></li>
+          <li class="disabled"><a href="#fancyform_tab5" class="visited5">Завершение</a></li>
         </ul>
         <form id="purchase_todoctor">
           <div id="fancyform_tab1" class="fieldset_wrapper">
@@ -329,7 +330,18 @@
           <div id="fancyform_tab2" class="fieldset_wrapper">
             <h3> Специалист</h3>
             <fieldset>
-              <input type="text" name="sometext" title="Пожалуйста, Введите сомтекст" placeholder="sometext" required="required"/>
+              <div class="customradiobtns">
+                <input type="radio" name="radiog_lite" required="required" id="radio1" class="css-checkbox"/>
+                <label for="radio1" class="css-label radGroup1">Гастроэтерология    </label>
+                <input type="radio" name="radiog_lite" id="radio2" class="css-checkbox"/>
+                <label for="radio2" checked="checked" required="required" class="css-label radGroup1">Хирургия     </label>
+                <input type="radio" name="radiog_lite" id="radio3" class="css-checkbox"/>
+                <label for="radio3" checked="checked" required="required" class="css-label radGroup1">654654654684      </label>
+                <input type="radio" name="radiog_lite" id="radio4" class="css-checkbox"/>
+                <label for="radio4" checked="checked" required="required" class="css-label radGroup1">654654654684      </label>
+                <input type="radio" name="radiog_lite" id="radio5" class="css-checkbox"/>
+                <label for="radio5" checked="checked" required="required" class="css-label radGroup1">654654654684      </label>
+              </div>
             </fieldset>
             <input type="button" value="назад" class="prev-button"/>
             <input type="button" value="дальше" class="next-button"/>
@@ -370,6 +382,8 @@
     <script src="bower_components/jquery-validation/dist/jquery.validate.js"></script>
     <script src="bower_components/jquery.scrollTo/jquery.scrollTo.js"></script>
     <script src="bower_components/jquery.easing/js/jquery.easing.js"></script>
+    <script src="bower_components/jquery-mousewheel/jquery.mousewheel.js"></script>
+    <script src="bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js"></script>
     <!-- endbower-->
     <script src="bower_components/easytabs/lib/jquery.easytabs.min.js"></script>
     <script src="bower_components/waypoints/lib/jquery.waypoints.min.js"></script>
