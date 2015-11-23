@@ -20,6 +20,93 @@ html {
         color: $fontcolor;
 
         // умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:
+        .ui-widget-header {
+            background: $mainbrown;
+            position:relative;
+            .ui-datepicker-title {
+                padding:0.5em;
+                text-align: center;
+                span {
+                    color: #fff;
+                    text-align: center;
+                    display: inline-block;
+                }
+            }
+            .ui-datepicker-prev{
+                position:absolute;
+                left:0.5em;
+                top:0.5em;
+                span{
+                    background:transparent url(../img/svg/arrow_top_btn.svg) left top no-repeat;
+                    color:#fff;
+                    cursor:pointer;
+                    content:"";
+                    width:15px;
+                    height:14px;
+                    display:inline-block;
+                    transform: rotate(180deg);
+
+                }
+            }
+            .ui-datepicker-next{
+                position:absolute;
+                right:0.5em;
+                top:0.5em;
+                span{
+                    background:transparent url(../img/svg/arrow_top_btn.svg) left top no-repeat;
+                    color:#fff;
+                    cursor:pointer;
+                    content:"";
+                    width:15px;
+                    height:14px;
+                    display:inline-block;
+                    //transform: rotate(180deg);
+                }
+            }
+        }
+        .ui-datepicker-calendar {
+            border: none;
+            width: 100%;
+            thead {
+                background: $mainbrown;
+
+                //color:#fff;
+                tr {
+
+                }
+                th {
+                    span {
+                        color: #fff;
+                        font-weight: normal;
+                        font-size: 0.9em;
+                    }
+                }
+            }
+            tbody {
+                background: #fff;
+                td {
+                    border: none;
+                    padding: 0;
+                    margin: 0;
+                    text-align: center;
+                    cursor: pointer;
+                    a {
+                        &:hover {
+                            text-decoration: none;
+                        }
+                    }
+                    &.ui-datepicker-current-day {
+                        background: $redColor;
+                        a {
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+        .ui-datepicker-today {
+            background: $lightenbrown2;
+        }
          ::selection {
             color: #fff;
             /* Цвет текста */
@@ -451,13 +538,24 @@ html {
                     }
                 }
                 #purchase_todoctor {
+                    fieldset {
+                        border: none;
+                    }
                     .fieldset_wrapper {
                         .customradiobtns {
+                            width: 50%;
+                            border: 1px solid darken($border,10%);
+                            margin: 0 auto;
+                            padding: 0;
+                            height: 20.1em;
+                            overflow: overlay;
+
                             //display:flex;
                             //flex-flow:column nowrap;
                             //height:10em;
                             //justify-content:space-between;
                             input[type=radio] {
+
                                 //display:block;
                                 &.css-checkbox {
                                     /*     position: absolute; */
@@ -475,22 +573,119 @@ html {
                                     &:checked + label {
                                         &.css-label {
                                             /*     background-position: 0 -19px; */
-                                            background-color: #ccc;
+                                            background-color: $redColor;
+                                            color: #fff;
                                         }
                                     }
                                 }
                             }
                             label {
-                                //display:block;
+                                display: block;
+                                width: 96.6%;
+                                padding: 0.6em 0 0.6em 1em;
+                                transition: all 0.1s linear;
                                 &.css-label {
                                     /*     background-image: url(csscheckbox_f5a0bac71f2d241ee9a9c97860a9eae4.png); */
-                                    background-color: orange;
+                                    background-color: #fff;
                                     -webkit-touch-callout: none;
                                     -webkit-user-select: none;
                                     -khtml-user-select: none;
                                     -moz-user-select: none;
                                     -ms-user-select: none;
                                     user-select: none;
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                        &#fancyform_tab3 {
+                            .ui-datepicker-prev,
+                            .ui-datepicker-next {
+
+                                //display:none;
+                            }
+                            input[type="date"] {
+
+                                //background-color:#ccc;
+                                visibility: hidden;
+                            }
+                        }
+                        h3 {
+                            text-align: center;
+                            margin: 2em auto 1em;
+                            font-size: 1.3em;
+                        }
+                        .datetime {
+                            display: flex;
+                            flex-flow: row wrap;
+                            justify-content: space-around;
+                            align-items: flex-start;
+                            .datepicker {
+                                width: 35%;
+                            }
+                            .timeradio {
+                                width: 40%;
+                                .timeradiobtns {
+
+                                    //width:50%;
+                                    //border:1px solid darken($border,10%);
+                                    //margin:0 auto;
+                                    padding: 0;
+
+                                    //height:20.1em;
+                                    //overflow:overlay;
+                                    display: flex;
+                                    flex-flow: row wrap;
+
+                                    //height:10em;
+                                    justify-content: flex-start;
+                                    align-items: flex-start;
+                                    input[type=radio] {
+                                        display: none;
+                                        &.css-checkbox {
+                                            /*     position: absolute; */
+                                            /*     z-index: -1000; */
+                                            /*     left: -1000px; */
+                                            overflow: hidden;
+                                            clip: rect(0 0 0 0);
+                                            height: 0;
+                                            width: 0;
+                                            margin: 0;
+                                            padding: 0;
+                                            border: 0;
+                                        }
+                                        &.css-checkbox {
+                                            &:checked + label {
+                                                &.css-label {
+                                                    /*     background-position: 0 -19px; */
+                                                    background-color: $redColor;
+                                                    color: #fff;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    label {
+
+                                        //outline:1px dotted red;
+                                        display: inline-block;
+                                        width: 4.011em;
+                                        height: 1.5em;
+                                        padding: 0.6em;
+                                        margin: 0 1.5em 1em 0;
+                                        transition: all 0.1s linear;
+                                        text-align: center;
+                                        &.css-label {
+                                            font-size: 1.1em;
+                                            /*     background-image: url(csscheckbox_f5a0bac71f2d241ee9a9c97860a9eae4.png); */
+                                            background-color: $lightenbrown2;
+                                            -webkit-touch-callout: none;
+                                            -webkit-user-select: none;
+                                            -khtml-user-select: none;
+                                            -moz-user-select: none;
+                                            -ms-user-select: none;
+                                            user-select: none;
+                                            cursor: pointer;
+                                        }
+                                    }
                                 }
                             }
                         }

@@ -314,10 +314,10 @@
       <div id="tab-container" class="fancyform_tabs">
         <ul>
           <li><a href="#fancyform_tab1" class="visited1">Направление</a></li>
-          <li class="disabled"><a href="#fancyform_tab2" class="visited2">Специалист</a></li>
-          <li class="disabled"><a href="#fancyform_tab3" class="visited3">Дата и время</a></li>
-          <li class="disabled"><a href="#fancyform_tab4" class="visited4">Контакты</a></li>
-          <li class="disabled"><a href="#fancyform_tab5" class="visited5">Завершение</a></li>
+          <li><a href="#fancyform_tab2" class="visited2">Специалист</a></li>
+          <li><a href="#fancyform_tab3" class="visited3">Дата и время</a></li>
+          <li><a href="#fancyform_tab4" class="visited4">Контакты</a></li>
+          <li><a href="#fancyform_tab5" class="visited5">Завершение</a></li>
         </ul>
         <form id="purchase_todoctor">
           <div id="fancyform_tab1" class="fieldset_wrapper">
@@ -333,7 +333,7 @@
               <div class="customradiobtns">
                 <input type="radio" name="radiog_lite" required="required" id="radio1" class="css-checkbox"/>
                 <label for="radio1" class="css-label radGroup1">Гастроэтерология    </label>
-                <input type="radio" name="radiog_lite" id="radio2" class="css-checkbox"/>
+                <input type="radio" name="radiog_lite" checked="checked" id="radio2" class="css-checkbox"/>
                 <label for="radio2" checked="checked" required="required" class="css-label radGroup1">Хирургия     </label>
                 <input type="radio" name="radiog_lite" id="radio3" class="css-checkbox"/>
                 <label for="radio3" checked="checked" required="required" class="css-label radGroup1">654654654684      </label>
@@ -341,6 +341,18 @@
                 <label for="radio4" checked="checked" required="required" class="css-label radGroup1">654654654684      </label>
                 <input type="radio" name="radiog_lite" id="radio5" class="css-checkbox"/>
                 <label for="radio5" checked="checked" required="required" class="css-label radGroup1">654654654684      </label>
+                <input type="radio" name="radiog_lite" id="radio6" class="css-checkbox"/>
+                <label for="radio6" checked="checked" required="required" class="css-label radGroup1">654654654684      </label>
+                <input type="radio" name="radiog_lite" id="radio7" class="css-checkbox"/>
+                <label for="radio7" checked="checked" required="required" class="css-label radGroup1">654654654684      </label>
+                <input type="radio" name="radiog_lite" id="radio8" class="css-checkbox"/>
+                <label for="radio8" checked="checked" required="required" class="css-label radGroup1">654654654684      </label>
+                <input type="radio" name="radiog_lite" id="radio9" class="css-checkbox"/>
+                <label for="radio9" checked="checked" required="required" class="css-label radGroup1">654654654684      </label>
+                <input type="radio" name="radiog_lite" id="radio10" class="css-checkbox"/>
+                <label for="radio10" checked="checked" required="required" class="css-label radGroup1">654654654684      </label>
+                <input type="radio" name="radiog_lite" id="radio11" class="css-checkbox"/>
+                <label for="radio11" checked="checked" required="required" class="css-label radGroup1">654654654684      </label>
               </div>
             </fieldset>
             <input type="button" value="назад" class="prev-button"/>
@@ -349,7 +361,30 @@
           <div id="fancyform_tab3" class="fieldset_wrapper">
             <h3> Дата и время</h3>
             <fieldset>
-              <input type="text" name="fam" title="Пожалуйста, Введите время" placeholder="время" required="required"/>
+              <input type="date" name="date" title="Пожалуйста, Введите время" value="" required="required"/>
+              <div class="datetime">
+                <div class="datepicker"></div>
+                <div class="timeradio">
+                  <div class="timeradiobtns">
+                    <input type="radio" name="radiog_lite" required="required" id="time1" class="css-checkbox"/>
+                    <label for="time1" class="css-label radGroup1">16:00    </label>
+                    <input type="radio" name="radiog_lite" checked="checked" id="time2" class="css-checkbox"/>
+                    <label for="time2" checked="checked" required="required" class="css-label radGroup1">17:00     </label>
+                    <input type="radio" name="radiog_lite" id="time3" class="css-checkbox"/>
+                    <label for="time3" checked="checked" required="required" class="css-label radGroup1">18:00      </label>
+                    <input type="radio" name="radiog_lite" id="time4" class="css-checkbox"/>
+                    <label for="time4" checked="checked" required="required" class="css-label radGroup1">19:00      </label>
+                    <input type="radio" name="radiog_lite" id="time5" class="css-checkbox"/>
+                    <label for="time5" checked="checked" required="required" class="css-label radGroup1">20:00      </label>
+                    <input type="radio" name="radiog_lite" id="time6" class="css-checkbox"/>
+                    <label for="time6" checked="checked" required="required" class="css-label radGroup1">21:00      </label>
+                    <input type="radio" name="radiog_lite" id="time7" class="css-checkbox"/>
+                    <label for="time7" checked="checked" required="required" class="css-label radGroup1">22:00      </label>
+                    <input type="radio" name="radiog_lite" id="time8" class="css-checkbox"/>
+                    <label for="time8" checked="checked" required="required" class="css-label radGroup1">23:00    </label>
+                  </div>
+                </div>
+              </div>
             </fieldset>
             <input type="button" value="назад" class="prev-button"/>
             <input type="button" value="дальше" class="next-button"/>
@@ -384,6 +419,7 @@
     <script src="bower_components/jquery.easing/js/jquery.easing.js"></script>
     <script src="bower_components/jquery-mousewheel/jquery.mousewheel.js"></script>
     <script src="bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js"></script>
+    <script src="bower_components/jquery-ui/jquery-ui.js"></script>
     <!-- endbower-->
     <script src="bower_components/easytabs/lib/jquery.easytabs.min.js"></script>
     <script src="bower_components/waypoints/lib/jquery.waypoints.min.js"></script>

@@ -4,6 +4,11 @@ $(document).ready(function() {
 
     $(".fancyimg").fancybox();
     $(".fancyblock").fancybox();
+
+    $(".fancyblock").click(function(event) {
+        $('.ui-datepicker-today').trigger('click');
+        /* Act on the event */
+    });
     $(".tabser").easytabs({
         animationSpeed: 'fast',
         // убираем сохранение хэша в адр строке(прыгает в хроме)
@@ -32,7 +37,8 @@ $(document).ready(function() {
                 // if (!tab.hasClass('active') && on_disable_b_and_c_clicked()) {
 
                 //если ошибок в валидаторе - нет то:
-                if (v_doc.form()) {
+                // if (v_doc.form()) {
+                if (true) {
                     //  открываем вкладки
                     // return confirm("Открыть вкладку?");
                     console.log("ok");
@@ -414,7 +420,7 @@ $(document).ready(function() {
         closeChar: ''
     });
 
-
+$(".customradiobtns").mCustomScrollbar();
 
     // waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints
 
@@ -428,7 +434,22 @@ $(document).ready(function() {
 
 
 // $(".customradiobtns").mCustomScrollbar();
+// $( "#datepicker" ).datepicker();
 
 
+$('.datepicker').datepicker( {
+        onSelect: function(date) {
+            // alert(date);
+            $('#fancyform_tab3 input[type="date"]').attr('value',date);
+        },
+        selectWeek: false,
+        inline: true,
+        regional:'ru',
+        // startDate: 'today',
+        hideIfNoPrevNext: true,
+        dateFormat:'yy-mm-dd',
+        currentDate:new Date(),
+        firstDay: 1
+    });
 
 });
