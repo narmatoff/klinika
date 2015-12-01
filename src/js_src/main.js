@@ -285,21 +285,30 @@ $(document).ready(function() {
     $('.gallerytype_slider>.slides').slick({
         dots: true,
         infinite: true,
-        speed: 500,
-        fade: true,
-        cssEase: 'linear',
+        speed: 1500,
+        // fade: true,
+        cssEase: 'ease',
+        centerMode: true,
+        centerPadding: '145px',
+        slidesToShow: 1,
         responsive: [{
             breakpoint: 1150,
             settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 infinite: true,
-                dots: true
+                fade: true,
+
+                dots: true,
+                centerMode: false,
+                centerPadding: '0',
             }
         }, {
             breakpoint: 775,
             settings: {
                 slidesToShow: 1,
+                fade: true,
+
                 slidesToScroll: 1,
                 infinite: true,
                 dots: true
@@ -309,6 +318,8 @@ $(document).ready(function() {
             settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1,
+                fade: true,
+
                 infinite: true,
                 dots: true
             }
@@ -317,6 +328,8 @@ $(document).ready(function() {
             settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1,
+                fade: true,
+                
                 dots: true
 
             }
@@ -420,7 +433,7 @@ $(document).ready(function() {
         closeChar: ''
     });
 
-$(".customradiobtns").mCustomScrollbar();
+    $(".customradiobtns").mCustomScrollbar();
 
     // waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints// waypoints
 
@@ -433,22 +446,22 @@ $(".customradiobtns").mCustomScrollbar();
     });
 
 
-// $(".customradiobtns").mCustomScrollbar();
-// $( "#datepicker" ).datepicker();
+    // $(".customradiobtns").mCustomScrollbar();
+    // $( "#datepicker" ).datepicker();
 
 
-$('.datepicker').datepicker( {
+    $('.datepicker').datepicker({
         onSelect: function(date) {
             // alert(date);
-            $('#fancyform_tab3 input[type="date"]').attr('value',date);
+            $('#fancyform_tab3 input[type="date"]').attr('value', date);
         },
         selectWeek: false,
         inline: true,
-        regional:'ru',
+        regional: 'ru',
         // startDate: 'today',
         hideIfNoPrevNext: true,
-        dateFormat:'yy-mm-dd',
-        currentDate:new Date(),
+        dateFormat: 'yy-mm-dd',
+        currentDate: new Date(),
         firstDay: 1
     });
 
