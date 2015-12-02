@@ -22,9 +22,9 @@ html {
         // умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:
         .ui-widget-header {
             background: $mainbrown;
-            position:relative;
+            position: relative;
             .ui-datepicker-title {
-                padding:0.5em;
+                padding: 0.5em;
                 text-align: center;
                 span {
                     color: #fff;
@@ -32,34 +32,34 @@ html {
                     display: inline-block;
                 }
             }
-            .ui-datepicker-prev{
-                position:absolute;
-                left:0.5em;
-                top:0.5em;
-                span{
-                    background:transparent url(../img/svg/arrow_top_btn.svg) left top no-repeat;
-                    color:#fff;
-                    cursor:pointer;
-                    content:"";
-                    width:15px;
-                    height:14px;
-                    display:inline-block;
+            .ui-datepicker-prev {
+                position: absolute;
+                left: 0.5em;
+                top: 0.5em;
+                span {
+                    background: transparent url(../img/svg/arrow_top_btn.svg) left top no-repeat;
+                    color: #fff;
+                    cursor: pointer;
+                    content: "";
+                    width: 15px;
+                    height: 14px;
+                    display: inline-block;
                     transform: rotate(180deg);
-
                 }
             }
-            .ui-datepicker-next{
-                position:absolute;
-                right:0.5em;
-                top:0.5em;
-                span{
-                    background:transparent url(../img/svg/arrow_top_btn.svg) left top no-repeat;
-                    color:#fff;
-                    cursor:pointer;
-                    content:"";
-                    width:15px;
-                    height:14px;
-                    display:inline-block;
+            .ui-datepicker-next {
+                position: absolute;
+                right: 0.5em;
+                top: 0.5em;
+                span {
+                    background: transparent url(../img/svg/arrow_top_btn.svg) left top no-repeat;
+                    color: #fff;
+                    cursor: pointer;
+                    content: "";
+                    width: 15px;
+                    height: 14px;
+                    display: inline-block;
+
                     //transform: rotate(180deg);
                 }
             }
@@ -153,7 +153,8 @@ html {
                 cursor: pointer;
             }
         }
-        article,.bordered {
+        article,
+        .bordered {
             ul,
             ol {
 
@@ -209,8 +210,8 @@ html {
                     display: none;
                 }
             }
-            &.big_heading{
-                text-transform:none;
+            &.big_heading {
+                text-transform: none;
             }
         }
         h2 {
@@ -484,7 +485,8 @@ html {
             //background-color: $lightenmiddlebrown;
             border-color: $lightenmiddlebrown;
         }
-        #fancyform {
+        #fancyform,
+        #fancyform2 {
             display: none;
 
             //outline:1px dotted red;
@@ -1541,7 +1543,7 @@ html {
                         line-height: 0.3em;
                         font-size: 2.5em;
                         font-weight: normal;
-                        margin:1em 0 0 0;
+                        margin: 1em 0 0;
                         @include respond-to(handhelds) {
                             font-size: 1.8em;
                             line-height: 1.2em;
@@ -1581,7 +1583,7 @@ html {
                         display: block;
                         width: 128px;
                         height: 34px;
-                        margin: 2em 0 2em;
+                        margin: 2em 0;
                     }
                     p {
                         color: $lightFontcolor;
@@ -1692,6 +1694,7 @@ html {
                         border: none;
                         height: auto;
                     }
+
                     //h1{
                     //    display:flex;
                     //
@@ -1778,17 +1781,18 @@ html {
                     }
                     .big_heading {
                         font-family: $ptSerif;
+
                         //text-transform: capitalize;
                         padding: 10px;
                         display: flex;
-                        justify-content:center;
-                        align-items:center;
-                        line-height:1.2em;
+                        justify-content: center;
+                        align-items: center;
+                        line-height: 1.2em;
                         font-size: 2.5em;
                         font-weight: normal;
-                        width:25em;
-                        max-width:26em;
-                        text-align:center;
+                        width: 25em;
+                        max-width: 26em;
+                        text-align: center;
                         @include respond-to(handhelds) {
                             font-size: 1.8em;
                             line-height: 1.2em;
@@ -2285,6 +2289,135 @@ html {
                         width: 97%;
                         margin: 0 0 2em;
                         padding: 2em 0;
+                        .firsttype_slider {
+                            position: relative;
+                            zoom: 1;
+                            display: flex;
+                            flex-flow: column nowrap;
+                            justify-content: center;
+                            align-items: center;
+                            width: 100%;
+                            z-index: 2;
+
+                            //height: 540px;
+                            @include respond-to(medium-screens) {
+                                width: 100%;
+                            }
+                            .slides {
+                                height: 100%;
+                                width: 100%;
+                                margin: 0;
+                                padding: 0;
+                                display: flex;
+                                flex-flow: row wrap;
+                                justify-content: space-around;
+                                align-items: center;
+
+                                // outline: 1px dotted red;
+                                li {
+
+                                    // display: flex !important;
+                                    // flex-flow: column nowrap;
+                                    // align-items: center;
+                                    // justify-content: space-around;
+                                    // // width: 316px;
+                                    // padding: 0;
+                                    // height: 100%;
+                                    display: flex !important;
+                                    flex-flow: column nowrap;
+                                    align-items: center;
+                                    justify-content: space-around;
+
+                                    // justify-content: center;
+                                    width: 316px;
+
+                                    // padding: 20px 0 20px 0;
+                                    // margin: 20px 0 20px 0;
+                                    padding: 0;
+                                    margin: 0;
+                                    height: 30em;
+                                    outline: none;
+                                    border: none;
+                                    @include respond-to(handhelds) {
+                                        background-color: $lightenbrown;
+                                        width: 270px;
+                                    }
+
+                                    // при наведении на элемент слайдера
+                                    &:hover {
+                                        background-color: #fff;
+                                        .border_akc_slider_wrap {
+                                            border: 4px solid $redColor;
+                                            .akc_slider_wrap {
+                                                border: 3px solid $redColor;
+                                                img {
+
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .border_akc_slider_wrap {
+                                        padding: 5px;
+                                        border-radius: 50%;
+                                        border: 4px solid $lightenbrown0;
+                                        background-color: $lightenmiddlebrown;
+                                        .akc_slider_wrap {
+                                            border: 3px solid $lightenbrown0;
+                                            width: 230px;
+                                            height: 230px;
+                                            overflow: hidden;
+                                            border-radius: 50%;
+                                            display: flex;
+                                            flex-flow: row nowrap;
+                                            align-items: center;
+                                            justify-content: center;
+                                            margin: 0;
+                                            img {
+
+                                            }
+                                        }
+                                    }
+                                    .akc_heading_slide {
+                                        text-align: center;
+                                        margin: 20px 0 0;
+                                        a {
+                                            font-family: $ptSerif;
+                                            text-transform: uppercase;
+                                            font-size: 1.1em;
+                                            text-decoration: none;
+
+                                            //color: $fontcolor;
+                                        }
+                                    }
+                                    .akc_slider_sep {
+                                        background-image: url(../img/svg/akc_slider_sep.svg);
+                                        background-repeat: no-repeat;
+                                        width: 94px;
+                                        height: 26px;
+
+                                        // margin: 30px 0 15px 0;
+                                        margin: 0;
+                                    }
+                                    .publishtime {
+                                        font-size: 0.9em;
+                                        font-family: $ptSerif;
+
+                                        //font-weight: bold;
+                                        display: inline-block;
+                                        text-align: center;
+                                        width: 230px;
+                                        margin: 0;
+                                    }
+                                    p {
+                                        width: 230px;
+                                        color: $lightFontcolor;
+                                        margin: 0;
+
+                                        //font-size: 0.9em;
+                                    }
+                                }
+                            }
+                        }
 
                         //past here doctors styles
                         .doctortype_wrapper {
@@ -2977,6 +3110,37 @@ html {
 
                                 //font-size: 0.9em;
                             }
+                            .spoiler-wrap {
+                                line-height: 1.55em;
+                                font-size: 0.9em;
+                                color: #6a6b6b;
+                                .spoiler-head {
+                                    border-bottom: 1px solid #a7a7a7;
+                                    display: inline-block;
+                                    cursor: pointer;
+                                    &.folded {
+                                        &:after {
+                                            content: "┿";
+                                            display: inline-block;
+
+                                            //color:$redColor;
+                                            font-size: 0.7em;
+                                        }
+                                    }
+                                    &.unfolded {
+                                        &:after {
+                                            content: "—";
+                                            display: inline-block;
+
+                                            //color:$redColor;
+                                            font-size: 0.7em;
+                                        }
+                                    }
+                                }
+                                .spoiler-body {
+                                    font-style: italic;
+                                }
+                            }
                         }
                     }
                     .firstbutton {
@@ -2994,7 +3158,267 @@ html {
                     .add_comment {
                         .cont_form {
                             border: 1px solid #ccc;
-                            padding: 0 0 0 1em;
+                            padding: 0 0 1em 1em;
+                            form {
+                                width: 50%;
+
+                                //margin:0 0 0 1em;
+                                align-items: flex-start;
+                                @include respond-to(handhelds) {
+
+                                    // color: red;
+                                    width: 90%;
+                                }
+                                @include respond-to(postmedium-screens) {
+                                    width: 50%;
+                                }
+                                @include respond-to(medium-screens) {
+                                    width: 90%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .faqser {
+
+                //outline:1px dotted red;
+                margin: 0;
+
+                //@include respond-to(handhelds) {
+                //    margin: 0;
+                //}
+                //@include respond-to(medium-screens) {
+                //    margin: 0;
+                //}
+                ul {
+                    display: flex;
+                    flex-flow: row wrap;
+                    list-style: none;
+
+                    //outline:1px dotted red;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    margin: 0 0 1em;
+                    padding: 0;
+                    width: 94.924%;
+                    @include respond-to(medium-screens) {
+
+                        // justify-content: center;
+                        // align-items: center;
+                        margin: 1em auto 0;
+                    }
+                    @include respond-to(handhelds) {
+
+                        // justify-content: center;
+                        // align-items: center;
+                        width: 100%;
+                    }
+                    .tab {
+                        margin: 0 1em;
+                        padding: 0;
+
+                        //outline:1px dotted red;
+                        height: 3.438em;
+                        width: 12.5em;
+                        @include respond-to(medium-screens) {
+                            width: auto;
+                            padding: 0 1em;
+                            background-color: transparent;
+                            font-size: 0.8em;
+                            &.active {
+                                background-color: $lightenbrown;
+
+                                //color: $fontcolor;
+                            }
+
+                            // &:first-child{
+                            //     margin:0;
+                            //
+                            // }
+                            //
+                            // &:last-child{
+                            //     margin:0;
+                            //
+                            // }
+                        }
+                        @include respond-to(handhelds) {
+                            width: auto;
+                            padding: 0 1em;
+                            background-color: transparent;
+                            font-size: 0.8em;
+                            &.active {
+                                background-color: $lightenbrown;
+
+                                //color: $fontcolor;
+                            }
+                        }
+                        &:hover {
+                            background-color: rgba(255, 255, 255, 0.35);
+                        }
+                        &.active {
+                            background-color: #fff;
+
+                            //color: $fontcolor;
+                        }
+                        &:first-child {
+                            margin: 0 1em 0 0;
+                        }
+                        &:last-child {
+                            margin: 0 0 0 1em;
+                        }
+                        a {
+                            text-decoration: none;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: 100%;
+                            height: 100%;
+                            font-family: $ptSerif;
+                            font-size: 1.2em;
+                            color: lighten($fontcolor,10%);
+                            .tab_informer {
+
+                                //display:inline-block;
+                                width: 33px;
+                                height: 33px;
+
+                                //outline:1px dotted red;
+                                background-color: $lightenbrown2;
+                                border-radius: 50%;
+                                display: inline-flex;
+                                justify-content: center;
+                                align-items: center;
+                                margin: 0 0 0 0.7em;
+                                font-size: 0.9em;
+                            }
+                        }
+                    }
+                }
+                #otzivi {
+                    display: flex;
+                    flex-flow: column nowrap;
+                    justify-content: center;
+                    align-items: center;
+
+                    //outline: 1px dotted red;
+                    .add_comment{
+                         @include respond-to(medium-screens) {
+                            // color: green;
+                            width: 92.73%;
+                         }
+                         @include respond-to(handhelds) {
+                            // color: green;
+                            width: 100%;
+                         }
+                        margin:0;
+                    }
+                    .comments_block {
+
+                        //outline: 1px dotted red;
+                        width: 100%;
+
+                        //height:auto;
+                        margin: 0 auto;
+                        display: flex;
+                        flex-flow: column nowrap;
+                        align-items: space-between;
+                        justify-content: space-between;
+                        ._one_comment {
+                            border: 1px solid #ccc;
+                            margin: 0 0 0.7em;
+                            padding: 1.8em;
+                            &:last-child {
+                                margin: 0;
+                            }
+                            .comm_headr {
+                                display: flex;
+                                flex-flow: row wrap;
+                                justify-content: flex-start;
+                                align-items: center;
+                                line-height: 1em;
+                                h3 {
+                                    margin: 0 1em 0 0;
+                                    padding: 0;
+                                    display: inline-block;
+                                    width: auto;
+                                    height: auto;
+                                    font-size: 1.2em;
+                                    color: lighten($fontcolor,10%);
+                                    @include respond-to(handhelds) {
+
+                                        //margin:1em 0 0 0;
+                                        width: 100%;
+                                        text-align: left;
+                                    }
+                                }
+                                span {
+                                    display: inline-block;
+                                    width: auto;
+                                    background-image: url(../img/svg/calendar.svg);
+                                    background-repeat: no-repeat;
+                                    padding: 0 0 0 1.5em;
+                                    color: lighten($fontcolor,15%);
+                                    font-size: 0.85em;
+                                    @include respond-to(handhelds) {
+                                        margin: 1em 0 0;
+                                    }
+                                }
+                            }
+                            p {
+                                color: lighten($fontcolor,20%);
+
+                                //font-size: 0.9em;
+                            }
+                            .spoiler-wrap {
+                                line-height: 1.55em;
+                                font-size: 0.9em;
+                                color: #6a6b6b;
+                                .spoiler-head {
+                                    border-bottom: 1px solid #a7a7a7;
+                                    display: inline-block;
+                                    cursor: pointer;
+                                    &.folded {
+                                        &:after {
+                                            content: "┿";
+                                            display: inline-block;
+
+                                            //color:$redColor;
+                                            font-size: 0.7em;
+                                        }
+                                    }
+                                    &.unfolded {
+                                        &:after {
+                                            content: "—";
+                                            display: inline-block;
+
+                                            //color:$redColor;
+                                            font-size: 0.7em;
+                                        }
+                                    }
+                                }
+                                .spoiler-body {
+                                    font-style: italic;
+                                }
+                            }
+                        }
+                    }
+                    .firstbutton {
+
+                        //display:inline-block;
+                        margin: 0 auto 3em;
+                        @include respond-to(handhelds) {
+
+                            // color: red;
+                            margin: 3em auto;
+                        }
+
+                        //color: $fontcolor;
+                    }
+                    .add_comment {
+                        .cont_form {
+                            border: 1px solid #ccc;
+                            padding: 0 0 1em 1em;
                             form {
                                 width: 50%;
 
@@ -3243,9 +3667,20 @@ html {
                                 // margin: 30px 0 15px 0;
                                 margin: 0;
                             }
+                            .publishtime {
+                                font-size: 0.9em;
+                                font-family: $ptSerif;
+
+                                //font-weight: bold;
+                                display: inline-block;
+                                text-align: center;
+                                width: 230px;
+                                margin: 0;
+                            }
                             p {
                                 width: 230px;
                                 color: $lightFontcolor;
+                                margin: 0;
 
                                 //font-size: 0.9em;
                             }
@@ -3905,9 +4340,9 @@ html {
                             li {
                                 display: flex !important;
                                 flex-flow: column nowrap;
-                                align-items:  center;
+                                align-items: center;
+                                justify-content: flex-start;
 
-                                 justify-content: flex-start;
                                 //justify-content: center;
                                 width: 298px;
 
@@ -4054,7 +4489,7 @@ html {
                                 .slick-track {
                                     height: 100%;
                                     display: flex;
-                                    justify-content:center;
+                                    justify-content: center;
                                     flex-flow: row nowrap;
                                     align-items: center;
                                 }

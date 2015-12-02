@@ -233,7 +233,7 @@ $(document).ready(function() {
 
 
     // слайдер услуг
-    $('.firsttype_slider>.slides').slick({
+    $('.firsttype_slider_wrapper > .firsttype_slider>.slides').slick({
         dots: true,
         infinite: false,
         speed: 500,
@@ -329,7 +329,7 @@ $(document).ready(function() {
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 fade: true,
-                
+
                 dots: true
 
             }
@@ -464,5 +464,14 @@ $(document).ready(function() {
         currentDate: new Date(),
         firstDay: 1
     });
+
+
+		// Скрываем все спойлеры
+		jQuery('.spoiler-body').hide();
+		// по клику отключаем класс folded, включаем unfolded, затем для следующего
+		// элемента после блока .spoiler-head (т.е. .spoiler-body) показываем текст спойлера
+		jQuery('.spoiler-head').click(function(){
+			jQuery(this).toggleClass("folded").toggleClass("unfolded").next().slideToggle();
+		});
 
 });
