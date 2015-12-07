@@ -572,6 +572,23 @@ html {
                         justify-content:space-between;
                         align-items:center;
                         text-align:right;
+                        .next-button{}
+                        .prev-button{
+                            font-weight:bold;
+                            &:before{
+                                content:"";
+                                width:15px;
+                                height:14px;
+                                display:inline-block;
+                                background-image: url(../img/svg/arrow_top_btn2.svg);
+                                background-repeat: no-repeat;
+                                background-position: 10% center;
+                                padding: 0;
+                                margin: 0 3em 0 0;
+                                transform: rotate(180deg);
+
+                            }
+                        }
                     }
                     .fieldset_wrapper {
                         .customradiobtns {
@@ -650,7 +667,9 @@ html {
                             width:50%;
                             margin:0 auto;
                             display:flex;
+                            flex-flow:column nowrap;
                             justify-content:flex-start;
+
                             .persitem{
                                 margin:0 1em 0 0;
                             }

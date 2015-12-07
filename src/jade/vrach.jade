@@ -351,14 +351,17 @@ html(lang="en").no-js
                         h3  Контакты
                         fieldset
                             .personalinfo
-                                input(type="text" name="cont" title="Пожалуйста, Введите Контакты" placeholder="Контакты" required="required")
+                                input(type="text" name="name" title="Пожалуйста, Введите Контакты" placeholder="Имя" required="required")
+                                input(type="text" name="tel" title="Пожалуйста, Введите Контакты" placeholder="Телефон" required="required")
+                                input(type="email" name="email" title="Пожалуйста, Введите Контакты" placeholder="e-mail" required="required")
+                                textarea(placeholder="Ваше сообщение") 
                         .navbuttonz
                             button(type="button" value="назад").prev-button.secondbutton назад
                             button(type="button" value="дальше").next-button.fourthbutton дальше
 
                     div#fancyform_tab5.fieldset_wrapper
                         h3  Завершение
-
+                        //- fieldset
                         .personalinfo
                             .persitem Клиент:
                             #name Иванов Иван

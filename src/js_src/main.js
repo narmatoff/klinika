@@ -3,7 +3,10 @@ $(document).ready(function() {
 
 
     $(".fancyimg").fancybox();
-    $(".fancyblock").fancybox();
+    $(".fancyblock").fancybox({
+		openEffect  : 'fade',
+		closeEffect : 'fade'
+	});
 
     $(".fancyblock").click(function(event) {
         $('.ui-datepicker-today').trigger('click');
@@ -11,6 +14,7 @@ $(document).ready(function() {
     });
     $(".tabser").easytabs({
         animationSpeed: 'fast',
+        // animate:false ,
         // убираем сохранение хэша в адр строке(прыгает в хроме)
         updateHash: false
     });
@@ -23,7 +27,8 @@ $(document).ready(function() {
         var tabs = $('.fancyform_tabs');
         tabs.easytabs({
                 animationSpeed: 'fast',
-                // animate: false,
+
+                animate: false,
                 tabActiveClass: "selected-tab",
                 panelActiveClass: "displayed",
                 // updateHash: "true"
