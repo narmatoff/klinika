@@ -238,7 +238,7 @@ $(document).ready(function() {
         infinite: false,
         speed: 500,
         slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToScroll: 1,
         // centerMode: true,
         variableWidth: true,
         autoplay: false,
@@ -246,7 +246,7 @@ $(document).ready(function() {
                 breakpoint: 1150,
                 settings: {
                     slidesToShow: 2,
-                    slidesToScroll: 2,
+                    slidesToScroll: 1,
                     infinite: true,
                     dots: true
                 }
@@ -425,12 +425,16 @@ $(document).ready(function() {
 
 
     // фиксация списка годов при прокруткe
-    $('.wayp_links').containedStickyScroll({
-        duration: 0,
-        queue: true,
-        unstick: true,
-        // easing:"easeOutBack"
-        closeChar: ''
+
+    $('.wayp_links').ready(function() {
+        // body...
+        $('.wayp_links').containedStickyScroll({
+            duration: 0,
+            queue: true,
+            unstick: true,
+            // easing:"easeOutBack"
+            closeChar: ''
+        });
     });
 
     $(".customradiobtns").mCustomScrollbar();

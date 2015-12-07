@@ -338,9 +338,24 @@
           <div id="fancyform_tab1" class="fieldset_wrapper">
             <h3> Направление</h3>
             <fieldset>
-              <input type="text" name="fio" placeholder="name" title="Пожалуйста, Введите имя" required="required"/>
+              <div class="customradiobtns">
+                <input type="radio" name="radiog_lite" required="required" id="radio11" class="css-checkbox"/>
+                <label for="radio11" class="css-label radGroup1">Гастроэтерология    </label>
+                <input type="radio" name="radiog_lite" checked="checked" id="radio22" class="css-checkbox"/>
+                <label for="radio22" checked="checked" required="required" class="css-label radGroup1">Хирургия     </label>
+                <input type="radio" name="radiog_lite" id="radio33" class="css-checkbox"/>
+                <label for="radio34" checked="checked" required="required" class="css-label radGroup1">654654654684      </label>
+                <input type="radio" name="radiog_lite" id="radio44" class="css-checkbox"/>
+                <label for="radio44" checked="checked" required="required" class="css-label radGroup1">654654654684      </label>
+                <input type="radio" name="radiog_lite" id="radio55" class="css-checkbox"/>
+                <label for="radio55" checked="checked" required="required" class="css-label radGroup1">654654654684      </label>
+                <input type="radio" name="radiog_lite" id="radio66" class="css-checkbox"/>
+                <label for="radio66" checked="checked" required="required" class="css-label radGroup1">654654654684        </label>
+              </div>
             </fieldset>
-            <input type="button" value="дальше" class="next-button"/>
+            <div class="navbuttonz">
+              <button type="button" value="дальше" class="next-button fourthbutton">дальше</button>
+            </div>
           </div>
           <div id="fancyform_tab2" class="fieldset_wrapper">
             <h3> Специалист</h3>
@@ -370,8 +385,10 @@
                 <label for="radio11" checked="checked" required="required" class="css-label radGroup1">654654654684      </label>
               </div>
             </fieldset>
-            <input type="button" value="назад" class="prev-button"/>
-            <input type="button" value="дальше" class="next-button"/>
+            <div class="navbuttonz">
+              <button type="button" value="назад" class="prev-button secondbutton">назад</button>
+              <button type="button" value="дальше" class="next-button fourthbutton">дальше</button>
+            </div>
           </div>
           <div id="fancyform_tab3" class="fieldset_wrapper">
             <h3> Дата и время</h3>
@@ -401,22 +418,52 @@
                 </div>
               </div>
             </fieldset>
-            <input type="button" value="назад" class="prev-button"/>
-            <input type="button" value="дальше" class="next-button"/>
+            <div class="navbuttonz">
+              <button type="button" value="назад" class="prev-button secondbutton">назад</button>
+              <button type="button" value="дальше" class="next-button fourthbutton">дальше</button>
+            </div>
           </div>
           <div id="fancyform_tab4" class="fieldset_wrapper">
             <h3> Контакты</h3>
             <fieldset>
-              <input type="text" name="cont" title="Пожалуйста, Введите Контакты" placeholder="Контакты" required="required"/>
+              <div class="personalinfo">
+                <input type="text" name="cont" title="Пожалуйста, Введите Контакты" placeholder="Контакты" required="required"/>
+              </div>
             </fieldset>
-            <input type="button" value="назад" class="prev-button"/>
-            <input type="button" value="дальше" class="next-button"/>
+            <div class="navbuttonz">
+              <button type="button" value="назад" class="prev-button secondbutton">назад</button>
+              <button type="button" value="дальше" class="next-button fourthbutton">дальше</button>
+            </div>
           </div>
           <div id="fancyform_tab5" class="fieldset_wrapper">
             <h3> Завершение</h3>
-            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta consequatur minus ipsam voluptas facere, pariatur expedita maiores, quidem suscipit maxime.                            </p>
-            <input type="button" value="назад" class="prev-button"/>
-            <button type="submit">Отправить</button>
+            <div class="personalinfo">
+              <div class="persitem">Клиент:</div>
+              <div id="name">Иванов Иван</div>
+            </div>
+            <div class="personalinfo">
+              <div class="persitem">Телефон:</div>
+              <div id="phone">984684684684</div>
+            </div>
+            <div class="personalinfo">
+              <div class="persitem">Дата:</div>
+              <div id="date">23.23.2325</div>
+            </div>
+            <div class="personalinfo">
+              <div class="persitem">Время:</div>
+              <div id="time">88:48</div>
+            </div>
+            <div class="personalinfo">
+              <div class="persitem">Направление:</div>
+              <div id="napr">Стоматология</div>
+            </div>
+            <div class="personalinfo">
+              <p id="comment"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta consequatur minus ipsam voluptas facere, pariatur expedita maiores, quidem suscipit maxime.                            </p>
+            </div>
+            <div class="navbuttonz">
+              <button type="button" value="назад" class="prev-button secondbutton">назад</button>
+              <button type="submit" class="next-button fourthbutton">Отправить</button>
+            </div>
           </div>
         </form>
       </div>

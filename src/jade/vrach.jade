@@ -247,9 +247,27 @@ html(lang="en").no-js
                     div#fancyform_tab1.fieldset_wrapper
                         h3  Направление
                         fieldset
-                            input(type="text" name="fio" placeholder="name" title="Пожалуйста, Введите имя" required="required")
+                            div.customradiobtns
+                                input(type="radio" name="radiog_lite" required="required")#radio11.css-checkbox
+                                label(for="radio11").css-label.radGroup1 Гастроэтерология    
+                                                            
+                                input(type="radio" name="radiog_lite" checked="checked")#radio22.css-checkbox
+                                label(for="radio22" checked="checked" required="required").css-label.radGroup1 Хирургия     
+                                 
+                                input(type="radio" name="radiog_lite")#radio33.css-checkbox
+                                label(for="radio34" checked="checked" required="required").css-label.radGroup1 654654654684      
+                                 
+                                input(type="radio" name="radiog_lite")#radio44.css-checkbox
+                                label(for="radio44" checked="checked" required="required").css-label.radGroup1 654654654684      
+                                 
+                                input(type="radio" name="radiog_lite")#radio55.css-checkbox
+                                label(for="radio55" checked="checked" required="required").css-label.radGroup1 654654654684      
+                                 
+                                input(type="radio" name="radiog_lite")#radio66.css-checkbox
+                                label(for="radio66" checked="checked" required="required").css-label.radGroup1 654654654684        
                         //- input(type="button" value="назад").prev-button
-                        input(type="button" value="дальше").next-button
+                        .navbuttonz
+                            button(type="button" value="дальше").next-button.fourthbutton дальше
 
                         
                     div#fancyform_tab2.fieldset_wrapper
@@ -289,8 +307,9 @@ html(lang="en").no-js
                                 input(type="radio" name="radiog_lite")#radio11.css-checkbox
                                 label(for="radio11" checked="checked" required="required").css-label.radGroup1 654654654684      
                                                           
-                        input(type="button" value="назад").prev-button
-                        input(type="button" value="дальше").next-button
+                        .navbuttonz
+                            button(type="button" value="назад").prev-button.secondbutton назад
+                            button(type="button" value="дальше").next-button.fourthbutton дальше
 
 
                     div#fancyform_tab3.fieldset_wrapper
@@ -324,26 +343,45 @@ html(lang="en").no-js
                                          
                                         input(type="radio" name="radiog_lite")#time8.css-checkbox
                                         label(for="time8" checked="checked" required="required").css-label.radGroup1 23:00    
-                                    
-                        input(type="button" value="назад").prev-button
-                        input(type="button" value="дальше").next-button
+                        .navbuttonz
+                            button(type="button" value="назад").prev-button.secondbutton назад
+                            button(type="button" value="дальше").next-button.fourthbutton дальше
 
                     div#fancyform_tab4.fieldset_wrapper
                         h3  Контакты
                         fieldset
-                            input(type="text" name="cont" title="Пожалуйста, Введите Контакты" placeholder="Контакты" required="required")
-                        input(type="button" value="назад").prev-button
-                        input(type="button" value="дальше").next-button
+                            .personalinfo
+                                input(type="text" name="cont" title="Пожалуйста, Введите Контакты" placeholder="Контакты" required="required")
+                        .navbuttonz
+                            button(type="button" value="назад").prev-button.secondbutton назад
+                            button(type="button" value="дальше").next-button.fourthbutton дальше
 
                     div#fancyform_tab5.fieldset_wrapper
                         h3  Завершение
 
-                        p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta consequatur minus ipsam voluptas facere, pariatur expedita maiores, quidem suscipit maxime.                            
-
-                        input(type="button" value="назад").prev-button
-                        //- input(type="button" value="дальше").next-button
+                        .personalinfo
+                            .persitem Клиент:
+                            #name Иванов Иван
+                        .personalinfo
+                            .persitem Телефон:
+                            #phone 984684684684
+                        .personalinfo
+                            .persitem Дата:
+                            #date 23.23.2325
+                        .personalinfo
+                            .persitem Время:
+                            #time 88:48
+                        .personalinfo
+                            .persitem Направление:
+                            #napr Стоматология
+                        .personalinfo
+                            p#comment  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta consequatur minus ipsam voluptas facere, pariatur expedita maiores, quidem suscipit maxime.                            
                         
-                        button(type="submit") Отправить
+                        
+
+                        .navbuttonz
+                            button(type="button" value="назад").prev-button.secondbutton назад
+                            button(type="submit").next-button.fourthbutton Отправить
             
             //- 
             //- button#disableCustomsTabs Отключить вкладки
