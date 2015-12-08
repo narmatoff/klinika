@@ -4,9 +4,9 @@ $(document).ready(function() {
 
     $(".fancyimg").fancybox();
     $(".fancyblock").fancybox({
-		openEffect  : 'fade',
-		closeEffect : 'fade'
-	});
+        openEffect: 'fade',
+        closeEffect: 'fade'
+    });
 
     $(".fancyblock").click(function(event) {
         $('.ui-datepicker-today').trigger('click');
@@ -22,6 +22,7 @@ $(document).ready(function() {
 
 
     // tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase// tabs purchase
+    disable_custom_tabs([4]);
 
     $(function() {
         var tabs = $('.fancyform_tabs');
@@ -42,33 +43,45 @@ $(document).ready(function() {
                 // if (!tab.hasClass('active') && on_disable_b_and_c_clicked()) {
 
                 //если ошибок в валидаторе - нет то:
-                // if (v_doc.form()) {
-                if (true) {
+                if (v_doc.form()) {
+                    // if (true) {
                     //  открываем вкладки
                     // return confirm("Открыть вкладку?");
-                    console.log("ok");
 
+                    console.log("TabClick-done");
 
-                    if ($("#fancyform_tab1 fieldset").children().hasClass('valid')) {
-                        console.log("keyushki");
-                        disable_custom_tabs([2, 3, 4, 5]);
+                    // if ($("#fancyform_tab1 fieldset").children().hasClass('valid')) {
+                    //     console.log("fancyform_tab1 - ОК");
+                    //     disable_custom_tabs([2, 3, 4]);
+                    // }
+                    // if ($("#fancyform_tab2 fieldset").children().hasClass('valid')) {
+                    //     console.log("fancyform_tab2 - ОК");
+                    //     disable_custom_tabs([3, 4]);
+                    // }
+                    // if ($("#fancyform_tab3 fieldset").children().hasClass('valid')) {
+                    //     console.log("fancyform_tab3 - ОК");
+                    //     disable_custom_tabs([4]);
+                    //     // enable_some_tabs();
+                    // }
+                    if ($("#fancyform_tab4 fieldset").children().children().hasClass('valid')) {
+                        console.log("fancyform_tab4 - validation - ОК");
+                        disable_custom_tabs([4]);
+                        enable_some_tabs();
+
+                    } else {
+                        console.log("fancyform_tab4 - is_not_valid");
+
                     }
-                    if ($("#fancyform_tab2 fieldset").children().hasClass('valid')) {
-                        console.log("keyushki");
-                        disable_custom_tabs([3, 4, 5]);
-                    }
-                    if ($("#fancyform_tab3 fieldset").children().hasClass('valid')) {
-                        console.log("keyushki");
-                        disable_custom_tabs([4, 5]);
-                    }
-                    if ($("#fancyform_tab4 fieldset").children().hasClass('valid')) {
-                        console.log("keyushki");
-                        disable_custom_tabs([]);
-                    }
+                    // if ($("#fancyform_tab5 fieldset").children().hasClass('valid')) {
+                    //     console.log("fancyform_tab4 - ОК");
+                    //     // disable_custom_tabs([]);
+                    //     // enable_some_tabs();
+                    //
+                    // }
 
                     return true;
                 } else {
-                    console.log("NOT_ok");
+                    console.log("Validator - NOT_ok");
                     // $(".selected-tab").next(function() {
                     //     $("li").each(function(i, elem) {
                     //         $(this).css("border", "3px solid red");
@@ -95,7 +108,6 @@ $(document).ready(function() {
     function disable_custom_tabs(numsTabs) {
         var tabs = $("#tab-container");
         disable_easytabs(tabs, numsTabs);
-
         return false;
     }
 
@@ -185,6 +197,15 @@ $(document).ready(function() {
     // валидация формы записи к врачу
     var tabChecker;
     var v_doc = $("#purchase_todoctor").validate({
+        rules: {
+            // simple rule, converted to {required:true}
+            name: "required",
+            // compound rule
+            email: {
+                required: true,
+                email: true
+            }
+        },
         errorClass: "warning",
         // onkeyup: true,
         // onfocusout: false,
@@ -475,12 +496,12 @@ $(document).ready(function() {
     });
 
 
-		// Скрываем все спойлеры
-		jQuery('.spoiler-body').hide();
-		// по клику отключаем класс folded, включаем unfolded, затем для следующего
-		// элемента после блока .spoiler-head (т.е. .spoiler-body) показываем текст спойлера
-		jQuery('.spoiler-head').click(function(){
-			jQuery(this).toggleClass("folded").toggleClass("unfolded").next().slideToggle();
-		});
+    // Скрываем все спойлеры
+    jQuery('.spoiler-body').hide();
+    // по клику отключаем класс folded, включаем unfolded, затем для следующего
+    // элемента после блока .spoiler-head (т.е. .spoiler-body) показываем текст спойлера
+    jQuery('.spoiler-head').click(function() {
+        jQuery(this).toggleClass("folded").toggleClass("unfolded").next().slideToggle();
+    });
 
 });

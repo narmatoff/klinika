@@ -14,7 +14,6 @@ html {
         }
     }
     body {
-
         background-color: $lightenmiddlebrown;
         background-repeat: no-repeat;
         width: 100%;
@@ -485,7 +484,7 @@ html {
 
             //background-color: $lightenmiddlebrown;
             border-color: $lightenmiddlebrown;
-            overflow:hidden !important;
+            overflow: hidden !important;
         }
         #fancyform,
         #fancyform2 {
@@ -504,7 +503,7 @@ html {
                 width: 100%;
             }
             .fancyform_tabs {
-                height:85%;
+                height: 85%;
                 ul {
                     display: flex;
                     flex-flow: row wrap;
@@ -546,47 +545,52 @@ html {
                     }
                 }
                 #purchase_todoctor {
-                    height:90%;
-                    &>div{
-                            width: 100%;
-                            height: 100%;
-
-                            display: flex;
-                            flex-flow: column nowrap;
-                            justify-content: space-between;
-                            align-items:space-between;
+                    height: 90%;
+                    label.warning {
+                        color: red;
+                        position: absolute;
+                        right: 0;
+                        margin: -2.5em 0.7em 0 0;
+                        opacity: 0.7;
+                    }
+                    &>div {
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        flex-flow: column nowrap;
+                        justify-content: space-between;
+                        align-items: space-between;
                     }
                     fieldset {
                         border: none;
-
-                        .personalinfo{
+                        .personalinfo {
                             width: 50%;
                             margin: 0 auto;
+                            position: relative;
+                        }
+                    }
+                    .navbuttonz {
+                        display: flex;
+                        flex-flow: row wrap;
+                        justify-content: space-between;
+                        align-items: center;
+                        text-align: right;
+                        .next-button {
 
                         }
-
-                    }
-                    .navbuttonz{
-                        display:flex;
-                        flex-flow:row wrap;
-                        justify-content:space-between;
-                        align-items:center;
-                        text-align:right;
-                        .next-button{}
-                        .prev-button{
-                            font-weight:bold;
-                            &:before{
-                                content:"";
-                                width:15px;
-                                height:14px;
-                                display:inline-block;
+                        .prev-button {
+                            font-weight: bold;
+                            &:before {
+                                content: "";
+                                width: 15px;
+                                height: 14px;
+                                display: inline-block;
                                 background-image: url(../img/svg/arrow_top_btn2.svg);
                                 background-repeat: no-repeat;
                                 background-position: 10% center;
                                 padding: 0;
                                 margin: 0 3em 0 0;
                                 transform: rotate(180deg);
-
                             }
                         }
                     }
@@ -598,14 +602,16 @@ html {
                             padding: 0;
                             height: 20.1em;
                             overflow: overlay;
-							background-color: #fff;
+                            background-color: #fff;
+
                             //display:flex;
                             //flex-flow:column nowrap;
                             //height:10em;
                             //justify-content:space-between;
                             input[type=radio] {
+
                                 //display:block;
-                                display:none;
+                                display: none;
                                 &.css-checkbox {
                                     /*     position: absolute; */
                                     /*     z-index: -1000; */
@@ -663,18 +669,21 @@ html {
                             margin: 2em auto 1em;
                             font-size: 1.3em;
                         }
-                        .personalinfo{
-                            width:50%;
-                            margin:0 auto;
-                            display:flex;
-                            flex-flow:column nowrap;
-                            justify-content:flex-start;
-
-                            .persitem{
-                                margin:0 1em 0 0;
+                        .personalinfo {
+                            width: 50%;
+                            margin: 0 auto;
+                            display: flex;
+                            flex-flow: column nowrap;
+                            justify-content: flex-start;
+                            .persitem {
+                                margin: 0 1em 0 0;
                             }
-                            #name,#phone,#date,#time,#napr{
-                                font-weight:bold;
+                            #name,
+                            #phone,
+                            #date,
+                            #time,
+                            #napr {
+                                font-weight: bold;
                             }
                         }
                         .datetime {
@@ -792,6 +801,7 @@ html {
                     flex-flow: column nowrap;
                     justify-content: center;
                     @include respond-to(handhelds) {
+
                         // outline: 1px dotted red;
                         position: absolute;
                         background-color: $lightenbrown;
@@ -1320,8 +1330,7 @@ html {
                                             font-size: 0.9em;
                                             &:before {
                                                 background-image: none;
-                                                display:none;
-
+                                                display: none;
                                             }
                                             a {
                                                 font-family: $openSans;
@@ -2633,6 +2642,7 @@ html {
                                                 text-transform: capitalize;
                                                 font-size: 1.1em;
                                                 text-decoration: none;
+
                                                 //color: $fontcolor;
                                             }
                                         }
@@ -3353,16 +3363,18 @@ html {
                     align-items: center;
 
                     //outline: 1px dotted red;
-                    .add_comment{
-                         @include respond-to(medium-screens) {
+                    .add_comment {
+                        @include respond-to(medium-screens) {
+
                             // color: green;
                             width: 92.73%;
-                         }
-                         @include respond-to(handhelds) {
+                        }
+                        @include respond-to(handhelds) {
+
                             // color: green;
                             width: 100%;
-                         }
-                        margin:0;
+                        }
+                        margin: 0;
                     }
                     .comments_block {
 
