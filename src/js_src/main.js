@@ -504,4 +504,37 @@ $(document).ready(function() {
         jQuery(this).toggleClass("folded").toggleClass("unfolded").next().slideToggle();
     });
 
+
+    // спойлер для article
+    $('.spoiler').after('<a href="javascript://" class="firstbutton expander">подробности</a>');
+
+    $(".expander").click(function() {
+        var expanderPar = $(this).siblings('.spoiler');
+        var spoiler = expanderPar.is(".expanded");
+
+        if (spoiler) {
+            // console.log("true!!!!");
+            expanderPar.transition({
+                'max-height': '5.3em',
+                overflow: 'hidden'
+            }, 1500, 'ease', function() {
+                expanderPar.removeClass("expanded");
+                $(this).siblings('.expander').text('подробности');
+
+            });
+        } else {
+            console.log("false!!!!");
+
+            expanderPar.transition({
+                'max-height': expanderPar.get(0).scrollHeight,
+                overflow: ''
+            }, 1500, 'ease', function() {
+                expanderPar.addClass("expanded");
+                $(this).siblings('.expander').text('спрятать');
+            });
+        }
+    });
+
+
+
 });
