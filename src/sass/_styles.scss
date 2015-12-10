@@ -13,11 +13,75 @@ html {
             clear: both;
         }
     }
+
+    &.slideout-open{
+        overflow: hidden;
+        body{
+            overflow: hidden;
+
+        }
+
+        .slideout-menu {
+            display: block;
+        }
+        .slideout-panel {
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            -webkit-box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.75);
+-moz-box-shadow:    0px 0px 15px 0px rgba(50, 50, 50, 0.75);
+box-shadow:         0px 0px 15px 0px rgba(50, 50, 50, 0.75);
+
+        }
+    }
     body {
         background-color: $lightenmiddlebrown;
         background-repeat: no-repeat;
         width: 100%;
+        height: 100%;
         color: $fontcolor;
+        #slideoutMenu {
+
+        }
+
+        .slideout-menu {
+            background-color: $lightenbrown2;
+            position: fixed;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            z-index: 0;
+            width: 256px;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+            display: none;
+
+            .menu_sloser{
+                    //background-image: url(../img/svg/closer_menu.svg);
+                    //height: 30px;
+                    //width: 30px;
+                    //position: absolute;
+                    //right: 0.2em;
+                    //top: 0.2em;
+                    //background-size: contain;
+                    //cursor: pointer;
+                    //display: block;
+                    //fill: #fff;
+                    background-image: url(../img/svg/hamburger.svg);
+                    height: 17px;
+                    width: 30px;
+                        position: absolute;
+                        right: 1em;
+                        top: 1em;
+                        background-size: contain;
+                        cursor: pointer;
+                        display: block;
+            }
+        }
+
+
+
 
         // умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:
         .ui-widget-header {
@@ -779,6 +843,11 @@ html {
             display: block;
             background-color: $lightenmiddlebrown;
 
+            &#slideoutPanel{
+                position: relative;
+                z-index: 1;
+            }
+
             // ШАПКА// ШАПКА// ШАПКА// ШАПКА// ШАПКА// ШАПКА// ШАПКА// ШАПКА// ШАПКА// ШАПКА// ШАПКА// ШАПКА// ШАПКА// ШАПКА
             header {
                 display: flex;
@@ -802,14 +871,13 @@ html {
                     justify-content: center;
                     @include respond-to(handhelds) {
 
-                        // outline: 1px dotted red;
-                        position: absolute;
-                        background-color: $lightenbrown;
-                        width: 100%;
-                        height: 100%;
-                        opacity: 0.97;
-                        z-index: 5;
-                        justify-content: flex-start;
+                        //position: absolute;
+                        //background-color: $lightenbrown;
+                        //width: 100%;
+                        //height: 100%;
+                        //opacity: 0.97;
+                        //z-index: 5;
+                        //justify-content: flex-start;
                         display: none;
                     }
                     .menu_sloser {
@@ -1560,6 +1628,7 @@ html {
                             font-size: 1.8em;
                             line-height: 1.2em;
                             text-align: center;
+
                             //width:100%;
                         }
                         &:before {
@@ -1598,12 +1667,13 @@ html {
                         height: 34px;
                         margin: 2em 0;
                     }
-                        .expander {
-                            //position: absolute;
-                            //left: 0.3em;
-                            //bottom: 0.3em;
-                            margin:0 0 2em 0;
-                        }
+                    .expander {
+
+                        //position: absolute;
+                        //left: 0.3em;
+                        //bottom: 0.3em;
+                        margin: 0 0 2em;
+                    }
                     article {
                         width: 90.3%;
                         margin: 0 0 3em;
@@ -1611,18 +1681,18 @@ html {
                         &.spoiler {
                             max-height: 5.3em;
                             overflow: hidden;
-                            border-bottom:1px solid rgba(55, 56, 56, 0.08);
-                                //padding: 0 0 3.5em 0;
-                        //    //transition: all 4s ease;
-                        //    &.expanded {
-                        //        //height: inherit;
-                        //    }
+                            border-bottom: 1px solid rgba(55, 56, 56, 0.08);
+
+                            //padding: 0 0 3.5em 0;
+                            //    //transition: all 4s ease;
+                            //    &.expanded {
+                            //        //height: inherit;
+                            //    }
                         }
                         p {
                             color: $lightFontcolor;
                             width: auto;
-                            margin: 0 auto 1em auto;
-
+                            margin: 0 auto 1em;
 
                             //font-size: 0.9em;
                         }
@@ -1883,8 +1953,8 @@ html {
                             font-size: 1.8em;
                             line-height: 1.2em;
                             text-align: center;
-                            width:100%;
-                                padding: 0;
+                            width: 100%;
+                            padding: 0;
                         }
                         &:before {
                             content: "";
@@ -2178,13 +2248,13 @@ html {
                         //         content: " ";
                         //     }
                         // }
-                        &.spoiler{
+                        &.spoiler {
                             max-height: 5.3em;
-    overflow: hidden;
+                            overflow: hidden;
                         }
                     }
-                    .expander{
-                            margin: 0 0 2em 0;
+                    .expander {
+                        margin: 0 0 2em;
                     }
                     .contacts_info {
 
@@ -3951,7 +4021,6 @@ html {
                         height: 14px;
                         display: block;
                         margin: 0 10px 0 0;
-
                         @include respond-to(handhelds) {
                             display: none;
                         }
@@ -3963,10 +4032,10 @@ html {
                         width: 25px;
                         height: 14px;
                         display: block;
-
                         @extend .rotating;
                         margin: 0 0 0 10px;
                         @include respond-to(handhelds) {
+
                             //transform: rotate(180deg);
                             display: none;
                         }
@@ -4096,8 +4165,8 @@ html {
                                     opacity: initial;
                                     color: initial;
                                     content: "";
-
                                     transform: rotate(180deg);
+
                                     //@extend .rotating;
                                     // background-image: url(/dist/img/sprite.png);
                                     // width: 145px;

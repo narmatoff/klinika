@@ -238,13 +238,30 @@ $(document).ready(function() {
 
 
     // menu on henhelds
-    $(".hamburger").click(function() {
-        $(".topmenu").show('fast');
-    });
+    // $(".hamburger").click(function() {
+    //     $(".topmenu").show('fast');
+    // });
+    // $(".menu_sloser").click(function() {
+    //     $(".topmenu").hide('fast');
+    // });
 
-    $(".menu_sloser").click(function() {
-        $(".topmenu").hide('fast');
-    });
+
+    var slideout = new Slideout({
+        'panel': document.getElementById('slideoutPanel'),
+        'menu': document.getElementById('slideoutMenu'),
+        'padding': 256,
+        'tolerance': 70
+      });
+
+      document.querySelector('.hamburger').addEventListener('click', function() {
+              slideout.toggle();
+            });
+      document.querySelector('.menu_sloser').addEventListener('click', function() {
+              slideout.toggle();
+            });
+
+
+
 
     // избегаем скрытие topmenu в desktop версии после его скрытия в hendhelds
     function windowSize() {
