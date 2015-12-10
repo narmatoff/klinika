@@ -496,12 +496,13 @@ $(document).ready(function() {
     });
 
 
+    // Спойлеры в FAQ
     // Скрываем все спойлеры
-    jQuery('.spoiler-body').hide();
+    $('.spoiler-body').hide();
     // по клику отключаем класс folded, включаем unfolded, затем для следующего
     // элемента после блока .spoiler-head (т.е. .spoiler-body) показываем текст спойлера
-    jQuery('.spoiler-head').click(function() {
-        jQuery(this).toggleClass("folded").toggleClass("unfolded").next().slideToggle();
+    $('.spoiler-head').click(function() {
+        $(this).toggleClass("folded").toggleClass("unfolded").next().slideToggle();
     });
 
 

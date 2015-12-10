@@ -1560,6 +1560,7 @@ html {
                             font-size: 1.8em;
                             line-height: 1.2em;
                             text-align: center;
+                            //width:100%;
                         }
                         &:before {
                             content: "";
@@ -1610,6 +1611,7 @@ html {
                         &.spoiler {
                             max-height: 5.3em;
                             overflow: hidden;
+                            border-bottom:1px solid rgba(55, 56, 56, 0.08);
                                 //padding: 0 0 3.5em 0;
                         //    //transition: all 4s ease;
                         //    &.expanded {
@@ -1881,6 +1883,8 @@ html {
                             font-size: 1.8em;
                             line-height: 1.2em;
                             text-align: center;
+                            width:100%;
+                                padding: 0;
                         }
                         &:before {
                             content: "";
@@ -3947,6 +3951,7 @@ html {
                         height: 14px;
                         display: block;
                         margin: 0 10px 0 0;
+
                         @include respond-to(handhelds) {
                             display: none;
                         }
@@ -3959,10 +3964,10 @@ html {
                         height: 14px;
                         display: block;
 
-                        //transform: rotate(180deg);
                         @extend .rotating;
                         margin: 0 0 0 10px;
                         @include respond-to(handhelds) {
+                            //transform: rotate(180deg);
                             display: none;
                         }
                     }
@@ -4092,7 +4097,7 @@ html {
                                     color: initial;
                                     content: "";
 
-                                    //transform: rotate(180deg);
+                                    transform: rotate(180deg);
                                     //@extend .rotating;
                                     // background-image: url(/dist/img/sprite.png);
                                     // width: 145px;
@@ -4716,7 +4721,7 @@ html {
         background-size: 372px 385px;
         @include respond-to(handhelds) {
             background-image: none;
-            height: auto;
+            height: 100%;
         }
         .conts {
             display: flex;

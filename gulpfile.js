@@ -40,8 +40,6 @@ var gulp = require('gulp'),
     combineMq = require('gulp-combine-mq');
 
 
-
-
 // jade
 gulp.task('jade', function() {
     var YOUR_LOCALS = {};
@@ -254,7 +252,7 @@ gulp.task('bower', function() {
 gulp.task('connect', function() {
     connect.server({
         livereload: true,
-        host:'0.0.0.0'
+        host: '0.0.0.0'
     });
 });
 
@@ -315,6 +313,8 @@ gulp.task('watch', function() {
     gulp.watch('src/js_src/main.js', ['lint_mainjs']);
     gulp.watch('src/js_src/custom_plgns.js', ['lint_customplgnsjs']);
     gulp.watch('src/images/forsprts/*.png', ['sprite']);
+    gulp.watch('src/images/master_picture.png', ['favicons']);
+    // gulp.watch('src/images/master_picture.png', ['inject-favicon-markups']);
     // gulp.watch('src/images/forsvgsprts/*.svg', ['svgsprites']);
     gulp.watch('src/images/*', ['imagemin']);
     gulp.watch('src/images/svg/**/*.svg', ['svgmin']);
@@ -325,4 +325,4 @@ gulp.task('watch', function() {
 });
 
 // default
-gulp.task('default', ['jade', 'sass', 'lint_mainjs','lint_customplgnsjs', 'sprite', 'imagemin', 'svgmin', 'bower', 'watch', 'connect']);
+gulp.task('default', ['jade', 'sass', 'lint_mainjs', 'lint_customplgnsjs', 'sprite', 'imagemin', 'svgmin', 'bower', 'watch', 'connect']);
