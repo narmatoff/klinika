@@ -13,14 +13,11 @@ html {
             clear: both;
         }
     }
-
-    &.slideout-open{
+    &.slideout-open {
         overflow: hidden;
-        body{
+        body {
             overflow: hidden;
-
         }
-
         .slideout-menu {
             display: block;
         }
@@ -28,10 +25,9 @@ html {
             position: relative;
             z-index: 1;
             overflow: hidden;
-            -webkit-box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.75);
--moz-box-shadow:    0px 0px 15px 0px rgba(50, 50, 50, 0.75);
-box-shadow:         0px 0px 15px 0px rgba(50, 50, 50, 0.75);
-
+            -webkit-box-shadow: 0 0 15px 0 rgba(50, 50, 50, 0.75);
+            -moz-box-shadow: 0 0 15px 0 rgba(50, 50, 50, 0.75);
+            box-shadow: 0 0 15px 0 rgba(50, 50, 50, 0.75);
         }
     }
     body {
@@ -43,11 +39,10 @@ box-shadow:         0px 0px 15px 0px rgba(50, 50, 50, 0.75);
         #slideoutMenu {
 
         }
-
         .slideout-menu {
             background-color: $lightenbrown2;
             position: fixed;
-            left: 0;
+            //left: 0;
             top: 0;
             bottom: 0;
             right: 0;
@@ -56,32 +51,76 @@ box-shadow:         0px 0px 15px 0px rgba(50, 50, 50, 0.75);
             overflow-y: auto;
             -webkit-overflow-scrolling: touch;
             display: none;
-
-            .menu_sloser{
-                    //background-image: url(../img/svg/closer_menu.svg);
-                    //height: 30px;
-                    //width: 30px;
-                    //position: absolute;
-                    //right: 0.2em;
-                    //top: 0.2em;
-                    //background-size: contain;
-                    //cursor: pointer;
-                    //display: block;
-                    //fill: #fff;
+            .sliMenuHead {
+                display:flex;
+                flex-flow:row nowrap;
+                justify-content:center;
+                align-items:center;
+                margin:1.8em 0 0 0;
+                h2 {
+                    margin: 0;
+                    padding: 0;
+                    display:inline-block;
+                    text-align:left;
+                    font-size:1.5em;
+                }
+                .menu_sloser {
                     background-image: url(../img/svg/hamburger.svg);
                     height: 17px;
                     width: 30px;
-                        position: absolute;
-                        right: 1em;
-                        top: 1em;
-                        background-size: contain;
-                        cursor: pointer;
-                        display: block;
+                    /* position: absolute; */
+                    /* right: 1em; */
+                    /* top: 2.2em; */
+                    background-size: contain;
+                    cursor: pointer;
+                    display: inline-block;
+                }
+            }
+            ul {
+                margin: 2em 0 0;
+                padding:0 0 0 3em;
+                li {
+                    &:hover {
+
+                        //background-color:$redColor;
+                    }
+
+                    //outline:1px dotted red;
+                    ul.topsubmenu {
+                        margin: 0;
+                        padding:0 0 0 2em;
+
+                        //padding: 1em;
+                        //list-style:circle;
+                        //text-align:right;
+                        li {
+
+                            //margin: 0.5em 0 0.5em 0;
+                            //padding: 0.3em 0 0.3em 0;
+                            //&:after{
+                            //    content:'';
+                            //    //margin:0 0 0 0.5em;
+                            //    position:absolute;
+                            //    //background-image:url('../img/svg/septopmenu.svg');
+                            //    width:6px;
+                            //    height:6px;
+                            //    display:inline-block;
+                            //}
+                            //padding:0;
+                            a {
+
+                                //padding:0;
+                            }
+                        }
+                    }
+                    a {
+                        &:hover {
+                            text-decoration: none;
+                        }
+                    }
+                }
             }
         }
-
-
-
 
         // умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:
         .ui-widget-header {
@@ -842,8 +881,7 @@ box-shadow:         0px 0px 15px 0px rgba(50, 50, 50, 0.75);
             margin: 0 auto;
             display: block;
             background-color: $lightenmiddlebrown;
-
-            &#slideoutPanel{
+            &#slideoutPanel {
                 position: relative;
                 z-index: 1;
             }
@@ -1367,10 +1405,10 @@ box-shadow:         0px 0px 15px 0px rgba(50, 50, 50, 0.75);
                                         list-style-image: none;
                                         list-style-type: none;
                                         @include respond-to(medium-screens) {
-                                            margin: 0;
+                                            margin: 0 0 0 1.8em;
                                         }
                                         &:last-child {
-                                            margin: 0;
+                                            margin: 0 0 0 1.8em;
                                         }
                                         span {
                                             display: block;
@@ -2707,7 +2745,7 @@ box-shadow:         0px 0px 15px 0px rgba(50, 50, 50, 0.75);
                                                 position: absolute;
                                                 z-index: 1;
                                                 left: 0;
-                                                bottom: -1px;
+                                                bottom: 0;
                                                 path {
                                                     &:first-child {
 
@@ -3013,7 +3051,7 @@ box-shadow:         0px 0px 15px 0px rgba(50, 50, 50, 0.75);
                                         position: absolute;
                                         z-index: 1;
                                         left: 0;
-                                        bottom: -1px;
+                                        bottom: 0;
                                         path {
                                             &:first-child {
 
@@ -4589,7 +4627,7 @@ box-shadow:         0px 0px 15px 0px rgba(50, 50, 50, 0.75);
                                             position: absolute;
                                             z-index: 1;
                                             left: 0;
-                                            bottom: -1px;
+                                            bottom: 0;
                                             path {
                                                 &:first-child {
 

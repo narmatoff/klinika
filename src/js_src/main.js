@@ -48,7 +48,7 @@ $(document).ready(function() {
                     //  открываем вкладки
                     // return confirm("Открыть вкладку?");
 
-                    console.log("TabClick-done");
+                    // console.log("TabClick-done");
 
                     // if ($("#fancyform_tab1 fieldset").children().hasClass('valid')) {
                     //     console.log("fancyform_tab1 - ОК");
@@ -250,15 +250,18 @@ $(document).ready(function() {
         'panel': document.getElementById('slideoutPanel'),
         'menu': document.getElementById('slideoutMenu'),
         'padding': 256,
-        'tolerance': 70
+        'tolerance': 70,
+        'side':'right',
+        'touch':'false'
       });
 
-      document.querySelector('.hamburger').addEventListener('click', function() {
-              slideout.toggle();
+            $('.hamburger').click(function() {
+                slideout.toggle();
             });
-      document.querySelector('.menu_sloser').addEventListener('click', function() {
-              slideout.toggle();
-            });
+
+            // $('.menu_sloser').click(function() {
+            //     slideout.close();
+            // });
 
 
 
@@ -285,6 +288,7 @@ $(document).ready(function() {
         // centerMode: true,
         variableWidth: true,
         autoplay: false,
+        swipe:false,
         responsive: [{
                 breakpoint: 1150,
                 settings: {
@@ -334,6 +338,7 @@ $(document).ready(function() {
         centerMode: true,
         centerPadding: '145px',
         slidesToShow: 1,
+        swipe:false,
         responsive: [{
             breakpoint: 1150,
             settings: {
@@ -342,7 +347,7 @@ $(document).ready(function() {
                 infinite: true,
                 fade: true,
 
-                dots: true,
+                dots: false,
                 centerMode: false,
                 centerPadding: '0',
             }
@@ -354,7 +359,9 @@ $(document).ready(function() {
 
                 slidesToScroll: 1,
                 infinite: true,
-                dots: true
+                // dots: false
+                dots: false
+
             }
         }, {
             breakpoint: 700,
@@ -364,7 +371,7 @@ $(document).ready(function() {
                 fade: true,
 
                 infinite: true,
-                dots: true
+                dots: false
             }
         }, {
             breakpoint: 620,
@@ -373,7 +380,7 @@ $(document).ready(function() {
                 slidesToScroll: 1,
                 fade: true,
 
-                dots: true
+                dots: false
 
             }
         }]
@@ -391,6 +398,7 @@ $(document).ready(function() {
         // centerMode: true,
         variableWidth: true,
         autoplay: false,
+        swipe:false,
         responsive: [{
                 breakpoint: 1150,
                 settings: {
@@ -468,17 +476,23 @@ $(document).ready(function() {
 
 
     // фиксация списка годов при прокруткe
-
-    $('.wayp_links').ready(function() {
         // body...
-        $('.wayp_links').containedStickyScroll({
-            duration: 0,
-            queue: true,
-            unstick: true,
-            // easing:"easeOutBack"
-            closeChar: ''
-        });
-    });
+
+        if ($('ul').is('.wayp_links')) {
+
+
+            $('.wayp_links').containedStickyScroll({
+                duration: 0,
+                queue: true,
+                unstick: true,
+                // easing:"easeOutBack"
+                closeChar: ''
+            });
+        }else {
+            console.log('.wayp_links element not loaded');
+        }
+
+
 
     $(".customradiobtns").mCustomScrollbar();
 
@@ -541,7 +555,7 @@ $(document).ready(function() {
 
             });
         } else {
-            console.log("false!!!!");
+            // console.log("false!!!!");
 
             expanderPar.transition({
                 'max-height': expanderPar.get(0).scrollHeight,
