@@ -37,7 +37,7 @@ html {
         height: 100%;
         color: $fontcolor;
         #slideoutMenu {
-
+            display: none;
         }
         .slideout-menu {
             background-color: $lightenbrown2;
@@ -52,17 +52,17 @@ html {
             -webkit-overflow-scrolling: touch;
             display: none;
             .sliMenuHead {
-                display:flex;
-                flex-flow:row nowrap;
-                justify-content:center;
-                align-items:center;
-                margin:1.8em 0 0 0;
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: center;
+                align-items: center;
+                margin: 1.8em 0 0 0;
                 h2 {
                     margin: 0;
                     padding: 0;
-                    display:inline-block;
-                    text-align:left;
-                    font-size:1.5em;
+                    display: inline-block;
+                    text-align: left;
+                    font-size: 1.5em;
                 }
                 .menu_sloser {
                     background-image: url(../img/svg/hamburger.svg);
@@ -78,23 +78,19 @@ html {
             }
             ul {
                 margin: 2em 0 0;
-                padding:0 0 0 3em;
+                padding: 0 0 0 3em;
                 li {
                     &:hover {
-
                         //background-color:$redColor;
                     }
-
                     //outline:1px dotted red;
                     ul.topsubmenu {
                         margin: 0;
-                        padding:0 0 0 2em;
-
+                        padding: 0 0 0 2em;
                         //padding: 1em;
                         //list-style:circle;
                         //text-align:right;
                         li {
-
                             //margin: 0.5em 0 0.5em 0;
                             //padding: 0.3em 0 0.3em 0;
                             //&:after{
@@ -108,7 +104,6 @@ html {
                             //}
                             //padding:0;
                             a {
-
                                 //padding:0;
                             }
                         }
@@ -121,7 +116,6 @@ html {
                 }
             }
         }
-
         // умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:// умолчания:
         .ui-widget-header {
             background: $mainbrown;
@@ -162,7 +156,6 @@ html {
                     width: 15px;
                     height: 14px;
                     display: inline-block;
-
                     //transform: rotate(180deg);
                 }
             }
@@ -172,11 +165,8 @@ html {
             width: 100%;
             thead {
                 background: $mainbrown;
-
                 //color:#fff;
-                tr {
-
-                }
+                tr {}
                 th {
                     span {
                         color: #fff;
@@ -210,7 +200,7 @@ html {
         .ui-datepicker-today {
             background: $lightenbrown2;
         }
-         ::selection {
+        ::selection {
             color: #fff;
             /* Цвет текста */
             background: $redColor;
@@ -220,7 +210,6 @@ html {
             transform: rotate(180deg);
         }
         .clearfix {
-
             //@include crp-Clearfix();
         }
         a {
@@ -231,11 +220,10 @@ html {
             }
         }
         a,
-         {
+        {
             outline: none;
             border: none;
         }
-
         // div,
         a,
         span,
@@ -250,7 +238,7 @@ html {
         p {
             line-height: 1.55em;
             font-size: 0.9em;
-            color: lighten($fontcolor,20%);
+            color: lighten($fontcolor, 20%);
             a {
                 color: $redColor;
                 cursor: pointer;
@@ -260,12 +248,10 @@ html {
         .bordered {
             ul,
             ol {
-
                 //display:block;
                 li {
                     font-size: 0.9em;
-                    color: lighten($fontcolor,10%);
-
+                    color: lighten($fontcolor, 10%);
                     //display:block;
                 }
             }
@@ -275,7 +261,6 @@ html {
             text-transform: none;
             padding: 10px 0;
             display: flex;
-
             //line-height: 0.3em;
             font-size: 2.5em;
             font-weight: normal;
@@ -283,7 +268,6 @@ html {
             @include respond-to(handhelds) {
                 font-size: 1.8em;
                 line-height: 1.2em;
-
                 //text-align: center;
             }
             &:before {
@@ -305,7 +289,6 @@ html {
                 width: 25px;
                 height: 14px;
                 display: block;
-
                 //transform: rotate(180deg);
                 @extend .rotating;
                 margin: 0 0 0 10px;
@@ -319,13 +302,11 @@ html {
         }
         h2 {
             font-family: $ptSerif;
-
             // text-transform: capitalize;
             padding: 10px 0;
             color: $fontcolor;
-
             // display: flex;
-            line-height: 0.3em;
+            line-height: 1.3em;
             font-size: 1.3em;
             font-weight: normal;
             width: 76.6%;
@@ -337,21 +318,17 @@ html {
         }
         h3 {
             font-family: $ptSerif;
-
             // text-transform: capitalize;
             padding: 10px 0;
             color: $fontcolor;
-
             // display: flex;
-            line-height: 0.3em;
+            line-height: 1.3em;
             font-size: 1.1em;
             font-weight: bold;
             width: 76.6%;
             @include respond-to(handhelds) {
-
                 //font-size: 1.8em;
                 line-height: 1.2em;
-
                 //text-align: center;
             }
         }
@@ -382,7 +359,7 @@ html {
             background-color: $lightenbrown2;
             border: none;
             &:hover {
-                background-color: lighten($lightenbrown2,3%);
+                background-color: lighten($lightenbrown2, 3%);
                 text-decoration: none;
             }
         }
@@ -403,10 +380,9 @@ html {
             background-position: 90% center;
             padding-right: 3em;
             &:hover {
-                background-color: lighten($mainbrown,3%);
+                background-color: lighten($mainbrown, 3%);
                 text-decoration: none;
             }
-
             //&:after {
             //    display: block;
             //    background-image: url("../img/svg/arrow_top_btn.svg");
@@ -433,10 +409,9 @@ html {
             background-position: 90% center;
             padding-right: 3em;
             &:hover {
-                background-color: lighten($redColor,3%);
+                background-color: lighten($redColor, 3%);
                 text-decoration: none;
             }
-
             //&:after {
             //    display: block;
             //    background-image: url("../img/svg/arrow_top_btn.svg");
@@ -446,6 +421,9 @@ html {
             //    content: "";
             //    margin: 0 0 0 1em;
             //}
+            &.usual{
+                width: inherit;
+            }
         }
         .fourthbutton.nonarrow {
             display: inline-flex;
@@ -460,7 +438,7 @@ html {
             border: none;
             margin: 2em 0;
             &:hover {
-                background-color: lighten($redColor,3%);
+                background-color: lighten($redColor, 3%);
                 text-decoration: none;
             }
         }
@@ -483,11 +461,8 @@ html {
                 top: 50%;
                 opacity: 0;
             }
-            &:before {
-
-            }
+            &:before {}
             &:hover {
-
                 // background-color: $fontcolor;
                 &:after {
                     opacity: 1;
@@ -502,25 +477,21 @@ html {
             }
         }
         table {
-
             //outline:1px dotted red;
             width: 98%;
             border: 1px solid #ccc;
             margin: 0 auto;
-            color: lighten($fontcolor,20%);
-
+            color: lighten($fontcolor, 20%);
             //для двуколоночных таблиц с последней колонкой цены
             &.two_columns {
                 tr {
                     td {
-
                         //min-width:20%;
                         width: 20%;
                         &:last-child {
                             text-align: center;
                             background-color: #fff;
                             padding: 0;
-
                             //min-width:20%;
                             //color: $fontcolor;
                         }
@@ -540,7 +511,6 @@ html {
             display: flex;
             flex-flow: column nowrap;
             font-size: 0.9em;
-
             //height: 100%;
             justify-content: flex-start;
             align-items: flex-end;
@@ -548,7 +518,6 @@ html {
                 justify-content: center;
                 align-items: center;
             }
-
             //width:100%;
             input[type="text"],
             input[type="number"],
@@ -556,20 +525,20 @@ html {
                 height: 2.188em;
                 width: 100%;
                 background: transparent;
-                border: 1px solid lighten($fontcolor,50%);
+                border: 1px solid lighten($fontcolor, 50%);
                 padding: 0 0 0 1em;
                 margin: 0 0 0.7em;
                 outline: none;
             }
             textarea {
                 background: transparent;
-                border: 1px solid lighten($fontcolor,50%);
+                border: 1px solid lighten($fontcolor, 50%);
                 padding: 1em 0 0 1em;
                 margin: 0 0 0.7em;
                 outline: none;
                 width: 100%;
                 max-width: 100%;
-                min-height: 10em;
+                min-height: 7em;
                 max-height: 100%;
             }
             button {
@@ -578,13 +547,11 @@ html {
         }
         .nonarrow {
             background-image: none;
-
             //&:after {
             //    content: none;
             //}
         }
         .fancybox-skin {
-
             //background-color: $lightenmiddlebrown;
             border-color: $lightenmiddlebrown;
             overflow: hidden !important;
@@ -592,12 +559,11 @@ html {
         #fancyform,
         #fancyform2 {
             display: none;
-
             //outline:1px dotted red;
             //width:100%;
             width: 53em;
             height: 37em;
-            border: 1px solid lighten($fontcolor,40%);
+            border: 1px solid lighten($fontcolor, 40%);
             background-color: $lightenmiddlebrown;
             padding: 1em;
             h1 {
@@ -621,12 +587,11 @@ html {
                             height: 2.9em;
                             font-family: $ptSerif;
                             font-size: 1.1em;
-                            color: lighten($fontcolor,10%);
+                            color: lighten($fontcolor, 10%);
                             display: flex;
                             align-items: center;
                             justify-content: center;
                             flex-flow: row nowrap;
-
                             // background-color: ;
                             &:hover {
                                 text-decoration: none;
@@ -636,7 +601,6 @@ html {
                             }
                         }
                         &.selected-tab {
-
                             // outline: 1px dotted red;
                             background-color: #fff;
                         }
@@ -672,15 +636,23 @@ html {
                             position: relative;
                         }
                     }
+                    .navbutton{
+
+                        display: flex;
+                        flex-flow: row wrap;
+                        justify-content: flex-end;
+                        align-items: center;
+                        text-align: right;                        
+                        .next-button {}
+                    }
                     .navbuttonz {
+
                         display: flex;
                         flex-flow: row wrap;
                         justify-content: space-between;
                         align-items: center;
                         text-align: right;
-                        .next-button {
-
-                        }
+                        .next-button {}
                         .prev-button {
                             font-weight: bold;
                             &:before {
@@ -700,19 +672,17 @@ html {
                     .fieldset_wrapper {
                         .customradiobtns {
                             width: 50%;
-                            border: 1px solid darken($border,10%);
+                            border: 1px solid darken($border, 10%);
                             margin: 0 auto;
                             padding: 0;
                             height: 20.1em;
                             overflow: overlay;
                             background-color: #fff;
-
                             //display:flex;
                             //flex-flow:column nowrap;
                             //height:10em;
                             //justify-content:space-between;
                             input[type=radio] {
-
                                 //display:block;
                                 display: none;
                                 &.css-checkbox {
@@ -758,11 +728,9 @@ html {
                         &#fancyform_tab3 {
                             .ui-datepicker-prev,
                             .ui-datepicker-next {
-
                                 //display:none;
                             }
                             input[type="date"] {
-
                                 //background-color:#ccc;
                                 visibility: hidden;
                             }
@@ -800,17 +768,14 @@ html {
                             .timeradio {
                                 width: 40%;
                                 .timeradiobtns {
-
                                     //width:50%;
                                     //border:1px solid darken($border,10%);
                                     //margin:0 auto;
                                     padding: 0;
-
                                     //height:20.1em;
                                     //overflow:overlay;
                                     display: flex;
                                     flex-flow: row wrap;
-
                                     //height:10em;
                                     justify-content: flex-start;
                                     align-items: flex-start;
@@ -839,7 +804,6 @@ html {
                                         }
                                     }
                                     label {
-
                                         //outline:1px dotted red;
                                         display: inline-block;
                                         width: 4.011em;
@@ -868,7 +832,6 @@ html {
                 }
             }
         }
-
         //.centering_elem{
         //    display:inline-flex;
         //    margin:0 auto;
@@ -876,7 +839,6 @@ html {
         // конец_умолчания// конец_умолчания// конец_умолчания// конец_умолчания// конец_умолчания// конец_умолчания// конец_умолчания// конец_умолчания// конец_умолчания// конец_умолчания// конец_умолчания// конец_умолчания// конец_умолчания// конец_умолчания// конец_умолчания// конец_умолчания// конец_умолчания// конец_умолчания// конец_умолчания// конец_умолчания
         .main_wrapper {
             width: 100%;
-
             // outline: 1px dotted red;
             margin: 0 auto;
             display: block;
@@ -885,12 +847,11 @@ html {
                 position: relative;
                 z-index: 1;
             }
-
             // ШАПКА// ШАПКА// ШАПКА// ШАПКА// ШАПКА// ШАПКА// ШАПКА// ШАПКА// ШАПКА// ШАПКА// ШАПКА// ШАПКА// ШАПКА// ШАПКА
             header {
                 display: flex;
                 flex-flow: column nowrap;
-                background-image: url(../img/header_back.png);
+                background-image: url(../img/header_back.jpg);
                 background-size: cover;
                 background-repeat: no-repeat;
                 @include respond-to(handhelds) {
@@ -901,14 +862,12 @@ html {
                     width: 100%;
                     background-color: #fff;
                     padding: 0;
-
                     // height: 40px;
                     height: 2.45em;
                     display: flex;
                     flex-flow: column nowrap;
                     justify-content: center;
                     @include respond-to(handhelds) {
-
                         //position: absolute;
                         //background-color: $lightenbrown;
                         //width: 100%;
@@ -942,7 +901,6 @@ html {
                         justify-content: flex-start;
                         align-content: flex-start;
                         align-items: center;
-
                         // margin: 0;
                         padding: 0;
                         height: 100%;
@@ -950,12 +908,10 @@ html {
                             width: 92.73%;
                         }
                         @include respond-to(handhelds) {
-
                             // width: 100%;
                             // height: auto;
                             // display: flex;
                             flex-flow: column wrap;
-
                             // flex-flow: row wrap;
                             justify-content: flex-start;
                             align-items: flex-start;
@@ -967,7 +923,6 @@ html {
                             padding: 0 3.3% 0 2%;
                             list-style-image: url(../img/svg/septopmenu.svg);
                             height: 100%;
-
                             // transition: all 0.1s linear;
                             // outline: 1px dotted red;
                             z-index: 2;
@@ -976,7 +931,6 @@ html {
                             }
                             @include respond-to(handhelds) {
                                 height: auto;
-
                                 // flex-flow:
                                 list-style-image: url(../img/svg/septopmenu.svg);
                                 list-style-image: none;
@@ -984,18 +938,15 @@ html {
                             }
                             &:first-child {
                                 list-style-image: none;
-
                                 // margin: 0;
                                 @include respond-to(handhelds) {
                                     flex-basis: 100%;
                                 }
                             }
                             a {
-
                                 //color: $fontcolor;
                                 text-decoration: none;
                                 padding: 0.4em 0;
-
                                 // color: #fff;
                                 // padding: 15px 0 0 0;
                                 display: block;
@@ -1015,25 +966,20 @@ html {
                             }
                             .topsubmenu {
                                 display: none;
-
                                 // flex-flow: column nowrap;
                                 position: absolute;
                                 left: 0;
-
                                 // top: 40px;
                                 top: 2.46em;
                                 margin: 0;
                                 padding: 1.2em 1em 1.2em 2.7em;
-
                                 // list-style-image: none;
                                 width: 180px;
                                 background-color: $lightenbrown2;
                                 height: auto;
-
                                 // list-style-image: none;
                                 @include respond-to(handhelds) {
                                     background-color: transparent;
-
                                     // flex-flow:
                                     padding: 0 0 0 0.9em;
                                 }
@@ -1050,7 +996,6 @@ html {
                                     width: 100%;
                                     text-align: left;
                                     list-style-image: url(../img/svg/septopmenu.svg);
-
                                     // list-style-type: disk;
                                     &:hover {
                                         background-color: none;
@@ -1074,24 +1019,20 @@ html {
                                 background-color: $lightenbrown2;
                                 .topsubmenu {
                                     display: block;
-
                                     // list-style: none;
                                 }
                                 @include respond-to(handhelds) {
                                     background-color: transparent;
-
                                     // flex-flow:
                                 }
                             }
                         }
                     }
                 }
-
                 // инфоблок
                 .topinfoblock {
                     width: $mainWidt;
                     margin: 0 auto;
-
                     // background-color: #ccc;
                     padding: 1em 0;
                     display: flex;
@@ -1121,7 +1062,6 @@ html {
                         }
                     }
                     .left_griphon {
-
                         // @include sprite($griphon1);
                         background-image: url(../img/svg/Gryphon-l.svg);
                         background-repeat: no-repeat;
@@ -1132,7 +1072,6 @@ html {
                         }
                     }
                     .right_griphon {
-
                         // @include sprite($griphon2);
                         // @include sprite($griphon1);
                         background-image: url(../img/svg/Gryphon-r.svg);
@@ -1175,7 +1114,6 @@ html {
                     }
                     .phone_block {
                         width: 150px;
-
                         // width: auto;
                         @include respond-to(handhelds) {
                             width: auto;
@@ -1188,7 +1126,6 @@ html {
                             font-size: 1.1em;
                             @include respond-to(handhelds) {
                                 list-style: none;
-
                                 //font-size: 0.9em;
                             }
                             a {
@@ -1198,7 +1135,6 @@ html {
                                     color: $lightFontcolor;
                                 }
                             }
-
                             // .hamburger {
                             //     display: none;
                             // }
@@ -1220,7 +1156,6 @@ html {
                         display: none;
                     }
                 }
-
                 // обертка галвного меню и кнопок ЗАПИСАТЬСЯ и ВЫЗОВ НА ДОМ
                 .main_menu_wrapper {
                     width: $mainWidt;
@@ -1229,10 +1164,8 @@ html {
                     flex-flow: row wrap;
                     justify-content: space-between;
                     align-items: center;
-
                     // outline: 1px dotted red;
                     height: 120px;
-
                     // обертка главного меню
                     @include respond-to(medium-screens) {
                         width: 92.73%;
@@ -1245,30 +1178,25 @@ html {
                     }
                     .main_menu {
                         background-color: #fff;
-
                         // outline: 1px dotted red;
                         height: 100%;
                         width: 79.7%;
-
                         // главное меню
                         @include respond-to(medium-screens) {
                             padding: 0;
                             margin: 0;
                             width: 80%;
-
                             // 92.73%
                         }
                         @include respond-to(handhelds) {
                             display: none;
                         }
                         ul {
-
                             // outline: 1px dotted blue;
                             display: flex;
                             flex-flow: row wrap;
                             justify-content: space-around;
                             align-items: center;
-
                             // text-align: space-between;
                             height: 100%;
                             width: 100%;
@@ -1278,14 +1206,12 @@ html {
                             @include respond-to(medium-screens) {
                                 padding: 0;
                                 margin: 0;
-
                                 // width:100%;
                             }
                             li {
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
-
                                 // list-style-image: url("../img/svg/mian_menu_sep.svg");
                                 width: 190px;
                                 height: 100px;
@@ -1293,28 +1219,23 @@ html {
                                 border-bottom: 2px solid $fontcolor;
                                 position: relative;
                                 @include respond-to(medium-screens) {
-
                                     // border-bottom: 1px solid $fontcolor;
                                     width: 20%;
                                     border: none;
-
                                     // border-top: 1px solid $fontcolor;
                                     height: 100%;
                                     font-size: 0.7em;
                                     padding: 0 1em;
                                 }
                                 @include respond-to(postmedium-screens) {
-
                                     // border-bottom: 1px solid $fontcolor;
                                     width: 20%;
                                     border: none;
-
                                     // border-top: 1px solid $fontcolor;
                                     height: 100%;
                                     font-size: 0.8em;
                                     padding: 0 1em;
                                 }
-
                                 // рисуем ромбик между итемами гглавного меню
                                 &:before {
                                     background-image: url(../img/svg/mian_menu_sep.svg);
@@ -1330,7 +1251,6 @@ html {
                                         display: none;
                                     }
                                 }
-
                                 // убираем ромбик у мервого итема главного меню
                                 &:first-child {
                                     &:before {
@@ -1351,7 +1271,6 @@ html {
                                     font-family: $ptSerif;
                                     font-size: 1em;
                                     text-decoration: none;
-
                                     //color: $fontcolor;
                                     text-transform: uppercase;
                                     border-top: 1px solid $fontcolor;
@@ -1362,7 +1281,6 @@ html {
                                         height: 100%;
                                     }
                                 }
-
                                 // показываем сабменю главного меню
                                 &:hover {
                                     .main_menu_list_items {
@@ -1370,7 +1288,6 @@ html {
                                         flex-flow: row nowrap;
                                         justify-content: space-between;
                                     }
-
                                     // перекрашиваем пункт главного меню при наведении
                                     background-color: $lightenmiddlebrown;
                                     a {
@@ -1379,14 +1296,12 @@ html {
                                 }
                                 .main_menu_list_items {
                                     display: none;
-
                                     // outline: 1px dotted red;
                                     position: absolute;
                                     top: 102px;
                                     left: 0;
                                     height: initial;
-                                    z-index: 2;
-
+                                    z-index: 3;
                                     // width: auto;
                                     padding: 40px;
                                     background-color: $lightenmiddlebrown;
@@ -1430,9 +1345,7 @@ html {
                                             height: auto;
                                             width: auto;
                                             line-height: 1.9em;
-                                            @include respond-to(medium-screens) {
-
-                                            }
+                                            @include respond-to(medium-screens) {}
                                             font-size: 0.9em;
                                             &:before {
                                                 background-image: none;
@@ -1453,7 +1366,6 @@ html {
                                             }
                                         }
                                     }
-
                                     // div{
                                     //     width:10em;
                                     //     margin: 0 7em 0 0;
@@ -1475,10 +1387,8 @@ html {
                         display: flex;
                         flex-flow: column nowrap;
                         justify-content: space-between;
-
                         // outline: 1px dotted red;
                         height: 100%;
-
                         // width: 222px;
                         width: 19.3%;
                         font-family: $ptSerif;
@@ -1498,8 +1408,8 @@ html {
                             flex-flow: row nowrap;
                             justify-content: space-around;
                             align-items: center;
-                            font-size: 1.1em;
-
+                            font-size: 1em;
+                            text-transform: uppercase;
                             // transition: all linear 0.1s;
                             @include respond-to(medium-screens) {
                                 font-size: 0.9em;
@@ -1522,7 +1432,6 @@ html {
                         }
                         .nadom {
                             background-color: $lightenbrown2;
-
                             //color: $fontcolor;
                             text-decoration: none;
                             text-align: center;
@@ -1532,7 +1441,8 @@ html {
                             flex-flow: row nowrap;
                             justify-content: space-around;
                             align-items: center;
-                            font-size: 1.1em;
+                            font-size: 1em;
+                            text-transform: uppercase;
                             @include respond-to(medium-screens) {
                                 font-size: 0.9em;
                                 height: 2.5em;
@@ -1548,7 +1458,6 @@ html {
                                 display: block;
                                 background-image: url(../img/svg/arrow_top_btn2.svg);
                                 background-repeat: no-repeat;
-
                                 // background-color: $fontcolor;
                                 width: 15px;
                                 height: 14px;
@@ -1558,7 +1467,6 @@ html {
                 }
             }
         }
-
         // КОНТЕНТ// КОНТЕНТ// КОНТЕНТ// КОНТЕНТ// КОНТЕНТ// КОНТЕНТ// КОНТЕНТ// КОНТЕНТ// КОНТЕНТ// КОНТЕНТ// КОНТЕНТ
         .content_wrapper {
             display: flex;
@@ -1569,7 +1477,7 @@ html {
             background-repeat: no-repeat;
             background-position: 0 0;
             background-size: 427px 572px;
-
+                border-top: 2px solid #C4BEB5;
             // position:relative;
             // background-size: normal;
             // блок о клинике на главной
@@ -1577,12 +1485,11 @@ html {
                 background-image: none;
             }
             .about_on_main {
-
                 // width: 1135px;
                 width: $mainWidt - 16;
-
                 // outline: 1px dotted red;
                 margin: -150px auto 0;
+                // margin: 0 auto 0;
                 background-color: $lightenbrown;
                 padding: 8px;
                 border: 1px solid #ccc;
@@ -1607,7 +1514,6 @@ html {
                     ul {
                         margin: 0 0 0 5em;
                         padding: 0;
-
                         //width:auto;
                         display: flex;
                         li {
@@ -1615,7 +1521,6 @@ html {
                             margin: 0 0 0 2em;
                             padding: 0 0 0 1em;
                             list-style-position: outside;
-
                             // line-height: 1em;
                             &:first-child {
                                 list-style-image: none;
@@ -1641,7 +1546,8 @@ html {
                         height: auto;
                     }
                 }
-                .bordered {
+                .bordered, // content_wrapper - костыль и не должен быть тут
+                .content_wrapper {
                     width: 100%;
                     min-height: 270px;
                     border: 1px solid $border;
@@ -1666,7 +1572,6 @@ html {
                             font-size: 1.8em;
                             line-height: 1.2em;
                             text-align: center;
-
                             //width:100%;
                         }
                         &:before {
@@ -1688,7 +1593,6 @@ html {
                             width: 25px;
                             height: 14px;
                             display: block;
-
                             //transform: rotate(180deg);
                             @extend .rotating;
                             margin: 0 0 0 10px;
@@ -1706,7 +1610,6 @@ html {
                         margin: 2em 0;
                     }
                     .expander {
-
                         //position: absolute;
                         //left: 0.3em;
                         //bottom: 0.3em;
@@ -1720,7 +1623,6 @@ html {
                             max-height: 5.3em;
                             overflow: hidden;
                             border-bottom: 1px solid rgba(55, 56, 56, 0.08);
-
                             //padding: 0 0 3.5em 0;
                             //    //transition: all 4s ease;
                             //    &.expanded {
@@ -1731,7 +1633,6 @@ html {
                             color: $lightFontcolor;
                             width: auto;
                             margin: 0 auto 1em;
-
                             //font-size: 0.9em;
                         }
                         ol {
@@ -1741,7 +1642,6 @@ html {
                             li {
                                 list-style-type: none;
                                 margin: 0 0 0.2em;
-
                                 //color: $fontcolor;
                                 .numlist {
                                     font-size: 1.1em;
@@ -1766,7 +1666,6 @@ html {
                                 list-style-type: none;
                                 margin: 0 0 0.5em;
                                 padding: 0 0 0 1.4em;
-
                                 //color: $fontcolor;
                                 list-style-image: url(../img/svg/septopmenu.svg);
                                 .numlist {
@@ -1782,6 +1681,47 @@ html {
                                     align-items: center;
                                     margin: 0 1em 0 0;
                                 }
+
+                            }
+                        }
+                    }
+                    // костыли для кастомизации главной новости вместо контентного блока
+                    .firsttype_slider_wrapper {
+                        width: 95%;
+                        @include respond-to(medium-screens) {
+                            width: 19.8em;
+                        }
+                        @include respond-to(postmedium-screens) {
+                            width: 38.3em;
+                            // color: orange;
+                        }
+                        @include respond-to(handhelds) {
+                            width: 18.7em;
+                        }
+                        .firsttype_slider {
+                            width: 85.435%;
+                            @include respond-to(medium-screens) {
+                                // width: initial;
+                                width: 100%;
+                            }
+                            @include respond-to(postmedium-screens) {
+                                // width: initial;
+                                width: 100%;
+                                // color: orange;
+                            }
+                            @include respond-to(handhelds) {
+                                // width: initial;
+                                width: 100%;
+                            }
+                            .slides {
+                                li {
+                                    width: 306px;
+                                }
+                                .slick-dots {
+                                    li {
+                                        width: initial;
+                                    }
+                                }
                             }
                         }
                     }
@@ -1789,10 +1729,8 @@ html {
             }
             .contentner,
             .someother_conteiner {
-
                 // width: 1135px;
                 width: $mainWidt - 16;
-
                 // outline: 1px dotted red;
                 margin: -150px auto 3em;
                 background-color: $lightenbrown;
@@ -1817,25 +1755,20 @@ html {
                     align-items: center;
                     margin: 0 0 0.5em;
                     @include respond-to(handhelds) {
-
                         // background-color: red;
                         display: none;
                     }
                     @include respond-to(medium-screens) {
-
                         // background-color: green;
                         display: none;
                     }
                     @include respond-to(postmedium-screens) {
-
                         // background-color: orange;
                         display: flex;
                     }
                     ul {
-
                         //margin: 0 0 0 5em;
                         padding: 0;
-
                         //padding: 0;
                         width: 98%;
                         display: flex;
@@ -1844,7 +1777,6 @@ html {
                             margin: 0 0 0 2em;
                             padding: 0 0 0 1em;
                             list-style-position: outside;
-
                             // line-height: 1em;
                             &:first-child {
                                 list-style-image: none;
@@ -1878,17 +1810,14 @@ html {
                     flex-flow: column;
                     justify-content: space-around;
                     align-items: center;
-
                     // margin:1em 0 1em 0;
                     margin: 0;
                     position: relative;
-
                     //padding:2em 0 2em 0;
                     @include respond-to(handhelds) {
                         border: none;
                         height: auto;
                     }
-
                     //h1{
                     //    display:flex;
                     //
@@ -1897,11 +1826,9 @@ html {
                         background: transparent;
                         padding: 0;
                         margin: 1.5em 2% 27em 0;
-
                         //padding: 0 0 15% 0;
                         width: 58px;
                         right: 0;
-
                         //top:30px;
                         //right:0;
                         //display:inline-block;
@@ -1910,7 +1837,6 @@ html {
                         justify-content: center;
                         align-items: center;
                         position: absolute;
-
                         //&.fixed {
                         //position: fixed;
                         //top: 10%;
@@ -1918,7 +1844,6 @@ html {
                         //right: 50%;
                         //}
                         @include respond-to(handhelds) {
-
                             // outline:1px dotted red;
                             display: none;
                         }
@@ -1926,7 +1851,6 @@ html {
                             display: none;
                         }
                         @include respond-to(postmedium-screens) {
-
                             //   outline:1px dotted green;
                             display: flex;
                         }
@@ -1937,13 +1861,11 @@ html {
                             display: inline-block;
                             width: 100%;
                             height: 58px;
-
                             //flex-flow:column nowrap;
                             border-radius: 50%;
                             font-family: $ptSerif;
                             font-size: 1.1em;
                             border: 2px solid transparent;
-
                             //&:hover {
                             //border: 2px solid $lightenbrown2;
                             //}
@@ -1962,7 +1884,6 @@ html {
                             }
                             &.active {
                                 background: $lightenbrown2;
-
                                 //font-weight:bold;
                                 a {
                                     color: $fontcolor;
@@ -1975,7 +1896,6 @@ html {
                     }
                     .big_heading {
                         font-family: $ptSerif;
-
                         //text-transform: capitalize;
                         padding: 10px;
                         display: flex;
@@ -2013,7 +1933,6 @@ html {
                             width: 25px;
                             height: 14px;
                             display: inline-table;
-
                             //transform: rotate(180deg);
                             @extend .rotating;
                             margin: 8px 0 0 10px;
@@ -2028,17 +1947,15 @@ html {
                         display: block;
                         width: 128px;
                         height: 34px;
-                        margin: 0 0 2em;
+                        margin: 0 0 0.8em;
                     }
                     article {
                         color: $lightFontcolor;
                         width: 76.6%;
                         position: relative;
-
                         //font-size: 0.9em;
                         margin: 0 0 2em;
                         .history_elemnt_wr {
-
                             //height: 50em;
                             //outline: 1px dotted red;
                             margin: 2em 0;
@@ -2066,7 +1983,6 @@ html {
                                         margin: 1.2em 0 2em;
                                     }
                                     margin: 2em 0;
-
                                     //outline:1px dotted red;
                                     img {
                                         width: 100%;
@@ -2076,16 +1992,12 @@ html {
                             .p_history_wr {
                                 width: 43.402%;
                                 @include respond-to(handhelds) {
-
                                     // color: red;
                                     width: 100%;
                                     order: 1;
                                 }
-                                p {
-
-                                }
+                                p {}
                             }
-
                             //первый элемент списка "истории" (стрела)
                             &:first-child {
                                 height: 6em;
@@ -2108,17 +2020,13 @@ html {
                                 }
                             }
                             &:last-child {
-
                                 //height: 6em;
                                 //margin: 0;
                                 .year_content_container {
-
                                     //margin: 0;
                                     .years_arrow_wr {
-
                                         //margin: 0;
                                         .years_arrow {
-
                                             //height: 6em !important;
                                             //justify-content: flex-end;
                                             &:after {
@@ -2151,7 +2059,6 @@ html {
                                 @include respond-to(handhelds) {
                                     flex-flow: column nowrap;
                                 }
-
                                 //position: absolute;
                                 //height: 100%;
                                 .years_arrow_wr {
@@ -2163,13 +2070,11 @@ html {
                                     justify-content: center;
                                     align-items: flex-start;
                                     @include respond-to(handhelds) {
-
                                         // outline:1px dotted red;
                                         display: none;
                                     }
                                     .years_arrow {
                                         width: 100%;
-
                                         //height: 40%;
                                         //min-height: 100%;
                                         display: flex;
@@ -2177,7 +2082,6 @@ html {
                                         justify-content: space-between;
                                         align-items: center;
                                         position: relative;
-
                                         //outline:1px dotted green;
                                         background-color: #ccc;
                                         &:before {
@@ -2211,7 +2115,6 @@ html {
                             li {
                                 list-style-type: none;
                                 margin: 0 0 0.2em;
-
                                 //color: $fontcolor;
                                 .numlist {
                                     font-size: 1.1em;
@@ -2236,7 +2139,6 @@ html {
                                 list-style-type: none;
                                 margin: 0 0 0.5em;
                                 padding: 0 0 0 1.4em;
-
                                 //color: $fontcolor;
                                 list-style-image: url(../img/svg/septopmenu.svg);
                                 .numlist {
@@ -2251,6 +2153,13 @@ html {
                                     justify-content: center;
                                     align-items: center;
                                     margin: 0 1em 0 0;
+                                }
+                                a{
+                                    text-decoration: underline;
+                                    &:hover{
+                                    text-decoration: none;
+
+                                    }
                                 }
                             }
                         }
@@ -2267,7 +2176,6 @@ html {
                             @include respond-to(postmedium-screens) {
                                 max-width: 100%;
                             }
-
                             //width: 100%;
                         }
                         .fancyimg {
@@ -2276,7 +2184,6 @@ html {
                                 border: none;
                             }
                         }
-
                         // a>img {
                         //     &:before {
                         //         background-image: url(../img/svg/image_zoom.svg);
@@ -2290,17 +2197,18 @@ html {
                             max-height: 5.3em;
                             overflow: hidden;
                         }
+                        &.img_prev{
+                            margin: 2em 0 0 0;
+                        }
                     }
                     .expander {
                         margin: 0 0 2em;
                     }
                     .contacts_info {
-
                         //background-color:red;
                         display: flex;
                         flex-flow: row wrap;
                         justify-content: space-between;
-
                         //padding:0 0em 0 2em;
                         //flex-basis:100%;
                         width: 100%;
@@ -2311,7 +2219,6 @@ html {
                             flex-basis: 45%;
                             padding: 0 0 0 2em;
                             @include respond-to(handhelds) {
-
                                 // color: red;
                                 flex-basis: 100%;
                                 padding: 0;
@@ -2320,7 +2227,6 @@ html {
                                 display: inline-block;
                                 padding: 0;
                                 @include respond-to(handhelds) {
-
                                     // color: orange;
                                     font-size: 1em;
                                     margin: 1em 0 1em 1em;
@@ -2338,7 +2244,6 @@ html {
                                 display: inline-block;
                                 padding: 0;
                                 @include respond-to(handhelds) {
-
                                     // color: orange;
                                     font-size: 1em;
                                     margin: 1em 0 1em 1em;
@@ -2350,7 +2255,6 @@ html {
                                     display: inline-block;
                                     content: "";
                                     margin: 0 1.8em 0 0;
-
                                     //@include respond-to(handhelds) {
                                     //   // color: orange;
                                     //   content: none;
@@ -2361,7 +2265,6 @@ html {
                                 display: inline-block;
                                 padding: 0;
                                 @include respond-to(handhelds) {
-
                                     // color: orange;
                                     font-size: 1em;
                                     margin: 1em 0 1em 1em;
@@ -2379,7 +2282,6 @@ html {
                                 display: inline-block;
                                 padding: 0;
                                 @include respond-to(handhelds) {
-
                                     // color: orange;
                                     font-size: 1em;
                                     margin: 1em 0 1em 1em;
@@ -2397,7 +2299,6 @@ html {
                                 display: inline-block;
                                 padding: 0;
                                 @include respond-to(handhelds) {
-
                                     // color: orange;
                                     font-size: 1em;
                                     margin: 1em 0 1em 1em;
@@ -2420,14 +2321,11 @@ html {
                                     color: $lightFontcolor;
                                     font-size: 0.9em;
                                     @include respond-to(handhelds) {
-
                                         // color: orange;
                                         //   font-size:1em;
                                         margin: 0 4em;
                                     }
-                                    a {
-
-                                    }
+                                    a {}
                                     b {
                                         text-transform: uppercase;
                                         margin: 0 0.7em 0 0;
@@ -2436,19 +2334,16 @@ html {
                             }
                         }
                         .cont_form {
-
                             //flex-basis: 44.092%;
                             flex-basis: 40%;
                             padding: 0 2em 0 0;
                             @include respond-to(handhelds) {
                                 flex-basis: 90%;
-
                                 //padding:0 0 0 2em;
                                 display: inline-block;
                                 margin: 0 auto;
                                 padding: 0;
                             }
-
                             //form {
                             //    display: flex;
                             //    flex-flow: column nowrap;
@@ -2486,7 +2381,6 @@ html {
                         }
                     }
                     .other_info {
-
                         //outline:1px dotted red;
                         height: auto;
                         width: 97%;
@@ -2501,7 +2395,6 @@ html {
                             align-items: center;
                             width: 100%;
                             z-index: 2;
-
                             //height: 540px;
                             @include respond-to(medium-screens) {
                                 width: 100%;
@@ -2515,10 +2408,8 @@ html {
                                 flex-flow: row wrap;
                                 justify-content: space-around;
                                 align-items: center;
-
                                 // outline: 1px dotted red;
                                 li {
-
                                     // display: flex !important;
                                     // flex-flow: column nowrap;
                                     // align-items: center;
@@ -2530,10 +2421,8 @@ html {
                                     flex-flow: column nowrap;
                                     align-items: center;
                                     justify-content: space-around;
-
                                     // justify-content: center;
                                     width: 316px;
-
                                     // padding: 20px 0 20px 0;
                                     // margin: 20px 0 20px 0;
                                     padding: 0;
@@ -2545,7 +2434,6 @@ html {
                                         background-color: $lightenbrown;
                                         width: 270px;
                                     }
-
                                     // при наведении на элемент слайдера
                                     &:hover {
                                         background-color: #fff;
@@ -2553,9 +2441,7 @@ html {
                                             border: 4px solid $redColor;
                                             .akc_slider_wrap {
                                                 border: 3px solid $redColor;
-                                                img {
-
-                                                }
+                                                img {}
                                             }
                                         }
                                     }
@@ -2575,9 +2461,7 @@ html {
                                             align-items: center;
                                             justify-content: center;
                                             margin: 0;
-                                            img {
-
-                                            }
+                                            img {}
                                         }
                                     }
                                     .akc_heading_slide {
@@ -2588,7 +2472,6 @@ html {
                                             text-transform: uppercase;
                                             font-size: 1.1em;
                                             text-decoration: none;
-
                                             //color: $fontcolor;
                                         }
                                     }
@@ -2597,14 +2480,12 @@ html {
                                         background-repeat: no-repeat;
                                         width: 94px;
                                         height: 26px;
-
                                         // margin: 30px 0 15px 0;
                                         margin: 0;
                                     }
                                     .publishtime {
                                         font-size: 0.9em;
                                         font-family: $ptSerif;
-
                                         //font-weight: bold;
                                         display: inline-block;
                                         text-align: center;
@@ -2615,13 +2496,11 @@ html {
                                         width: 230px;
                                         color: $lightFontcolor;
                                         margin: 0;
-
                                         //font-size: 0.9em;
                                     }
                                 }
                             }
                         }
-
                         //past here doctors styles
                         .doctortype_wrapper {
                             position: relative;
@@ -2635,7 +2514,6 @@ html {
                             z-index: 2;
                             height: auto;
                             margin: 0 auto;
-
                             // overflow:hidden;
                             @include respond-to(medium-screens) {
                                 width: 82.73%;
@@ -2652,46 +2530,37 @@ html {
                                 flex-flow: row wrap;
                                 justify-content: space-around;
                                 align-items: center;
-
                                 // width
                                 // outline: 1px dotted red;
                                 li {
                                     display: flex !important;
                                     flex-flow: column nowrap;
                                     align-items: center;
-
                                     // justify-content: flex-start;
                                     //justify-content: center;
                                     justify-content: space-between;
                                     width: 298px;
-
                                     // padding: 20px 0 20px 0;
                                     // margin: 20px 0 20px 0;
                                     padding: 1em 0;
                                     margin: 1em 0;
                                     outline: 1px doted red;
                                     min-height: 23.5em;
-
                                     //height: auto;
                                     outline: none;
                                     border: none;
                                     @include respond-to(handhelds) {
                                         width: 17.85em;
                                     }
-
                                     // при наведении на элемент слайдера
                                     &:hover {
                                         background-color: #fff;
                                         .border_doctor_slider_wrap {
-
                                             // border: 4px solid $redColor;
                                             .doctor_slider_wrap {
                                                 overflow: hidden;
-
                                                 // border: 3px solid $redColor;
-                                                img {
-
-                                                }
+                                                img {}
                                                 svg {
                                                     path {
                                                         &:nth-child(2) {
@@ -2715,7 +2584,6 @@ html {
                                     }
                                     .border_doctor_slider_wrap {
                                         padding: 5px;
-
                                         // border-radius: 50%;
                                         // border: 4px solid $lightenbrown0;
                                         // background-color: $lightenmiddlebrown;
@@ -2723,12 +2591,10 @@ html {
                                         // mask: url(#a);
                                         margin: 0 0 1.4em;
                                         .doctor_slider_wrap {
-
                                             // border: 3px solid $lightenbrown0;
                                             width: 198px;
                                             height: 198px;
                                             overflow: hidden;
-
                                             // border-radius: 50%;
                                             display: flex;
                                             flex-flow: row nowrap;
@@ -2737,7 +2603,6 @@ html {
                                             margin: 0;
                                             position: relative;
                                             img {
-
                                                 // clip-path: url(#doctors);
                                                 // mask-border: url("./img/svg/doctor_border.svg") 35 repeat;
                                             }
@@ -2748,7 +2613,6 @@ html {
                                                 bottom: 0;
                                                 path {
                                                     &:first-child {
-
                                                         // fill:red;
                                                     }
                                                 }
@@ -2758,7 +2622,6 @@ html {
                                     .doctor_heading_slide {
                                         text-align: center;
                                         margin: 0;
-
                                         //margin: 0 0 1.2em;
                                         border-top: 2px solid darken($lightenmiddlebrown2, 10%);
                                         border-bottom: 2px solid $lightenmiddlebrown2;
@@ -2783,7 +2646,6 @@ html {
                                                 text-transform: capitalize;
                                                 font-size: 1.1em;
                                                 text-decoration: none;
-
                                                 //color: $fontcolor;
                                             }
                                         }
@@ -2792,7 +2654,6 @@ html {
                                         width: 230px;
                                         color: $lightFontcolor;
                                         min-height: 4.584em;
-
                                         //font-size: 0.9em;
                                         margin: 0;
                                         text-align: center;
@@ -2802,7 +2663,6 @@ html {
                                         align-items: flex-end;
                                     }
                                 }
-
                                 // вперед/назад
                                 // // пагинация слайдера
                                 .slick-list {
@@ -2815,7 +2675,6 @@ html {
                                     }
                                 }
                                 .slick-arrow {
-
                                     // outline: 1px dotted red;
                                     height: 50px;
                                     width: 50px;
@@ -2825,15 +2684,12 @@ html {
                                         background-color: $lightenbrown2;
                                     }
                                     &.slick-disabled {
-                                        &:before {
-
-                                        }
+                                        &:before {}
                                         opacity: 0.25;
                                         background-color: initial;
                                     }
                                     &.slick-prev {
                                         left: -70px;
-
                                         //transform: rotate(180deg);
                                         @extend .rotating;
                                         z-index: 2;
@@ -2855,7 +2711,6 @@ html {
                                     }
                                     &.slick-next {
                                         right: -70px;
-
                                         // transform: rotate(180deg);
                                         @include respond-to(handhelds) {
                                             right: -25px;
@@ -2874,7 +2729,6 @@ html {
                                         }
                                     }
                                 }
-
                                 // slick slider dots
                                 .slick-dots {
                                     height: initial;
@@ -2933,7 +2787,6 @@ html {
                                 flex-flow: row wrap;
                                 justify-content: space-around;
                                 align-items: space-around;
-
                                 // width
                                 // outline: 1px dotted red;
                                 li {
@@ -2947,8 +2800,7 @@ html {
                                     outline: 1px doted red;
                                     height: 26.5em;
                                     outline: none;
-                                    border: 1px solid lighten($fontcolor,50%);
-
+                                    border: 1px solid lighten($fontcolor, 50%);
                                     //@include respond-to(handhelds) {
                                     //    width: 17.85em;
                                     //}
@@ -2963,9 +2815,7 @@ html {
                                         line-height: 1.2em;
                                         text-align: center;
                                         font-size: 1.2em;
-                                        a {
-
-                                        }
+                                        a {}
                                     }
                                     .doctor_heading_vrach_insbord {
                                         background-image: url(../img/svg/akc_slider_sep.svg);
@@ -2977,7 +2827,6 @@ html {
                                     p {
                                         width: 230px;
                                         color: $lightFontcolor;
-
                                         //font-size: 0.9em;
                                         margin: 0;
                                         text-align: left;
@@ -2990,7 +2839,7 @@ html {
                                         padding: 0 0 0 1.5em;
                                         margin: 1.5em 0 0;
                                         line-height: 1em;
-                                        color: lighten($fontcolor,15%);
+                                        color: lighten($fontcolor, 15%);
                                         font-size: 0.85em;
                                     }
                                 }
@@ -3018,7 +2867,6 @@ html {
                             flex-basis: 215px;
                             .border_doctor_ava_wrap {
                                 padding: 5px;
-
                                 // border-radius: 50%;
                                 // border: 4px solid $lightenbrown0;
                                 // background-color: $lightenmiddlebrown;
@@ -3028,12 +2876,10 @@ html {
                                 display: flex;
                                 justify-content: center;
                                 .doctor_ava_wrap {
-
                                     // border: 3px solid $lightenbrown0;
                                     width: 198px;
                                     height: 198px;
                                     overflow: hidden;
-
                                     // border-radius: 50%;
                                     display: flex;
                                     flex-flow: row nowrap;
@@ -3043,7 +2889,6 @@ html {
                                     padding: 0;
                                     position: relative;
                                     img {
-
                                         // clip-path: url(#doctors);
                                         // mask-border: url("./img/svg/doctor_border.svg") 35 repeat;
                                     }
@@ -3054,7 +2899,6 @@ html {
                                         bottom: 0;
                                         path {
                                             &:first-child {
-
                                                 // fill:red;
                                             }
                                         }
@@ -3068,14 +2912,11 @@ html {
                         }
                         .mainabout_doctor {
                             width: 70%;
-
                             //flex-basis:656px;
                             @include respond-to(handhelds) {
-
                                 // color: red;
                                 width: 90%;
                             }
-
                             // @include respond-to(medium-screens) {
                             //     color: green;
                             // }
@@ -3087,7 +2928,6 @@ html {
                                     text-align: center;
                                     display: block;
                                 }
-
                                 // @include respond-to(medium-screens) {
                                 //    // color: green;
                                 // }
@@ -3106,18 +2946,19 @@ html {
                             }
                             .whois_he {
                                 font-size: 1.1em;
-                                border-bottom: 2px solid lighten($fontcolor,35%);
-                                height: 2.6em;
+                                border-bottom: 2px solid lighten($fontcolor, 35%);
+                                height: auto;
                                 display: inline-block;
+                                    padding: 0 0 0.1em 0;
                                 @include respond-to(handhelds) {
                                     text-align: center;
                                     width: 100%;
                                 }
                                 span {
-
+                                        padding: 0;
                                     //font-size:1.1em;
-                                    border-bottom: 1px solid lighten($fontcolor,35%);
-                                    height: 2.86em;
+                                    border-bottom: 1px solid lighten($fontcolor, 35%);
+                                    height: auto;
                                     display: inline-block;
                                     @include respond-to(handhelds) {
                                         text-align: center;
@@ -3125,30 +2966,22 @@ html {
                                     }
                                 }
                             }
-                            p {
-
-                            }
-                            h3 {
-
-                            }
+                            p {}
+                            h3 {}
                             ul {
-                                li {
-
-                                }
+                                li {}
                             }
                         }
                     }
                 }
             }
             .tabser {
-
                 //outline:1px dotted red;
                 margin: 0 auto 3em;
                 ul {
                     display: flex;
                     flex-flow: row wrap;
                     list-style: none;
-
                     //outline:1px dotted red;
                     justify-content: flex-start;
                     align-items: flex-start;
@@ -3156,13 +2989,11 @@ html {
                     padding: 0;
                     width: 94.924%;
                     @include respond-to(medium-screens) {
-
                         // justify-content: center;
                         // align-items: center;
                         margin: 1em auto 0;
                     }
                     @include respond-to(handhelds) {
-
                         // justify-content: center;
                         // align-items: center;
                         width: 100%;
@@ -3170,7 +3001,6 @@ html {
                     .tab {
                         margin: 0 1em;
                         padding: 0;
-
                         //outline:1px dotted red;
                         height: 3.438em;
                         width: 12.5em;
@@ -3181,10 +3011,8 @@ html {
                             font-size: 0.8em;
                             &.active {
                                 background-color: $lightenbrown;
-
                                 //color: $fontcolor;
                             }
-
                             // &:first-child{
                             //     margin:0;
                             //
@@ -3202,7 +3030,6 @@ html {
                             font-size: 0.8em;
                             &.active {
                                 background-color: $lightenbrown;
-
                                 //color: $fontcolor;
                             }
                         }
@@ -3211,7 +3038,6 @@ html {
                         }
                         &.active {
                             background-color: #fff;
-
                             //color: $fontcolor;
                         }
                         &:first-child {
@@ -3229,13 +3055,11 @@ html {
                             height: 100%;
                             font-family: $ptSerif;
                             font-size: 1.2em;
-                            color: lighten($fontcolor,10%);
+                            color: lighten($fontcolor, 10%);
                             .tab_informer {
-
                                 //display:inline-block;
                                 width: 33px;
                                 height: 33px;
-
                                 //outline:1px dotted red;
                                 background-color: $lightenbrown2;
                                 border-radius: 50%;
@@ -3253,13 +3077,10 @@ html {
                     flex-flow: column nowrap;
                     justify-content: center;
                     align-items: center;
-
                     //outline: 1px dotted red;
                     .comments_block {
-
                         //outline: 1px dotted red;
                         width: 100%;
-
                         //height:auto;
                         margin: 0 auto;
                         display: flex;
@@ -3286,9 +3107,8 @@ html {
                                     width: auto;
                                     height: auto;
                                     font-size: 1.2em;
-                                    color: lighten($fontcolor,10%);
+                                    color: lighten($fontcolor, 10%);
                                     @include respond-to(handhelds) {
-
                                         //margin:1em 0 0 0;
                                         width: 100%;
                                         text-align: left;
@@ -3300,7 +3120,7 @@ html {
                                     background-image: url(../img/svg/calendar.svg);
                                     background-repeat: no-repeat;
                                     padding: 0 0 0 1.5em;
-                                    color: lighten($fontcolor,15%);
+                                    color: lighten($fontcolor, 15%);
                                     font-size: 0.85em;
                                     @include respond-to(handhelds) {
                                         margin: 1em 0 0;
@@ -3308,8 +3128,7 @@ html {
                                 }
                             }
                             p {
-                                color: lighten($fontcolor,20%);
-
+                                color: lighten($fontcolor, 20%);
                                 //font-size: 0.9em;
                             }
                             .spoiler-wrap {
@@ -3324,7 +3143,6 @@ html {
                                         &:after {
                                             content: "┿";
                                             display: inline-block;
-
                                             //color:$redColor;
                                             font-size: 0.7em;
                                         }
@@ -3333,7 +3151,6 @@ html {
                                         &:after {
                                             content: "—";
                                             display: inline-block;
-
                                             //color:$redColor;
                                             font-size: 0.7em;
                                         }
@@ -3346,15 +3163,12 @@ html {
                         }
                     }
                     .firstbutton {
-
                         //display:inline-block;
                         margin: 0 auto 3em;
                         @include respond-to(handhelds) {
-
                             // color: red;
                             margin: 3em auto;
                         }
-
                         //color: $fontcolor;
                     }
                     .add_comment {
@@ -3363,11 +3177,9 @@ html {
                             padding: 0 0 1em 1em;
                             form {
                                 width: 50%;
-
                                 //margin:0 0 0 1em;
                                 align-items: flex-start;
                                 @include respond-to(handhelds) {
-
                                     // color: red;
                                     width: 90%;
                                 }
@@ -3383,10 +3195,8 @@ html {
                 }
             }
             .faqser {
-
                 //outline:1px dotted red;
                 margin: 0;
-
                 //@include respond-to(handhelds) {
                 //    margin: 0;
                 //}
@@ -3397,7 +3207,6 @@ html {
                     display: flex;
                     flex-flow: row wrap;
                     list-style: none;
-
                     //outline:1px dotted red;
                     justify-content: flex-start;
                     align-items: flex-start;
@@ -3405,13 +3214,11 @@ html {
                     padding: 0;
                     width: 94.924%;
                     @include respond-to(medium-screens) {
-
                         // justify-content: center;
                         // align-items: center;
                         margin: 1em auto 0;
                     }
                     @include respond-to(handhelds) {
-
                         // justify-content: center;
                         // align-items: center;
                         width: 100%;
@@ -3419,7 +3226,6 @@ html {
                     .tab {
                         margin: 0 1em;
                         padding: 0;
-
                         //outline:1px dotted red;
                         height: 3.438em;
                         width: 12.5em;
@@ -3430,10 +3236,8 @@ html {
                             font-size: 0.8em;
                             &.active {
                                 background-color: $lightenbrown;
-
                                 //color: $fontcolor;
                             }
-
                             // &:first-child{
                             //     margin:0;
                             //
@@ -3451,7 +3255,6 @@ html {
                             font-size: 0.8em;
                             &.active {
                                 background-color: $lightenbrown;
-
                                 //color: $fontcolor;
                             }
                         }
@@ -3460,7 +3263,6 @@ html {
                         }
                         &.active {
                             background-color: #fff;
-
                             //color: $fontcolor;
                         }
                         &:first-child {
@@ -3478,13 +3280,11 @@ html {
                             height: 100%;
                             font-family: $ptSerif;
                             font-size: 1.2em;
-                            color: lighten($fontcolor,10%);
+                            color: lighten($fontcolor, 10%);
                             .tab_informer {
-
                                 //display:inline-block;
                                 width: 33px;
                                 height: 33px;
-
                                 //outline:1px dotted red;
                                 background-color: $lightenbrown2;
                                 border-radius: 50%;
@@ -3502,26 +3302,21 @@ html {
                     flex-flow: column nowrap;
                     justify-content: center;
                     align-items: center;
-
                     //outline: 1px dotted red;
                     .add_comment {
                         @include respond-to(medium-screens) {
-
                             // color: green;
                             width: 92.73%;
                         }
                         @include respond-to(handhelds) {
-
                             // color: green;
                             width: 100%;
                         }
                         margin: 0;
                     }
                     .comments_block {
-
                         //outline: 1px dotted red;
                         width: 100%;
-
                         //height:auto;
                         margin: 0 auto;
                         display: flex;
@@ -3548,9 +3343,8 @@ html {
                                     width: auto;
                                     height: auto;
                                     font-size: 1.2em;
-                                    color: lighten($fontcolor,10%);
+                                    color: lighten($fontcolor, 10%);
                                     @include respond-to(handhelds) {
-
                                         //margin:1em 0 0 0;
                                         width: 100%;
                                         text-align: left;
@@ -3562,7 +3356,7 @@ html {
                                     background-image: url(../img/svg/calendar.svg);
                                     background-repeat: no-repeat;
                                     padding: 0 0 0 1.5em;
-                                    color: lighten($fontcolor,15%);
+                                    color: lighten($fontcolor, 15%);
                                     font-size: 0.85em;
                                     @include respond-to(handhelds) {
                                         margin: 1em 0 0;
@@ -3570,8 +3364,7 @@ html {
                                 }
                             }
                             p {
-                                color: lighten($fontcolor,20%);
-
+                                color: lighten($fontcolor, 20%);
                                 //font-size: 0.9em;
                             }
                             .spoiler-wrap {
@@ -3586,7 +3379,6 @@ html {
                                         &:after {
                                             content: "┿";
                                             display: inline-block;
-
                                             //color:$redColor;
                                             font-size: 0.7em;
                                         }
@@ -3595,7 +3387,6 @@ html {
                                         &:after {
                                             content: "—";
                                             display: inline-block;
-
                                             //color:$redColor;
                                             font-size: 0.7em;
                                         }
@@ -3608,15 +3399,12 @@ html {
                         }
                     }
                     .firstbutton {
-
                         //display:inline-block;
                         margin: 0 auto 3em;
                         @include respond-to(handhelds) {
-
                             // color: red;
                             margin: 3em auto;
                         }
-
                         //color: $fontcolor;
                     }
                     .add_comment {
@@ -3625,11 +3413,9 @@ html {
                             padding: 0 0 1em 1em;
                             form {
                                 width: 50%;
-
                                 //margin:0 0 0 1em;
                                 align-items: flex-start;
                                 @include respond-to(handhelds) {
-
                                     // color: red;
                                     width: 90%;
                                 }
@@ -3647,10 +3433,8 @@ html {
             .someother_conteiner {
                 margin: 0 auto 3em;
             }
-
             // обертка главного слайдера
             .firsttype_slider_wrapper {
-
                 // outline: 1px dotted red;
                 width: $mainWidt;
                 margin: 2em auto;
@@ -3659,7 +3443,6 @@ html {
                 justify-content: center;
                 align-items: center;
                 position: relative;
-
                 // padding: 0 40px 0 40px;
                 // обертка для заголовка слайдера
                 @include respond-to(medium-screens) {
@@ -3667,21 +3450,18 @@ html {
                 }
                 @include respond-to(postmedium-screens) {
                     width: 39.5em;
-
                     // color: orange;
                 }
                 @include respond-to(handhelds) {
                     width: 16.7em;
                 }
                 .big_heading_for_slider {
-
                     // outline: 1px dotted red;
                     width: 100%;
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
                     margin: 0 auto 2em;
-
                     // @include respond-to(medium-screens) {
                     //     width: 92.73%;
                     // }
@@ -3708,7 +3488,6 @@ html {
                     }
                     .big_heading {
                         font-family: $ptSerif;
-
                         // text-transform: capitalize;
                         padding: 10px;
                         display: flex;
@@ -3733,7 +3512,6 @@ html {
                             width: 25px;
                             height: 14px;
                             display: block;
-
                             //transform: rotate(180deg);
                             @extend .rotating;
                             margin: 0 0 0 10px;
@@ -3756,12 +3534,10 @@ html {
                             font-family: $ptSerif;
                             font-size: 0.9em;
                             text-decoration: none;
-
                             //color: $fontcolor;
                         }
                     }
                 }
-
                 // первый слайдер (инициализируется по классу firsttype_slider_wrapper в main.js)
                 .firsttype_slider {
                     position: relative;
@@ -3785,10 +3561,8 @@ html {
                         flex-flow: row wrap;
                         justify-content: space-around;
                         align-items: center;
-
                         // outline: 1px dotted red;
                         li {
-
                             // display: flex !important;
                             // flex-flow: column nowrap;
                             // align-items: center;
@@ -3800,10 +3574,8 @@ html {
                             flex-flow: column nowrap;
                             align-items: center;
                             justify-content: space-around;
-
                             // justify-content: center;
                             width: 316px;
-
                             // padding: 20px 0 20px 0;
                             // margin: 20px 0 20px 0;
                             padding: 0;
@@ -3815,7 +3587,6 @@ html {
                                 background-color: $lightenbrown;
                                 width: 270px;
                             }
-
                             // при наведении на элемент слайдера
                             &:hover {
                                 background-color: $lightenbrown0;
@@ -3823,9 +3594,7 @@ html {
                                     border: 4px solid $redColor;
                                     .akc_slider_wrap {
                                         border: 3px solid $redColor;
-                                        img {
-
-                                        }
+                                        img {}
                                     }
                                 }
                             }
@@ -3845,9 +3614,7 @@ html {
                                     align-items: center;
                                     justify-content: center;
                                     margin: 0;
-                                    img {
-
-                                    }
+                                    img {}
                                 }
                             }
                             .akc_heading_slide {
@@ -3858,7 +3625,6 @@ html {
                                     text-transform: uppercase;
                                     font-size: 1.1em;
                                     text-decoration: none;
-
                                     //color: $fontcolor;
                                 }
                             }
@@ -3867,14 +3633,12 @@ html {
                                 background-repeat: no-repeat;
                                 width: 94px;
                                 height: 26px;
-
                                 // margin: 30px 0 15px 0;
                                 margin: 0;
                             }
                             .publishtime {
                                 font-size: 0.9em;
                                 font-family: $ptSerif;
-
                                 //font-weight: bold;
                                 display: inline-block;
                                 text-align: center;
@@ -3885,11 +3649,9 @@ html {
                                 width: 230px;
                                 color: $lightFontcolor;
                                 margin: 0;
-
                                 //font-size: 0.9em;
                             }
                         }
-
                         // вперед/назад
                         // // пагинация слайдера
                         .slick-list {
@@ -3902,7 +3664,6 @@ html {
                             }
                         }
                         .slick-arrow {
-
                             // outline: 1px dotted red;
                             height: 50px;
                             width: 50px;
@@ -3912,14 +3673,11 @@ html {
                                 background-color: $lightenbrown2;
                             }
                             &.slick-disabled {
-                                &:before {
-
-                                }
+                                &:before {}
                                 opacity: 0.25;
                                 background-color: initial;
                             }
                             &.slick-prev {
-
                                 // left: -70px;
                                 //transform: rotate(180deg);
                                 @extend .rotating;
@@ -3938,7 +3696,6 @@ html {
                                 }
                             }
                             &.slick-next {
-
                                 // right: -70px;
                                 // transform: rotate(180deg);
                                 &:before {
@@ -3955,7 +3712,6 @@ html {
                                 }
                             }
                         }
-
                         // slick slider dots
                         .slick-dots {
                             height: initial;
@@ -4003,15 +3759,12 @@ html {
                         }
                     }
                 }
-
                 // вперед/назад
                 // // пагинация слайдера
             }
         }
-
         // обертка слайдера фотогалереи
         .gallery_slider_wrapper {
-
             // outline: 1px dotted red;
             width: $mainWidt;
             height: auto;
@@ -4021,16 +3774,13 @@ html {
             justify-content: space-around;
             align-items: center;
             position: relative;
-
             // padding: 0 40px 0 40px;
             // обертка для заголовка слайдера
             @include respond-to(medium-screens) {
                 width: 92.73%;
-
                 // width: 100%;
             }
             @include respond-to(postmedium-screens) {
-
                 // width: 92.73%;
                 width: 47.5em;
             }
@@ -4045,7 +3795,6 @@ html {
                 margin: 0 auto 2em;
                 .big_heading {
                     font-family: $ptSerif;
-
                     // text-transform: capitalize;
                     padding: 10px;
                     display: flex;
@@ -4073,14 +3822,12 @@ html {
                         @extend .rotating;
                         margin: 0 0 0 10px;
                         @include respond-to(handhelds) {
-
                             //transform: rotate(180deg);
                             display: none;
                         }
                     }
                 }
             }
-
             // галерея слайдер (инициализируется по классу gallerytype_slider в main.js)
             .gallerytype_slider {
                 position: relative;
@@ -4089,20 +3836,16 @@ html {
                 flex-flow: column nowrap;
                 justify-content: space-around;
                 align-items: center;
-
                 // width: 861px;
                 width: 100%;
                 height: 574px;
                 z-index: 2;
-
                 // overflow: hidden;
                 @include respond-to(medium-screens) {
-
                     // height: 100%;
                     height: 29.5em;
                 }
                 .slides {
-
                     // outline: 1px dotted red;
                     height: 100%;
                     width: 100%;
@@ -4118,15 +3861,27 @@ html {
                         align-items: center;
                     }
                     li {
-                        img {
-
-                        }
+                        img {}
                     }
                     .slick-list {
                         width: 861px;
                         height: 574px;
-                        @include respond-to(medium-screens) {
+                            outline: none;
 
+                        &:after{
+                            content: "";
+                            position: absolute;
+                            width: 100%;
+                            height: 100%;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            z-index: 50;
+                            bottom: 0;
+                            background: url(../img/slider_mask.png);
+                            outline: none;
+                        }
+                        @include respond-to(medium-screens) {
                             // height: 560px;
                             // width: 374px;
                             width: 100%;
@@ -4134,6 +3889,8 @@ html {
                         }
                         .slick-slide {
                             width: auto;
+                            outline: none;
+                            
                             img {
                                 height: auto;
                                 width: 100%;
@@ -4141,43 +3898,34 @@ html {
                         }
                     }
                     .slick-arrow {
-
                         // outline: 1px dotted red;
                         height: initial;
                         width: initial;
-
                         // border-radius: 50%;
                         overflow: hidden;
-
                         // top:0;
                         // left:0;
                         // position: relative;
                         height: 574px;
                         top: 10px;
                         &.slick-disabled {
-                            &:before {
-
-                            }
+                            &:before {}
                             opacity: 0.9;
                             background-color: initial;
                         }
                         &.slick-prev {
-
                             // left: -70px;
                             // transform: rotate(180deg);
                             left: 0;
                             z-index: 1;
                             @include respond-to(medium-screens) {
-
                                 // margin: -30px 0 0 0;
                                 top: 50%;
-
                                 // left: 10px;
                                 height: 50px;
                                 width: 50px;
                                 border-radius: 50%;
                                 overflow: hidden;
-
                                 // border:1px solid #736D6D;
                             }
                             &:before {
@@ -4204,7 +3952,6 @@ html {
                                     color: initial;
                                     content: "";
                                     transform: rotate(180deg);
-
                                     //@extend .rotating;
                                     // background-image: url(/dist/img/sprite.png);
                                     // width: 145px;
@@ -4215,15 +3962,12 @@ html {
                         }
                         &.slick-next {
                             right: 0;
-
                             // top:0;
                             // bottom:0;
                             // transform: rotate(180deg);
                             @include respond-to(medium-screens) {
-
                                 // margin: -30px 0 0 0;
                                 top: 50%;
-
                                 // right: 10px;
                                 height: 50px;
                                 width: 50px;
@@ -4235,7 +3979,6 @@ html {
                                 opacity: initial;
                                 color: initial;
                                 content: "";
-
                                 // background-image: url("../img/svg/navigation_button.svg");
                                 @include sprite($photo_rightarrow);
                                 display: block;
@@ -4253,7 +3996,6 @@ html {
                                     opacity: initial;
                                     color: initial;
                                     content: "";
-
                                     // background-image: url(/dist/img/sprite.png);
                                     // width: 145px;
                                     // height: 574px;
@@ -4262,7 +4004,6 @@ html {
                             }
                         }
                     }
-
                     // slick slider dots
                     .slick-dots {
                         height: initial;
@@ -4318,7 +4059,6 @@ html {
                     }
                 }
             }
-
             // вперед/назад
             // // пагинация слайдера
             .custom-navigation2 {
@@ -4331,7 +4071,6 @@ html {
                 justify-content: space-between;
                 align-items: center;
                 a {
-
                     // color: red;
                     // outline: 1px dotted red;
                     display: block;
@@ -4351,12 +4090,10 @@ html {
             .custom-controls-container2 {
                 position: absolute;
                 width: 100%;
-
                 // bottom:0
                 left: 0;
                 margin: 30px 0 0;
                 .flex-control-nav.flex-control-paging {
-
                     // background-color: #ccc;
                     li {
                         a {
@@ -4366,20 +4103,17 @@ html {
                 }
             }
         }
-
         // врачи////////врачи////////врачи////////врачи////////врачи////////
         // обертка слайдера с докторами
         .doctortype_slider_wrapper {
             width: $mainWidt;
             margin: 2em auto;
-
             // outline: 1px dotted red;
             display: flex;
             flex-flow: column nowrap;
             justify-content: center;
             align-items: center;
             position: relative;
-
             // padding: 0 40px 0 40px;
             // обертка для заголовка слайдера
             @include respond-to(medium-screens) {
@@ -4392,7 +4126,6 @@ html {
                 width: 16.7em;
             }
             .big_heading_for_slider {
-
                 // outline: 1px dotted red;
                 width: 100%;
                 display: flex;
@@ -4422,13 +4155,11 @@ html {
                 }
                 .big_heading {
                     font-family: $ptSerif;
-
                     // text-transform: capitalize;
                     padding: 10px;
                     display: flex;
                     line-height: 0.3em;
                     font-size: 2em;
-
                     // @include respond-to(medium-screens) {
                     //     // font-size: 1.2em;
                     //     // text-transform: uppercase;
@@ -4447,7 +4178,6 @@ html {
                         height: 14px;
                         display: block;
                         margin: 0 10px 0 0;
-
                         // @include respond-to(medium-screens) {
                         //     display: none;
                         // }
@@ -4462,11 +4192,9 @@ html {
                         width: 25px;
                         height: 14px;
                         display: block;
-
                         //transform: rotate(180deg);
                         @extend .rotating;
                         margin: 0 0 0 10px;
-
                         // @include respond-to(medium-screens) {
                         //     display: none;
                         // }
@@ -4489,12 +4217,10 @@ html {
                         font-family: $ptSerif;
                         font-size: 0.9em;
                         text-decoration: none;
-
                         //color: $fontcolor;
                     }
                 }
             }
-
             //  слайдер с докторами (инициализируется по классу doctortype_slider в main.js)
             .wrap_doctor {
                 width: 100%;
@@ -4506,7 +4232,6 @@ html {
                     @include respond-to(handhelds) {
                         margin: 0;
                         border: none;
-
                         // width:70%;
                     }
                     .doctortype_slider {
@@ -4521,7 +4246,6 @@ html {
                         z-index: 2;
                         height: 480px;
                         margin: 0 auto;
-
                         // overflow:hidden;
                         @include respond-to(medium-screens) {
                             width: 82.73%;
@@ -4538,7 +4262,6 @@ html {
                             flex-flow: row wrap;
                             justify-content: space-around;
                             align-items: center;
-
                             // width
                             // outline: 1px dotted red;
                             li {
@@ -4546,10 +4269,8 @@ html {
                                 flex-flow: column nowrap;
                                 align-items: center;
                                 justify-content: flex-start;
-
                                 //justify-content: center;
                                 width: 298px;
-
                                 // padding: 20px 0 20px 0;
                                 // margin: 20px 0 20px 0;
                                 padding: 0;
@@ -4560,20 +4281,15 @@ html {
                                 @include respond-to(handhelds) {
                                     width: 17.85em;
                                 }
-
                                 // при наведении на элемент слайдера
                                 &:hover {
                                     background-color: #fff;
                                     .border_doctor_slider_wrap {
-
                                         // border: 4px solid $redColor;
                                         .doctor_slider_wrap {
                                             overflow: hidden;
-
                                             // border: 3px solid $redColor;
-                                            img {
-
-                                            }
+                                            img {}
                                             svg {
                                                 path {
                                                     &:nth-child(2) {
@@ -4597,7 +4313,6 @@ html {
                                 }
                                 .border_doctor_slider_wrap {
                                     padding: 5px;
-
                                     // border-radius: 50%;
                                     // border: 4px solid $lightenbrown0;
                                     // background-color: $lightenmiddlebrown;
@@ -4605,12 +4320,10 @@ html {
                                     // mask: url(#a);
                                     margin: 0 0 1.4em;
                                     .doctor_slider_wrap {
-
                                         // border: 3px solid $lightenbrown0;
                                         width: 198px;
                                         height: 198px;
                                         overflow: hidden;
-
                                         // border-radius: 50%;
                                         display: flex;
                                         flex-flow: row nowrap;
@@ -4619,7 +4332,6 @@ html {
                                         margin: 0;
                                         position: relative;
                                         img {
-
                                             // clip-path: url(#doctors);
                                             // mask-border: url("./img/svg/doctor_border.svg") 35 repeat;
                                         }
@@ -4630,7 +4342,6 @@ html {
                                             bottom: 0;
                                             path {
                                                 &:first-child {
-
                                                     // fill:red;
                                                 }
                                             }
@@ -4640,7 +4351,6 @@ html {
                                 .doctor_heading_slide {
                                     text-align: center;
                                     margin: 0;
-
                                     //margin: 0 0 1.2em;
                                     border-top: 2px solid darken($lightenmiddlebrown2, 10%);
                                     border-bottom: 2px solid $lightenmiddlebrown2;
@@ -4666,7 +4376,6 @@ html {
                                             text-transform: capitalize;
                                             font-size: 1.1em;
                                             text-decoration: none;
-
                                             //color: $fontcolor;
                                         }
                                     }
@@ -4675,7 +4384,6 @@ html {
                                     width: 230px;
                                     color: $lightFontcolor;
                                     min-height: 4.584em;
-
                                     //font-size: 0.9em;
                                     margin: 0;
                                     text-align: center;
@@ -4685,7 +4393,6 @@ html {
                                     align-items: flex-end;
                                 }
                             }
-
                             // вперед/назад
                             // // пагинация слайдера
                             .slick-list {
@@ -4699,7 +4406,6 @@ html {
                                 }
                             }
                             .slick-arrow {
-
                                 // outline: 1px dotted red;
                                 height: 50px;
                                 width: 50px;
@@ -4709,15 +4415,12 @@ html {
                                     background-color: $lightenbrown2;
                                 }
                                 &.slick-disabled {
-                                    &:before {
-
-                                    }
+                                    &:before {}
                                     opacity: 0.25;
                                     background-color: initial;
                                 }
                                 &.slick-prev {
                                     left: -70px;
-
                                     //transform: rotate(180deg);
                                     @extend .rotating;
                                     z-index: 2;
@@ -4739,7 +4442,6 @@ html {
                                 }
                                 &.slick-next {
                                     right: -70px;
-
                                     // transform: rotate(180deg);
                                     @include respond-to(handhelds) {
                                         right: -25px;
@@ -4758,7 +4460,6 @@ html {
                                     }
                                 }
                             }
-
                             // slick slider dots
                             .slick-dots {
                                 height: initial;
@@ -4808,14 +4509,11 @@ html {
                     }
                 }
             }
-
             // конец врачей/////////конец врачей/////////конец врачей/////////конец врачей/////////конец врачей/////////
         }
     }
-
     // ПОДВАЛ//////ПОДВАЛ//////ПОДВАЛ//////ПОДВАЛ//////ПОДВАЛ//////ПОДВАЛ//////ПОДВАЛ//////ПОДВАЛ//////
     .footer_wrapper {
-
         // outline: 1px dotted red;
         background-color: $mainbrown;
         height: 385px;
@@ -4837,7 +4535,6 @@ html {
             color: #fff;
             width: $mainWidt;
             margin: 2em auto;
-
             // outline: 1px dotted white;
             @include respond-to(medium-screens) {
                 width: 92.73%;
@@ -4863,7 +4560,6 @@ html {
                 @include respond-to(handhelds) {
                     height: auto;
                 }
-
                 // span {
                 //     display: block;
                 //     padding: 0 0 1.5em 0;
@@ -4879,7 +4575,6 @@ html {
                     li {
                         list-style-position: inside;
                         border: none;
-
                         // list-style-image: none;
                         display: list-item;
                         list-style-type: disc;
@@ -4912,7 +4607,6 @@ html {
                             }
                             &:hover {
                                 text-decoration: underline;
-
                                 // color:inherit;
                             }
                             &[type="email"] {
@@ -4933,7 +4627,6 @@ html {
                 @include respond-to(medium-screens) {
                     display: none;
                 }
-
                 // span {
                 //     display: block;
                 //     padding: 0 0 1.5em 0;
@@ -4954,7 +4647,6 @@ html {
                     li {
                         list-style-position: inside;
                         border: none;
-
                         // list-style-image: none;
                         display: list-item;
                         list-style-type: disc;
@@ -4988,7 +4680,6 @@ html {
                             }
                             &:hover {
                                 text-decoration: underline;
-
                                 // color:inherit;
                             }
                         }
@@ -5008,7 +4699,6 @@ html {
             padding: 2em 0;
             @include respond-to(medium-screens) {
                 width: 92.73%;
-
                 // height:100%;
             }
             span {

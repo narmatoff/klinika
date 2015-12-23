@@ -54,7 +54,7 @@ html(lang="en").no-js
             //- шапка
             include includes/head.jade
             //- обертка для контента (главной)
-            .content_wrapper
+            .content_wrapper(data-stellar-background-ratio="0.5")
                 .about_on_main
                     .bordered
                         span.big_heading О клинике доктора пеля
@@ -239,6 +239,7 @@ html(lang="en").no-js
         script(src='bower_components/jquery-ui/jquery-ui.js')
         script(src='bower_components/emitter-es6/browser/index.js')
         script(src='bower_components/slideout.js/dist/slideout.js')
+        script(src='bower_components/jquery.stellar/jquery.stellar.js')
         // endbower
         script(src='bower_components/easytabs/lib/jquery.easytabs.min.js')
         //- end before body

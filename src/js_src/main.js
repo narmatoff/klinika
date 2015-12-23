@@ -2,7 +2,10 @@ $(document).ready(function() {
 
 
 
-    $(".fancyimg").fancybox();
+    $(".fancyimg").fancybox({
+        openEffect: 'fade',
+        closeEffect: 'fade'
+    });
     $(".fancyblock").fancybox({
         openEffect: 'fade',
         closeEffect: 'fade'
@@ -567,6 +570,6 @@ $(document).ready(function() {
         }
     });
 
-
+$('body').stellar();
 
 });

@@ -50,7 +50,8 @@ html(lang="en").no-js
                                             include includes/doctor_border.jade
                                 a(href="#fancyform").fourthbutton.nonarrow.fancyblock записаться на прием
                             .mainabout_doctor
-                                h1 Рищук Сергей Владимирович                                span.whois_he
+                                h1 Рищук Сергей Владимирович
+                                span.whois_he
                                     span Врач-репродуктолог
                                 article
                                     p  Доктор медицинских наук, профессор кафедры акушерства, гинекологии, перинатологии и репродуктологии Северо-Западного государственного медицинского университета им. И.И. Мечникова
@@ -201,12 +202,132 @@ html(lang="en").no-js
         //- форма записи на прием
         div#fancyform
             h1 Запись на прием
-            div#tab-container.fancyform_tabs                ul
+            div#tab-container.fancyform_tabs
+                ul
                     li
-                        a(href="#fancyform_tab1").visited1 Направление                    li                        a(href="#fancyform_tab2").visited2 Специалист                    li                        a(href="#fancyform_tab3").visited3 Дата и время                    li                        a(href="#fancyform_tab4").visited4 Контакты                    li                        a(href="#fancyform_tab5").visited5 Завершение                form#purchase_todoctor
+                        a(href="#fancyform_tab1").visited1 Направление
+                    li
+                        a(href="#fancyform_tab2").visited2 Специалист
+                    li
+                        a(href="#fancyform_tab3").visited3 Дата и время
+                    li
+                        a(href="#fancyform_tab4").visited4 Контакты
+                    li
+                        a(href="#fancyform_tab5").visited5 Завершение
+                form#purchase_todoctor
                     div#fancyform_tab1.fieldset_wrapper
-                        h3  Направление                        fieldset
-                            div.customradiobtns                                input(type="radio" name="radiog_lite" required="required")#radio11.css-checkbox                                label(for="radio11").css-label.radGroup1 Гастроэтерология                                    input(type="radio" name="radiog_lite" checked="checked")#radio22.css-checkbox                                label(for="radio22" checked="checked" required="required").css-label.radGroup1 Хирургия                                     input(type="radio" name="radiog_lite")#radio33.css-checkbox                                label(for="radio34" checked="checked" required="required").css-label.radGroup1 654654654684                                      input(type="radio" name="radiog_lite")#radio44.css-checkbox                                label(for="radio44" checked="checked" required="required").css-label.radGroup1 654654654684                                      input(type="radio" name="radiog_lite")#radio55.css-checkbox                                label(for="radio55" checked="checked" required="required").css-label.radGroup1 654654654684                                      input(type="radio" name="radiog_lite")#radio66.css-checkbox                                label(for="radio66" checked="checked" required="required").css-label.radGroup1 654654654684                                //- input(type="button" value="назад").prev-button                        .navbuttonz                            button(type="button" value="дальше").next-button.fourthbutton дальше                    div#fancyform_tab2.fieldset_wrapper                        h3  Специалист                        fieldset                            div.customradiobtns                                input(type="radio" name="radiog_lite" required="required")#radio1.css-checkbox                                label(for="radio1").css-label.radGroup1 Гастроэтерология                                    input(type="radio" name="radiog_lite" checked="checked")#radio2.css-checkbox                                label(for="radio2" checked="checked" required="required").css-label.radGroup1 Хирургия                                     input(type="radio" name="radiog_lite")#radio3.css-checkbox                                label(for="radio3" checked="checked" required="required").css-label.radGroup1 654654654684                                      input(type="radio" name="radiog_lite")#radio4.css-checkbox                                label(for="radio4" checked="checked" required="required").css-label.radGroup1 654654654684                                      input(type="radio" name="radiog_lite")#radio5.css-checkbox                                label(for="radio5" checked="checked" required="required").css-label.radGroup1 654654654684                                      input(type="radio" name="radiog_lite")#radio6.css-checkbox                                label(for="radio6" checked="checked" required="required").css-label.radGroup1 654654654684                                      input(type="radio" name="radiog_lite")#radio7.css-checkbox                                label(for="radio7" checked="checked" required="required").css-label.radGroup1 654654654684                                      input(type="radio" name="radiog_lite")#radio8.css-checkbox                                label(for="radio8" checked="checked" required="required").css-label.radGroup1 654654654684                                      input(type="radio" name="radiog_lite")#radio9.css-checkbox                                label(for="radio9" checked="checked" required="required").css-label.radGroup1 654654654684                                      input(type="radio" name="radiog_lite")#radio10.css-checkbox                                label(for="radio10" checked="checked" required="required").css-label.radGroup1 654654654684                                      input(type="radio" name="radiog_lite")#radio11.css-checkbox                                label(for="radio11" checked="checked" required="required").css-label.radGroup1 654654654684                              .navbuttonz                            button(type="button" value="назад").prev-button.secondbutton назад                            button(type="button" value="дальше").next-button.fourthbutton дальше                    div#fancyform_tab3.fieldset_wrapper                        h3  Дата и время                        fieldset                            input(type="date" name="date" title="Пожалуйста, Введите время" value="" required="required")                            .datetime                                .datepicker                                .timeradio                                    div.timeradiobtns                                        input(type="radio" name="radiog_lite" required="required")#time1.css-checkbox                                        label(for="time1").css-label.radGroup1 16:00                                            input(type="radio" name="radiog_lite" checked="checked")#time2.css-checkbox                                        label(for="time2" checked="checked" required="required").css-label.radGroup1 17:00                                             input(type="radio" name="radiog_lite")#time3.css-checkbox                                        label(for="time3" checked="checked" required="required").css-label.radGroup1 18:00                                              input(type="radio" name="radiog_lite")#time4.css-checkbox                                        label(for="time4" checked="checked" required="required").css-label.radGroup1 19:00                                              input(type="radio" name="radiog_lite")#time5.css-checkbox                                        label(for="time5" checked="checked" required="required").css-label.radGroup1 20:00                                              input(type="radio" name="radiog_lite")#time6.css-checkbox                                        label(for="time6" checked="checked" required="required").css-label.radGroup1 21:00                                              input(type="radio" name="radiog_lite")#time7.css-checkbox                                        label(for="time7" checked="checked" required="required").css-label.radGroup1 22:00                                              input(type="radio" name="radiog_lite")#time8.css-checkbox                                        label(for="time8" checked="checked" required="required").css-label.radGroup1 23:00                            .navbuttonz                            button(type="button" value="назад").prev-button.secondbutton назад                            button(type="button" value="дальше").next-button.fourthbutton дальше                    div#fancyform_tab4.fieldset_wrapper                        h3  Контакты                        fieldset                            .personalinfo                                input(type="text" name="name" title="Обязательное поле" placeholder="Имя" required="required")                                input(type="text" name="tel" title="Обязательное поле" placeholder="Телефон" required="required")                                input(type="email" name="email" title="Обязательное поле" placeholder="e-mail" required="required")                                textarea(placeholder="Ваше сообщение")                         .navbuttonz                            button(type="button" value="назад").prev-button.secondbutton назад                            button(type="button" value="дальше").next-button.fourthbutton дальше                    div#fancyform_tab5.fieldset_wrapper                        h3  Завершение                        //- fieldset                        .personalinfo                            .persitem Клиент:                            #name Иванов Иван                        .personalinfo                            .persitem Телефон:                            #phone 984684684684                        .personalinfo                            .persitem Дата:                            #date 23.23.2325                        .personalinfo                            .persitem Время:                            #time 88:48                        .personalinfo                            .persitem Направление:                            #napr Стоматология                        .personalinfo                            p#comment  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta consequatur minus ipsam voluptas facere, pariatur expedita maiores, quidem suscipit maxime.                                                    .navbuttonz                            button(type="button" value="назад").prev-button.secondbutton назад                            button(type="submit").next-button.fourthbutton Отправить            //-             //- button#disableCustomsTabs Отключить вкладки            //- button#enableCustomsTabs Включить вкладки        //- before body///////////////////////////////////////////////////////////////////////////////////////
+                        h3  Направление
+                        fieldset
+                            div.customradiobtns
+                                input(type="radio" name="radiog_lite" required="required")#radio11.css-checkbox
+                                label(for="radio11").css-label.radGroup1 Гастроэтерология    
+                                input(type="radio" name="radiog_lite" checked="checked")#radio22.css-checkbox
+                                label(for="radio22" checked="checked" required="required").css-label.radGroup1 Хирургия     
+                                input(type="radio" name="radiog_lite")#radio33.css-checkbox
+                                label(for="radio34" checked="checked" required="required").css-label.radGroup1 654654654684      
+                                input(type="radio" name="radiog_lite")#radio44.css-checkbox
+                                label(for="radio44" checked="checked" required="required").css-label.radGroup1 654654654684      
+                                input(type="radio" name="radiog_lite")#radio55.css-checkbox
+                                label(for="radio55" checked="checked" required="required").css-label.radGroup1 654654654684      
+                                input(type="radio" name="radiog_lite")#radio66.css-checkbox
+                                label(for="radio66" checked="checked" required="required").css-label.radGroup1 654654654684        
+                        //- input(type="button" value="назад").prev-button
+                        .navbuttonz
+                            button(type="button" value="дальше").next-button.fourthbutton дальше
+                    div#fancyform_tab2.fieldset_wrapper
+                        h3  Специалист
+                        fieldset
+                            div.customradiobtns
+                                input(type="radio" name="radiog_lite" required="required")#radio1.css-checkbox
+                                label(for="radio1").css-label.radGroup1 Гастроэтерология    
+                                input(type="radio" name="radiog_lite" checked="checked")#radio2.css-checkbox
+                                label(for="radio2" checked="checked" required="required").css-label.radGroup1 Хирургия     
+                                input(type="radio" name="radiog_lite")#radio3.css-checkbox
+                                label(for="radio3" checked="checked" required="required").css-label.radGroup1 654654654684      
+                                input(type="radio" name="radiog_lite")#radio4.css-checkbox
+                                label(for="radio4" checked="checked" required="required").css-label.radGroup1 654654654684      
+                                input(type="radio" name="radiog_lite")#radio5.css-checkbox
+                                label(for="radio5" checked="checked" required="required").css-label.radGroup1 654654654684      
+                                input(type="radio" name="radiog_lite")#radio6.css-checkbox
+                                label(for="radio6" checked="checked" required="required").css-label.radGroup1 654654654684      
+                                input(type="radio" name="radiog_lite")#radio7.css-checkbox
+                                label(for="radio7" checked="checked" required="required").css-label.radGroup1 654654654684      
+                                input(type="radio" name="radiog_lite")#radio8.css-checkbox
+                                label(for="radio8" checked="checked" required="required").css-label.radGroup1 654654654684      
+                                input(type="radio" name="radiog_lite")#radio9.css-checkbox
+                                label(for="radio9" checked="checked" required="required").css-label.radGroup1 654654654684      
+                                input(type="radio" name="radiog_lite")#radio10.css-checkbox
+                                label(for="radio10" checked="checked" required="required").css-label.radGroup1 654654654684      
+                                input(type="radio" name="radiog_lite")#radio11.css-checkbox
+                                label(for="radio11" checked="checked" required="required").css-label.radGroup1 654654654684      
+                        .navbuttonz
+                            button(type="button" value="назад").prev-button.secondbutton назад
+                            button(type="button" value="дальше").next-button.fourthbutton дальше
+                    div#fancyform_tab3.fieldset_wrapper
+                        h3  Дата и время
+                        fieldset
+                            input(type="date" name="date" title="Пожалуйста, Введите время" value="" required="required")
+                            .datetime
+                                .datepicker
+                                .timeradio
+                                    div.timeradiobtns
+                                        input(type="radio" name="radiog_lite" required="required")#time1.css-checkbox
+                                        label(for="time1").css-label.radGroup1 16:00    
+                                        input(type="radio" name="radiog_lite" checked="checked")#time2.css-checkbox
+                                        label(for="time2" checked="checked" required="required").css-label.radGroup1 17:00     
+                                        input(type="radio" name="radiog_lite")#time3.css-checkbox
+                                        label(for="time3" checked="checked" required="required").css-label.radGroup1 18:00      
+                                        input(type="radio" name="radiog_lite")#time4.css-checkbox
+                                        label(for="time4" checked="checked" required="required").css-label.radGroup1 19:00      
+                                        input(type="radio" name="radiog_lite")#time5.css-checkbox
+                                        label(for="time5" checked="checked" required="required").css-label.radGroup1 20:00      
+                                        input(type="radio" name="radiog_lite")#time6.css-checkbox
+                                        label(for="time6" checked="checked" required="required").css-label.radGroup1 21:00      
+                                        input(type="radio" name="radiog_lite")#time7.css-checkbox
+                                        label(for="time7" checked="checked" required="required").css-label.radGroup1 22:00      
+                                        input(type="radio" name="radiog_lite")#time8.css-checkbox
+                                        label(for="time8" checked="checked" required="required").css-label.radGroup1 23:00    
+                        .navbuttonz
+                            button(type="button" value="назад").prev-button.secondbutton назад
+                            button(type="button" value="дальше").next-button.fourthbutton дальше
+                    div#fancyform_tab4.fieldset_wrapper
+                        h3  Контакты
+                        fieldset
+                            .personalinfo
+                                input(type="text" name="name" title="Обязательное поле" placeholder="Имя" required="required")
+                                input(type="text" name="tel" title="Обязательное поле" placeholder="Телефон" required="required")
+                                input(type="email" name="email" title="Обязательное поле" placeholder="e-mail" required="required")
+                                textarea(placeholder="Ваше сообщение") 
+                        .navbuttonz
+                            button(type="button" value="назад").prev-button.secondbutton назад
+                            button(type="button" value="дальше").next-button.fourthbutton дальше
+                    div#fancyform_tab5.fieldset_wrapper
+                        h3  Завершение
+                        //- fieldset
+                        .personalinfo
+                            .persitem Клиент:
+                            #name Иванов Иван
+                        .personalinfo
+                            .persitem Телефон:
+                            #phone 984684684684
+                        .personalinfo
+                            .persitem Дата:
+                            #date 23.23.2325
+                        .personalinfo
+                            .persitem Время:
+                            #time 88:48
+                        .personalinfo
+                            .persitem Направление:
+                            #napr Стоматология
+                        .personalinfo
+                            p#comment  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta consequatur minus ipsam voluptas facere, pariatur expedita maiores, quidem suscipit maxime.                            
+                        .navbuttonz
+                            button(type="button" value="назад").prev-button.secondbutton назад
+                            button(type="submit").next-button.fourthbutton Отправить
+            //- 
+            //- button#disableCustomsTabs Отключить вкладки
+            //- button#enableCustomsTabs Включить вкладки
+        //- before body///////////////////////////////////////////////////////////////////////////////////////
         // bower:js
         script(src='bower_components/jquery/dist/jquery.js')
         script(src='bower_components/slick-carousel/slick/slick.min.js')
@@ -219,6 +340,7 @@ html(lang="en").no-js
         script(src='bower_components/jquery-ui/jquery-ui.js')
         script(src='bower_components/emitter-es6/browser/index.js')
         script(src='bower_components/slideout.js/dist/slideout.js')
+        script(src='bower_components/jquery.stellar/jquery.stellar.js')
         // endbower
         //- script(src='bower_components/easytabs/vendor/jquery.hashchange.min.js')
         script(src='bower_components/easytabs/lib/jquery.easytabs.min.js')
