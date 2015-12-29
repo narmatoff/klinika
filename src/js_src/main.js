@@ -254,17 +254,17 @@ $(document).ready(function() {
         'menu': document.getElementById('slideoutMenu'),
         'padding': 256,
         'tolerance': 70,
-        'side':'right',
-        'touch':'false'
-      });
+        'side': 'right',
+        'touch': 'false'
+    });
 
-            $('.hamburger').click(function() {
-                slideout.toggle();
-            });
+    $('.hamburger').click(function() {
+        slideout.toggle();
+    });
 
-            // $('.menu_sloser').click(function() {
-            //     slideout.close();
-            // });
+    // $('.menu_sloser').click(function() {
+    //     slideout.close();
+    // });
 
 
 
@@ -291,7 +291,7 @@ $(document).ready(function() {
         // centerMode: true,
         variableWidth: true,
         autoplay: false,
-        swipe:false,
+        swipe: false,
         responsive: [{
                 breakpoint: 1150,
                 settings: {
@@ -341,7 +341,7 @@ $(document).ready(function() {
         centerMode: true,
         centerPadding: '145px',
         slidesToShow: 1,
-        swipe:false,
+        swipe: false,
         responsive: [{
             breakpoint: 1150,
             settings: {
@@ -401,7 +401,7 @@ $(document).ready(function() {
         // centerMode: true,
         variableWidth: true,
         autoplay: false,
-        swipe:false,
+        swipe: false,
         responsive: [{
                 breakpoint: 1150,
                 settings: {
@@ -479,21 +479,21 @@ $(document).ready(function() {
 
 
     // фиксация списка годов при прокруткe
-        // body...
+    // body...
 
-        if ($('ul').is('.wayp_links')) {
+    if ($('ul').is('.wayp_links')) {
 
 
-            $('.wayp_links').containedStickyScroll({
-                duration: 0,
-                queue: true,
-                unstick: true,
-                // easing:"easeOutBack"
-                closeChar: ''
-            });
-        }else {
-            console.log('.wayp_links element not loaded');
-        }
+        $('.wayp_links').containedStickyScroll({
+            duration: 0,
+            queue: true,
+            unstick: true,
+            // easing:"easeOutBack"
+            closeChar: ''
+        });
+    } else {
+        console.log('.wayp_links element not loaded');
+    }
 
 
 
@@ -570,6 +570,17 @@ $(document).ready(function() {
         }
     });
 
-$('body').stellar();
+    $('body').stellar();
+
+
+    $("html").niceScroll({
+        zindex:9,
+        cursorborderradius:0,
+        cursorwidth:10
+    });
+
+
+
+
 
 });
